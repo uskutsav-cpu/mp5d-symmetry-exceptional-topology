@@ -1,0 +1,9 @@
+line-length = 100
+target-version = "py311"
+
+[lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E741"]  # ambiguous name 'l' is standard notation for angular momentum here
+
+[lint.per-file-ignores]
+"tests/**" = ["E501"]
