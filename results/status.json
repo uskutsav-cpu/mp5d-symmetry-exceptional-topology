@@ -3,7 +3,7 @@
   "updated": "2026-08-01",
   "stage": {
     "A_repository_and_reuse": "complete except public author-code recovery",
-    "B_minimal_baseline": "not started (blocked on radial solver)",
+    "B_minimal_baseline": "not started (blocked on radial eigenvalue solver)",
     "C_equal_spin_structure": "analytic part complete; numerical branch atlas not started",
     "D_symmetry_breaking": "not started",
     "E_higher_order_topology": "not started",
@@ -12,14 +12,14 @@
   "solvers": {
     "angular_spectral_jacobi": "implemented, cross-verified",
     "angular_finite_difference": "implemented, independent cross-check",
-    "radial": "NOT IMPLEMENTED - critical path"
+    "radial": "singular structure + exponents derived and tested; no eigenvalue solver yet - critical path"
   },
   "qnm_frequencies_computed": 0,
   "tests": {
-    "total": 46,
-    "passing": 46
+    "total": 56,
+    "passing": 56
   },
-  "current_finding": "Exact: spheroidicity c^2 = 4*s*delta*(omega^2-mu^2), so the angular operator is exactly the S^3 Laplacian on delta=0 AND on s=0. At delta=0 the full separated problem depends on (m1,m2) only through m1+m2, so the equal-spin degenerate set at fixed (l,m) is a single irreducible SU(2) multiplet of dimension l+1. Because (m1,m2) label permanently decoupled blocks at every delta, this degeneracy provably cannot become defective: a structural no-go removing specification target 2.1.",
+  "current_finding": "Exact: spheroidicity c^2 = 4*s*delta*(omega^2-mu^2), so the angular operator is exactly the S^3 Laplacian on delta=0 AND on s=0. At delta=0 the full separated problem depends on (m1,m2) only through m1+m2, so the equal-spin degenerate set at fixed (l,m) is a single irreducible SU(2) multiplet of dimension l+1. Because (m1,m2) label permanently decoupled blocks at every delta, this degeneracy provably cannot become defective: a structural no-go removing specification target 2.1. Radial structure also derived exactly: r=0 is an ordinary point for ab!=0, the problem is confluent-Heun type (two regular singular points + irregular infinity), the horizon exponent is (omega - m1*Om_a - m2*Om_b)/(2*kappa), and the potential is exactly even in r so there is no Coulomb tail and the asymptotic exponent is exactly -3/2.",
   "current_evidence_level": "symmetry derived (exact, machine-verified); no numerical QNM evidence yet",
   "next_gate": "radial solver + minimum benchmark set"
 }

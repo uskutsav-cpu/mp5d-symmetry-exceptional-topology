@@ -23,4 +23,8 @@ topological / certified until its evidence requirement is met.
 | C11 | Angular spectral solver agrees with an independent finite-difference discretization. | cross-solver verified (angular only) | `test_spectral_matches_independent_finite_difference` |
 | C12 | EPs in diagonal sectors occur in `±δ` pairs; an on-surface EP is codimension 2. | **conjectured** | — needs radial solver |
 | C13 | Exceptional sets come in quadruples under `s→−s`, `δ→−δ`. | **conjectured, probably too strong** | radial operator depends on `s`, `δ` separately |
+| C15 | `z = r² = 0` is an **ordinary point** of the radial equation whenever `ab ≠ 0`: the apparent `1/z` singularities cancel exactly because `W(0) = abG` and `P(0) = a²b²`. | symmetry derived | `test_origin_is_an_ordinary_point` |
+| C16 | The radial problem has exactly two regular singular points (`z₊`, `z₋`) plus an irregular point at infinity — confluent Heun type. | symmetry derived | `docs/../src/mp5d/radial/structure.py`; C15 + indicial tests |
+| C17 | Horizon exponent is exactly `σ₊ = (ω − m₁Ω_a − m₂Ω_b)/(2κ)`; ingoing branch is `(z−z₊)^{−iσ₊}`. | symmetry derived | `test_horizon_indicial_exponent_derivation`, `test_W_at_horizon_factorizes_through_angular_velocities` |
+| C18 | The radial potential is exactly even in `r`, so it has **no** `1/r` tail and the asymptotic exponent is exactly `−3/2`: no Coulomb phase, unlike 4D massive Kerr. Follows from `D−3=2`. | symmetry derived | `test_potential_is_even_in_r_so_no_coulomb_tail` |
 | C14 | Any QNM frequency of this system. | **not yet computed** | — |
