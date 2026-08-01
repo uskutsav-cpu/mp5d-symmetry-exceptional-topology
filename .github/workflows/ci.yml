@@ -52,7 +52,8 @@ jobs:
         run: |
           pip install detect-secrets
           cp .secrets.baseline .secrets.baseline.orig
-          detect-secrets scan --baseline .secrets.baseline --exclude-files '^\.venv/'
+          detect-secrets scan --baseline .secrets.baseline \
+            --exclude-files '^\.venv/' --exclude-files '^\.secrets\.baseline$'
           python - <<'EOF'
           import json, sys
 
