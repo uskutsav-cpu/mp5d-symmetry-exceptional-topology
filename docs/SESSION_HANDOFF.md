@@ -16,9 +16,19 @@ completed first, because it sharply narrows the numerical search.
   structural **no-go** (C8) that removes the specification's primary target
   scenario §2.1 and redirects the search (`docs/SYMMETRY_STRUCTURE.md` §5).
 
+## Radial sector: structure done, solver not
+
+Derived and pinned (C15-C18): `r = 0` is an ordinary point for `ab != 0`; the
+problem is confluent-Heun type; the horizon exponent is
+`(ω − m₁Ω_a − m₂Ω_b)/(2κ)`; the potential is exactly even in `r` so the
+asymptotic exponent is exactly `−3/2` with no Coulomb phase.
+
+That fixes every ingredient a radial method needs *except* the eigenvalue
+solver itself.
+
 ## Not started
 
-* **Radial solver.** This is the critical path. Nothing downstream (branch
+* **Radial eigenvalue solver.** This is the critical path. Nothing downstream (branch
   atlas, degeneracy detection, exceptional sets, certification) can begin
   without it. No QNM frequency has been computed yet (claim C14).
 * Baseline benchmark validation against Huang–Huang and the singly-rotating
