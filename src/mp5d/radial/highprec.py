@@ -31,6 +31,7 @@ __all__ = [
     "solve_qnm_mp",
     "MPSolution",
     "dft_polynomial_coefficients",
+    "asymptotic_ratio",
 ]
 
 
@@ -124,9 +125,51 @@ def _reduce_three_term_mp(A, B, C, depth: int):
     return alpha, beta, gamma
 
 
-def _cf_inverted_mp(alpha, beta, gamma, inversion: int, depth: int):
+def asymptotic_ratio(n, c, order: int = 1):
+    """Minimal-solution ratio ``R_n = a_{n+1}/a_n`` at large ``n``.
+
+    Structure (derived, see ``docs/RECURRENCE_ASYMPTOTICS.md``): the recurrence's
+    characteristic equation is ``A(1/R) = 0`` and ``x = 1`` is a multiple root of
+    ``A``, so ``R = 1`` is degenerate and the corrections come in powers of
+    ``n^{-1/2}``:
+
+        R_n = 1 + u1 n^{-1/2} + u2 n^{-1} + ...,   u1 = -sqrt(-2c)
+
+    with ``c = i Omega (r_+ - r_-)`` the coefficient of the peeled exponential
+    ``exp(c/(1-x))``.  The sign is fixed by minimality: the decaying solution is
+    the one with ``Re(u1) < 0`` for the branch of ``sqrt`` used here.
+
+    ``order = 0`` returns 1 (no tail).  Only ``order <= 1`` is supported: the
+    higher coefficients have NOT been derived, and asking for them raises rather
+    than silently returning a wrong tail.
+    """
+    if order <= 0:
+        return mp.mpc(1)
+    if order > 1:
+        raise NotImplementedError(
+            "only tail_order <= 1 is derived; u2 and beyond are not available"
+        )
+    u1 = -mp.sqrt(-2 * c)
+    if u1.real > 0:
+        u1 = -u1
+    return 1 + u1 / mp.sqrt(n)
+
+
+def _cf_inverted_mp(alpha, beta, gamma, inversion: int, depth: int,
+                    c=None, tail_order: int = 0):
+    """Backward evaluation.  ``tail_order > 0`` closes the truncation with the
+    asymptotic minimal-solution ratio instead of the crude ``frac = 0``.
+
+    Terminal condition: the CF variable satisfies ``f_{k+1} = -alpha_k r_k``
+    where ``r_k = a_{k+1}/a_k``, so seeding ``f_depth`` with the asymptotic
+    ``r_{depth-1}`` is the exact analogue of Nollert's remainder estimate.
+    """
     k = int(inversion)
-    frac = mp.mpc(0)
+    if tail_order > 0 and c is not None:
+        R = asymptotic_ratio(depth - 1, c, tail_order)
+        frac = -alpha[depth - 1] * R
+    else:
+        frac = mp.mpc(0)
     for j in range(depth - 1, k, -1):
         den = beta[j] - frac
         frac = alpha[j - 1] * gamma[j] / den
@@ -312,16 +355,25 @@ class HighPrecisionProblem:
         k = min(val(a) for a in out)
         return [a[k:] for a in out] if k else out
 
-    def cf_value(self, omega, depth: int, inversion: int, degree_bound: int = 32):
+    def exp_coefficient(self, omega):
+        """``c = i Omega (r_+ - r_-)`` -- the peeled exponential's coefficient."""
+        Om = mp.sqrt(omega**2 - self.mu**2)
+        if Om.real < 0:
+            Om = -Om
+        return mp.mpc(0, 1) * Om * (self.rp - self.rm)
+
+    def cf_value(self, omega, depth: int, inversion: int, degree_bound: int = 32,
+                 tail_order: int = 0):
         Lam = self.Lambda(omega)
         A, B, C = self.poly_ABC(omega, Lam, degree_bound)
         al, be, ga = _reduce_three_term_mp(A, B, C, depth)
-        return _cf_inverted_mp(al, be, ga, inversion, depth)
+        c = self.exp_coefficient(omega) if tail_order > 0 else None
+        return _cf_inverted_mp(al, be, ga, inversion, depth, c, tail_order)
 
 
 def solve_qnm_mp(a, b, mu, m1, m2, ell, overtone=0, initial_frequency=None,
                  dps: int = 50, depth: int = 300, degree_bound: int = 32,
-                 M: float = 1.0, maxiter: int = 60) -> MPSolution:
+                 M: float = 1.0, maxiter: int = 60, tail_order: int = 0) -> MPSolution:
     """Solve one QNM entirely at ``dps`` decimal digits."""
     if initial_frequency is None:
         raise ValueError("initial_frequency is required")
@@ -331,10 +383,10 @@ def solve_qnm_mp(a, b, mu, m1, m2, ell, overtone=0, initial_frequency=None,
         tol = mp.mpf(10) ** (-(dps - 8))
         w0 = mp.mpc(initial_frequency.real, initial_frequency.imag)
         root, iters, ok = _muller_mp(
-            lambda w: prob.cf_value(w, depth, overtone, degree_bound),
+            lambda w: prob.cf_value(w, depth, overtone, degree_bound, tail_order),
             w0, tol, maxiter, mp.mpf("0.05"),
         )
-        res = abs(prob.cf_value(root, depth, overtone, degree_bound))
+        res = abs(prob.cf_value(root, depth, overtone, degree_bound, tail_order))
         lam = prob.Lambda(root)
         return MPSolution(
             omega=complex(root), Lambda=complex(lam), cf_residual=float(res),

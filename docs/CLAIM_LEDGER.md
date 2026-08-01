@@ -32,3 +32,8 @@ topological / certified until its evidence requirement is met.
 | C20 | The raw Frobenius recurrence for the MP5D radial equation has **width 9**; the general Gaussian reduction to three terms is exact. | numerically observed + validated on synthetic recurrences | `tests/unit/test_recurrence_synthetic.py` |
 | C6/C7 numerical | The equal-spin U(2) multiplet degeneracy is **confirmed numerically**: `(1,1)`, `(2,0)`, `(0,2)` at `l=2, m=2`, `a=b=0.25` share one frequency to `4.67e-15`, and split by `5.38e-02` once `δ ≠ 0`. | **numerically observed**, confirming a symmetry-derived prediction | `tests/unit/test_first_qnm.py` |
 | C21 | Exchange symmetry `(a,m₁) ↔ (b,m₂)` holds numerically on two-spin backgrounds to `4.15e-15`. | cross-solver verified | `test_exchange_symmetry_is_exact_for_two_spins` |
+| C22 | The recurrence's characteristic equation is `A(1/R)=0`; `x=1` is a multiple root (`A` mult ≥5, `B`,`C` mult 4), so `R_n = 1 + u₁n^{-1/2} + …` with half-integer powers. | symbolically derived + numerically confirmed | `docs/RECURRENCE_ASYMPTOTICS.md`; exponent test `n^{1/2}` converges / `n^1` diverges |
+| C23 | Leading tail coefficient `u₁ = −√(−2c)`, `c = iΩ(r₊−r₋)`, sign fixed by minimality. | numerically observed, consistent with derivation | measured `(R_n−1)√n` → `−0.523+1.020i` |
+| C24 | The leading-order tail measurably reduces required depth (~1.35×, +1.4 digits at depth 200). | numerically observed | `results/tail_validation.json` |
+| C25 | Higher tail orders (`u₂`+). | **not derived** | blocked by reduction degradation past `n~500–800` |
+| C26 | An independent non-recurrence solver (Solver C). | **not built** | — |

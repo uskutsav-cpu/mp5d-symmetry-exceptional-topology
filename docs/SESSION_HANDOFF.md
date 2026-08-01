@@ -1,63 +1,48 @@
 # Session handoff
 
-## Session 3 (2026-08-01) — radial solver rescue: SUCCESS
+## Session 5 (2026-08-01) — asymptotic tail; Solver C NOT built
 
 ### Achieved
 
-**First trustworthy QNM.** 5D Schwarzschild–Tangherlini, massless scalar,
-`l = 0`, `n = 0`, `r₊ = 1`:
+* PR #2 merged; work continues on `research/solver-c`.
+* **Tail structure derived.** Characteristic equation `A(1/R) = 0`; `x = 1` is a
+  multiple root (`A` multiplicity ≥5, `B`,`C` exactly 4), so the `n^{-3/2}`
+  balance reads `−u₁A'(1) = 0` with `A'(1) = 0` and half-integer powers survive:
+  `R_n = 1 + u₁n^{-1/2} + …`, `u₁ = −√(−2c)`, `c = iΩ(r₊−r₋)`.
+* Confirmed two independent ways: the exponent test (`n^{1/2}` scaling
+  converges, `n^1` diverges) and the `exp(−k√N)` depth signature.
+* **Tail implemented** at leading order, opt-in via `tail_order`; higher orders
+  raise rather than返回 a wrong tail. Measured **~1.35× depth reduction**
+  (+1.4 digits at depth 200).
+* 127 tests passing.
 
-```
-omega = 0.533835574268 - 0.383375368513 i
-```
+### NOT done — the session's central deliverable
 
-matching Matyjasek (arXiv:2107.04815, Table I) to all 12 published digits
-(`4.98e-13`). Four benchmarks total (`l = 0,1` × `n = 0,1`), all cross-solver
-verified. Full detail in `docs/FIRST_QNM_VALIDATION.md`.
+**Solver C was not built.** There is still no independent non-recurrence solver.
+Everything in the difficult region continues to rest on one recurrence family
+plus Huang–Huang's published matrix values. Gate items 3–10 are therefore open:
+static fundamental/overtone via C, two rotating modes via C, large-`r₂` via C,
+three-way A/B/C agreement, long-lived branch, and the revised validity map.
 
-**Two independent solvers.**
-* Solver A — Leaver CF: width-9 Frobenius recurrence, general Gaussian
-  reduction to three terms, `n`-th CF inversion.
-* Solver B — Hill/Wynn: raw recurrence, `a_N` condition, Wynn acceleration.
-  No reduction, no continued fraction; independent root condition.
-They agree to `2.15e-12`.
+### Blocker discovered
 
-**U(2) degeneracy confirmed numerically.** The session-1 analytic prediction
-(claims C6/C7) now has numerical backing: `(1,1)`, `(2,0)`, `(0,2)` at `l=2`,
-`m=2`, `a=b=0.25` share one frequency to `4.67e-15`; `δ ≠ 0` splits them by
-`5.38e-02`. Exchange symmetry holds to `4.15e-15`.
+The Gaussian reduction degrades past `n ~ 500–800`: the backward ratio recursion
+collapses to a spurious, problem-independent `R_n − 1 = 2/n` (identical for two
+unrelated parameter sets). Clean window for asymptotics is `n = 200–400`. This
+blocks numerical extraction of `u₂` and caps the achievable tail order. It does
+**not** affect the CF values or the benchmark agreements.
 
-93 tests passing.
+Untested fixes: raise working precision inside the reduction independently of
+the solve precision; or restructure the elimination to shorten the recursive
+chain.
 
-### Not done, and needed before the science resumes
+### Next, in order
 
-1. **Rotating benchmarks against published values.** The rotating results are
-   validated by exact internal symmetries and A/B agreement only. The
-   Huang–Huang two-spin comparison (arXiv:2502.11764) is still open, as are the
-   singly-rotating literature points. This is the next gate.
-2. **Precision escalation.** Everything is double precision; `A, B, C` are
-   extracted by FFT, flooring residuals near `1e-12`. Gate requirement 3
-   ("stable with arithmetic precision") is therefore **not discharged**. Move
-   the extraction to exact rational or `mpmath` arithmetic.
-3. **Nollert asymptotic tail.** Not implemented; the CF uses plain truncation.
-   Fine for these modes, needed for high overtones and long-lived massive modes.
+1. Fix the reduction degradation, then derive/extract `u₂`, `u₃`.
+2. Build Solver C (complex-contour Wronskian matching) — horizon Frobenius
+   series outward, outgoing asymptotic series inward along a rotated contour,
+   match logarithmic derivatives at a complex interior point. Must not reuse the
+   recurrence, the reduction, the CF, or the Hill determinant.
+3. Only then: three-way validation, long-lived branch, revised validity map.
 
-### Then, and only then
-
-Branch atlas in diagonal sectors `m₁ = m₂` first (they have exact `δ`-parity),
-then the targeted within-sector EP search. No exceptional-point work has been
-done and none should start before gate 1 above.
-
-### Reproduction
-
-```bash
-PYTHONPATH=src .venv/bin/python -m pytest -q            # 93 passed
-PYTHONPATH=src .venv/bin/python scripts/first_qnm.py    # regenerates results/first_qnm.json
-```
-
-### Do not repeat
-
-* Fully symbolic Leaver derivation with symbolic parameters (fails, three times).
-* Peel-and-demand-boundedness selection for `Im ω < 0` (FAILED_APPROACHES #3).
-* SVD of the equilibrated Hill matrix (#5/#5b — dynamic range, not edge modes).
-* Widening the Muller initial triangle (#6 — made things worse).
+No branch atlas and no EP search until that gate closes.

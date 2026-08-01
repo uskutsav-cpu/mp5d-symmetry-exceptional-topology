@@ -1,0 +1,39 @@
+{
+  "session": "numerical closure: Nollert tail + independent contour Solver C",
+  "starting_commit_main": "38408886d297ab0528e2ea6dacd768e352bcc1ec",
+  "branch": "research/solver-c",
+  "env_hash": "51bd433766170fc3",
+  "verified_starting_state": {
+    "pr1": "merged",
+    "pr2": "merged",
+    "tests": 120,
+    "table_ii": "6/6",
+    "table_iii": "3/3",
+    "exchange": "5/5",
+    "equal_spin_offdiag": "4/4",
+    "precision_digits": [
+      25.8,
+      49.2,
+      49.1
+    ],
+    "anomaly_labelled_suspected": true,
+    "solver_A": "leaver-cf/2.0",
+    "solver_B": "hill-wynn/1.0",
+    "solver_C": "not built",
+    "tail": "not implemented"
+  },
+  "gate": {
+    "1_tail_derived": "pending",
+    "2_tail_improves_depth": "pending",
+    "3_solverC_independent": "pending",
+    "4_C_static_fundamental": "pending",
+    "5_C_static_overtone": "pending",
+    "6_C_two_rotating": "pending",
+    "7_C_large_r2": "pending",
+    "8_ABC_agree": "pending",
+    "9_long_lived_two_methods": "pending",
+    "10_map_revised": "pending",
+    "11_tests_pass": "pending",
+    "12_pushed": "pending"
+  }
+}

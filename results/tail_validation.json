@@ -1,0 +1,86 @@
+{
+  "status": "complete (leading order only)",
+  "provenance": {
+    "commit": "38408886d297ab0528e2ea6dacd768e352bcc1ec",
+    "solver": "leaver-cf-mp/1.1",
+    "precision": "dps=50"
+  },
+  "structure": {
+    "characteristic_equation": "A(1/R) = 0; relevant root x=1 (irregular point)",
+    "multiplicity_of_x_eq_1": {
+      "A": ">=5",
+      "B": 4,
+      "C": 4
+    },
+    "expansion": "R_n = 1 + u1 n^{-1/2} + u2 n^{-1} + ...",
+    "u1": "-sqrt(-2c), c = i*Omega*(r_+ - r_-), sign fixed by minimality",
+    "half_powers_justification": "n^{-3/2} equation reads -u1*A'(1)=0; A'(1)=0 so u1 is not forced to vanish",
+    "orders_derived": 1,
+    "orders_not_derived": "u2 and beyond -- asymptotic_ratio raises for order>1"
+  },
+  "exponent_confirmation": {
+    "R_minus_1_times_sqrt_n": {
+      "n=200": [
+        -0.5994797295,
+        0.9754770307
+      ],
+      "n=400": [
+        -0.5785530218,
+        0.9903286192
+      ]
+    },
+    "R_minus_1_times_n": {
+      "n=200": [
+        -8.48,
+        13.8
+      ],
+      "n=400": [
+        -11.58,
+        19.8
+      ]
+    },
+    "verdict": "n^{-1/2} converges, n^{-1} diverges: half-integer powers",
+    "predicted_u1_minus_sqrt_minus_2c": [
+      -0.5233154494,
+      1.020102836
+    ]
+  },
+  "depth_reduction": {
+    "case": "ST5D l=0 n=0, dps=50",
+    "rows": [
+      {
+        "depth": 100,
+        "digits_no_tail": 9.17,
+        "digits_tail1": 10.38,
+        "gain": 1.21
+      },
+      {
+        "depth": 200,
+        "digits_no_tail": 12.94,
+        "digits_tail1": 14.31,
+        "gain": 1.37
+      },
+      {
+        "depth": 400,
+        "digits_no_tail": 16.46,
+        "digits_tail1": 16.47,
+        "note": "reference-limited"
+      },
+      {
+        "depth": 800,
+        "digits_no_tail": 16.47,
+        "digits_tail1": 16.47,
+        "note": "reference-limited"
+      }
+    ],
+    "effective_depth_reduction": "~1.35x at fixed accuracy",
+    "assessment": "measurable but modest; expected for a leading-order-only tail"
+  },
+  "not_tested_with_tail": [
+    "large-r2 slowly convergent modes",
+    "long-lived massive branch",
+    "small Re(omega) modes",
+    "static overtone"
+  ],
+  "known_limitation": "the recursive Gaussian reduction degrades past n ~ 500-800; the backward ratio recursion then collapses to a spurious problem-independent R_n - 1 = 2/n. Clean window for reading R_n is n = 200-400."
+}
