@@ -1,9 +1,9 @@
 {
   "project": "mp5d-symmetry-exceptional-topology",
-  "updated": "2026-08-01",
+  "updated": "2026-08-01 (session 2)",
   "stage": {
-    "A_repository_and_reuse": "complete except public author-code recovery",
-    "B_minimal_baseline": "not started (blocked on radial eigenvalue solver)",
+    "A_repository_and_reuse": "complete; repo public, CI active",
+    "B_minimal_baseline": "BLOCKED - no working radial eigenvalue solver, so zero benchmarks attempted",
     "C_equal_spin_structure": "analytic part complete; numerical branch atlas not started",
     "D_symmetry_breaking": "not started",
     "E_higher_order_topology": "not started",
@@ -12,14 +12,18 @@
   "solvers": {
     "angular_spectral_jacobi": "implemented, cross-verified",
     "angular_finite_difference": "implemented, independent cross-check",
-    "radial": "singular structure + exponents derived and tested; no eigenvalue solver yet - critical path"
+    "radial_structure": "exponents + singular structure derived and tested",
+    "radial_collocation_A": "IMPLEMENTED BUT NON-FUNCTIONAL - selection principle is wrong for Im(omega)<0; see docs/FAILED_APPROACHES.md entry 3",
+    "radial_leaver_B": "PARTIAL - recurrence recovery works and is self-validating; Hill truncation does not yet isolate roots; see FAILED_APPROACHES entry 5"
   },
   "qnm_frequencies_computed": 0,
   "tests": {
-    "total": 56,
-    "passing": 56
+    "total": 67,
+    "passing": 67
   },
-  "current_finding": "Exact: spheroidicity c^2 = 4*s*delta*(omega^2-mu^2), so the angular operator is exactly the S^3 Laplacian on delta=0 AND on s=0. At delta=0 the full separated problem depends on (m1,m2) only through m1+m2, so the equal-spin degenerate set at fixed (l,m) is a single irreducible SU(2) multiplet of dimension l+1. Because (m1,m2) label permanently decoupled blocks at every delta, this degeneracy provably cannot become defective: a structural no-go removing specification target 2.1. Radial structure also derived exactly: r=0 is an ordinary point for ab!=0, the problem is confluent-Heun type (two regular singular points + irregular infinity), the horizon exponent is (omega - m1*Om_a - m2*Om_b)/(2*kappa), and the potential is exactly even in r so there is no Coulomb tail and the asymptotic exponent is exactly -3/2.",
-  "current_evidence_level": "symmetry derived (exact, machine-verified); no numerical QNM evidence yet",
-  "next_gate": "radial solver + minimum benchmark set"
+  "current_finding": "Unchanged from session 1 in substance: the exact equal-spin U(2) structure and the cross-sector no-go. Session 2 added the written no-go argument with its proof obligations (docs/CROSS_SECTOR_EP_NO_GO.md), of which O6.1-O6.4 are discharged and O6.5-O6.7 remain open. No new physical result; the radial solver remains the blocking item.",
+  "current_evidence_level": "symmetry derived (exact, machine-verified); still NO numerical QNM evidence",
+  "next_gate": "Reduce the multi-term Leaver recurrence to three terms by Gaussian elimination and impose the minimal-solution condition via the continued fraction with its large-n tail estimate, replacing the hard Hill truncation.",
+  "repository_visibility": "PUBLIC",
+  "exceptional_points_verified": 0
 }

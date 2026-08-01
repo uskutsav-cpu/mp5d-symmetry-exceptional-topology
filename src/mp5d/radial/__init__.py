@@ -17,3 +17,7 @@ __all__ = [
     "horizon_exponent",
     "inner_horizon_exponent",
 ]
+
+from .collocation import SOLVER_VERSION, QNMResult, RadialCollocation, solve_qnm  # noqa: E402
+
+__all__ += ["QNMResult", "RadialCollocation", "solve_qnm", "SOLVER_VERSION"]

@@ -116,4 +116,4 @@ def test_convergence_in_truncation():
     ]
     assert errs[0] > 1e-6, f"stress c2 too small to resolve truncation: {errs}"
     assert errs[-1] < 1e-8, f"not converged: {errs}"
-    assert all(x > y for x, y in zip(errs, errs[1:], strict=True)), f"non-monotone: {errs}"
+    assert all(x > y for x, y in zip(errs, errs[1:], strict=False)), f"non-monotone: {errs}"
