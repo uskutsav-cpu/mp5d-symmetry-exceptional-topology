@@ -1,0 +1,74 @@
+id,group,authors,short_title,identifier,metadata_verified,notes
+A01,geometry,Myers; Perry,Black Holes in Higher Dimensional Space-Times,AnnPhys172-304-1986,no,
+A02,geometry,Emparan; Reall,Black Holes in Higher Dimensions,arXiv:0801.3471,no,
+A03,geometry,Murata; Soda,Separability of Field Equations in Myers-Perry,arXiv:0710.0221,no,
+A04,geometry,Wu,Separability of Massive Dirac in 5D Myers-Perry,arXiv:0807.2114,no,
+A05,angular,Berti; Cardoso; Casals,Spin-Weighted Spheroidal Harmonics in Four and Higher Dimensions,arXiv:gr-qc/0511111,no,key angular benchmark
+A06,stability,Murata; Soda,Stability of 5D Myers-Perry with Equal Angular Momenta,arXiv:0803.1371,no,equal-spin sector
+A07,stability,Dias et al.,An Instability of Higher-Dimensional Rotating Black Holes,arXiv:1001.4527,no,
+A08,stability,Emparan; Suzuki; Tanabe,Instability of Rotating Black Holes: Large-D,arXiv:1402.6215,no,
+A09,fields,Frolov et al.,Massive Vector Fields in Rotating Black-Hole Spacetimes,arXiv:1804.00030,no,
+A10,fields,Blazquez-Salcedo; Knoll,QNMs of Dirac Spinors in Rotating BHs in 4D and 5D,arXiv:1811.02014,no,
+A11,fields,Lunin,Excitations of the Myers-Perry Black Holes,arXiv:1907.03820,no,
+A12,dS,Ponglertsakul; Gwak,Massive Scalar on Myers-Perry-de Sitter Single Rotation,arXiv:2007.16108,no,
+A13,dS,Davey et al.,SCC and Eigenvalue Repulsions for Rotating dS BHs in Higher D,arXiv:2203.13830,no,
+A14,qnm,Lu; Li; Huang,QNMs and Stability of Higher-D Rotating BHs under Massive Scalar,arXiv:2307.02338,no,
+A15,qnm,Li et al.,5D Myers-Perry under Massive Scalar: Bound States and QNMs,arXiv:2309.08203,no,benchmark source
+A16,qnm,Huang; Huang,QNMs of Massive Scalar in 5D Myers-Perry Two Arbitrary Rotations,arXiv:2502.11764,no,PRIMARY BENCHMARK
+A17,ep,Nakamoto; Oshita,Exceptional Lines and Nearly Double-Pole QNMs in Nariai,arXiv:2601.00704,no,verify: date is in the future relative to most of corpus
+B18,ep,Yang et al.,Branching of QNMs for Nearly Extremal Kerr,arXiv:1212.3271,no,
+B19,ep,Dias et al.,Eigenvalue Repulsions in Kerr-Newman QNM Spectra,arXiv:2109.13949,no,
+B20,ep,Dias; Godazgar; Santos,Extended Kerr-Newman eigenvalue repulsion,arXiv:2205.13072,no,
+B21,ep,Davey; Dias; Santos,Scalar QNM Spectra of Kerr and RN via Kerr-Newman Repulsions,arXiv:2305.11216,no,
+B22,ep,Cavalcante; Richartz; da Cunha,Exceptional Point and Hysteresis in Kerr,arXiv:2407.20850,no,
+B23,ep,Cavalcante; Richartz; da Cunha,Massive Scalar in Kerr: Near-Extremal,arXiv:2408.13964,no,
+B24,ep,Motohashi,Resonant Excitation of QNMs,arXiv:2407.15191,no,
+B25,ep,Oshita; Berti; Cardoso,Unstable Chords and Destructive Resonant Excitation,arXiv:2503.21276,no,
+B26,ep,Yang; Berti; Franchini,Black Hole QNM Resonances,arXiv:2504.06072,no,
+B27,ep,Kubota; Motohashi,Resonance in Ringdown: Benchmarking QNM Excitation,arXiv:2509.06411,no,
+B28,ep,Cao et al.,Exceptional Line and Pseudospectrum in Black Hole Spectroscopy,arXiv:2511.17067,no,
+B29,ep,Cavalcante; Richartz; da Cunha,Ergodic Hysteresis of the Kerr Spectrum,arXiv:2511.16640,no,
+B30,ep,Panosso Macedo et al.,Exceptional Points and Resonance in Ringdown,arXiv:2512.02110,no,
+B32,ep,Wang; Wu,Coexistence of Spectrally Stable and Unstable Modes,PRD-114-L021501-2026,no,SPEC FLAGS: verify exact metadata before use
+C33,pseudo,Nollert,About the Significance of QNMs,arXiv:gr-qc/9602032,no,
+C34,pseudo,Nollert; Price,Quantifying Excitations of QNM Systems,,no,identifier missing in spec
+C35,pseudo,Barausse; Cardoso; Pani,Environmental Effects and Precision GW Astrophysics,arXiv:1404.7149,no,
+C36,pseudo,Jaramillo; Panosso Macedo; Al Sheikh,Pseudospectrum and QNM (In)stability,arXiv:2004.06434,no,
+C37,pseudo,Jaramillo; Panosso Macedo; Al Sheikh,GW Signatures of QNM Instability,arXiv:2105.03451,no,
+C38,pseudo,Destounis et al.,Pseudospectrum of Reissner-Nordstrom,arXiv:2107.09673,no,
+C39,pseudo,Cheung et al.,The Elephant and the Flea,arXiv:2111.05415,no,
+C40,pseudo,Gasperin; Jaramillo,Energy Scales and Black Hole Pseudospectra,,no,identifier missing in spec
+C41,pseudo,Berti et al.,Stability of the Fundamental QNM in Time Domain,arXiv:2205.08547,no,
+C42,pseudo,Destounis; Duque,Black-Hole Spectroscopy: QNMs Ringdown Stability Pseudospectrum,arXiv:2308.16227,no,
+C43,pseudo,Yang et al.,Spectral Instability: Frequency to Time Domain,arXiv:2407.20131,no,
+C44,pseudo,Shen et al.,Asymptotic QNMs Echoes and Spectral Instability,arXiv:2507.11663,no,
+C45,pseudo,Miyachi; Namba; Omiya; Oshita,Spectral Instability via Exact WKB,arXiv:2512.18631,no,
+D46,methods,Kokkotas; Schmidt,QNMs of Stars and Black Holes,arXiv:gr-qc/9909058,no,
+D47,methods,Berti; Cardoso; Starinets,QNMs of Black Holes and Black Branes,arXiv:0905.2975,no,
+D48,methods,Konoplya; Zhidenko,QNMs of Black Holes,arXiv:1102.4014,no,
+D49,methods,Hatsuda; Kimura,Spectral Problems for QNMs,arXiv:2111.15197,no,
+D50,methods,Berti et al.,Black Hole Spectroscopy: Theory to Experiment,arXiv:2505.23895,no,
+D51,methods,Leaver,Analytic Representation for QNMs of Kerr,ProcRSocA402-285-1985,no,continued fraction method
+D52,methods,Leaver,Spectral Decomposition of the Perturbation Response,,no,identifier missing in spec
+D53,methods,Detweiler,Klein-Gordon Equation and Rotating Black Holes,,no,identifier missing in spec
+D54,methods,Furuhashi; Nambu,,arXiv:gr-qc/0402037,no,title missing in spec
+D55,methods,Dolan,,arXiv:0705.2880,no,title missing in spec
+D56,methods,Zhidenko,,arXiv:gr-qc/0607133,no,title missing in spec
+D57,methods,Cho et al.,,arXiv:1111.5024,no,title missing in spec
+D58,methods,Lin; Qian,,arXiv:1610.08135,no,title missing in spec
+D59,methods,Lin et al.,,arXiv:1703.06439,no,title missing in spec
+D60,methods,Matyjasek; Opala,,arXiv:1704.00361,no,title missing in spec
+D61,methods,Stein,qnm python package,arXiv:1908.10377,no,Kerr only
+D62,methods,Fortuna; Vega,,arXiv:2003.06232,no,title missing in spec
+E63,nonherm,Bergholtz; Budich; Kunst,Exceptional Topology of Non-Hermitian Systems,arXiv:1912.10048,no,
+E64,nonherm,Ashida; Gong; Ueda,Non-Hermitian Physics,arXiv:2006.01837,no,
+E65,nonherm,Mandal; Bergholtz,Symmetry and Higher-Order Exceptional Points,arXiv:2103.15729,no,CENTRAL to this project
+E66,nonherm,Zhang et al.,Symmetry-Protected Topological Exceptional Chains,arXiv:2204.08052,no,CENTRAL to this project
+E67,cont,Nennig; Perrey-Debain,High-Order Continuation to Locate EPs and Puiseux Series,arXiv:1909.11579,no,reusable method
+E68,cont,Campos; Roman,NEP: Nonlinear Eigenvalue Problems in SLEPc,arXiv:1910.11712,no,candidate reuse
+E69,cert,Breiding; Rose; Timme,Certifying Zeros Using Interval Arithmetic,arXiv:2011.05000,no,
+E70,cert,Duff; Lee,Certified Homotopy Tracking Using Krawczyk,arXiv:2402.07053,no,
+E71,cert,Kato,Perturbation Theory for Linear Operators,book,no,
+E72,cert,Trefethen; Embree,Spectra and Pseudospectra,book,no,
+E73,cert,Moore; Kearfott; Cloud,Introduction to Interval Analysis,book,no,
+E74,cert,Tucker,Validated Numerics,book,no,

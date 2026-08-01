@@ -1,0 +1,2133 @@
+{
+  "status": "complete",
+  "kind": "analytic",
+  "provenance": {
+    "commit": "uncommitted",
+    "lock_sha256_16": "51bd433766170fc3",
+    "solver": "none (exact representation theory)",
+    "precision": "exact"
+  },
+  "definitions": {
+    "l": "2n + |m1| + |m2|, S^3 angular momentum",
+    "m": "m1 + m2, the U(1) charge of U(2) = (SU(2) x U(1))/Z2",
+    "validity": "delta = 0 only; for delta != 0 these sets split"
+  },
+  "l_max": 8,
+  "records": [
+    {
+      "l": 0,
+      "m": 0,
+      "u1_charge": 0,
+      "su2_irrep_dim": 1,
+      "degeneracy": 1,
+      "states_n_m1_m2": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 1,
+      "m": -1,
+      "u1_charge": -1,
+      "su2_irrep_dim": 2,
+      "degeneracy": 2,
+      "states_n_m1_m2": [
+        [
+          0,
+          -1,
+          0
+        ],
+        [
+          0,
+          0,
+          -1
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 1,
+      "m": 1,
+      "u1_charge": 1,
+      "su2_irrep_dim": 2,
+      "degeneracy": 2,
+      "states_n_m1_m2": [
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 2,
+      "m": -2,
+      "u1_charge": -2,
+      "su2_irrep_dim": 3,
+      "degeneracy": 3,
+      "states_n_m1_m2": [
+        [
+          0,
+          -2,
+          0
+        ],
+        [
+          0,
+          -1,
+          -1
+        ],
+        [
+          0,
+          0,
+          -2
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          0,
+          -1,
+          -1
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 2,
+      "m": 0,
+      "u1_charge": 0,
+      "su2_irrep_dim": 3,
+      "degeneracy": 3,
+      "states_n_m1_m2": [
+        [
+          0,
+          -1,
+          1
+        ],
+        [
+          0,
+          1,
+          -1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 2,
+      "m": 2,
+      "u1_charge": 2,
+      "su2_irrep_dim": 3,
+      "degeneracy": 3,
+      "states_n_m1_m2": [
+        [
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          2,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          0,
+          1,
+          1
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 3,
+      "m": -3,
+      "u1_charge": -3,
+      "su2_irrep_dim": 4,
+      "degeneracy": 4,
+      "states_n_m1_m2": [
+        [
+          0,
+          -3,
+          0
+        ],
+        [
+          0,
+          -2,
+          -1
+        ],
+        [
+          0,
+          -1,
+          -2
+        ],
+        [
+          0,
+          0,
+          -3
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 3,
+      "m": -1,
+      "u1_charge": -1,
+      "su2_irrep_dim": 4,
+      "degeneracy": 4,
+      "states_n_m1_m2": [
+        [
+          0,
+          -2,
+          1
+        ],
+        [
+          0,
+          1,
+          -2
+        ],
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          1,
+          0,
+          -1
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 3,
+      "m": 1,
+      "u1_charge": 1,
+      "su2_irrep_dim": 4,
+      "degeneracy": 4,
+      "states_n_m1_m2": [
+        [
+          0,
+          -1,
+          2
+        ],
+        [
+          0,
+          2,
+          -1
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 3,
+      "m": 3,
+      "u1_charge": 3,
+      "su2_irrep_dim": 4,
+      "degeneracy": 4,
+      "states_n_m1_m2": [
+        [
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          2,
+          1
+        ],
+        [
+          0,
+          3,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 4,
+      "m": -4,
+      "u1_charge": -4,
+      "su2_irrep_dim": 5,
+      "degeneracy": 5,
+      "states_n_m1_m2": [
+        [
+          0,
+          -4,
+          0
+        ],
+        [
+          0,
+          -3,
+          -1
+        ],
+        [
+          0,
+          -2,
+          -2
+        ],
+        [
+          0,
+          -1,
+          -3
+        ],
+        [
+          0,
+          0,
+          -4
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          0,
+          -2,
+          -2
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 4,
+      "m": -2,
+      "u1_charge": -2,
+      "su2_irrep_dim": 5,
+      "degeneracy": 5,
+      "states_n_m1_m2": [
+        [
+          0,
+          -3,
+          1
+        ],
+        [
+          0,
+          1,
+          -3
+        ],
+        [
+          1,
+          -2,
+          0
+        ],
+        [
+          1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          0,
+          -2
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          1,
+          -1,
+          -1
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 4,
+      "m": 0,
+      "u1_charge": 0,
+      "su2_irrep_dim": 5,
+      "degeneracy": 5,
+      "states_n_m1_m2": [
+        [
+          0,
+          -2,
+          2
+        ],
+        [
+          0,
+          2,
+          -2
+        ],
+        [
+          1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          -1
+        ],
+        [
+          2,
+          0,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          2,
+          0,
+          0
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 4,
+      "m": 2,
+      "u1_charge": 2,
+      "su2_irrep_dim": 5,
+      "degeneracy": 5,
+      "states_n_m1_m2": [
+        [
+          0,
+          -1,
+          3
+        ],
+        [
+          0,
+          3,
+          -1
+        ],
+        [
+          1,
+          0,
+          2
+        ],
+        [
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          2,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 4,
+      "m": 4,
+      "u1_charge": 4,
+      "su2_irrep_dim": 5,
+      "degeneracy": 5,
+      "states_n_m1_m2": [
+        [
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          2
+        ],
+        [
+          0,
+          3,
+          1
+        ],
+        [
+          0,
+          4,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          0,
+          2,
+          2
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 5,
+      "m": -5,
+      "u1_charge": -5,
+      "su2_irrep_dim": 6,
+      "degeneracy": 6,
+      "states_n_m1_m2": [
+        [
+          0,
+          -5,
+          0
+        ],
+        [
+          0,
+          -4,
+          -1
+        ],
+        [
+          0,
+          -3,
+          -2
+        ],
+        [
+          0,
+          -2,
+          -3
+        ],
+        [
+          0,
+          -1,
+          -4
+        ],
+        [
+          0,
+          0,
+          -5
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 5,
+      "m": -3,
+      "u1_charge": -3,
+      "su2_irrep_dim": 6,
+      "degeneracy": 6,
+      "states_n_m1_m2": [
+        [
+          0,
+          -4,
+          1
+        ],
+        [
+          0,
+          1,
+          -4
+        ],
+        [
+          1,
+          -3,
+          0
+        ],
+        [
+          1,
+          -2,
+          -1
+        ],
+        [
+          1,
+          -1,
+          -2
+        ],
+        [
+          1,
+          0,
+          -3
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 5,
+      "m": -1,
+      "u1_charge": -1,
+      "su2_irrep_dim": 6,
+      "degeneracy": 6,
+      "states_n_m1_m2": [
+        [
+          0,
+          -3,
+          2
+        ],
+        [
+          0,
+          2,
+          -3
+        ],
+        [
+          1,
+          -2,
+          1
+        ],
+        [
+          1,
+          1,
+          -2
+        ],
+        [
+          2,
+          -1,
+          0
+        ],
+        [
+          2,
+          0,
+          -1
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 5,
+      "m": 1,
+      "u1_charge": 1,
+      "su2_irrep_dim": 6,
+      "degeneracy": 6,
+      "states_n_m1_m2": [
+        [
+          0,
+          -2,
+          3
+        ],
+        [
+          0,
+          3,
+          -2
+        ],
+        [
+          1,
+          -1,
+          2
+        ],
+        [
+          1,
+          2,
+          -1
+        ],
+        [
+          2,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 5,
+      "m": 3,
+      "u1_charge": 3,
+      "su2_irrep_dim": 6,
+      "degeneracy": 6,
+      "states_n_m1_m2": [
+        [
+          0,
+          -1,
+          4
+        ],
+        [
+          0,
+          4,
+          -1
+        ],
+        [
+          1,
+          0,
+          3
+        ],
+        [
+          1,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          3,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 5,
+      "m": 5,
+      "u1_charge": 5,
+      "su2_irrep_dim": 6,
+      "degeneracy": 6,
+      "states_n_m1_m2": [
+        [
+          0,
+          0,
+          5
+        ],
+        [
+          0,
+          1,
+          4
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          3,
+          2
+        ],
+        [
+          0,
+          4,
+          1
+        ],
+        [
+          0,
+          5,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 6,
+      "m": -6,
+      "u1_charge": -6,
+      "su2_irrep_dim": 7,
+      "degeneracy": 7,
+      "states_n_m1_m2": [
+        [
+          0,
+          -6,
+          0
+        ],
+        [
+          0,
+          -5,
+          -1
+        ],
+        [
+          0,
+          -4,
+          -2
+        ],
+        [
+          0,
+          -3,
+          -3
+        ],
+        [
+          0,
+          -2,
+          -4
+        ],
+        [
+          0,
+          -1,
+          -5
+        ],
+        [
+          0,
+          0,
+          -6
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          0,
+          -3,
+          -3
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 6,
+      "m": -4,
+      "u1_charge": -4,
+      "su2_irrep_dim": 7,
+      "degeneracy": 7,
+      "states_n_m1_m2": [
+        [
+          0,
+          -5,
+          1
+        ],
+        [
+          0,
+          1,
+          -5
+        ],
+        [
+          1,
+          -4,
+          0
+        ],
+        [
+          1,
+          -3,
+          -1
+        ],
+        [
+          1,
+          -2,
+          -2
+        ],
+        [
+          1,
+          -1,
+          -3
+        ],
+        [
+          1,
+          0,
+          -4
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          1,
+          -2,
+          -2
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 6,
+      "m": -2,
+      "u1_charge": -2,
+      "su2_irrep_dim": 7,
+      "degeneracy": 7,
+      "states_n_m1_m2": [
+        [
+          0,
+          -4,
+          2
+        ],
+        [
+          0,
+          2,
+          -4
+        ],
+        [
+          1,
+          -3,
+          1
+        ],
+        [
+          1,
+          1,
+          -3
+        ],
+        [
+          2,
+          -2,
+          0
+        ],
+        [
+          2,
+          -1,
+          -1
+        ],
+        [
+          2,
+          0,
+          -2
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          2,
+          -1,
+          -1
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 6,
+      "m": 0,
+      "u1_charge": 0,
+      "su2_irrep_dim": 7,
+      "degeneracy": 7,
+      "states_n_m1_m2": [
+        [
+          0,
+          -3,
+          3
+        ],
+        [
+          0,
+          3,
+          -3
+        ],
+        [
+          1,
+          -2,
+          2
+        ],
+        [
+          1,
+          2,
+          -2
+        ],
+        [
+          2,
+          -1,
+          1
+        ],
+        [
+          2,
+          1,
+          -1
+        ],
+        [
+          3,
+          0,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          3,
+          0,
+          0
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 6,
+      "m": 2,
+      "u1_charge": 2,
+      "su2_irrep_dim": 7,
+      "degeneracy": 7,
+      "states_n_m1_m2": [
+        [
+          0,
+          -2,
+          4
+        ],
+        [
+          0,
+          4,
+          -2
+        ],
+        [
+          1,
+          -1,
+          3
+        ],
+        [
+          1,
+          3,
+          -1
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 6,
+      "m": 4,
+      "u1_charge": 4,
+      "su2_irrep_dim": 7,
+      "degeneracy": 7,
+      "states_n_m1_m2": [
+        [
+          0,
+          -1,
+          5
+        ],
+        [
+          0,
+          5,
+          -1
+        ],
+        [
+          1,
+          0,
+          4
+        ],
+        [
+          1,
+          1,
+          3
+        ],
+        [
+          1,
+          2,
+          2
+        ],
+        [
+          1,
+          3,
+          1
+        ],
+        [
+          1,
+          4,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          1,
+          2,
+          2
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 6,
+      "m": 6,
+      "u1_charge": 6,
+      "su2_irrep_dim": 7,
+      "degeneracy": 7,
+      "states_n_m1_m2": [
+        [
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          1,
+          5
+        ],
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          0,
+          3,
+          3
+        ],
+        [
+          0,
+          4,
+          2
+        ],
+        [
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          6,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          0,
+          3,
+          3
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 7,
+      "m": -7,
+      "u1_charge": -7,
+      "su2_irrep_dim": 8,
+      "degeneracy": 8,
+      "states_n_m1_m2": [
+        [
+          0,
+          -7,
+          0
+        ],
+        [
+          0,
+          -6,
+          -1
+        ],
+        [
+          0,
+          -5,
+          -2
+        ],
+        [
+          0,
+          -4,
+          -3
+        ],
+        [
+          0,
+          -3,
+          -4
+        ],
+        [
+          0,
+          -2,
+          -5
+        ],
+        [
+          0,
+          -1,
+          -6
+        ],
+        [
+          0,
+          0,
+          -7
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 7,
+      "m": -5,
+      "u1_charge": -5,
+      "su2_irrep_dim": 8,
+      "degeneracy": 8,
+      "states_n_m1_m2": [
+        [
+          0,
+          -6,
+          1
+        ],
+        [
+          0,
+          1,
+          -6
+        ],
+        [
+          1,
+          -5,
+          0
+        ],
+        [
+          1,
+          -4,
+          -1
+        ],
+        [
+          1,
+          -3,
+          -2
+        ],
+        [
+          1,
+          -2,
+          -3
+        ],
+        [
+          1,
+          -1,
+          -4
+        ],
+        [
+          1,
+          0,
+          -5
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 7,
+      "m": -3,
+      "u1_charge": -3,
+      "su2_irrep_dim": 8,
+      "degeneracy": 8,
+      "states_n_m1_m2": [
+        [
+          0,
+          -5,
+          2
+        ],
+        [
+          0,
+          2,
+          -5
+        ],
+        [
+          1,
+          -4,
+          1
+        ],
+        [
+          1,
+          1,
+          -4
+        ],
+        [
+          2,
+          -3,
+          0
+        ],
+        [
+          2,
+          -2,
+          -1
+        ],
+        [
+          2,
+          -1,
+          -2
+        ],
+        [
+          2,
+          0,
+          -3
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 7,
+      "m": -1,
+      "u1_charge": -1,
+      "su2_irrep_dim": 8,
+      "degeneracy": 8,
+      "states_n_m1_m2": [
+        [
+          0,
+          -4,
+          3
+        ],
+        [
+          0,
+          3,
+          -4
+        ],
+        [
+          1,
+          -3,
+          2
+        ],
+        [
+          1,
+          2,
+          -3
+        ],
+        [
+          2,
+          -2,
+          1
+        ],
+        [
+          2,
+          1,
+          -2
+        ],
+        [
+          3,
+          -1,
+          0
+        ],
+        [
+          3,
+          0,
+          -1
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 7,
+      "m": 1,
+      "u1_charge": 1,
+      "su2_irrep_dim": 8,
+      "degeneracy": 8,
+      "states_n_m1_m2": [
+        [
+          0,
+          -3,
+          4
+        ],
+        [
+          0,
+          4,
+          -3
+        ],
+        [
+          1,
+          -2,
+          3
+        ],
+        [
+          1,
+          3,
+          -2
+        ],
+        [
+          2,
+          -1,
+          2
+        ],
+        [
+          2,
+          2,
+          -1
+        ],
+        [
+          3,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 7,
+      "m": 3,
+      "u1_charge": 3,
+      "su2_irrep_dim": 8,
+      "degeneracy": 8,
+      "states_n_m1_m2": [
+        [
+          0,
+          -2,
+          5
+        ],
+        [
+          0,
+          5,
+          -2
+        ],
+        [
+          1,
+          -1,
+          4
+        ],
+        [
+          1,
+          4,
+          -1
+        ],
+        [
+          2,
+          0,
+          3
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          3,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 7,
+      "m": 5,
+      "u1_charge": 5,
+      "su2_irrep_dim": 8,
+      "degeneracy": 8,
+      "states_n_m1_m2": [
+        [
+          0,
+          -1,
+          6
+        ],
+        [
+          0,
+          6,
+          -1
+        ],
+        [
+          1,
+          0,
+          5
+        ],
+        [
+          1,
+          1,
+          4
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          1,
+          4,
+          1
+        ],
+        [
+          1,
+          5,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 7,
+      "m": 7,
+      "u1_charge": 7,
+      "su2_irrep_dim": 8,
+      "degeneracy": 8,
+      "states_n_m1_m2": [
+        [
+          0,
+          0,
+          7
+        ],
+        [
+          0,
+          1,
+          6
+        ],
+        [
+          0,
+          2,
+          5
+        ],
+        [
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          4,
+          3
+        ],
+        [
+          0,
+          5,
+          2
+        ],
+        [
+          0,
+          6,
+          1
+        ],
+        [
+          0,
+          7,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 8,
+      "m": -8,
+      "u1_charge": -8,
+      "su2_irrep_dim": 9,
+      "degeneracy": 9,
+      "states_n_m1_m2": [
+        [
+          0,
+          -8,
+          0
+        ],
+        [
+          0,
+          -7,
+          -1
+        ],
+        [
+          0,
+          -6,
+          -2
+        ],
+        [
+          0,
+          -5,
+          -3
+        ],
+        [
+          0,
+          -4,
+          -4
+        ],
+        [
+          0,
+          -3,
+          -5
+        ],
+        [
+          0,
+          -2,
+          -6
+        ],
+        [
+          0,
+          -1,
+          -7
+        ],
+        [
+          0,
+          0,
+          -8
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          0,
+          -4,
+          -4
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 8,
+      "m": -6,
+      "u1_charge": -6,
+      "su2_irrep_dim": 9,
+      "degeneracy": 9,
+      "states_n_m1_m2": [
+        [
+          0,
+          -7,
+          1
+        ],
+        [
+          0,
+          1,
+          -7
+        ],
+        [
+          1,
+          -6,
+          0
+        ],
+        [
+          1,
+          -5,
+          -1
+        ],
+        [
+          1,
+          -4,
+          -2
+        ],
+        [
+          1,
+          -3,
+          -3
+        ],
+        [
+          1,
+          -2,
+          -4
+        ],
+        [
+          1,
+          -1,
+          -5
+        ],
+        [
+          1,
+          0,
+          -6
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          1,
+          -3,
+          -3
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 8,
+      "m": -4,
+      "u1_charge": -4,
+      "su2_irrep_dim": 9,
+      "degeneracy": 9,
+      "states_n_m1_m2": [
+        [
+          0,
+          -6,
+          2
+        ],
+        [
+          0,
+          2,
+          -6
+        ],
+        [
+          1,
+          -5,
+          1
+        ],
+        [
+          1,
+          1,
+          -5
+        ],
+        [
+          2,
+          -4,
+          0
+        ],
+        [
+          2,
+          -3,
+          -1
+        ],
+        [
+          2,
+          -2,
+          -2
+        ],
+        [
+          2,
+          -1,
+          -3
+        ],
+        [
+          2,
+          0,
+          -4
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          2,
+          -2,
+          -2
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 8,
+      "m": -2,
+      "u1_charge": -2,
+      "su2_irrep_dim": 9,
+      "degeneracy": 9,
+      "states_n_m1_m2": [
+        [
+          0,
+          -5,
+          3
+        ],
+        [
+          0,
+          3,
+          -5
+        ],
+        [
+          1,
+          -4,
+          2
+        ],
+        [
+          1,
+          2,
+          -4
+        ],
+        [
+          2,
+          -3,
+          1
+        ],
+        [
+          2,
+          1,
+          -3
+        ],
+        [
+          3,
+          -2,
+          0
+        ],
+        [
+          3,
+          -1,
+          -1
+        ],
+        [
+          3,
+          0,
+          -2
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          3,
+          -1,
+          -1
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 8,
+      "m": 0,
+      "u1_charge": 0,
+      "su2_irrep_dim": 9,
+      "degeneracy": 9,
+      "states_n_m1_m2": [
+        [
+          0,
+          -4,
+          4
+        ],
+        [
+          0,
+          4,
+          -4
+        ],
+        [
+          1,
+          -3,
+          3
+        ],
+        [
+          1,
+          3,
+          -3
+        ],
+        [
+          2,
+          -2,
+          2
+        ],
+        [
+          2,
+          2,
+          -2
+        ],
+        [
+          3,
+          -1,
+          1
+        ],
+        [
+          3,
+          1,
+          -1
+        ],
+        [
+          4,
+          0,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          4,
+          0,
+          0
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 8,
+      "m": 2,
+      "u1_charge": 2,
+      "su2_irrep_dim": 9,
+      "degeneracy": 9,
+      "states_n_m1_m2": [
+        [
+          0,
+          -3,
+          5
+        ],
+        [
+          0,
+          5,
+          -3
+        ],
+        [
+          1,
+          -2,
+          4
+        ],
+        [
+          1,
+          4,
+          -2
+        ],
+        [
+          2,
+          -1,
+          3
+        ],
+        [
+          2,
+          3,
+          -1
+        ],
+        [
+          3,
+          0,
+          2
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          2,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          3,
+          1,
+          1
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 8,
+      "m": 4,
+      "u1_charge": 4,
+      "su2_irrep_dim": 9,
+      "degeneracy": 9,
+      "states_n_m1_m2": [
+        [
+          0,
+          -2,
+          6
+        ],
+        [
+          0,
+          6,
+          -2
+        ],
+        [
+          1,
+          -1,
+          5
+        ],
+        [
+          1,
+          5,
+          -1
+        ],
+        [
+          2,
+          0,
+          4
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          2,
+          4,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 8,
+      "m": 6,
+      "u1_charge": 6,
+      "su2_irrep_dim": 9,
+      "degeneracy": 9,
+      "states_n_m1_m2": [
+        [
+          0,
+          -1,
+          7
+        ],
+        [
+          0,
+          7,
+          -1
+        ],
+        [
+          1,
+          0,
+          6
+        ],
+        [
+          1,
+          1,
+          5
+        ],
+        [
+          1,
+          2,
+          4
+        ],
+        [
+          1,
+          3,
+          3
+        ],
+        [
+          1,
+          4,
+          2
+        ],
+        [
+          1,
+          5,
+          1
+        ],
+        [
+          1,
+          6,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          1,
+          3,
+          3
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    },
+    {
+      "l": 8,
+      "m": 8,
+      "u1_charge": 8,
+      "su2_irrep_dim": 9,
+      "degeneracy": 9,
+      "states_n_m1_m2": [
+        [
+          0,
+          0,
+          8
+        ],
+        [
+          0,
+          1,
+          7
+        ],
+        [
+          0,
+          2,
+          6
+        ],
+        [
+          0,
+          3,
+          5
+        ],
+        [
+          0,
+          4,
+          4
+        ],
+        [
+          0,
+          5,
+          3
+        ],
+        [
+          0,
+          6,
+          2
+        ],
+        [
+          0,
+          7,
+          1
+        ],
+        [
+          0,
+          8,
+          0
+        ]
+      ],
+      "diagonal_sector_members": [
+        [
+          0,
+          4,
+          4
+        ]
+      ],
+      "defective_possible": false,
+      "reason": "members carry distinct (m1,m2), which label blocks that are decoupled at every delta; degeneracy is semisimple"
+    }
+  ]
+}
