@@ -1,51 +1,79 @@
 # Session handoff
 
-## Completed (session 1, 2026-08-01)
+## Session 2 (2026-08-01) — bulk research takeover
 
-Stage A essentially complete; a substantial and unplanned part of Stage C
-(equal-spin symmetry analysis) turned out to be reachable analytically and was
-completed first, because it sharply narrows the numerical search.
+### Completed
 
-* Repo, venv, dependency lock, CI (pytest + gitleaks), package skeleton.
-* **Separation re-derived from the metric symbolically**, not transcribed.
-  Conventions in `docs/CONVENTIONS.md` are enforced by CI.
-* Geometry module (horizons, `Ω_a`, `Ω_b`, `κ`, `T_H`, `s`/`δ`) + tests.
-* Angular sector **complete and cross-verified**: exactly-tridiagonal
-  complex-symmetric Jacobi construction + independent finite-difference solver.
-* Exact symmetry results C4–C10 in `docs/CLAIM_LEDGER.md`, including a
-  structural **no-go** (C8) that removes the specification's primary target
-  scenario §2.1 and redirects the search (`docs/SYMMETRY_STRUCTURE.md` §5).
+**Administrative**
+* Recovery audit (`docs/RECOVERY_AUDIT.md`): entry state independently verified,
+  56/56 tests passing, handoff accurate.
+* History-aware publication audit over every reachable commit — zero
+  credentials, zero PDFs, zero large blobs, zero personal paths. Repository is
+  now **PUBLIC** with history intact (no rewrite, nothing to revoke).
+* CI **green**: `tests and lint` + `secret scan`, minimal `contents: read`
+  permissions, no `pull_request_target`, slow tests excluded from the per-commit
+  path, plus a manual `research-validation.yml` for the full suite.
+* `main` protected: PR required, both checks required, force pushes and
+  deletions blocked, linear history, conversation resolution.
+* Durable project skill at `.claude/skills/mp5d-bulk-research/`.
 
-## Radial sector: structure done, solver not
+**Scientific**
+* `docs/CROSS_SECTOR_EP_NO_GO.md` written properly: the no-go now rests on the
+  direct-sum structure of the operator pencil **and its resolvent**, giving a
+  simple (order-1) resolvent pole at a cross-sector coincidence and hence
+  semisimplicity. O6.1–O6.4 discharged; **O6.5–O6.7 open**.
+* Radial singular structure and exponents (session 1) unchanged and still CI-pinned.
+* 67 tests passing.
 
-Derived and pinned (C15-C18): `r = 0` is an ordinary point for `ab != 0`; the
-problem is confluent-Heun type; the horizon exponent is
-`(ω − m₁Ω_a − m₂Ω_b)/(2κ)`; the potential is exactly even in `r` so the
-asymptotic exponent is exactly `−3/2` with no Coulomb phase.
+### NOT completed — and this is the blocking item
 
-That fixes every ingredient a radial method needs *except* the eigenvalue
-solver itself.
+**No QNM frequency has been computed. Zero benchmarks. Zero EP searches.**
 
-## Not started
+Two radial formulations were built; both are documented failures with
+diagnoses in `docs/FAILED_APPROACHES.md` (entries 3–5):
 
-* **Radial eigenvalue solver.** This is the critical path. Nothing downstream (branch
-  atlas, degeneracy detection, exceptional sets, certification) can begin
-  without it. No QNM frequency has been computed yet (claim C14).
-* Baseline benchmark validation against Huang–Huang and the singly-rotating
-  literature.
-* Author-code recovery (`docs/AUTHOR_CODE_REQUEST.md` drafted, not sent).
+* **Collocation (Solver A) — structurally wrong, abandoned.** After peeling
+  `e^{iΩr}`, the ingoing solution `e^{−2iΩr}` *decays* for `Im ω < 0`, so
+  demanding boundedness does not exclude it. Matrix singular everywhere in the
+  lower half plane. Not fixable by tuning.
+* **Leaver/Hill (Solver B) — partially working, the real path forward.** The
+  Leaver variable, prefactor, and polynomial-coefficient recovery all work and
+  are self-validating (degrees 12/11/10, stable). The hard Hill truncation does
+  **not** isolate roots: the last columns have reduced norm and produce spurious
+  near-null vectors at the truncation edge.
 
-## Next actions, in order
+### Exact next commands
 
-1. Implement the radial solver. Recommended: Leaver-type continued fraction in
-   `z = r²` (regular singular points at `z = 0, z₊, z₋`; irregular point at
-   infinity of half-integer rank, so the expansion variable should be `r`, not
-   `z`) **plus** an independent Chebyshev collocation on a compactified
-   coordinate. The collocation form is required regardless, because the
-   exceptional-point analysis needs left/right eigenvectors and condition
-   numbers, which a continued fraction cannot supply.
-2. Reproduce the minimum benchmark set (§8 of the specification).
-3. Build the equal-spin branch atlas at fixed `(m₁, m₂)` — note that by C6 the
-   atlas is indexed by `(l, m, N)` at `δ = 0`, which is much smaller than a
-   naive `(n, m₁, m₂, N)` enumeration.
-4. Search within diagonal sectors `m₁ = m₂` first (C10).
+The blocker is the truncation, not the construction. Fix it in
+`src/mp5d/radial/leaver.py`:
+
+1. Reduce the multi-term recurrence (bandwidth set by `deg A = 12`) to a
+   three-term recurrence by Leaver's Gaussian elimination, row by row.
+2. Replace `hill_matrix` / `smallest_singular_value` with the continued-fraction
+   condition on the three-term recurrence, using the standard large-`n` tail
+   estimate `a_{n+1}/a_n → 1 − √(c)/√n + …` for a rank-1 irregular point, so the
+   tail is closed analytically instead of truncated.
+3. Validate in this order, and do not skip: 5D Schwarzschild–Tangherlini
+   (`a = b = 0`, `l = 0`) first, then convergence in `depth`, then the
+   `(a, m₁) ↔ (b, m₂)` exchange identity, which is exact and is the most
+   sensitive diagnostic available.
+
+```bash
+cd ~/mp5d-symmetry-exceptional-topology
+PYTHONPATH=src .venv/bin/python -m pytest -q            # expect 67 passed
+PYTHONPATH=src .venv/bin/python -c "
+from mp5d.radial.leaver import LeaverProblem
+from mp5d.geometry import MPGeometry
+p = LeaverProblem(MPGeometry(a=0.0,b=0.0,M=1.0), 0.0, 0,0,0, depth=50)
+print(p.smallest_singular_value(0.9-0.9j))"   # currently ~1e-8 everywhere: the bug
+```
+
+Only after a QNM is trustworthy do the benchmark gate
+(`.claude/skills/mp5d-bulk-research/SCIENTIFIC_GATES.md`), then the branch atlas
+in diagonal sectors `m₁ = m₂` first, then the targeted EP search.
+
+### Do not repeat
+
+* Fully symbolic sympy derivations with all parameters symbolic (fails, twice).
+* Any method that selects QNMs by "peel the outgoing factor, demand bounded".
+* Leaving the clearing factor's `u^k` in place (zeroes the leading recurrence rows).
