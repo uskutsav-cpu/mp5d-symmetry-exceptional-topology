@@ -80,12 +80,13 @@ R = x^{-iσ} (1-x)^{3/2} exp( iΩ(r₊-r₋)/(1-x) ) Σ aₙ xⁿ
 `exp(iΩr) r^{-3/2}` with `Ω = √(ω²−μ²)` (outgoing at infinity), the power being
 exactly `−3/2` because the radial potential is even in `r` (claim C18).
 
-The raw recurrence has **width 9**. It is reduced to three terms by the general
+The raw recurrence has **width 9 for the static case `a = b = 0`**; for generic
+two-spin parameters it is **width 13**. It is reduced to three terms by the general
 Gaussian elimination in `mp5d.radial.recurrence`, then the `n`-th inversion of
 Leaver's condition is solved by Muller's method. `Λ` is recomputed from the
 angular solver at every iterate — never frozen.
 
-**Solver B — Hill determinant with Wynn acceleration.** Uses the raw 9-term
+**Solver B — Hill determinant with Wynn acceleration.** Uses the raw N-term
 recurrence directly: no Gaussian reduction and no continued fraction. The
 truncated determinant is proportional to the forward-generated coefficient
 `a_N`, so that is evaluated instead, and the root sequence in truncation order

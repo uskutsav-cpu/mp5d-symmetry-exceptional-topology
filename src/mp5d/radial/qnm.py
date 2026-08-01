@@ -1,7 +1,8 @@
 """Radial QNM solvers for 5D Myers-Perry.
 
 Solver A -- Leaver continued fraction
-    Frobenius series in ``x = (r - r_+)/(r - r_-)``, the raw 9-term recurrence
+    Frobenius series in ``x = (r - r_+)/(r - r_-)``, the raw N-term recurrence
+    (width 9 for a = b = 0; width 13 for generic two spins)
     reduced to three terms by the general Gaussian elimination in
     :mod:`mp5d.radial.recurrence`, then the ``n``-th inversion of Leaver's
     condition solved for ``omega``.

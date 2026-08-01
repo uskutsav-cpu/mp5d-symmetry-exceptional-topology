@@ -1,0 +1,83 @@
+{
+  "commit": "c2ab227f53b0a088052f37ffdfda52286da4b7ad",
+  "env_hash": "51bd433766170fc3",
+  "gates": [
+    {
+      "n": 1,
+      "name": "Repository recovery and consistency",
+      "status": "COMPLETE"
+    },
+    {
+      "n": 2,
+      "name": "Raw-recurrence asymptotic tail",
+      "status": "PARTIAL - leading order only"
+    },
+    {
+      "n": 3,
+      "name": "Independent Solver C",
+      "status": "COMPLETE"
+    },
+    {
+      "n": 4,
+      "name": "Three-solver validation",
+      "status": "COMPLETE - 10/10 points"
+    },
+    {
+      "n": 5,
+      "name": "Long-lived massive branches",
+      "status": "NOT STARTED"
+    },
+    {
+      "n": 6,
+      "name": "Cross-sector no-go closure",
+      "status": "PARTIAL - O6.5-O6.7 open"
+    },
+    {
+      "n": 7,
+      "name": "Fixed-sector branch atlas",
+      "status": "NOT STARTED"
+    },
+    {
+      "n": 8,
+      "name": "Candidate collision localization",
+      "status": "NOT STARTED"
+    },
+    {
+      "n": 9,
+      "name": "EP verification",
+      "status": "NOT STARTED"
+    },
+    {
+      "n": 10,
+      "name": "Exceptional-locus continuation",
+      "status": "NOT STARTED"
+    },
+    {
+      "n": 11,
+      "name": "Higher-order and junction search",
+      "status": "NOT STARTED"
+    },
+    {
+      "n": 12,
+      "name": "Effective local theory",
+      "status": "NOT STARTED"
+    },
+    {
+      "n": 13,
+      "name": "Pseudospectral and time-domain",
+      "status": "NOT STARTED"
+    },
+    {
+      "n": 14,
+      "name": "Numerical certification",
+      "status": "NOT STARTED"
+    },
+    {
+      "n": 15,
+      "name": "Final reproducibility freeze",
+      "status": "NOT STARTED"
+    }
+  ],
+  "complete": 3,
+  "total": 15
+}
