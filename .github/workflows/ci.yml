@@ -51,9 +51,27 @@ jobs:
       - name: detect-secrets against audited baseline
         run: |
           pip install detect-secrets
-          # Fails if any NEW finding appears that is not already audited in
-          # .secrets.baseline.  The baseline's existing entries are provenance
-          # hashes (sha256 of requirements.lock), audited as is_secret: false.
+          cp .secrets.baseline .secrets.baseline.orig
           detect-secrets scan --baseline .secrets.baseline --exclude-files '^\.venv/'
-          git diff --exit-code .secrets.baseline \
-            || { echo "New potential secret detected; review .secrets.baseline"; exit 1; }
+          python - <<'EOF'
+          import json, sys
+
+          def findings(path):
+              d = json.load(open(path))
+              # compare only the findings themselves; detect-secrets rewrites a
+              # `generated_at` timestamp on every run, which is not a signal.
+              return {
+                  (f, i["type"], i.get("line_number"))
+                  for f, items in d.get("results", {}).items()
+                  for i in items
+                  if i.get("is_secret") is not False
+              }
+
+          new = findings(".secrets.baseline") - findings(".secrets.baseline.orig")
+          if new:
+              print("New unaudited potential secrets:")
+              for x in sorted(map(str, new)):
+                  print("  ", x)
+              sys.exit(1)
+          print("no new secrets beyond the audited baseline")
+          EOF
