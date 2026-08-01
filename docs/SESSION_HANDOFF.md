@@ -12,7 +12,7 @@
 * Confirmed two independent ways: the exponent test (`n^{1/2}` scaling
   converges, `n^1` diverges) and the `exp(−k√N)` depth signature.
 * **Tail implemented** at leading order, opt-in via `tail_order`; higher orders
-  raise rather than返回 a wrong tail. Measured **~1.35× depth reduction**
+  raise rather than return a wrong tail. Measured **~1.35× depth reduction**
   (+1.4 digits at depth 200).
 * 127 tests passing.
 
