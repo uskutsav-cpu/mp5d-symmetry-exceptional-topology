@@ -130,11 +130,11 @@ class MPGeometry:
         return 0.5 * (self.a - self.b)
 
     @classmethod
-    def from_sdelta(cls, s: float, delta: float, M: float = 1.0) -> "MPGeometry":
+    def from_sdelta(cls, s: float, delta: float, M: float = 1.0) -> MPGeometry:
         a, b = sdelta_to_ab(s, delta)
         return cls(a=a, b=b, M=M)
 
-    def exchanged(self) -> "MPGeometry":
+    def exchanged(self) -> MPGeometry:
         """The ``a <-> b`` image, i.e. ``delta -> -delta`` at fixed ``s``."""
         return MPGeometry(a=self.b, b=self.a, M=self.M)
 

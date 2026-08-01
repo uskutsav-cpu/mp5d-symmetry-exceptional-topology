@@ -1,0 +1,33 @@
+{
+  "source": {
+    "authors": "Jerzy Matyjasek",
+    "title": "Accurate Quasinormal Modes of the Five-Dimensional Schwarzschild-Tangherlini Black Holes",
+    "arxiv": "2107.04815",
+    "table": "I (l=0) / II (l=1)",
+    "methods_agreeing_in_source": [
+      "Hill determinant",
+      "continued fractions"
+    ],
+    "quoted_precision_digits": 12,
+    "access": "arXiv abstract+PDF consulted for the tabulated value only; no PDF committed"
+  },
+  "system": "5D Schwarzschild-Tangherlini, massless scalar",
+  "normalization": {
+    "metric_function": "f(r) = 1 - r^{3-D}, D = 5",
+    "horizon_radius": 1.0,
+    "T_H": 0.15915494309189535,
+    "published_quantity": "omega_tilde = omega / T_H"
+  },
+  "mode": {
+    "l": 1,
+    "overtone": 0
+  },
+  "published_omega_over_TH": [
+    6.38382253011,
+    -2.27657411582
+  ],
+  "published_omega_r_plus_units": [
+    1.0160169114884163,
+    -0.36232802384781404
+  ]
+}

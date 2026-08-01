@@ -2,7 +2,7 @@
   "status": "complete",
   "kind": "analytic",
   "provenance": {
-    "commit": "uncommitted",
+    "commit": "e339b0fdfc7d088a4164b0a07b742474ec4c7907",
     "lock_sha256_16": "51bd433766170fc3",
     "solver": "none (exact representation theory)",
     "precision": "exact"
