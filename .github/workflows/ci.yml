@@ -48,19 +48,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
-      - name: detect-secrets over the working tree
+      - name: detect-secrets against audited baseline
         run: |
           pip install detect-secrets
-          detect-secrets scan --all-files > .ds.json
-          python - <<'PY'
-          import json, sys
-          res = json.load(open(".ds.json")).get("results", {})
-          allowed = {"results/symmetry_multiplets.json"}  # provenance hash, not a secret
-          bad = {f: v for f, v in res.items() if f not in allowed}
-          if bad:
-              print("Potential secrets found:")
-              for f in bad:
-                  print(" ", f, [i.get("type") for i in bad[f]])
-              sys.exit(1)
-          print("no unexpected secrets")
-          PY
+          # Fails if any NEW finding appears that is not already audited in
+          # .secrets.baseline.  The baseline's existing entries are provenance
+          # hashes (sha256 of requirements.lock), audited as is_secret: false.
+          detect-secrets scan --baseline .secrets.baseline --exclude-files '^\.venv/'
+          git diff --exit-code .secrets.baseline \
+            || { echo "New potential secret detected; review .secrets.baseline"; exit 1; }
