@@ -1,0 +1,42 @@
+{
+  "status": "complete",
+  "description": "Radial root candidates rejected, with the reason. Kept so the same spurious roots are not rediscovered.",
+  "records": [
+    {
+      "candidate": [
+        6.7e-09,
+        -0.6959523763
+      ],
+      "context": "solver A, ST5D l=0, Newton from seed 0.9-0.9j, depth 300",
+      "reason": "Re(omega) ~ 0: the root finder walked onto the branch cut of Omega = sqrt(omega^2 - mu^2), where the peeled prefactor is discontinuous. Not a physical mode.",
+      "rejected_by": "branch-choice inconsistency"
+    },
+    {
+      "candidate": [
+        1.9574e-06,
+        -0.586946355
+      ],
+      "context": "solver A, ST5D l=0, Newton from seed 1.2-1.1j, depth 300",
+      "reason": "same branch-cut artifact at Re(omega) ~ 0",
+      "rejected_by": "branch-choice inconsistency"
+    },
+    {
+      "candidate": [
+        0.006196893543,
+        -0.799039842122
+      ],
+      "context": "solver A, ST5D l=0, Muller from seed 0.45-0.45j",
+      "reason": "drifted to the Re(omega) ~ 0 branch cut; depth table unstable (0.8005, 0.7514, 0.7965, 0.7990 at depths 100/200/400/800) and converged flag False",
+      "rejected_by": "drift with recurrence depth"
+    },
+    {
+      "candidate": [
+        -1.0133264e-05,
+        -0.355951899095
+      ],
+      "context": "solver B, a=0.3 b=0 mu=0.2 (m1,m2)=(1,0) l=1, seed 1.02-0.36j",
+      "reason": "Hill/Wynn root finder drifted to the branch cut from a loose seed; with a tight seed (1.115-0.354j) solver B reproduces solver A to 2.3e-13. A seeding limitation of solver B, not a spectral feature.",
+      "rejected_by": "solver B seeding; superseded by a converged value"
+    }
+  ]
+}

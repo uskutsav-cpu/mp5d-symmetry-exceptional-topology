@@ -109,3 +109,45 @@ condition through the continued fraction with its correct large-`n` tail
 estimate, rather than reading a determinant off a hard truncation. That closes
 the truncation edge properly. It was not reached before the session's resource
 ceiling.
+
+## 5b. CORRECTION to entry 5 (session 3)
+
+Entry 5 attributed the Hill-truncation failure to an **edge-localized null
+vector**. That diagnosis is **wrong** and is corrected here rather than edited
+away.
+
+Measured: the null vector's weight in the last five coefficients is `0.19`, not
+dominant. The reproduction test
+`tests/unit/test_radial_known_failures.py::test_hill_svd_condition_is_omega_insensitive`
+now asserts `< 0.5` so the incorrect story cannot be re-asserted.
+
+**Actual cause: dynamic range.** Recurrence rows carry an `n(n-1)` factor, so
+Hill-matrix entries span many orders of magnitude. After row equilibration the
+smallest singular value is tiny *and nearly independent of* `omega`, which
+destroys the root condition. Taking an SVD was the mistake, not the truncation.
+
+**Fix (session 3, working).** Do not form an SVD at all. The truncated
+determinant is proportional to the forward-generated coefficient `a_N`, which
+carries the same zeros with none of the dynamic range. Evaluating `a_N` and
+accelerating the root sequence with Wynn's epsilon algorithm gives Solver B,
+which now reproduces Solver A to `1e-12`.
+
+## 6. Muller iterates walking onto the branch cut (session 3, mitigated)
+
+`Om = sqrt(omega^2 - mu^2)` has a branch cut at `Re omega = 0`. Root searches
+seeded loosely repeatedly converged to spurious near-imaginary "roots" there
+(recorded with their values in `results/rejected_radial_roots.json`).
+
+Mitigations that worked: clamp Muller iterates to `Re omega >= 0.05`, and start
+the depth schedule coarse (depth 100), which widens the basin of attraction.
+
+Mitigation that did **not** work, recorded so it is not retried: widening the
+initial Muller triangle from `h = 1e-4|x0|` to `2e-2|x0|`. It made matters worse,
+turning one failing seed into three. The narrow triangle is correct here.
+
+## 7. Fully symbolic Leaver derivation, second attempt (session 3)
+
+Re-confirmed that a fully symbolic transformation of the radial ODE to the
+Leaver variable with all parameters symbolic does not terminate in 10 minutes.
+The FFT-based numerical extraction is the route that works. Do not retry the
+symbolic path without first fixing the parameters to numbers.
