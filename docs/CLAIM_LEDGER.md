@@ -41,3 +41,6 @@ topological / certified until its evidence requirement is met.
 | C28 | Physical QNMs are invariant under scaling angle (45–75°), contour length (40–130) and resolution (150–380); continuum artifacts are not. | resolution verified | `tests/unit/test_solver_c.py` |
 | C29 | Three solvers agree below `1e-5` on 10/10 benchmark points, including `r₂ = 0.140` and `0.190` — beyond the `r₂ ≳ 0.1` limit Huang–Huang state for their own CFM. | **independently verified** | `results/three_solver_validation.json` |
 | C30 | Any exceptional point in this system. | **NOT SEARCHED** | no atlas, no EP work |
+| C31 | EP2 augmented conditions implemented with an exact total `dF/dω` (Λ recomputed every evaluation, never frozen). | numerically observed | `src/mp5d/exceptional/ep_solver.py` |
+| C32 | **No EP2 exists** in sector (1,1), `l=2`, `N=0`, over `r₂ ≤ 0.20`, extremality `≥ 0.05`, `s ∈ [0.15,0.35]`, `δ ∈ [−0.15,0.15]`, `μ ∈ [0.1,1.7]`: min `|dF/dω| = 1.02e-2` over 74 converged points. | **numerically observed (bounded exclusion)** | `results/negative_regions.json` |
+| C33 | A near-double root at `r₂=0.44`, extremality `0.0089`. | **REJECTED — outside the verified domain**, not evidence either way | `results/rejected_collisions.json` |
