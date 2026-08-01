@@ -7,3 +7,7 @@ ignore = ["E741"]  # ambiguous name 'l' is standard notation for angular momentu
 
 [lint.per-file-ignores]
 "tests/**" = ["E501"]
+# Each transcribed table row is kept on one line so it lines up visually with
+# the corresponding row of the source paper; wrapping them would make
+# proof-reading the transcription against the PDF materially harder.
+"scripts/build_huang_huang_manifest.py" = ["E501"]

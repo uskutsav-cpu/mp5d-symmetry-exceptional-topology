@@ -1,0 +1,690 @@
+{
+  "source": {
+    "authors": "Zi-Yang Huang and Jia-Hui Huang",
+    "title": "Quasinormal modes of massive scalar fields in five-dimensional Myers-Perry black holes with two arbitrary rotation parameters",
+    "arxiv": "2502.11764",
+    "dated": "2025-02-20"
+  },
+  "normalization": {
+    "metric": "their Eq.(1); rho^2 and Delta agree with ours",
+    "ansatz": "Psi = e^{-i w t} e^{i m1 phi} e^{i m2 psi} R(r) S(theta)",
+    "sign_convention": "damped modes have Im(omega) < 0",
+    "lambda_mapping": "their lambda_{k m1 m2} = our Ahat = Lambda + (w^2-mu^2) b^2",
+    "k_mapping": "their k is our angular node index n; l = 2k + |m1| + |m2|",
+    "r2_mapping": "their r2 is our inner horizon r_-",
+    "restriction": "paper restricts to m1 >= 0, m2 >= 0"
+  },
+  "cfm_caveat": "The authors state the continued-fraction method is applicable for r2 << 1 and that their CFM results 'begin to show instability when r2 >~ 0.1' (text near Fig. 1). Their CFM uses a 25-term recursion.",
+  "table": "IV",
+  "caption": "k=0, m1=m2=1, mu=0.1 grid.",
+  "records": [
+    {
+      "table": "IV",
+      "row": "b=0.1",
+      "col": "a=0.1",
+      "M": 1.0,
+      "a": 0.1,
+      "b": 0.1,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.56895,
+        -0.355839
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.010102051443364988,
+      "cfm_regarded_reliable_by_authors": true,
+      "flags": [
+        "equal_spin_diagonal"
+      ]
+    },
+    {
+      "table": "IV",
+      "row": "b=0.1",
+      "col": "a=0.2",
+      "M": 1.0,
+      "a": 0.2,
+      "b": 0.1,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.60232,
+        -0.354012
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.020524117844836553,
+      "cfm_regarded_reliable_by_authors": true,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.1",
+      "col": "a=0.3",
+      "M": 1.0,
+      "a": 0.3,
+      "b": 0.1,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.64036,
+        -0.350607
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.031640379061052146,
+      "cfm_regarded_reliable_by_authors": true,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.1",
+      "col": "a=0.4",
+      "M": 1.0,
+      "a": 0.4,
+      "b": 0.1,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.68394,
+        -0.345147
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.04395689881625348,
+      "cfm_regarded_reliable_by_authors": true,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.1",
+      "col": "a=0.5",
+      "M": 1.0,
+      "a": 0.5,
+      "b": 0.1,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.73441,
+        -0.33684
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.058257569495584006,
+      "cfm_regarded_reliable_by_authors": true,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.1",
+      "col": "a=0.6",
+      "M": 1.0,
+      "a": 0.6,
+      "b": 0.1,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.79398,
+        -0.324253
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.07594128046507667,
+      "cfm_regarded_reliable_by_authors": true,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.2",
+      "col": "a=0.1",
+      "M": 1.0,
+      "a": 0.1,
+      "b": 0.2,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.60232,
+        -0.354012
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.020524117844836553,
+      "cfm_regarded_reliable_by_authors": true,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.2",
+      "col": "a=0.2",
+      "M": 1.0,
+      "a": 0.2,
+      "b": 0.2,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.63886,
+        -0.351547
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.04174243050441632,
+      "cfm_regarded_reliable_by_authors": true,
+      "flags": [
+        "equal_spin_diagonal"
+      ]
+    },
+    {
+      "table": "IV",
+      "row": "b=0.2",
+      "col": "a=0.3",
+      "M": 1.0,
+      "a": 0.3,
+      "b": 0.2,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.6812,
+        -0.347026
+      ],
+      "printed_digits": 5,
+      "inner_horizon_r2": 0.06448101666109057,
+      "cfm_regarded_reliable_by_authors": true,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.2",
+      "col": "a=0.4",
+      "M": 1.0,
+      "a": 0.4,
+      "b": 0.2,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.73079,
+        -0.339647
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.08989794855663565,
+      "cfm_regarded_reliable_by_authors": true,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.2",
+      "col": "a=0.5",
+      "M": 1.0,
+      "a": 0.5,
+      "b": 0.2,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.78996,
+        -0.327913
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.11989817928133031,
+      "cfm_regarded_reliable_by_authors": false,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.2",
+      "col": "a=0.6",
+      "M": 1.0,
+      "a": 0.6,
+      "b": 0.2,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.86312,
+        -0.308557
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.15825756949558398,
+      "cfm_regarded_reliable_by_authors": false,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.3",
+      "col": "a=0.1",
+      "M": 1.0,
+      "a": 0.1,
+      "b": 0.3,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.64036,
+        -0.350607
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.031640379061052146,
+      "cfm_regarded_reliable_by_authors": true,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.3",
+      "col": "a=0.2",
+      "M": 1.0,
+      "a": 0.2,
+      "b": 0.3,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.6812,
+        -0.347026
+      ],
+      "printed_digits": 5,
+      "inner_horizon_r2": 0.06448101666109057,
+      "cfm_regarded_reliable_by_authors": true,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.3",
+      "col": "a=0.3",
+      "M": 1.0,
+      "a": 0.3,
+      "b": 0.3,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.72958,
+        -0.340538
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.10000000000000005,
+      "cfm_regarded_reliable_by_authors": false,
+      "flags": [
+        "equal_spin_diagonal"
+      ]
+    },
+    {
+      "table": "IV",
+      "row": "b=0.3",
+      "col": "a=0.4",
+      "M": 1.0,
+      "a": 0.4,
+      "b": 0.3,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.78795,
+        -0.329626
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.14042229712616744,
+      "cfm_regarded_reliable_by_authors": false,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.3",
+      "col": "a=0.5",
+      "M": 1.0,
+      "a": 0.5,
+      "b": 0.3,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.86084,
+        -0.310928
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.18989794855663567,
+      "cfm_regarded_reliable_by_authors": false,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.3",
+      "col": "a=0.6",
+      "M": 1.0,
+      "a": 0.6,
+      "b": 0.3,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.95865,
+        -0.274389
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.25902465353143916,
+      "cfm_regarded_reliable_by_authors": false,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.4",
+      "col": "a=0.1",
+      "M": 1.0,
+      "a": 0.1,
+      "b": 0.4,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.68394,
+        -0.345147
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.04395689881625348,
+      "cfm_regarded_reliable_by_authors": true,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.4",
+      "col": "a=0.2",
+      "M": 1.0,
+      "a": 0.2,
+      "b": 0.4,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.73079,
+        -0.339647
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.08989794855663565,
+      "cfm_regarded_reliable_by_authors": true,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.4",
+      "col": "a=0.3",
+      "M": 1.0,
+      "a": 0.3,
+      "b": 0.4,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.78795,
+        -0.329626
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.14042229712616744,
+      "cfm_regarded_reliable_by_authors": false,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.4",
+      "col": "a=0.4",
+      "M": 1.0,
+      "a": 0.4,
+      "b": 0.4,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.86008,
+        -0.311689
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.2000000000000001,
+      "cfm_regarded_reliable_by_authors": false,
+      "flags": [
+        "equal_spin_diagonal"
+      ]
+    },
+    {
+      "table": "IV",
+      "row": "b=0.4",
+      "col": "a=0.5",
+      "M": 1.0,
+      "a": 0.5,
+      "b": 0.4,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.95776,
+        -0.275621
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.2795487713762763,
+      "cfm_regarded_reliable_by_authors": false,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.5",
+      "col": "a=0.1",
+      "M": 1.0,
+      "a": 0.1,
+      "b": 0.5,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.73441,
+        -0.33684
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.058257569495584006,
+      "cfm_regarded_reliable_by_authors": true,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.5",
+      "col": "a=0.2",
+      "M": 1.0,
+      "a": 0.2,
+      "b": 0.5,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.78996,
+        -0.327913
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.11989817928133031,
+      "cfm_regarded_reliable_by_authors": false,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.5",
+      "col": "a=0.3",
+      "M": 1.0,
+      "a": 0.3,
+      "b": 0.5,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.86084,
+        -0.310928
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.18989794855663567,
+      "cfm_regarded_reliable_by_authors": false,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.5",
+      "col": "a=0.4",
+      "M": 1.0,
+      "a": 0.4,
+      "b": 0.5,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.95776,
+        -0.275621
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.2795487713762763,
+      "cfm_regarded_reliable_by_authors": false,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.6",
+      "col": "a=0.1",
+      "M": 1.0,
+      "a": 0.1,
+      "b": 0.6,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.79398,
+        -0.324253
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.07594128046507667,
+      "cfm_regarded_reliable_by_authors": true,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.6",
+      "col": "a=0.2",
+      "M": 1.0,
+      "a": 0.2,
+      "b": 0.6,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.86312,
+        -0.308557
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.15825756949558398,
+      "cfm_regarded_reliable_by_authors": false,
+      "flags": []
+    },
+    {
+      "table": "IV",
+      "row": "b=0.6",
+      "col": "a=0.3",
+      "M": 1.0,
+      "a": 0.3,
+      "b": 0.6,
+      "mu": 0.1,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "method": "matrix method (MM)",
+      "omega": [
+        1.95865,
+        -0.274389
+      ],
+      "printed_digits": 6,
+      "inner_horizon_r2": 0.25902465353143916,
+      "cfm_regarded_reliable_by_authors": false,
+      "flags": []
+    }
+  ]
+}
