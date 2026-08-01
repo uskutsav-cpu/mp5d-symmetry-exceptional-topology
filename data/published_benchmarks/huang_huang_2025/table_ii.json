@@ -1,0 +1,142 @@
+{
+  "source": {
+    "authors": "Zi-Yang Huang and Jia-Hui Huang",
+    "title": "Quasinormal modes of massive scalar fields in five-dimensional Myers-Perry black holes with two arbitrary rotation parameters",
+    "arxiv": "2502.11764",
+    "dated": "2025-02-20"
+  },
+  "normalization": {
+    "metric": "their Eq.(1); rho^2 and Delta agree with ours",
+    "ansatz": "Psi = e^{-i w t} e^{i m1 phi} e^{i m2 psi} R(r) S(theta)",
+    "sign_convention": "damped modes have Im(omega) < 0",
+    "lambda_mapping": "their lambda_{k m1 m2} = our Ahat = Lambda + (w^2-mu^2) b^2",
+    "k_mapping": "their k is our angular node index n; l = 2k + |m1| + |m2|",
+    "r2_mapping": "their r2 is our inner horizon r_-",
+    "restriction": "paper restricts to m1 >= 0, m2 >= 0"
+  },
+  "cfm_caveat": "The authors state the continued-fraction method is applicable for r2 << 1 and that their CFM results 'begin to show instability when r2 >~ 0.1' (text near Fig. 1). Their CFM uses a 25-term recursion.",
+  "table": "II",
+  "caption": "Comparison with literature. M=1, b=0 except last row.",
+  "records": [
+    {
+      "a": 0.0,
+      "b": 0.0,
+      "mu": 0.0,
+      "k": 0,
+      "m1": 0,
+      "m2": 0,
+      "omega_ref": [
+        0.53384,
+        -0.38338
+      ],
+      "omega_MM": [
+        0.534406,
+        -0.383241
+      ],
+      "omega_CFM": [
+        0.533838,
+        -0.383387
+      ]
+    },
+    {
+      "a": 0.0,
+      "b": 0.0,
+      "mu": 0.0,
+      "k": 0,
+      "m1": 1,
+      "m2": 0,
+      "omega_ref": [
+        1.01602,
+        -0.36233
+      ],
+      "omega_MM": [
+        1.0162,
+        -0.362074
+      ],
+      "omega_CFM": [
+        1.01602,
+        -0.362328
+      ]
+    },
+    {
+      "a": 0.0,
+      "b": 0.0,
+      "mu": 0.0,
+      "k": 0,
+      "m1": 1,
+      "m2": 1,
+      "omega_ref": [
+        1.51057,
+        -0.35754
+      ],
+      "omega_MM": [
+        1.51055,
+        -0.357371
+      ],
+      "omega_CFM": [
+        1.51057,
+        -0.357537
+      ]
+    },
+    {
+      "a": 0.2,
+      "b": 0.0,
+      "mu": 0.0,
+      "k": 1,
+      "m1": 1,
+      "m2": 1,
+      "omega_ref": [
+        2.565177,
+        -0.353047
+      ],
+      "omega_MM": [
+        2.5651,
+        -0.353033
+      ],
+      "omega_CFM": [
+        2.56514,
+        -0.353072
+      ]
+    },
+    {
+      "a": 0.5,
+      "b": 0.0,
+      "mu": 0.0,
+      "k": 1,
+      "m1": 1,
+      "m2": 0,
+      "omega_ref": [
+        2.178379,
+        -0.340853
+      ],
+      "omega_MM": [
+        2.17821,
+        -0.340858
+      ],
+      "omega_CFM": [
+        2.17828,
+        -0.340943
+      ]
+    },
+    {
+      "a": 0.3,
+      "b": 0.0,
+      "mu": 0.3,
+      "k": 1,
+      "m1": 1,
+      "m2": 1,
+      "omega_ref": [
+        2.609174,
+        -0.348709
+      ],
+      "omega_MM": [
+        2.60908,
+        -0.348761
+      ],
+      "omega_CFM": [
+        2.60913,
+        -0.348797
+      ]
+    }
+  ]
+}

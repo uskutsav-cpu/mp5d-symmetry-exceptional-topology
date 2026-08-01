@@ -1,0 +1,302 @@
+{
+  "status": "complete",
+  "records": [
+    {
+      "a": 0.1,
+      "b": 0.1,
+      "r2": 0.010102051443364988,
+      "r1": 0.9898979485566356,
+      "nearest_spurious_singularity": 1.9797958971132699,
+      "margin_beyond_unit_circle": 0.9797958971132699,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": true
+    },
+    {
+      "a": 0.1,
+      "b": 0.2,
+      "r2": 0.020524117844836553,
+      "r1": 0.9744633192617828,
+      "nearest_spurious_singularity": 1.9587449708822058,
+      "margin_beyond_unit_circle": 0.9587449708822058,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": true
+    },
+    {
+      "a": 0.1,
+      "b": 0.3,
+      "r2": 0.031640379061052146,
+      "r1": 0.9481555180522196,
+      "nearest_spurious_singularity": 1.9354143466934843,
+      "margin_beyond_unit_circle": 0.9354143466934843,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": true
+    },
+    {
+      "a": 0.1,
+      "b": 0.4,
+      "r2": 0.04395689881625348,
+      "r1": 0.9099823026006921,
+      "nearest_spurious_singularity": 1.9078412990032037,
+      "margin_beyond_unit_circle": 0.9078412990032037,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": true
+    },
+    {
+      "a": 0.1,
+      "b": 0.5,
+      "r2": 0.058257569495584006,
+      "r1": 0.858257569495584,
+      "nearest_spurious_singularity": 1.8728715609439694,
+      "margin_beyond_unit_circle": 0.8728715609439694,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": true
+    },
+    {
+      "a": 0.2,
+      "b": 0.1,
+      "r2": 0.020524117844836553,
+      "r1": 0.9744633192617828,
+      "nearest_spurious_singularity": 1.9587449708822058,
+      "margin_beyond_unit_circle": 0.9587449708822058,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": true
+    },
+    {
+      "a": 0.2,
+      "b": 0.2,
+      "r2": 0.04174243050441632,
+      "r1": 0.9582575694955839,
+      "nearest_spurious_singularity": 1.9165151389911674,
+      "margin_beyond_unit_circle": 0.9165151389911674,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": true
+    },
+    {
+      "a": 0.2,
+      "b": 0.3,
+      "r2": 0.06448101666109057,
+      "r1": 0.9305064204455293,
+      "nearest_spurious_singularity": 1.8703882797784894,
+      "margin_beyond_unit_circle": 0.8703882797784894,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": true
+    },
+    {
+      "a": 0.2,
+      "b": 0.4,
+      "r2": 0.08989794855663565,
+      "r1": 0.8898979485566356,
+      "nearest_spurious_singularity": 1.8164965809277258,
+      "margin_beyond_unit_circle": 0.8164965809277258,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": true
+    },
+    {
+      "a": 0.2,
+      "b": 0.5,
+      "r2": 0.11989817928133031,
+      "r1": 0.8340410221356154,
+      "nearest_spurious_singularity": 1.7486251134176307,
+      "margin_beyond_unit_circle": 0.7486251134176307,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": false
+    },
+    {
+      "a": 0.3,
+      "b": 0.1,
+      "r2": 0.031640379061052146,
+      "r1": 0.9481555180522196,
+      "nearest_spurious_singularity": 1.9354143466934843,
+      "margin_beyond_unit_circle": 0.9354143466934843,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": true
+    },
+    {
+      "a": 0.3,
+      "b": 0.2,
+      "r2": 0.06448101666109057,
+      "r1": 0.9305064204455293,
+      "nearest_spurious_singularity": 1.8703882797784894,
+      "margin_beyond_unit_circle": 0.8703882797784894,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": true
+    },
+    {
+      "a": 0.3,
+      "b": 0.3,
+      "r2": 0.10000000000000005,
+      "r1": 0.9,
+      "nearest_spurious_singularity": 1.8,
+      "margin_beyond_unit_circle": 0.8,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": false
+    },
+    {
+      "a": 0.3,
+      "b": 0.4,
+      "r2": 0.14042229712616744,
+      "r1": 0.8545651399804525,
+      "nearest_spurious_singularity": 1.7177405625652735,
+      "margin_beyond_unit_circle": 0.7177405625652735,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": false
+    },
+    {
+      "a": 0.3,
+      "b": 0.5,
+      "r2": 0.18989794855663567,
+      "r1": 0.7898979485566356,
+      "nearest_spurious_singularity": 1.6123724356957945,
+      "margin_beyond_unit_circle": 0.6123724356957945,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": false
+    },
+    {
+      "a": 0.4,
+      "b": 0.1,
+      "r2": 0.04395689881625348,
+      "r1": 0.9099823026006921,
+      "nearest_spurious_singularity": 1.9078412990032037,
+      "margin_beyond_unit_circle": 0.9078412990032037,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": true
+    },
+    {
+      "a": 0.4,
+      "b": 0.2,
+      "r2": 0.08989794855663565,
+      "r1": 0.8898979485566356,
+      "nearest_spurious_singularity": 1.8164965809277258,
+      "margin_beyond_unit_circle": 0.8164965809277258,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": true
+    },
+    {
+      "a": 0.4,
+      "b": 0.3,
+      "r2": 0.14042229712616744,
+      "r1": 0.8545651399804525,
+      "nearest_spurious_singularity": 1.7177405625652735,
+      "margin_beyond_unit_circle": 0.7177405625652735,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": false
+    },
+    {
+      "a": 0.4,
+      "b": 0.4,
+      "r2": 0.2000000000000001,
+      "r1": 0.7999999999999999,
+      "nearest_spurious_singularity": 1.5999999999999999,
+      "margin_beyond_unit_circle": 0.5999999999999999,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": false
+    },
+    {
+      "a": 0.4,
+      "b": 0.5,
+      "r2": 0.2795487713762763,
+      "r1": 0.7154386657303436,
+      "nearest_spurious_singularity": 1.4380858271151806,
+      "margin_beyond_unit_circle": 0.4380858271151806,
+      "radius_of_convergence": 1.0,
+      "classification": "slowly convergent",
+      "authors_regard_cfm_reliable": false
+    },
+    {
+      "a": 0.5,
+      "b": 0.1,
+      "r2": 0.058257569495584006,
+      "r1": 0.858257569495584,
+      "nearest_spurious_singularity": 1.8728715609439694,
+      "margin_beyond_unit_circle": 0.8728715609439694,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": true
+    },
+    {
+      "a": 0.5,
+      "b": 0.2,
+      "r2": 0.11989817928133031,
+      "r1": 0.8340410221356154,
+      "nearest_spurious_singularity": 1.7486251134176307,
+      "margin_beyond_unit_circle": 0.7486251134176307,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": false
+    },
+    {
+      "a": 0.5,
+      "b": 0.3,
+      "r2": 0.18989794855663567,
+      "r1": 0.7898979485566356,
+      "nearest_spurious_singularity": 1.6123724356957945,
+      "margin_beyond_unit_circle": 0.6123724356957945,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": false
+    },
+    {
+      "a": 0.5,
+      "b": 0.4,
+      "r2": 0.2795487713762763,
+      "r1": 0.7154386657303436,
+      "nearest_spurious_singularity": 1.4380858271151806,
+      "margin_beyond_unit_circle": 0.4380858271151806,
+      "radius_of_convergence": 1.0,
+      "classification": "slowly convergent",
+      "authors_regard_cfm_reliable": false
+    },
+    {
+      "a": 0.6,
+      "b": 0.1,
+      "r2": 0.07594128046507667,
+      "r1": 0.7900841233193618,
+      "nearest_spurious_singularity": 1.8246211251235325,
+      "margin_beyond_unit_circle": 0.8246211251235325,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": true
+    },
+    {
+      "a": 0.6,
+      "b": 0.2,
+      "r2": 0.15825756949558398,
+      "r1": 0.758257569495584,
+      "nearest_spurious_singularity": 1.654653670707977,
+      "margin_beyond_unit_circle": 0.6546536707079771,
+      "radius_of_convergence": 1.0,
+      "classification": "recurrence-convergent",
+      "authors_regard_cfm_reliable": false
+    },
+    {
+      "a": 0.6,
+      "b": 0.3,
+      "r2": 0.25902465353143916,
+      "r1": 0.6949145478855066,
+      "nearest_spurious_singularity": 1.4569367667316877,
+      "margin_beyond_unit_circle": 0.4569367667316877,
+      "radius_of_convergence": 1.0,
+      "classification": "slowly convergent",
+      "authors_regard_cfm_reliable": false
+    }
+  ]
+}

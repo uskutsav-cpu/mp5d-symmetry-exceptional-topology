@@ -1,0 +1,51 @@
+{
+  "source": {
+    "authors": "Zi-Yang Huang and Jia-Hui Huang",
+    "title": "Quasinormal modes of massive scalar fields in five-dimensional Myers-Perry black holes with two arbitrary rotation parameters",
+    "arxiv": "2502.11764",
+    "dated": "2025-02-20"
+  },
+  "normalization": {
+    "metric": "their Eq.(1); rho^2 and Delta agree with ours",
+    "ansatz": "Psi = e^{-i w t} e^{i m1 phi} e^{i m2 psi} R(r) S(theta)",
+    "sign_convention": "damped modes have Im(omega) < 0",
+    "lambda_mapping": "their lambda_{k m1 m2} = our Ahat = Lambda + (w^2-mu^2) b^2",
+    "k_mapping": "their k is our angular node index n; l = 2k + |m1| + |m2|",
+    "r2_mapping": "their r2 is our inner horizon r_-",
+    "restriction": "paper restricts to m1 >= 0, m2 >= 0"
+  },
+  "cfm_caveat": "The authors state the continued-fraction method is applicable for r2 << 1 and that their CFM results 'begin to show instability when r2 >~ 0.1' (text near Fig. 1). Their CFM uses a 25-term recursion.",
+  "extraction": {
+    "method": "text extracted from the arXiv PDF with pypdf, transcribed here, then re-checked by automated internal-consistency tests",
+    "tests": "tests/published_benchmarks/test_huang_huang_manifest.py",
+    "pdf_committed": false
+  },
+  "table_i_inner_horizons": {
+    "a=0.1,b=0.1": 0.0101,
+    "a=0.2,b=0.1": 0.02052,
+    "a=0.3,b=0.1": 0.03164,
+    "a=0.4,b=0.1": 0.04396,
+    "a=0.5,b=0.1": 0.05826,
+    "a=0.6,b=0.1": 0.07594,
+    "a=0.2,b=0.2": 0.04174,
+    "a=0.3,b=0.2": 0.06448,
+    "a=0.4,b=0.2": 0.08989,
+    "a=0.5,b=0.2": 0.1199,
+    "a=0.6,b=0.2": 0.15826,
+    "a=0.3,b=0.3": 0.1,
+    "a=0.4,b=0.3": 0.14042,
+    "a=0.5,b=0.3": 0.1899,
+    "a=0.6,b=0.3": 0.25903
+  },
+  "suspicious_entries": [
+    {
+      "where": "Tables V, VI, VII: every equal-spin diagonal entry (a = b)",
+      "status": "suspected source artifact; verified directly by our solver",
+      "observation": "Table VII's diagonal (1.56895, 1.63886, 1.72958, 1.86008) is IDENTICAL to Table IV's diagonal, although Table IV is k=0 and Table VII is k=1. Tables V and VI show the same pattern: their diagonals (~1.05-1.19) break the trend of their own off-diagonal neighbours (~2.05-2.26).",
+      "retracted_argument": "An earlier draft of this manifest claimed Table II contained an equal-spin entry contradicting Table VII. That was OUR misreading: Table II's key is {a, mu, k, m1, m2} with b = 0 fixed by its caption, so {0.3, 0.3, 1, 1, 1} is a = 0.3, mu = 0.3, b = 0. Table II contains no equal-spin entry. The claim is withdrawn.",
+      "direct_test": "The anomaly is instead tested directly: our solver is run at a = b, k = 1, m1 = m2 = 1, mu = 0.1 and compared with both the printed diagonal and the trend of its own off-diagonal neighbours. See results/rotating_validation.json.",
+      "hypothesis": "The k=1 diagonals appear to carry k=0 values. At a=b the angular equation is exactly degenerate (our c2 = 4 s delta (w^2-mu^2) vanishes identically), so an angular routine that returns the lowest eigenvalue regardless of the requested k would reproduce exactly this pattern.",
+      "action": "Treated as a suspected transcription/solver artifact in the source, NOT as a target for our solver. Excluded from the pass criteria; tested separately against Table II, which is internally consistent."
+    }
+  ]
+}

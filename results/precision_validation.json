@@ -1,0 +1,133 @@
+{
+  "status": "complete",
+  "provenance": {
+    "commit": "cae8d7a505f273102de1d00b2c584cfbb50cb649",
+    "env_hash": "51bd433766170fc3",
+    "solver_A": "leaver-cf/2.0",
+    "solver_B": "hill-wynn/1.0",
+    "solver_mp": "leaver-cf-mp/1.0"
+  },
+  "note": "Recurrence coefficients, angular eigenvalue, reduction, CF and root finder ALL run at the stated dps. Horizons are recomputed at working precision, never imported from the double path.",
+  "cases": [
+    {
+      "case": "st5d_l0n0",
+      "a": 0.0,
+      "b": 0.0,
+      "mu": 0.0,
+      "m1": 0,
+      "m2": 0,
+      "l": 0,
+      "ladder": [
+        {
+          "dps": 30,
+          "depth": 400,
+          "cf_residual": 1.0352680407764993e-26,
+          "omega_str": "(0.533835574268276465229766224152 - 0.383375368512460197784703565263j)",
+          "digits_agreeing_with_previous": null,
+          "runtime_s": 11.9,
+          "converged": true
+        },
+        {
+          "dps": 50,
+          "depth": 800,
+          "cf_residual": 8.926270540587063e-47,
+          "omega_str": "(0.53383557426827646528924685009910571217694760352466 - 0.38337536851246019724223877790571994704201907688442j)",
+          "digits_agreeing_with_previous": 18.26303328531801,
+          "runtime_s": 18.0,
+          "converged": true
+        },
+        {
+          "dps": 80,
+          "depth": 1600,
+          "cf_residual": 3.263727254700695e-77,
+          "omega_str": "(0.53383557426827646528924683770569193801731915981737165764141755535784661728142247 - 0.38337536851246019724223878803029004910833384985417668839077581330364784086660313j)",
+          "digits_agreeing_with_previous": 25.79579213737894,
+          "runtime_s": 19.7,
+          "converged": true
+        }
+      ],
+      "stable_digits": 25.79579213737894,
+      "beyond_double": true
+    },
+    {
+      "case": "hh_table_iii_row1",
+      "a": 0.2,
+      "b": 0.3,
+      "mu": 0.1,
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "ladder": [
+        {
+          "dps": 30,
+          "depth": 400,
+          "cf_residual": 1.5509041439216374e-26,
+          "omega_str": "(1.681109025986455924518297527 - 0.347226596708509093447137220222j)",
+          "digits_agreeing_with_previous": null,
+          "runtime_s": 7.3,
+          "converged": true
+        },
+        {
+          "dps": 50,
+          "depth": 800,
+          "cf_residual": 2.254049248032011e-49,
+          "omega_str": "(1.6811090259864559245182975237288394156706255972049 - 0.34722659670850909344713721943231754573407031852823j)",
+          "digits_agreeing_with_previous": 26.473000293076893,
+          "runtime_s": 10.9,
+          "converged": true
+        },
+        {
+          "dps": 80,
+          "depth": 1600,
+          "cf_residual": 3.2751514404298097e-79,
+          "omega_str": "(1.6811090259864559245182975237288394156706255972049482092358881440038766614871994 - 0.34722659670850909344713721943231754573407031852826830885299622738315880054870451j)",
+          "digits_agreeing_with_previous": 49.21113033391493,
+          "runtime_s": 19.4,
+          "converged": true
+        }
+      ],
+      "stable_digits": 49.21113033391493,
+      "beyond_double": true
+    },
+    {
+      "case": "hh_table_ii_massive_singly",
+      "a": 0.3,
+      "b": 0.0,
+      "mu": 0.3,
+      "m1": 1,
+      "m2": 1,
+      "l": 4,
+      "ladder": [
+        {
+          "dps": 30,
+          "depth": 400,
+          "cf_residual": 7.928444555869383e-29,
+          "omega_str": "(2.6091341402688482400584696568 - 0.348797207522898223228256804834j)",
+          "digits_agreeing_with_previous": null,
+          "runtime_s": 5.5,
+          "converged": true
+        },
+        {
+          "dps": 50,
+          "depth": 800,
+          "cf_residual": 2.4244200666693674e-49,
+          "omega_str": "(2.6091341402688482400584696567994071472491172174943 - 0.34879720752289822322825680484050199559026243502134j)",
+          "digits_agreeing_with_previous": 29.183210489704194,
+          "runtime_s": 9.7,
+          "converged": true
+        },
+        {
+          "dps": 80,
+          "depth": 1600,
+          "cf_residual": 3.306420516732166e-79,
+          "omega_str": "(2.6091341402688482400584696567994071472491172174942805292289840480558370429357924 - 0.34879720752289822322825680484050199559026243502141359089599123657032208658941188j)",
+          "digits_agreeing_with_previous": 49.11625012362179,
+          "runtime_s": 21.9,
+          "converged": true
+        }
+      ],
+      "stable_digits": 49.11625012362179,
+      "beyond_double": true
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "session": "rotating validation and precision hardening",
+  "starting_commit_main": "cae8d7a505f273102de1d00b2c584cfbb50cb649",
+  "branch": "research/rotating-validation",
+  "commit_at_write": "cae8d7a505f273102de1d00b2c584cfbb50cb649",
+  "env_hash": "51bd433766170fc3",
+  "gate": {
+    "1_benchmark_manifest": "COMPLETE - Tables II-VII + provenance, 8 self-consistency tests",
+    "2_arbitrary_precision_recurrence": "COMPLETE - mpmath DFT + mpmath angular CF + exact horizons",
+    "3_three_modes_beyond_double": "COMPLETE - 25.8, 49.2, 49.1 stable digits",
+    "4_asymptotic_tail": "NOT DONE",
+    "5_table_iii_three_points": "COMPLETE - 3/3 to 1.8e-6..7.4e-5 vs their CFM",
+    "6_four_exchange_pairs": "COMPLETE - 5/5, residual < 1e-10",
+    "7_three_equal_spin_relations": "COMPLETE - 4/4 off-diagonal; diagonal shown to be a source artifact",
+    "8_solverA_B_agree": "COMPLETE in the verified domain",
+    "9_independent_solver_C": "NOT DONE",
+    "10_validity_region_mapped": "COMPLETE - 27 points, analytic singularity geometry",
+    "11_tests_pass": "COMPLETE - 120 passed",
+    "12_pushed": "see branch"
+  },
+  "not_done": [
+    "Nollert asymptotic tail (gate 4) - quantitative case for it is in docs/PRECISION_VALIDATION.md",
+    "Independent boundary-value/matching Solver C (gate 9)",
+    "Long-lived massive-mode continuation (section 8)"
+  ]
+}
