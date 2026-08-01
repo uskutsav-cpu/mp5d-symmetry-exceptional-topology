@@ -37,3 +37,7 @@ topological / certified until its evidence requirement is met.
 | C24 | The leading-order tail measurably reduces required depth (~1.35×, +1.4 digits at depth 200). | numerically observed | `results/tail_validation.json` |
 | C25 | Higher tail orders (`u₂`+). | **not derived** | blocked by reduction degradation past `n~500–800` |
 | C26 | An independent non-recurrence solver (Solver C). | **not built** | — |
+| C27 | Solver C (exterior complex scaling) is recurrence-free and reproduces the static fundamental, static overtone, `l=1`, and all three Huang–Huang Table III two-spin points. | **independently verified** | `docs/SOLVER_C.md`; independence enforced by test |
+| C28 | Physical QNMs are invariant under scaling angle (45–75°), contour length (40–130) and resolution (150–380); continuum artifacts are not. | resolution verified | `tests/unit/test_solver_c.py` |
+| C29 | Three solvers agree below `1e-5` on 10/10 benchmark points, including `r₂ = 0.140` and `0.190` — beyond the `r₂ ≳ 0.1` limit Huang–Huang state for their own CFM. | **independently verified** | `results/three_solver_validation.json` |
+| C30 | Any exceptional point in this system. | **NOT SEARCHED** | no atlas, no EP work |

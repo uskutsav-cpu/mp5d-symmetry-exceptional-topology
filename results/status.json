@@ -1,6 +1,6 @@
 {
   "project": "mp5d-symmetry-exceptional-topology",
-  "updated": "2026-08-01 (session 5: tail leading order; Solver C NOT built)",
+  "updated": "2026-08-01 (session 6: Solver C + three-solver validation)",
   "stage": {
     "A_repository_and_reuse": "complete; repo public, CI green",
     "B_minimal_baseline": "PARTIAL - 4 Schwarzschild-Tangherlini benchmarks reproduced to 1e-13..1e-11, cross-solver verified; rotating benchmarks vs published values NOT yet done",
@@ -17,16 +17,17 @@
     "radial_leaver_cf": "WORKING - Solver A: 9-term recurrence -> 3-term Gaussian reduction -> n-th CF inversion",
     "radial_hill_wynn": "WORKING - Solver B: raw recurrence, a_N condition, Wynn acceleration; independent of A",
     "radial_tail": "leading order only (u1); orders>1 raise NotImplementedError",
-    "solver_C_contour": "NOT BUILT"
+    "solver_C_contour": "BUILT AND VALIDATED - complex-scaled collocation, recurrence-free"
   },
   "qnm_frequencies_computed": 4,
   "tests": {
-    "total": 127,
-    "passing": 127
+    "total": 142,
+    "passing": 142,
+    "note": "139 fast + 3 slow-marked"
   },
-  "current_finding": "Asymptotic tail: characteristic equation A(1/R)=0 with x=1 a multiple root, so corrections are half-integer powers; u1 = -sqrt(-2c), c = i*Omega*(r_+-r_-), confirmed by exponent test and by the exp(-k*sqrt(N)) depth signature. Implemented at leading order; gives ~1.35x depth reduction (+1.4 digits at depth 200). Higher orders not derived, blocked by degradation of the Gaussian reduction past n~500-800. Solver C was NOT built this session.",
-  "current_evidence_level": "tail leading order derived+verified; no third independent solver",
-  "next_gate": "Independent complex-contour Wronskian Solver C (unstarted)",
+  "current_finding": "Gate 3 and 4 closed. Solver C (exterior complex scaling) is recurrence-free and reproduces static fundamental/overtone/l=1 and all three Huang-Huang Table III two-spin points. Physical modes invariant under scaling angle, contour length and resolution. Three-solver A/B/C agreement on 10/10 points below 1e-5, including r2 = 0.140 and 0.190, beyond the r2 ~ 0.1 limit Huang-Huang state for their CFM.",
+  "current_evidence_level": "independently verified (three solvers) on the benchmark set",
+  "next_gate": "Gate 5 long-lived branches, then Gate 7 fixed-sector branch atlas",
   "repository_visibility": "PUBLIC",
   "exceptional_points_verified": 0,
   "first_qnm": {
