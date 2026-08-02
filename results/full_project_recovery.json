@@ -1,0 +1,19 @@
+{
+  "verified_commit_at_entry": "c2ab227f53b0a088052f37ffdfda52286da4b7ad",
+  "branch": "research/solver-c",
+  "ci": "success",
+  "repo": "PUBLIC",
+  "default_branch": "main",
+  "documentation_corrections": [
+    "raw recurrence width: 9 is the STATIC value; generic two-spin is 13. Corrected in docs/FIRST_QNM_VALIDATION.md, docs/CLAIM_LEDGER.md (C20), src/mp5d/radial/qnm.py"
+  ],
+  "tail_order_actually_implemented": 1,
+  "solver_c_status_at_entry": "absent",
+  "recurrence_family_only_claims_at_entry": [
+    "all large-r2 validation",
+    "all rotating benchmarks"
+  ],
+  "suspected_not_proven": [
+    "Huang-Huang Tables V/VI/VII equal-spin diagonal anomaly"
+  ]
+}

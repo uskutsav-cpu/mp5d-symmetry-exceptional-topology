@@ -1,0 +1,39 @@
+{
+  "status": "complete",
+  "provenance": {
+    "commit": "f4bcbd80c8241d2dd440943f1a11d74e4fcbf5ed",
+    "solver": "leaver-cf/2.0"
+  },
+  "records": [
+    {
+      "candidate_omega": [
+        1.97826525,
+        -0.45044647
+      ],
+      "params": {
+        "s": 0.49777,
+        "delta": -0.11359,
+        "mu": 1.9
+      },
+      "derived": {
+        "a": 0.38418,
+        "b": 0.61136,
+        "r2": 0.4398,
+        "extremality": 0.0089
+      },
+      "mode_labels": {
+        "m1": 1,
+        "m2": 1,
+        "l": 2,
+        "overtone": 0
+      },
+      "residual_F": 1.543e-11,
+      "residual_dFdomega": 4.301e-06,
+      "why_it_looked_promising": "|dF/domega| fell ~7 orders below the ~4.6 typical at a simple root, and |F| reached 1.5e-11 -- the signature of a near-double root.",
+      "rejection_reason": "OUTSIDE THE VERIFIED NUMERICAL DOMAIN. r2 = 0.44 against a validated recurrence domain of r2 <~ 0.20 (slowly convergent beyond ~0.26); extremality M-(|a|+|b|)^2 = 0.0089, i.e. essentially extremal, where the asymptotic tail explicitly breaks down (c -> 0) and Solver C is untested. Newton also stagnated near 1e-6 rather than converging.",
+      "rejected_by": "domain validity; non-convergence",
+      "status": "REJECTED - not evidence for or against an EP",
+      "what_would_settle_it": "extend Solver C validation to r2 ~ 0.44 and near-extremal parameters, then re-solve the augmented system there with three independent solvers"
+    }
+  ]
+}

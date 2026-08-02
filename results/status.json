@@ -1,6 +1,6 @@
 {
   "project": "mp5d-symmetry-exceptional-topology",
-  "updated": "2026-08-01 (session 3: radial solver rescue)",
+  "updated": "2026-08-01 (session 7: EP machinery + bounded negative result)",
   "stage": {
     "A_repository_and_reuse": "complete; repo public, CI green",
     "B_minimal_baseline": "PARTIAL - 4 Schwarzschild-Tangherlini benchmarks reproduced to 1e-13..1e-11, cross-solver verified; rotating benchmarks vs published values NOT yet done",
@@ -15,16 +15,19 @@
     "radial_structure": "exponents + singular structure derived and tested",
     "radial_collocation_A_legacy": "NON-FUNCTIONAL by design of the selection principle; retained with reproduction test (FAILED_APPROACHES #3)",
     "radial_leaver_cf": "WORKING - Solver A: 9-term recurrence -> 3-term Gaussian reduction -> n-th CF inversion",
-    "radial_hill_wynn": "WORKING - Solver B: raw recurrence, a_N condition, Wynn acceleration; independent of A"
+    "radial_hill_wynn": "WORKING - Solver B: raw recurrence, a_N condition, Wynn acceleration; independent of A",
+    "radial_tail": "leading order only (u1); orders>1 raise NotImplementedError",
+    "solver_C_contour": "BUILT AND VALIDATED - complex-scaled collocation, recurrence-free"
   },
   "qnm_frequencies_computed": 4,
   "tests": {
-    "total": 93,
-    "passing": 93
+    "total": 142,
+    "passing": 142,
+    "note": "139 fast + 3 slow-marked"
   },
-  "current_finding": "Radial solver rescued. Leaver CF (Solver A) and Hill/Wynn (Solver B) both work and agree to 1e-12. Four published Schwarzschild-Tangherlini benchmarks reproduced to all 12 displayed digits. On rotating two-spin backgrounds the exact exchange identity holds to 4e-15, and the U(2) multiplet degeneracy predicted analytically in session 1 (claims C6/C7) is CONFIRMED NUMERICALLY to 5e-15, while delta != 0 splits it by 5e-2 as predicted.",
-  "current_evidence_level": "cross-solver verified (double precision); symmetry claims C6/C7 now numerically confirmed",
-  "next_gate": "Rotating benchmarks against published values (Huang-Huang two-spin); then precision escalation beyond double via exact/mpmath coefficient extraction; then the Nollert tail for high overtones.",
+  "current_finding": "EP2 augmented solver built (F=0, dF/domega=0, total derivative exact -- Lambda never frozen). Searched sector (1,1), l=2 and l=4, overtones N=0,1,2, mu in [0.1,3.0]. Branches never approach: l=2 vs l=4 stays >0.84; N=0 vs N=1 shrinks to 0.60 but does not close. One near-double-root candidate (|dF|=4.3e-6) appeared at r2=0.44, extremality 0.0089 -- REJECTED as outside the verified domain. Bounded negative result over 74 points in the safe domain: min |dF/domega| = 1.02e-2, bounded away from zero, so no EP2 in that box.",
+  "current_evidence_level": "bounded negative result in one sector/box; no EP verified",
+  "next_gate": "extend Solver C to r2~0.44 and near-extremal, then re-test the rejected candidate",
   "repository_visibility": "PUBLIC",
   "exceptional_points_verified": 0,
   "first_qnm": {

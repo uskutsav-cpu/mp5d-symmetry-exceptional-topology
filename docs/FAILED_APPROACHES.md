@@ -151,3 +151,28 @@ Re-confirmed that a fully symbolic transformation of the radial ODE to the
 Leaver variable with all parameters symbolic does not terminate in 10 minutes.
 The FFT-based numerical extraction is the route that works. Do not retry the
 symbolic path without first fixing the parameters to numbers.
+
+## 8. Reading the large-n ratio from the reduced recurrence (session 5, partial)
+
+Attempting to extract `R_n = a_{n+1}/a_n` at `n` of order `10^3` from the
+Gaussian-reduced three-term recurrence gives a **spurious, problem-independent**
+answer: `R_n - 1 = 2/n` exactly, identical for two completely unrelated
+parameter sets (`a=b=mu=0` and `a=0.2, b=0.3, mu=0.1`). That coincidence is the
+giveaway that it is an artifact, not physics.
+
+**Cause.** The reduction is a long recursive elimination; cancellation
+accumulates and past `n ~ 500-800` the reduced coefficients lose their leading
+structure. Diagnostic: `(alpha_n + beta_n + gamma_n)/alpha_n` should decay
+smoothly like `1/n`, but is measured non-monotonic at the `1e-3`-`1e-5` level.
+
+**Consequence.** The clean window for reading the asymptotics is `n = 200-400`,
+which is enough to fix the leading coefficient `u1` but not enough to extract
+`u2` reliably. This is the current obstacle to a higher-order tail.
+
+**Not fixed.** Candidate fixes, untested: raise working precision inside the
+reduction independently of the solve precision; or restructure the elimination
+to avoid the long recursive chain.
+
+Note this does *not* invalidate the CF values themselves -- deep terms
+contribute little to the backward evaluation, and the benchmark agreements are
+unaffected.
