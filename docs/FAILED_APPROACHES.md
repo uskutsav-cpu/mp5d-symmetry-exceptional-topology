@@ -176,3 +176,25 @@ to avoid the long recursive chain.
 Note this does *not* invalidate the CF values themselves -- deep terms
 contribute little to the backward evaluation, and the benchmark agreements are
 unaffected.
+
+## 9. Trusting a small |dF/domega| outside the validated solver domain (session 8)
+
+The augmented EP Newton solve produced |F| = 1.5e-11 and |dF/domega| = 4.3e-6 at
+r2 = 0.44, extremality 0.0089 -- the signature of a near-double root. It was
+correctly held back as unverified, and has now been **refuted**.
+
+Cause: at r2 = 0.44 the Leaver series radius degenerates (the spurious
+singularity x(-r_+) = 2 r_+/(r_+ + r_-) approaches the unit circle), so Solver A
+returns depth-dependent roots that drift 2e-4 to 6e-4 per depth doubling while
+its CF residual stays at 1e-13. Newton on (F, dF/domega) then locates a spurious
+stationary point in that drift.
+
+**Lesson, now enforced by the record:** a small residual does NOT imply a
+converged root. Before treating any repeated-root diagnostic as physical, check
+that the frequency itself is converged to better than the diagnostic. Here the
+diagnostic (4.3e-6) was three orders BELOW the three-solver frequency spread
+(3.5e-3), so it could not have carried information.
+
+Ruled out as causes: horizon-exponent blow-up (|sigma| = 1.69, only ~2x
+ordinary) and Solver C resolution (stable under contour-length and resolution
+refinement).

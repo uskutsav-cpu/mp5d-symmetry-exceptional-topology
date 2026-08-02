@@ -44,3 +44,6 @@ topological / certified until its evidence requirement is met.
 | C31 | EP2 augmented conditions implemented with an exact total `dF/dω` (Λ recomputed every evaluation, never frozen). | numerically observed | `src/mp5d/exceptional/ep_solver.py` |
 | C32 | **No EP2 exists** in sector (1,1), `l=2`, `N=0`, over `r₂ ≤ 0.20`, extremality `≥ 0.05`, `s ∈ [0.15,0.35]`, `δ ∈ [−0.15,0.15]`, `μ ∈ [0.1,1.7]`: min `|dF/dω| = 1.02e-2` over 74 converged points. | **numerically observed (bounded exclusion)** | `results/negative_regions.json` |
 | C33 | A near-double root at `r₂=0.44`, extremality `0.0089`. | **REJECTED — outside the verified domain**, not evidence either way | `results/rejected_collisions.json` |
+| C34 | The near-extremal candidate (`r₂=0.44`, extremality `0.0089`) is a **numerical artifact** of Solver A's non-convergent drift, not an EP. Solver C shows contrast 0.13 (no root); Solver A drifts 2–6×10⁻⁴ per depth doubling; three-solver spread `3.5×10⁻³` vastly exceeds the claimed `|dF/dω| = 4.3×10⁻⁶`. | **falsified** | `docs/NEAR_EXTREMAL_CANDIDATE.md` |
+| C35 | The region `r₂ ≈ 0.44` is outside the validated domain of **all three** solvers; best achievable agreement is `3.5×10⁻³`. | numerically observed | same |
+| C36 | No EP exists near extremality. | **NOT ESTABLISHED** — region unresolvable at present accuracy | — |

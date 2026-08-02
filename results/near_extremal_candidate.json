@@ -1,0 +1,127 @@
+{
+  "status": "ADJUDICATED - REFUTED",
+  "provenance": {
+    "commit": "3313b6dda84f3c11bbbd44b7592ba090e4be18d9",
+    "solvers": [
+      "leaver-cf/2.0",
+      "hill-wynn/1.0",
+      "complex-scaled-collocation-C/1.0"
+    ]
+  },
+  "candidate": {
+    "omega": [
+      1.97826525,
+      -0.45044647
+    ],
+    "params": {
+      "s": 0.49777,
+      "delta": -0.11359,
+      "mu": 1.9
+    },
+    "derived": {
+      "a": 0.38418,
+      "b": 0.61136,
+      "r_plus": 0.5341,
+      "r2": 0.43976,
+      "extremality": 0.0089,
+      "kappa": 0.17202,
+      "abs_sigma": 1.693
+    },
+    "mode_labels": {
+      "m1": 1,
+      "m2": 1,
+      "l": 2,
+      "overtone": 0
+    },
+    "original_diagnostics": {
+      "absF": 1.543e-11,
+      "absdFdomega": 4.301e-06
+    }
+  },
+  "classification": "NUMERICAL ARTIFACT of the recurrence in its non-convergent regime",
+  "evidence": [
+    {
+      "test": "Solver C spectral contrast at the candidate frequency",
+      "result": {
+        "sigma_min_at_candidate": 3.867e-07,
+        "sigma_min_generic_nearby": 5.169e-08,
+        "contrast": 0.13
+      },
+      "interpretation": "Solver C sees NO root: sigma_min at the candidate is LARGER than at a generic nearby frequency. At a genuine QNM Solver C shows contrast ~1e11."
+    },
+    {
+      "test": "Solver A depth convergence at these parameters (ordinary mode)",
+      "result": {
+        "depth_200": [
+          2.1404411,
+          -0.4903574
+        ],
+        "depth_400": [
+          2.1403019,
+          -0.490203
+        ],
+        "depth_800": [
+          2.1404805,
+          -0.4901583
+        ],
+        "depth_1600": [
+          2.1398633,
+          -0.4903641
+        ],
+        "depth_3200": [
+          2.1395202,
+          -0.4900188
+        ],
+        "movement_per_doubling": "2e-4 to 6e-4, NOT decreasing"
+      },
+      "interpretation": "Solver A does NOT converge here. Its CF residual stays ~1e-13 while the root itself drifts -- the residual measures the truncated equation, not the truncation error, exactly as documented in docs/PRECISION_VALIDATION.md."
+    },
+    {
+      "test": "three-solver spread on an ordinary mode at the same parameters",
+      "result": {
+        "omega_A": [
+          2.1395202,
+          -0.4900188
+        ],
+        "omega_B": [
+          2.1407009,
+          -0.4900153
+        ],
+        "omega_C": [
+          2.1423202,
+          -0.4930677
+        ],
+        "delta_AB": 0.001181,
+        "delta_AC": 0.00414,
+        "delta_BC": 0.003455
+      },
+      "interpretation": "The three solvers agree only to ~3.5e-3 in this region. A repeated-root diagnostic of 4.3e-6 is three orders of magnitude BELOW the frequency uncertainty, so it carries no information."
+    },
+    {
+      "test": "Solver C internal convergence",
+      "result": {
+        "L_20_N_280": [
+          2.142318,
+          -0.4930581
+        ],
+        "L_20_N_650": [
+          2.1413585,
+          -0.4897666
+        ],
+        "L_60_N_450": [
+          2.1423202,
+          -0.4930677
+        ],
+        "L_60_N_650": [
+          2.1422496,
+          -0.493057
+        ]
+      },
+      "interpretation": "Solver C is internally stable across contour length and resolution, so the 3.5e-3 spread is not Solver C's error alone."
+    }
+  ],
+  "verdict": "The small |dF/domega| was produced by Solver A's non-convergent drift in a regime where the Leaver series is only slowly convergent (r2 = 0.44 against a validated domain of r2 <~ 0.20). It is NOT evidence of a repeated root. The candidate is refuted as an EP2.",
+  "mechanism": "Near extremality the spurious singularity x(-r_+) = 2 r_+/(r_+ + r_-) approaches the unit circle, so the Frobenius series radius of convergence degenerates. The continued fraction then returns depth-dependent roots whose residual is small but whose value drifts.",
+  "what_would_be_needed": "A method that resolves the near-horizon scale r_+ - r_- = 0.094 directly -- multidomain spectral matching or near-horizon matched asymptotics (the near-extremal/ZDM treatment) -- to reach better than 1e-3 accuracy in this region.",
+  "not_claimed": "This does not prove no EP exists near extremality; it shows this candidate is not evidence of one."
+}

@@ -1,6 +1,6 @@
 {
   "project": "mp5d-symmetry-exceptional-topology",
-  "updated": "2026-08-01 (session 7: EP machinery + bounded negative result)",
+  "updated": "2026-08-01 (session 8: near-extremal candidate adjudicated and refuted)",
   "stage": {
     "A_repository_and_reuse": "complete; repo public, CI green",
     "B_minimal_baseline": "PARTIAL - 4 Schwarzschild-Tangherlini benchmarks reproduced to 1e-13..1e-11, cross-solver verified; rotating benchmarks vs published values NOT yet done",
@@ -25,9 +25,9 @@
     "passing": 142,
     "note": "139 fast + 3 slow-marked"
   },
-  "current_finding": "EP2 augmented solver built (F=0, dF/domega=0, total derivative exact -- Lambda never frozen). Searched sector (1,1), l=2 and l=4, overtones N=0,1,2, mu in [0.1,3.0]. Branches never approach: l=2 vs l=4 stays >0.84; N=0 vs N=1 shrinks to 0.60 but does not close. One near-double-root candidate (|dF|=4.3e-6) appeared at r2=0.44, extremality 0.0089 -- REJECTED as outside the verified domain. Bounded negative result over 74 points in the safe domain: min |dF/domega| = 1.02e-2, bounded away from zero, so no EP2 in that box.",
-  "current_evidence_level": "bounded negative result in one sector/box; no EP verified",
-  "next_gate": "extend Solver C to r2~0.44 and near-extremal, then re-test the rejected candidate",
+  "current_finding": "The near-extremal candidate is REFUTED as an EP. Three independent tests: Solver C shows no spectral dip there (contrast 0.13 vs ~1e11 at a genuine QNM); Solver A does not converge at those parameters (drifts 2-6e-4 per depth doubling with residual stuck at 1e-13); and the three solvers agree only to 3.5e-3, three orders above the claimed |dF/domega|=4.3e-6. The small derivative was Solver A's non-convergent drift. Mechanism: near extremality the spurious singularity x(-r_+) crowds the unit circle and the Frobenius radius degenerates.",
+  "current_evidence_level": "candidate falsified; bounded negative result stands in the safe box",
+  "next_gate": "multidomain / near-horizon matched asymptotics to make r2>0.26 resolvable",
   "repository_visibility": "PUBLIC",
   "exceptional_points_verified": 0,
   "first_qnm": {
