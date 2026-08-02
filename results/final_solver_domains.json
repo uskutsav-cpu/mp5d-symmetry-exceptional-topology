@@ -1,0 +1,102 @@
+{
+ "status": "complete",
+ "provenance": {
+  "commit": "0f84f1cd409f6a1bfb3c43b7f7d7d750317df6a9"
+ },
+ "definitions": {
+  "z_minus": "inner horizon radius squared; the near-extremality difficulty parameter",
+  "extremality": "M - (|a|+|b|)^2"
+ },
+ "solvers": [
+  {
+   "id": "A",
+   "module": "mp5d.radial.qnm.solve_qnm_cf",
+   "formulation": "Leaver continued fraction (Gaussian-reduced)",
+   "recurrence_free": false,
+   "domain": {
+    "z_minus_max": 0.2,
+    "extremality_min": 0.05
+   },
+   "precision": "double (HP variant available)",
+   "failure": "drifts 2-6e-4 per depth doubling at z_minus=0.44"
+  },
+  {
+   "id": "B",
+   "module": "mp5d.radial.qnm.solve_qnm_hill",
+   "formulation": "raw recurrence + Hill determinant + Wynn",
+   "recurrence_free": false,
+   "domain": {
+    "z_minus_max": 0.2,
+    "extremality_min": 0.05
+   },
+   "precision": "double",
+   "failure": "shares A's recurrence family; not independent of A"
+  },
+  {
+   "id": "C",
+   "module": "mp5d.radial.solver_c",
+   "formulation": "exterior complex scaling, Chebyshev collocation",
+   "recurrence_free": true,
+   "domain": {
+    "z_minus_max": 0.19,
+    "extremality_min": 0.05,
+    "theta_deg": [
+     45,
+     75
+    ],
+    "L": [
+     40,
+     130
+    ],
+    "resolution": [
+     150,
+     380
+    ]
+   },
+   "precision": "double",
+   "failure": "no root at z_minus=0.44 (contrast 0.13)"
+  },
+  {
+   "id": "D",
+   "module": "mp5d.radial.multidomain_near_horizon",
+   "formulation": "multidomain near-horizon + exterior scaling",
+   "recurrence_free": true,
+   "domain": {
+    "note": "ordinary modes only"
+   },
+   "precision": "double",
+   "failure": "non-convergent at z_minus=0.44; wanders in a ball of radius ~2e-3"
+  },
+  {
+   "id": "HP",
+   "module": "mp5d.radial.highprec",
+   "formulation": "full mpmath chain incl. coefficient extraction",
+   "recurrence_free": false,
+   "domain": {
+    "z_minus_max": 0.2,
+    "extremality_min": 0.05
+   },
+   "precision": "arbitrary",
+   "failure": "slow"
+  }
+ ],
+ "independence_rule": "a major claim needs one recurrence solver AND one recurrence-free solver; two wrappers around one discretization do not count",
+ "measured_agreement": {
+  "n_points": 10,
+  "max_difference": 1e-05,
+  "includes_z_minus": [
+   0.14,
+   0.19
+  ]
+ },
+ "near_extremal": {
+  "z_minus": 0.44,
+  "extremality": 0.0089,
+  "status": "outside every declared domain",
+  "best_three_solver_spread": 0.0035,
+  "refuted_explanations": [
+   "near-horizon scale (Solver D resolves it and still fails)",
+   "double-precision conditioning (cond 5.3e11 hard vs 3.2e11 easy-and-converging)"
+  ]
+ }
+}

@@ -1,0 +1,101 @@
+% Draft. Numerical values marked \TODO are filled from results/*.json by
+% scripts/fill_manuscript.py -- never typed by hand, so the text cannot drift
+% from the machine-readable record.
+\documentclass[aps,prd,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
+\usepackage{amsmath,amssymb,graphicx,hyperref}
+\newcommand{\TODO}[1]{\textbf{[#1]}}
+
+\begin{document}
+
+\title{Symmetry control of exceptional structure in the massive scalar
+quasinormal spectrum of doubly rotating five-dimensional Myers--Perry black
+holes}
+
+\author{\TODO{authors}}
+\affiliation{\TODO{affiliation}}
+
+\begin{abstract}
+\TODO{abstract: state the sector decomposition theorem, the symmetry
+classification, the termination law, and the bounded exclusion with its
+numbers.}
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+Massive scalar quasinormal modes of five-dimensional Myers--Perry black holes
+with two rotation parameters are established \cite{HuangHuang2025}. What is not
+established is how the enhanced $U(2)$ symmetry of the equal-spin surface
+$a=b$ organizes \emph{exceptional} (defective) structure in that spectrum. This
+paper answers that question structurally rather than by survey.
+
+\section{Setup and conventions}
+Metric, horizon structure, and the separated massive Klein--Gordon system. All
+conventions are re-derived symbolically from the metric and enforced by tests;
+none are transcribed. Key exact results used throughout:
+\begin{align}
+  c^2 &= 4 s \delta\,(\omega^2-\mu^2), \\
+  \Lambda\big|_{\delta=0} &= l(l+2), \qquad l = 2n+|m_1|+|m_2| .
+\end{align}
+The spheroidicity vanishes identically on $\delta=0$ \emph{and} on $s=0$, so the
+angular operator is the round $S^3$ Laplacian on both.
+
+\section{The sector decomposition and the cross-sector no-go}
+$\partial_\phi$ and $\partial_\psi$ are Killing for arbitrary $a,b$, so the
+torus $T^2$ acts on whatever Banach space carries the quasinormal pencil by
+strongly continuous bounded operators. Fourier analysis for compact group
+actions --- not $L^2$ theory --- gives
+\begin{equation}
+  T(\omega) = \bigoplus_{(m_1,m_2)\in\mathbb{Z}^2} T_{m_1m_2}(\omega).
+\end{equation}
+
+\begin{theorem}[Direct-sum Jordan structure]
+For $T=\bigoplus_k T_k$ on a direct-sum domain, the Jordan chains of $T$ at
+$\omega_*$ are exactly the direct sums of chains of the summands, so the maximal
+chain length of $T$ equals the maximum over $k$ of that of $T_k$.
+\end{theorem}
+
+\begin{corollary}
+A coincidence of quasinormal frequencies belonging to \emph{distinct} azimuthal
+sectors cannot be defective. The total pencil is defective at $\omega_*$ if and
+only if a single sector is already defective there.
+\end{corollary}
+
+In particular the $U(2)$ multiplet degeneracies at $a=b$ --- of dimension
+exactly $l+1$ at each allowed $m$, and $(l+1)^2$ per level --- are protected
+\emph{and} forbidden from becoming exceptional by the same fact. This closes the
+most natural target and redirects the search inside a fixed sector.
+
+\section{The discrete symmetry group}
+Exchange $E$ and parity $P$ generate a Klein four-group acting on
+(parameters $\times$ sector labels). Neither acts on parameters alone, so a
+parameter-space symmetry survives only in sectors that the element stabilizes:
+diagonal sectors $m_1=m_2$ are exactly even in $\delta$; anti-diagonal sectors
+$m_1=-m_2$ are exactly even in $s$; the sector $(0,0)$ has both.
+
+\subsection{A termination law}
+Evenness in $\delta$ makes every diagonal-sector branch analytic in
+$t=\delta^2$. The discriminant $D=(\omega_+-\omega_-)^2$ therefore depends on
+$\delta$ only through $t$, and the exceptional set $D=0$ is a curve in
+$(s,t,\mu)$. Since $\delta=\pm\sqrt{t}$ exists only for $t\ge 0$, an exceptional
+line in a diagonal sector must come in mirror pairs and \emph{terminates} on the
+equal-spin surface, meeting it quadratically, rather than crossing it.
+
+\section{Numerical method}
+Solvers A--D, their validated domains, and the independence rule. The
+scale-free exceptional diagnostic: $|a_1/a_2|$ from a Cauchy expansion, which is
+invariant under rescaling of the spectral condition, unlike $|dF/d\omega|$.
+
+\section{Branch atlas and collision search}
+\TODO{atlas size, sectors, domain, min branch gap, min root separation}
+
+\section{Result}
+\TODO{positive or negative classification, with the quantitative bounds}
+
+\section{Limitations}
+The near-extremal region $z_-\gtrsim 0.2$ lies outside every solver's validated
+domain; no claim is made there. All certification is of finite-dimensional or
+truncated objects and is labelled as such; none of it is a continuum theorem.
+
+\bibliography{references}
+\end{document}
