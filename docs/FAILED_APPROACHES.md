@@ -198,3 +198,31 @@ diagnostic (4.3e-6) was three orders BELOW the three-solver frequency spread
 Ruled out as causes: horizon-exponent blow-up (|sigma| = 1.69, only ~2x
 ordinary) and Solver C resolution (stable under contour-length and resolution
 refinement).
+
+## 10. Near-horizon multidomain resolution as the fix for r2 ~ 0.44 (session 9)
+
+**Hypothesis:** the near-extremal failure was caused by the inner-horizon
+singularity crowding the domain endpoint (Bernstein ellipse collapse), so a
+scaled near-horizon coordinate y = (r-r_+)/(r_+-r_-) plus domain decomposition
+should fix it.
+
+**Built and validated:** Solver D reproduces ST5D l=0 (5.8e-6), ST5D l=1
+(1.4e-6) and HH Table III r1 (2.9e-5).
+
+**Hypothesis REFUTED.** At r2 = 0.44 Solver D still does not converge: the root
+wanders in a ball of radius ~2e-3 as n_inner goes 60 -> 280 and n_outer
+160 -> 400, with movement NOT decreasing. Resolving the near-horizon scale was
+necessary but not sufficient.
+
+**Second hypothesis also refuted:** double-precision conditioning. Measured
+cond(M) at r2=0.44 is 5.3e11, comparable to the ST5D case at 3.2e11 which
+converges to 1e-9. The hard case is not worse conditioned.
+
+**Still unidentified.** The failing point sits at mu = 1.9, near where the l=2
+branch transitions toward omega^2 = mu^2 (observed near mu ~ 2.0). The
+difficulty may be spectral (branch point / mode accumulation) rather than
+discretization, in which case no spatial resolution helps. UNTESTED.
+
+Value retained: Solver D is a second recurrence-free method, and it agrees with
+Solver C (2.1423) against the recurrence family (A 2.1395, B 2.1407),
+strengthening the finding that the recurrence is the outlier near extremality.

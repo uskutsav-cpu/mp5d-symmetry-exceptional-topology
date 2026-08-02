@@ -1,0 +1,82 @@
+{
+  "status": "complete",
+  "provenance": {
+    "commit": "6dd14cd55f1365c59939cc113dc8fc0704269136",
+    "env_hash": "51bd433766170fc3",
+    "solver": "multidomain-near-horizon-D/1.0"
+  },
+  "validated": [
+    {
+      "case": "ST5D l=0 n=0",
+      "omega": [
+        0.5338312,
+        -0.38337163
+      ],
+      "diff_vs_published": 5.76e-06
+    },
+    {
+      "case": "ST5D l=1",
+      "omega": [
+        1.01601617,
+        -0.36232687
+      ],
+      "diff_vs_published": 1.37e-06
+    },
+    {
+      "case": "HH TableIII r1",
+      "omega": [
+        1.68110923,
+        -0.34722673
+      ],
+      "diff_vs_CFM": 2.88e-05
+    }
+  ],
+  "near_extremal_r2_0p44": {
+    "converges": false,
+    "resolution_study_n_inner": [
+      [
+        60,
+        2.142323389,
+        -0.493082071
+      ],
+      [
+        90,
+        2.142097482,
+        -0.492943819
+      ],
+      [
+        140,
+        2.141929995,
+        -0.490135819
+      ],
+      [
+        200,
+        2.141460455,
+        -0.491443273
+      ],
+      [
+        280,
+        2.141962732,
+        -0.491897519
+      ]
+    ],
+    "movement": "2.7e-4, 2.8e-3, 1.4e-3, 6.8e-4 -- not decreasing",
+    "parameter_invariance_spread": 0.0012,
+    "agrees_with": "Solver C (2.1423); separates from Solver A (2.1395) and B (2.1407)"
+  },
+  "hypotheses_refuted": [
+    {
+      "hypothesis": "near-horizon scale (Bernstein ellipse collapse) is the obstruction",
+      "test": "Solver D resolves r_+-r_- by construction",
+      "result": "still does not converge",
+      "status": "REFUTED"
+    },
+    {
+      "hypothesis": "double-precision conditioning is the obstruction",
+      "test": "cond(M) at r2=0.44 is 5.3e11 vs 3.2e11 for ST5D which converges to 1e-9",
+      "result": "hard case is not worse conditioned",
+      "status": "REFUTED"
+    }
+  ],
+  "remaining_untested": "spectral difficulty (branch point / mode accumulation) near mu~1.9-2.0 where the l=2 branch transitions toward omega^2=mu^2"
+}

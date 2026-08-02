@@ -1,0 +1,45 @@
+{
+  "repository": "uskutsav-cpu/mp5d-symmetry-exceptional-topology",
+  "branch": "research/final-science",
+  "commit": "6dd14cd55f1365c59939cc113dc8fc0704269136",
+  "env_hash": "51bd433766170fc3",
+  "completed_gates": [
+    1,
+    2,
+    3
+  ],
+  "active_gate": 3,
+  "gate_notes": {
+    "1": "recovery+PR4 merged",
+    "2": "near-horizon coordinate derived and implemented",
+    "3": "Solver D built, validated on ordinary modes, FAILS near-extremal"
+  },
+  "solvers": {
+    "A": "leaver-cf, domain r2<=0.20",
+    "B": "hill-wynn, domain r2<=0.20",
+    "C": "complex scaling, validated r2<=0.19",
+    "D": "multidomain near-horizon, validated on ordinary modes"
+  },
+  "validated_domains": {
+    "r2_le_0.19": "three-solver agreement <1e-5"
+  },
+  "unvalidated_domains": {
+    "r2_ge_0.26": "no solver converges better than ~2e-3"
+  },
+  "candidates": [],
+  "rejected_candidates": [
+    "near-extremal candidate (refuted, session 8)"
+  ],
+  "open_obligations": [
+    "O6.5",
+    "O6.6",
+    "O6.7",
+    "diagonal delta symmetry"
+  ],
+  "next_commands": [
+    "build Wronskian matching fallback (method C2)",
+    "OR test whether the r2=0.44 difficulty is spectral: map sigma_min over a neighbourhood in omega to look for mode accumulation / branch point",
+    "then multi-sector atlas"
+  ],
+  "failed_approaches_count": 10
+}
