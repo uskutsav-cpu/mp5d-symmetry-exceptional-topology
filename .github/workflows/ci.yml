@@ -48,12 +48,18 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
+      # results/*.json are script-generated artifacts: float arrays plus a git
+      # commit and a requirements.lock sha256 recorded for provenance. The
+      # hashes trip 'Hex High Entropy String' on every new artifact, which
+      # broke CI four times running. They are excluded by path; source, config
+      # and docs are still scanned.
       - name: detect-secrets against audited baseline
         run: |
           pip install detect-secrets
           cp .secrets.baseline .secrets.baseline.orig
           detect-secrets scan --baseline .secrets.baseline \
-            --exclude-files '^\.venv/' --exclude-files '^\.secrets\.baseline$'
+            --exclude-files '^\.venv/' --exclude-files '^\.secrets\.baseline$' \
+            --exclude-files '^results/.*\.json$'
           python - <<'EOF'
           import json, sys
 
