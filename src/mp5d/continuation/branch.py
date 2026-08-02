@@ -106,7 +106,7 @@ def extrapolate(history: list[complex], targets: list[float], nxt: float) -> com
 
 def continue_along(label: BranchLabel, path: list[tuple[float, float, float]],
                    seed: complex, *, depth: int = 200, angular_N: int = 40,
-                   M: float = 1.0, predictor_tol: float = 0.25,
+                   M: float = 1.0, predictor_tol: float = 0.12,
                    depth_schedule: tuple[int, ...] = (100, 200),
                    commit: str = "", parent: str | None = None,
                    solver: str = "leaver-cf") -> tuple[list[AtlasPoint], list[dict]]:

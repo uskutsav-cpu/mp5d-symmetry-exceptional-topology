@@ -226,3 +226,42 @@ discretization, in which case no spatial resolution helps. UNTESTED.
 Value retained: Solver D is a second recurrence-free method, and it agrees with
 Solver C (2.1423) against the recurrence family (A 2.1395, B 2.1407),
 strengthening the finding that the recurrence is the outlier near extremality.
+
+---
+
+## Branch-label collapse in the first atlas build (fixed, guard added)
+
+**Attempted.** Build the fixed-sector branch atlas by nested continuation with
+`S_GRID = [0.0, 0.12, 0.24, 0.34, 0.42]` and a predictor tolerance of `0.25`.
+
+**Symptom.** The tier-1 collision search reported a minimum within-sector branch
+gap of `4.3e-15` — machine precision — at 200 parameter points, which read like
+a perfect degeneracy across the whole atlas.
+
+**Mechanism.** Always the same `l`, always adjacent overtones `N=2` and `N=3`,
+and always in `l = 6`. The first step of the stage-2 walk (`s: 0 → 0.12`) has
+only **one** history point, so `extrapolate` degenerates to the trivial
+predictor `omega_prev`. For a strongly damped high-`l` overtone the true motion
+over that step exceeds the spacing to the neighbouring overtone, and Muller's
+method converged onto the `N=2` branch while still carrying the `N=3` label.
+The jump was `|Δω| ≈ 0.79`, just under the `0.25·|ω| ≈ 0.86` tolerance, so the
+predictor guard did not fire.
+
+**How it was caught.** Not by the gap. The scale-free tier-2 diagnostic reported
+a root separation of `≈ 1.0` at points whose tier-1 gap was `1e-15` — a flat
+contradiction, since a genuine coalescence must show *both* small. This is
+precisely why the search is two-tier: tier 1 alone would have reported a
+spectacular false positive.
+
+**Fixes applied.**
+1. Finer early `s` steps: `[0.0, 0.04, 0.08, 0.14, 0.20, 0.27, 0.34, 0.42]`,
+   so the quadratic predictor is active before the steps grow.
+2. Predictor tolerance tightened `0.25 → 0.12`.
+3. A permanent **collapse guard** in `scripts/collision_search.py`: a tier-1 gap
+   below `1e-10` whose tier-2 separation exceeds `1000×` the gap is classified
+   `collapsed_label` and excluded from candidacy. Reported explicitly as
+   `n_collapsed_labels`, never silently dropped.
+
+**Revisit?** No. But the general lesson stands: *a small computed gap between
+two labels is evidence about the labels first and about the physics second.*
+The first atlas is retained at `data/atlas_v1_superseded/` for comparison.

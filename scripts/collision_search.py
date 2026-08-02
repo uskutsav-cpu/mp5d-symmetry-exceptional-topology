@@ -140,8 +140,28 @@ def main() -> int:
         print(f"  tier2 [{idx}] gap={gaps[idx]['gap']:.4e} "
               f"sep={gaps[idx]['tier2'].get('separation')}", flush=True)
 
+    # ---- branch-label collapse guard ---------------------------------------
+    # A tier-1 gap at machine precision together with a tier-2 separation that
+    # is orders of magnitude LARGER means the two labelled branches are the same
+    # mode: continuation lost one of them.  That is a mode-label error, not a
+    # degeneracy, and it must never be counted as an EP candidate.  Without this
+    # guard the tier-1 minimum reads ~1e-15 and looks like a perfect coalescence.
+    for g in gaps:
+        t2 = g.get("tier2")
+        g["collapsed_label"] = bool(
+            t2 and t2.get("ok") and g["gap"] < 1e-10
+            and t2["separation"] > 1e3 * max(g["gap"], 1e-300)
+        )
+    n_collapsed = sum(1 for g in gaps if g.get("collapsed_label"))
+
+    genuine = [g for g in gaps if not g.get("collapsed_label")]
+    # untested small gaps are suspect too: treat any sub-1e-10 tier-1 gap that
+    # was not tier-2 tested as unverified rather than as a candidate
+    genuine_tested = [g for g in genuine
+                      if g["gap"] > 1e-10 or g.get("tier2", {}).get("ok")]
+
     seps = [g["tier2"]["separation"] for g in gaps
-            if g.get("tier2", {}).get("ok")]
+            if g.get("tier2", {}).get("ok") and not g.get("collapsed_label")]
     result = {
         "status": "complete",
         "provenance": {"commit": commit_hash(), "runtime_s": round(time.time() - t0, 1),
@@ -149,9 +169,16 @@ def main() -> int:
         "n_atlas_points": len(points),
         "n_parameter_points": len(gaps),
         "n_tier2": len(seps),
-        "min_branch_gap": gaps[0]["gap"],
+        "n_collapsed_labels": n_collapsed,
+        "collapse_note": "gap < 1e-10 with tier-2 separation > 1000x the gap means "
+                         "two labelled branches are the SAME mode (continuation lost "
+                         "one). Excluded from candidacy: it is a mode-label error, "
+                         "not a degeneracy.",
+        "min_branch_gap_raw": gaps[0]["gap"],
+        "min_branch_gap": genuine_tested[0]["gap"] if genuine_tested else None,
         "min_root_separation": min(seps) if seps else None,
-        "candidates": gaps[:200],
+        "candidates": genuine_tested[:200],
+        "collapsed_examples": [g for g in gaps if g.get("collapsed_label")][:10],
     }
     pathlib.Path(args.out).write_text(json.dumps(result, indent=1) + "\n")
 
@@ -172,14 +199,16 @@ def main() -> int:
                             max(g["delta"] for g in gaps)],
             "mu_range": [min(g["mu"] for g in gaps), max(g["mu"] for g in gaps)],
         },
-        "min_branch_gap": gaps[0]["gap"],
+        "min_branch_gap": genuine_tested[0]["gap"] if genuine_tested else None,
         "min_root_separation": min(seps) if seps else None,
         "n_atlas_points": len(points),
         "n_parameter_points": len(gaps),
+        "n_collapsed_labels_excluded": n_collapsed,
         "verdict": None,  # filled in by the reporting step after inspection
     }
     pathlib.Path(args.negative_out).write_text(json.dumps(neg, indent=1) + "\n")
-    print(f"min branch gap        = {result['min_branch_gap']:.6e}")
+    print(f"collapsed labels excluded = {n_collapsed}")
+    print(f"min branch gap        = {result['min_branch_gap']}")
     print(f"min root separation   = {result['min_root_separation']}")
     print(f"wrote {args.out} and {args.negative_out} in {time.time()-t0:.1f}s")
     return 0
