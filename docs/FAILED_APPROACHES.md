@@ -264,4 +264,6 @@ spectacular false positive.
 
 **Revisit?** No. But the general lesson stands: *a small computed gap between
 two labels is evidence about the labels first and about the physics second.*
-The first atlas is retained at `data/atlas_v1_superseded/` for comparison.
+A minimal extract documenting the defect is kept at
+`results/atlas_v1_collapse_extract.json`; the full 13 MB superseded atlas was
+not worth carrying in a public repository.
