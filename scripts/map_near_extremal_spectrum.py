@@ -40,7 +40,7 @@ import numpy as np
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "src"))
 
 from mp5d.geometry import MPGeometry  # noqa: E402
-from mp5d.radial.solver_c import SolverCProblem  # noqa: E402
+from mp5d.radial.solver_c import SolverCProblem, solve_qnm_c  # noqa: E402
 
 
 def commit_hash() -> str:
@@ -106,20 +106,40 @@ def main() -> int:
     ap.add_argument("--ell", type=int, default=2)
     ap.add_argument("--m1", type=int, default=1)
     ap.add_argument("--m2", type=int, default=1)
-    ap.add_argument("--centre", type=float, nargs=2, default=[2.14, -0.49])
+    ap.add_argument("--centre", type=float, nargs=2, default=[2.14, -0.49],
+                help="seed for the LOWEST z_minus; later windows are re-centred "
+                     "by continuation")
+    ap.add_argument("--half-re", type=float, default=0.45)
+    ap.add_argument("--half-im", type=float, default=0.45)
     args = ap.parse_args()
 
     t0 = time.time()
     entries = []
-    for z in args.z_minus:
+    # Centre each window on the actual mode at that background, obtained by
+    # continuation in z_minus from a converged low-z_minus mode.  Using one
+    # fixed window for every z_minus put the minimum on the window edge and made
+    # the theta comparison meaningless -- the drift measured the boundary, not
+    # the spectrum.
+    centre = complex(*args.centre)
+    for z in sorted(args.z_minus):
         a, b = ab_for_z_minus(z)
         geo = MPGeometry(a=a, b=b, M=1.0)
+        try:
+            seeded = solve_qnm_c(a, b, args.mu, args.m1, args.m2, args.ell,
+                                 initial_frequency=centre,
+                                 theta=math.radians(args.thetas_deg[0]),
+                                 L=60.0, resolution=args.resolution)
+            if seeded.converged:
+                centre = seeded.omega
+        except Exception as exc:  # noqa: BLE001
+            print(f"  [warn] seeding failed at z-={z}: {str(exc)[:80]}", flush=True)
+        print(f"z-={z:.3f}: window centred on {centre:.6f}", flush=True)
         per_theta = {}
         for th_deg in args.thetas_deg:
             th = math.radians(th_deg)
             prob = SolverCProblem(geo, args.mu, args.m1, args.m2, args.ell,
                                   theta=th, L=60.0, resolution=args.resolution)
-            m = map_window(prob, complex(*args.centre), 0.30, 0.30,
+            m = map_window(prob, centre, args.half_re, args.half_im,
                            args.n_re, args.n_im)
             per_theta[f"{th_deg:g}"] = m
             print(f"z-={z:.3f} (a={a:.4f},b={b:.4f}) theta={th_deg:g}deg "
