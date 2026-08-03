@@ -36,6 +36,9 @@ if [ "$FIGS" = "1" ]; then
   fi
 fi
 
+echo "==> citation check"
+.venv/bin/python scripts/check_citations.py
+
 mkdir -p manuscript/build
 cd manuscript
 for doc in main supplement cover_letter_prd cover_letter_prl response_template; do

@@ -81,7 +81,7 @@
    "cover_letter_prl.tex",
    "response_template.tex"
   ],
-  "figures": 5,
+  "figures": 4,
   "compiles": true,
   "engine": "tectonic",
   "build": "./scripts/build_manuscript.sh",
@@ -92,7 +92,19 @@
    "referee suggestions"
   ],
   "target": "PRD. PRL explicitly declined -- see cover_letter_prl.tex for the reasoning, recorded so the decision is deliberate rather than an omission.",
-  "not_submitted": true
+  "not_submitted": true,
+  "style": "Modelled on Kokkotas & Schmidt, Living Rev. Relativity 2, 2 (1999) [gr-qc/9909058]: single column, hierarchical numbered sections, heavy numbered equations, tables of numerical values, few figures, technical derivations in appendices.",
+  "pages": 27,
+  "sections": 14,
+  "subsections": 37,
+  "numbered_equations": 66,
+  "theorem_environments": 9,
+  "proofs": 5,
+  "tables": 6,
+  "distinct_citations": 66,
+  "bibliography_entries": 75,
+  "independently_verified_entries": 21,
+  "figure_style": "greyscale, Computer Modern, open/filled markers, labelled level curves instead of filled colour maps; survives monochrome printing"
  },
  "ringdown": {
   "finding": "No exceptional phenomenology. The strongest interactions split in Im omega (0.53) rather than Re omega (8e-4 to 0.07): nearly equal oscillation frequencies, very different decay rates. The EP template beats a single damped exponential by only 2.4x while using twice the free amplitudes.",
