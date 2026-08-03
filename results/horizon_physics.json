@@ -1,0 +1,334 @@
+{
+ "status": "complete",
+ "provenance": {
+  "commit": "2467c2a9b23581711ef92753f9989dd0e068ec86"
+ },
+ "conventions": {
+  "area": "A = 2 pi^2 (z_+ + a^2)(z_+ + b^2)/r_+ ; checked against A = 2 pi^2 r_+^3 at a=b=0",
+  "entropy": "S = A/4 in units G = c = hbar = 1",
+  "superradiance": "S_factor = Re(omega) - (m1 Omega_a + m2 Omega_b); negative means superradiant"
+ },
+ "domain_corners": [
+  {
+   "s": 0.0,
+   "delta": 0.0,
+   "a": 0.0,
+   "b": 0.0,
+   "r_plus": 1.0,
+   "r_minus": 0.0,
+   "extremality": 1.0,
+   "Omega_a": 0.0,
+   "Omega_b": 0.0,
+   "kappa": 1.0,
+   "T_H": 0.15915494309189535,
+   "area": 19.739208802178716,
+   "entropy": 4.934802200544679
+  },
+  {
+   "s": 0.2,
+   "delta": 0.0,
+   "a": 0.2,
+   "b": 0.2,
+   "r_plus": 0.9582575694955839,
+   "r_minus": 0.04174243050441632,
+   "extremality": 0.84,
+   "Omega_a": 0.20871215252208003,
+   "Omega_b": 0.20871215252208003,
+   "kappa": 0.9564392373896,
+   "T_H": 0.15222203239759757,
+   "area": 18.915246250541614,
+   "entropy": 4.7288115626354035
+  },
+  {
+   "s": 0.42,
+   "delta": 0.0,
+   "a": 0.42,
+   "b": 0.42,
+   "r_plus": 0.7712931993250107,
+   "r_minus": 0.22870680067498927,
+   "extremality": 0.2944000000000001,
+   "Omega_a": 0.5445400016071174,
+   "Omega_b": 0.5445400016071174,
+   "kappa": 0.7034761866497207,
+   "T_H": 0.11196171245273984,
+   "area": 15.224717509176832,
+   "entropy": 3.806179377294208
+  },
+  {
+   "s": 0.42,
+   "delta": 0.2,
+   "a": 0.62,
+   "b": 0.21999999999999997,
+   "r_plus": 0.7295507688205947,
+   "r_minus": 0.18696437017057327,
+   "extremality": 0.2944000000000001,
+   "Omega_a": 0.6763801221181922,
+   "Omega_b": 0.37888943506035977,
+   "kappa": 0.6816367959934682,
+   "T_H": 0.1084858654756823,
+   "area": 14.40075495753973,
+   "entropy": 3.6001887393849326
+  },
+  {
+   "s": 0.42,
+   "delta": -0.2,
+   "a": 0.21999999999999997,
+   "b": 0.62,
+   "r_plus": 0.7295507688205947,
+   "r_minus": 0.18696437017057327,
+   "extremality": 0.2944000000000001,
+   "Omega_a": 0.37888943506035977,
+   "Omega_b": 0.6763801221181922,
+   "kappa": 0.6816367959934682,
+   "T_H": 0.1084858654756823,
+   "area": 14.400754957539732,
+   "entropy": 3.600188739384933
+  },
+  {
+   "s": 0.34,
+   "delta": 0.2,
+   "a": 0.54,
+   "b": 0.14,
+   "r_plus": 0.8248636250920511,
+   "r_minus": 0.0916515138991169,
+   "extremality": 0.5375999999999999,
+   "Omega_a": 0.5555555555555556,
+   "Omega_b": 0.20000000000000007,
+   "kappa": 0.814680123547705,
+   "T_H": 0.12966036870133327,
+   "area": 16.28215532901406,
+   "entropy": 4.070538832253515
+  }
+ ],
+ "T_H_range": [
+  0.1084858654756823,
+  0.15915494309189535
+ ],
+ "Omega_a_range": [
+  0.0,
+  0.6763801221181922
+ ],
+ "n_superradiant_branches": 0,
+ "superradiance": [
+  {
+   "labels": {
+    "m1": 1,
+    "m2": 1,
+    "ell": 2,
+    "overtone": 0
+   },
+   "background": {
+    "s": 0.0,
+    "delta": 0.0
+   },
+   "Omega_a": 0.0,
+   "Omega_b": 0.0,
+   "critical_frequency": 0.0,
+   "min_superradiance_factor": 1.5105674517727272,
+   "at_mu": 0.0,
+   "omega_re": 1.5105674517727272,
+   "is_superradiant": false,
+   "min_damping": 8.654682716258757e-10
+  },
+  {
+   "labels": {
+    "m1": 1,
+    "m2": 1,
+    "ell": 2,
+    "overtone": 0
+   },
+   "background": {
+    "s": 0.24,
+    "delta": 0.0
+   },
+   "Omega_a": 0.2556906500448909,
+   "Omega_b": 0.2556906500448909,
+   "critical_frequency": 0.5113813000897818,
+   "min_superradiance_factor": 1.1592902104326277,
+   "at_mu": 0.0,
+   "omega_re": 1.6706715105224095,
+   "is_superradiant": false,
+   "min_damping": 2.5152974894973205e-07
+  },
+  {
+   "labels": {
+    "m1": 1,
+    "m2": 1,
+    "ell": 2,
+    "overtone": 0
+   },
+   "background": {
+    "s": 0.24,
+    "delta": 0.1
+   },
+   "Omega_a": 0.3477293158999254,
+   "Omega_b": 0.15877119575696166,
+   "critical_frequency": 0.506500511656887,
+   "min_superradiance_factor": 1.16557928068914,
+   "at_mu": 0.0,
+   "omega_re": 1.672079792346027,
+   "is_superradiant": false,
+   "min_damping": 1.6132703917340192e-07
+  },
+  {
+   "labels": {
+    "m1": 1,
+    "m2": 1,
+    "ell": 2,
+    "overtone": 1
+   },
+   "background": {
+    "s": 0.24,
+    "delta": 0.0
+   },
+   "Omega_a": 0.2556906500448909,
+   "Omega_b": 0.2556906500448909,
+   "critical_frequency": 0.5113813000897818,
+   "min_superradiance_factor": 1.0682852995709144,
+   "at_mu": 0.0,
+   "omega_re": 1.5796665996606962,
+   "is_superradiant": false,
+   "min_damping": 0.0936020039486922
+  },
+  {
+   "labels": {
+    "m1": 0,
+    "m2": 0,
+    "ell": 0,
+    "overtone": 0
+   },
+   "background": {
+    "s": 0.0,
+    "delta": 0.0
+   },
+   "Omega_a": 0.0,
+   "Omega_b": 0.0,
+   "critical_frequency": 0.0,
+   "min_superradiance_factor": 0.533835574268393,
+   "at_mu": 0.0,
+   "omega_re": 0.533835574268393,
+   "is_superradiant": false,
+   "min_damping": 0.00013413366750110602
+  },
+  {
+   "labels": {
+    "m1": 0,
+    "m2": 0,
+    "ell": 0,
+    "overtone": 0
+   },
+   "background": {
+    "s": 0.24,
+    "delta": 0.0
+   },
+   "Omega_a": 0.2556906500448909,
+   "Omega_b": 0.2556906500448909,
+   "critical_frequency": 0.0,
+   "min_superradiance_factor": 0.5378508773910842,
+   "at_mu": 0.0,
+   "omega_re": 0.5378508773910842,
+   "is_superradiant": false,
+   "min_damping": 0.00019458397054839373
+  },
+  {
+   "labels": {
+    "m1": 0,
+    "m2": 0,
+    "ell": 2,
+    "overtone": 0
+   },
+   "background": {
+    "s": 0.24,
+    "delta": 0.0
+   },
+   "Omega_a": 0.2556906500448909,
+   "Omega_b": 0.2556906500448909,
+   "critical_frequency": 0.0,
+   "min_superradiance_factor": 1.5217986868815823,
+   "at_mu": 0.0,
+   "omega_re": 1.5217986868815823,
+   "is_superradiant": false,
+   "min_damping": 5.766744236341494e-09
+  },
+  {
+   "labels": {
+    "m1": 2,
+    "m2": 2,
+    "ell": 4,
+    "overtone": 0
+   },
+   "background": {
+    "s": 0.24,
+    "delta": 0.0
+   },
+   "Omega_a": 0.2556906500448909,
+   "Omega_b": 0.2556906500448909,
+   "critical_frequency": 1.0227626001795636,
+   "min_superradiance_factor": 1.8019653682909547,
+   "at_mu": 0.0,
+   "omega_re": 2.824727968470518,
+   "is_superradiant": false,
+   "min_damping": 0.21134696338008996
+  },
+  {
+   "labels": {
+    "m1": 1,
+    "m2": 0,
+    "ell": 1,
+    "overtone": 0
+   },
+   "background": {
+    "s": 0.24,
+    "delta": 0.0
+   },
+   "Omega_a": 0.2556906500448909,
+   "Omega_b": 0.2556906500448909,
+   "critical_frequency": 0.2556906500448909,
+   "min_superradiance_factor": 0.8426451390973201,
+   "at_mu": 0.0,
+   "omega_re": 1.098335789142211,
+   "is_superradiant": false,
+   "min_damping": 5.835164817504734e-09
+  },
+  {
+   "labels": {
+    "m1": 2,
+    "m2": 0,
+    "ell": 2,
+    "overtone": 0
+   },
+   "background": {
+    "s": 0.24,
+    "delta": 0.0
+   },
+   "Omega_a": 0.2556906500448909,
+   "Omega_b": 0.2556906500448909,
+   "critical_frequency": 0.5113813000897818,
+   "min_superradiance_factor": 1.1592902104326261,
+   "at_mu": 0.0,
+   "omega_re": 1.670671510522408,
+   "is_superradiant": false,
+   "min_damping": 1.7912745629032717e-06
+  },
+  {
+   "labels": {
+    "m1": 2,
+    "m2": 1,
+    "ell": 3,
+    "overtone": 0
+   },
+   "background": {
+    "s": 0.24,
+    "delta": 0.0
+   },
+   "Omega_a": 0.2556906500448909,
+   "Omega_b": 0.2556906500448909,
+   "critical_frequency": 0.7670719501346727,
+   "min_superradiance_factor": 1.479744625867216,
+   "at_mu": 0.0,
+   "omega_re": 2.2468165760018888,
+   "is_superradiant": false,
+   "min_damping": 0.13162770857821507
+  }
+ ]
+}
