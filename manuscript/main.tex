@@ -1,6 +1,8 @@
-% Draft. Numerical values marked \TODO are filled from results/*.json by
-% scripts/fill_manuscript.py -- never typed by hand, so the text cannot drift
-% from the machine-readable record.
+% Draft.  Every numerical value in this file is transcribed from results/*.json
+% (see docs/FINAL_NEGATIVE_RESULT.md for the same numbers with provenance).
+% Authorship is left as \TODO deliberately: it is not for the tooling to assign.
+% NOT submitted, and not to be submitted without the novelty audit in
+% docs/NOVELTY_AUDIT.md being re-checked against the literature at that date.
 \documentclass[aps,prd,twocolumn,superscriptaddress,nofootinbib]{revtex4-2}
 \usepackage{amsmath,amssymb,graphicx,hyperref}
 \newcommand{\TODO}[1]{\textbf{[#1]}}
@@ -15,9 +17,31 @@ holes}
 \affiliation{\TODO{affiliation}}
 
 \begin{abstract}
-\TODO{abstract: state the sector decomposition theorem, the symmetry
-classification, the termination law, and the bounded exclusion with its
-numbers.}
+We ask how the enhanced equal-spin symmetry of the asymptotically flat, doubly
+rotating five-dimensional Myers--Perry black hole organizes exceptional
+(defective) structure in its massive scalar quasinormal spectrum. Two results
+are structural. First, because $\partial_\phi$ and $\partial_\psi$ are Killing
+for arbitrary rotation parameters, the quasinormal pencil is a direct sum over
+azimuthal sectors $(m_1,m_2)$, and the Jordan chains of a direct sum are the
+union of the summands' chains; a coincidence of frequencies belonging to
+different sectors is therefore always semisimple. This closes the equal-spin
+$U(2)$ multiplet channel exactly: those degeneracies are protected and
+forbidden from becoming exceptional by the same fact. Second, the discrete
+symmetry group is a Klein four-group acting on parameters \emph{and} sector
+labels, so diagonal sectors $m_1=m_2$ are exactly even in the spin asymmetry
+$\delta$; any exceptional line there must come in mirror pairs and terminate
+quadratically on the equal-spin surface rather than crossing it. We then search
+the surviving within-sector channel numerically: a branch atlas of $50\,558$
+continued points across seven sectors, three angular branches and four
+overtones each, bounds the pairwise branch gap below by $0.51$, a
+rescaling-invariant root-separation diagnostic by $0.31$, and the local
+discriminant by $0.26$, with the eigenvalue condition number at the strongest
+interaction finite at $8.7\times10^3$. The ten tightest candidates are
+classified as avoided crossings by argument-principle, monodromy and Puiseux
+tests. We find no exceptional point in the searched domain. This contrasts with
+the exceptional lines established for the de Sitter members of this family,
+whose mechanism is tied to the near-Nariai structure and has no $\Lambda=0$
+analogue.
 \end{abstract}
 
 \maketitle
@@ -87,15 +111,64 @@ scale-free exceptional diagnostic: $|a_1/a_2|$ from a Cauchy expansion, which is
 invariant under rescaling of the spectral condition, unlike $|dF/d\omega|$.
 
 \section{Branch atlas and collision search}
-\TODO{atlas size, sectors, domain, min branch gap, min root separation}
+Branches are continued, never sorted: identity comes from continuation history
+plus a predictor-agreement test taken from the branch's own miss history. The
+atlas contains $50\,558$ points over seven independent sectors
+$(0,0)$, $(\pm1,\pm1)$, $(1,0)$, $(2,0)$, $(2,1)$, $(2,2)$, with
+$l\in\{l_{\min},l_{\min}+2,l_{\min}+4\}$ and $N=0,\dots,3$, over
+$s\le0.42$, $|\delta|\le0.20$, $\mu\le1.8$, inner horizon $r_-\le0.2287$ and
+extremality $\ge0.294$. Solver A and the recurrence-free Solver C agree to
+$2.1\times10^{-9}$ on nine spanning points.
+
+Two diagnostics are used. The pairwise branch gap is free given the atlas but
+sees only computed branches; a Cauchy expansion of the spectral condition gives
+$|a_1/a_2|$, which estimates the distance to \emph{any} nearby zero and is
+invariant under rescaling of the spectral condition. The latter matters:
+$|dF/d\omega|$ at a root can be made arbitrarily small by multiplying $F$ by a
+nonvanishing analytic function, so it cannot bound anything.
 
 \section{Result}
-\TODO{positive or negative classification, with the quantitative bounds}
+No exceptional point exists in the searched domain, with
+\begin{align}
+  \min |\omega_i-\omega_j| &= 0.5116, &
+  \min |a_1/a_2| &= 0.3107, \\
+  \min |D| &= 0.2618, &
+  \kappa_{\max} &= 8.73\times10^{3},
+\end{align}
+against $\kappa=18.3$ at an ordinary control mode. An exceptional point of
+order two requires the first three to vanish simultaneously and $\kappa$ to
+diverge. The ten tightest candidates all show the same signature: two distinct
+zeros are present (argument principle, contour-moment root finding), but there
+is no coalescence, no monodromy exchange around a parameter loop, and no
+square-root splitting --- i.e. avoided crossings.
+
+The one place where the spectrum does behave dramatically is the quasiresonant
+limit, where the damping falls by $8.6$ orders of magnitude to
+$8.7\times10^{-10}$ as $\mathrm{Re}\,\omega\to\mu$. That is a branch point in
+$\mu$, not a coalescence: the neighbouring overtone remains at
+$-\mathrm{Im}\,\omega\sim0.1$ throughout.
 
 \section{Limitations}
-The near-extremal region $z_-\gtrsim 0.2$ lies outside every solver's validated
-domain; no claim is made there. All certification is of finite-dimensional or
-truncated objects and is labelled as such; none of it is a continuum theorem.
+The minimum gap is attained on the boundary of the searched box
+($s=0.42$, $\delta=-0.20$, $\mu=1.8$); a probe beyond the box shows the gap
+falling to $0.47$ at $s=0.45$ but rising again at larger $\mu$, so the trend
+does not extrapolate to zero, and no claim is made for $s>0.45$ or $\mu>1.8$.
+Overtones $N>3$ and higher $l$ were not searched.
+
+The quasiresonant regime is not searched for exceptional points. There
+$\mathrm{Re}\,\Omega\to0$ with $\Omega=\sqrt{\omega^2-\mu^2}$, so the minimum
+admissible exterior-complex-scaling angle tends to $90^\circ$ and the
+recurrence-free solvers are inapplicable \emph{by formulation}; no independent
+confirmation is available, so the standard for a claim cannot be met. We note
+that this, and not proximity to extremality, is what defeated earlier attempts
+in this parameter range: ordinary modes continue to extremality $0.0103$ with
+residuals $\sim10^{-13}$. A hyperboloidal formulation, which regularizes the
+outgoing behaviour geometrically rather than by rotation, is the principled
+next step.
+
+The result is a bounded numerical exclusion over a declared domain. It is not a
+theorem. The symmetry statements of Secs.~III--IV are exact and independent of
+the numerics; they should not be conflated with the numerical exclusion.
 
 \bibliography{references}
 \end{document}

@@ -1,48 +1,69 @@
 # Session handoff
 
-## Session 5 (2026-08-01) — asymptotic tail; Solver C NOT built
+## Session 8 (2026-08-02) — Outcome C reached: bounded multi-sector EP exclusion
+
+### State
+
+* Branch `research/absolute-final`, PR **#6** open against `main`, CI green.
+* **252 tests passing.** Repository public, `main` protected.
+* Atlas data (~24 MB) is **untracked**; regenerate with
+  `scripts/build_branch_atlas.py` and verify against the sha256 per shard in
+  `results/full_branch_atlas.json`.
 
 ### Achieved
 
-* PR #2 merged; work continues on `research/solver-c`.
-* **Tail structure derived.** Characteristic equation `A(1/R) = 0`; `x = 1` is a
-  multiple root (`A` multiplicity ≥5, `B`,`C` exactly 4), so the `n^{-3/2}`
-  balance reads `−u₁A'(1) = 0` with `A'(1) = 0` and half-integer powers survive:
-  `R_n = 1 + u₁n^{-1/2} + …`, `u₁ = −√(−2c)`, `c = iΩ(r₊−r₋)`.
-* Confirmed two independent ways: the exponent test (`n^{1/2}` scaling
-  converges, `n^1` diverges) and the `exp(−k√N)` depth signature.
-* **Tail implemented** at leading order, opt-in via `tail_order`; higher orders
-  raise rather than return a wrong tail. Measured **~1.35× depth reduction**
-  (+1.4 digits at depth 200).
-* 127 tests passing.
+**Analytical (exact, independent of the numerics)**
 
-### NOT done — the session's central deliverable
+* Cross-sector no-go **closed unconditionally** (O6.5–O6.7 discharged). Jordan
+  chains of a direct sum are the union of the summands' chains, so cross-sector
+  coincidence cannot create defectiveness. O6.5 needs no `L²` — a strongly
+  continuous torus action on any Banach space suffices. O6.6 was removed: the
+  proof never used angular separation.
+* Symmetry group is Klein four `{1,E,P,EP}` on (parameters × sector labels).
+  Diagonal sectors even in `δ`, anti-diagonal even in `s`, `(0,0)` both.
+  **C13 corrected** — false in general, true only in `(0,0)`.
+* O7 discharged for all `l`: multiplet dimension `l+1`, level total `(l+1)²`.
+* Termination law recorded **before** the search (C43, conditional).
 
-**Solver C was not built.** There is still no independent non-recurrence solver.
-Everything in the difficult region continues to rest on one recurrence family
-plus Huang–Huang's published matrix values. Gate items 3–10 are therefore open:
-static fundamental/overtone via C, two rotating modes via C, large-`r₂` via C,
-three-way A/B/C agreement, long-lived branch, and the revised validity map.
+**Numerical**
 
-### Blocker discovered
+* Atlas: **50 558 points**, 7 sectors × 3 `l` × 4 `N`.
+* Bounds: branch gap `≥ 0.5116`, scale-free separation `≥ 0.3107`,
+  `min|D| ≥ 0.2618`, `κ ≤ 8.73e3` (ordinary control 18.3).
+* Ten tightest candidates **rejected** — avoided crossings (G2/G3 pass,
+  G1/G4/G6 fail).
+* Long-lived branches tracked to damping `8.65e-10`.
+* A-vs-C agreement `2.06e-9` up to `r₋ = 0.2287`.
 
-The Gaussian reduction degrades past `n ~ 500–800`: the backward ratio recursion
-collapses to a spurious, problem-independent `R_n − 1 = 2/n` (identical for two
-unrelated parameter sets). Clean window for asymptotics is `n = 200–400`. This
-blocks numerical extraction of `u₂` and caps the achievable tail order. It does
-**not** affect the CF values or the benchmark agreements.
+**Corrections to the prior record**
 
-Untested fixes: raise working precision inside the reduction independently of
-the solve precision; or restructure the elimination to shorten the recursive
-chain.
+* **C32 withdrawn**: `|dF/dω|` is not rescaling-invariant and bounds nothing.
+* **Near-extremal breakdown is not extremality** — it is the quasiresonant
+  limit (`Re Ω → 0` ⇒ required scaling angle → 90°).
+* `r₂` is the inner horizon *radius*, not its square.
+
+### Not done
+
+* **Gate 16 certification is PARTIAL.** Krawczyk and Arb machinery exist and are
+  validated both directions, and the angular eigenvalue is enclosed for the
+  `N`-truncated Jacobi matrix. The **radial** problem is *not* certified: the
+  polynomial coefficients come from a DFT with no rigorous aliasing bound, so
+  `E_truncation` for the recurrence cannot currently be bounded. This is the
+  exact obstruction, and it is why no "truncated-recurrence certified" label is
+  used anywhere.
+* **Solvers E (Wronskian) and F (hyperboloidal) not built** — deliberately
+  deferred until gate 13 said whether a better solver could help. It now has:
+  hyperboloidal is the principled fix for the quasiresonant regime.
+* Gate 18 novelty audit done; gate 19 manuscript is a filled draft with
+  authorship intentionally unassigned.
+* `μ > 1.8`, `s > 0.45`, `N > 3` and higher `l` unsearched.
 
 ### Next, in order
 
-1. Fix the reduction degradation, then derive/extract `u₂`, `u₃`.
-2. Build Solver C (complex-contour Wronskian matching) — horizon Frobenius
-   series outward, outgoing asymptotic series inward along a rotated contour,
-   match logarithmic derivatives at a complex interior point. Must not reuse the
-   recurrence, the reduction, the CF, or the Hill determinant.
-3. Only then: three-way validation, long-lived branch, revised validity map.
-
-No branch atlas and no EP search until that gate closes.
+1. **Solver F (hyperboloidal).** The only method that remains applicable where
+   `Re Ω → 0`, i.e. the one region of the spectrum this search could not cover,
+   and the only place an EP could still hide within the studied sectors.
+2. Extend the atlas to `μ > 1.8` and `N > 3` once F exists.
+3. Close gate 16 for the radial problem: either bound the DFT aliasing error
+   rigorously, or replace the coefficient extraction with an exact symbolic
+   route so Arb can enclose it end to end.
