@@ -1,8 +1,8 @@
 {
  "status": "complete",
  "provenance": {
-  "commit": "2432876ea9048de2634e377fe61f27eac0e6674c",
-  "runtime_s": 77.3,
+  "commit": "129be1b554fd1a93b0d41322f674a95a33d896ba",
+  "runtime_s": 158.2,
   "solver": "leaver-cf",
   "precision": "double"
  },
@@ -13,7 +13,7 @@
  "collapse_note": "gap < 1e-10 with tier-2 separation > 1000x the gap means two labelled branches are the SAME mode (continuation lost one). Excluded from candidacy: it is a mode-label error, not a degeneracy.",
  "min_branch_gap_raw": 2.1504082610475877e-12,
  "min_branch_gap": 0.5116202072812408,
- "min_root_separation": 0.3106567290754732,
+ "min_root_separation": 0.0820831923593214,
  "candidates": [
   {
    "gap": 0.5116202072812408,
@@ -40,9 +40,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.4393269282293471,
-    "residual_relative": 0.23688462244114877,
-    "radius": 0.07674303109218612
+    "separation": 0.08332122588892112,
+    "residual_relative": 1.662146426088269e-09,
+    "radius": 0.07674303109218612,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -71,9 +72,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.45352218325265775,
-    "residual_relative": 0.2320577768066241,
-    "radius": 0.07702556210186451
+    "separation": 0.0854314675409606,
+    "residual_relative": 9.129746762953134e-10,
+    "radius": 0.07702556210186451,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -102,9 +104,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.4728785163811745,
-    "residual_relative": 0.22517285128614944,
-    "radius": 0.07753016343734027
+    "separation": 0.08778822602908876,
+    "residual_relative": 7.399847306026545e-10,
+    "radius": 0.07753016343734027,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -133,9 +136,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.4959320400200824,
-    "residual_relative": 0.21676673236647173,
-    "radius": 0.07819490625709073
+    "separation": 0.0902519967852831,
+    "residual_relative": 9.679092391923542e-10,
+    "radius": 0.07819490625709073,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -164,9 +168,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.5202552919781904,
-    "residual_relative": 0.20756352506828674,
-    "radius": 0.07896329367529895
+    "separation": 0.09262017453451185,
+    "residual_relative": 7.045042676774122e-10,
+    "radius": 0.07896329367529895,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -195,9 +200,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.5202552581184892,
-    "residual_relative": 0.20756352163131572,
-    "radius": 0.07896329367538724
+    "separation": 0.0926201744276341,
+    "residual_relative": 6.201099011068149e-10,
+    "radius": 0.07896329367538724,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -226,9 +232,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.5172560344779558,
-    "residual_relative": 0.20782954252407657,
-    "radius": 0.07898205398920663
+    "separation": 0.09229598153286947,
+    "residual_relative": 1.0440439088583784e-09,
+    "radius": 0.07898205398920663,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -257,9 +264,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.5172559826356061,
-    "residual_relative": 0.20782954077470414,
-    "radius": 0.07898205399049785
+    "separation": 0.09229598125932008,
+    "residual_relative": 6.651671325774213e-10,
+    "radius": 0.07898205399049785,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -288,9 +296,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.5086935686370425,
-    "residual_relative": 0.20855863295114566,
-    "radius": 0.07905059894586143
+    "separation": 0.09137048112937288,
+    "residual_relative": 7.372614649756779e-10,
+    "radius": 0.07905059894586143,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -319,9 +328,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.5086937201499153,
-    "residual_relative": 0.20855863089201024,
-    "radius": 0.07905059894692246
+    "separation": 0.09137048369112567,
+    "residual_relative": 1.4326862233626195e-09,
+    "radius": 0.07905059894692246,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -350,9 +360,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.4957721078327419,
-    "residual_relative": 0.20954383244943364,
-    "radius": 0.07920722309952459
+    "separation": 0.0899801667904585,
+    "residual_relative": 9.544899676659847e-10,
+    "radius": 0.07920722309952459,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -381,9 +392,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.49577207968607745,
-    "residual_relative": 0.20954383259922985,
-    "radius": 0.07920722310154149
+    "separation": 0.08998016648680487,
+    "residual_relative": 9.5106160691138e-10,
+    "radius": 0.07920722310154149,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -414,7 +426,8 @@
     "ok": true,
     "separation": 0.39526991627420804,
     "residual_relative": 8.824871487490445e-12,
-    "radius": 0.07921391969246587
+    "radius": 0.07921391969246587,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -443,9 +456,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.4802111290664429,
-    "residual_relative": 0.21045055284200898,
-    "radius": 0.07952029722057942
+    "separation": 0.08833839963562706,
+    "residual_relative": 1.2204531143420866e-09,
+    "radius": 0.07952029722057942,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -474,9 +488,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.48021115991153446,
-    "residual_relative": 0.210450553757855,
-    "radius": 0.07952029722093439
+    "separation": 0.08833839986297443,
+    "residual_relative": 1.1675301971786179e-09,
+    "radius": 0.07952029722093439,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -507,7 +522,8 @@
     "ok": true,
     "separation": 0.4073307318435957,
     "residual_relative": 6.629647116249481e-12,
-    "radius": 0.07955765277683947
+    "radius": 0.07955765277683947,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -536,9 +552,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.542580481053528,
-    "residual_relative": 0.1982698841567647,
-    "radius": 0.07979310846476724
+    "separation": 0.09462490309873363,
+    "residual_relative": 1.1309296792591865e-09,
+    "radius": 0.07979310846476724,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -569,7 +586,8 @@
     "ok": true,
     "separation": 0.4184358071971034,
     "residual_relative": 1.8810382568478955e-12,
-    "radius": 0.07984153177265631
+    "radius": 0.07984153177265631,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -600,7 +618,8 @@
     "ok": true,
     "separation": 0.44692287586901325,
     "residual_relative": 1.6162100892230355e-12,
-    "radius": 0.07991259627412646
+    "radius": 0.07991259627412646,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -631,7 +650,8 @@
     "ok": true,
     "separation": 0.4282696726655833,
     "residual_relative": 9.18645321511919e-12,
-    "radius": 0.08006147557475629
+    "radius": 0.08006147557475629,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -662,7 +682,8 @@
     "ok": true,
     "separation": 0.44828042032286264,
     "residual_relative": 4.940014484574748e-12,
-    "radius": 0.0801529872636667
+    "radius": 0.0801529872636667,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -693,7 +714,8 @@
     "ok": true,
     "separation": 0.4365056167604707,
     "residual_relative": 1.2593640847685442e-11,
-    "radius": 0.08021189453267268
+    "radius": 0.08021189453267268,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -724,7 +746,8 @@
     "ok": true,
     "separation": 0.44683077152500167,
     "residual_relative": 4.0547793180847865e-12,
-    "radius": 0.08027033574898794
+    "radius": 0.08027033574898794,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -755,7 +778,8 @@
     "ok": true,
     "separation": 0.44280468879142193,
     "residual_relative": 4.768024501542746e-12,
-    "radius": 0.0802850666523921
+    "radius": 0.0802850666523921,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -784,9 +808,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.5591110544593689,
-    "residual_relative": 0.18947099441095863,
-    "radius": 0.0806586767503511
+    "separation": 0.09594314212123467,
+    "residual_relative": 1.2481572323907394e-09,
+    "radius": 0.0806586767503511,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -815,9 +840,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.5660765012285567,
-    "residual_relative": 0.18160778818965967,
-    "radius": 0.08155242553451857
+    "separation": 0.09624331426396439,
+    "residual_relative": 1.4251779417117886e-09,
+    "radius": 0.08155242553451857,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -848,7 +874,8 @@
     "ok": true,
     "separation": 0.43625300535318234,
     "residual_relative": 2.0413518899222979e-13,
-    "radius": 0.08167620399253936
+    "radius": 0.08167620399253936,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -879,7 +906,8 @@
     "ok": true,
     "separation": 0.4362530053601613,
     "residual_relative": 2.135007246357817e-13,
-    "radius": 0.08167620399254374
+    "radius": 0.08167620399254374,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -908,9 +936,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.47056953128612916,
-    "residual_relative": 0.2165180028010105,
-    "radius": 0.08195365544291462
+    "separation": 0.0820831923593214,
+    "residual_relative": 1.164273664935736e-08,
+    "radius": 0.08195365544291462,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -941,7 +970,8 @@
     "ok": true,
     "separation": 0.4429450007954158,
     "residual_relative": 1.5178683787642213e-13,
-    "radius": 0.08197439199654173
+    "radius": 0.08197439199654173,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -972,7 +1002,8 @@
     "ok": true,
     "separation": 0.44294500079529675,
     "residual_relative": 3.071074383153849e-13,
-    "radius": 0.08197439199656535
+    "radius": 0.08197439199656535,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -1003,7 +1034,8 @@
     "ok": true,
     "separation": 0.42807694801181617,
     "residual_relative": 1.4332668854171514e-12,
-    "radius": 0.08217243036962761
+    "radius": 0.08217243036962761,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -1034,7 +1066,8 @@
     "ok": true,
     "separation": 0.44783805879517063,
     "residual_relative": 2.2599515847880335e-13,
-    "radius": 0.08218248571786953
+    "radius": 0.08218248571786953,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -1065,7 +1098,8 @@
     "ok": true,
     "separation": 0.4478380588058725,
     "residual_relative": 3.0498203336569793e-13,
-    "radius": 0.08218248571791584
+    "radius": 0.08218248571791584,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -1094,9 +1128,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.48883577370507136,
-    "residual_relative": 0.2097544058784955,
-    "radius": 0.08220234158214025
+    "separation": 0.08407999038768618,
+    "residual_relative": 1.0287266439936552e-08,
+    "radius": 0.08220234158214025,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -1127,7 +1162,8 @@
     "ok": true,
     "separation": 0.4508174772161376,
     "residual_relative": 6.377684460642503e-13,
-    "radius": 0.0823054142114543
+    "radius": 0.0823054142114543,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -1708,7 +1744,8 @@
     "ok": true,
     "separation": 0.46752036413171544,
     "residual_relative": 3.6739615827958293e-13,
-    "radius": 0.08386404276071514
+    "radius": 0.08386404276071514,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -1739,7 +1776,8 @@
     "ok": true,
     "separation": 0.33204933178644735,
     "residual_relative": 3.7891711840352065e-11,
-    "radius": 0.08391495628236555
+    "radius": 0.08391495628236555,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -5270,9 +5308,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.4393269282293471,
-    "residual_relative": 0.23688462244114877,
-    "radius": 0.07674303109218612
+    "separation": 0.08332122588892112,
+    "residual_relative": 1.662146426088269e-09,
+    "radius": 0.07674303109218612,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -5301,9 +5340,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.45352218325265775,
-    "residual_relative": 0.2320577768066241,
-    "radius": 0.07702556210186451
+    "separation": 0.0854314675409606,
+    "residual_relative": 9.129746762953134e-10,
+    "radius": 0.07702556210186451,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -5332,9 +5372,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.4728785163811745,
-    "residual_relative": 0.22517285128614944,
-    "radius": 0.07753016343734027
+    "separation": 0.08778822602908876,
+    "residual_relative": 7.399847306026545e-10,
+    "radius": 0.07753016343734027,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -5363,9 +5404,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.4959320400200824,
-    "residual_relative": 0.21676673236647173,
-    "radius": 0.07819490625709073
+    "separation": 0.0902519967852831,
+    "residual_relative": 9.679092391923542e-10,
+    "radius": 0.07819490625709073,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -5394,9 +5436,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.5202552919781904,
-    "residual_relative": 0.20756352506828674,
-    "radius": 0.07896329367529895
+    "separation": 0.09262017453451185,
+    "residual_relative": 7.045042676774122e-10,
+    "radius": 0.07896329367529895,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -5425,9 +5468,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.5202552581184892,
-    "residual_relative": 0.20756352163131572,
-    "radius": 0.07896329367538724
+    "separation": 0.0926201744276341,
+    "residual_relative": 6.201099011068149e-10,
+    "radius": 0.07896329367538724,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -5456,9 +5500,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.5172560344779558,
-    "residual_relative": 0.20782954252407657,
-    "radius": 0.07898205398920663
+    "separation": 0.09229598153286947,
+    "residual_relative": 1.0440439088583784e-09,
+    "radius": 0.07898205398920663,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -5487,9 +5532,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.5172559826356061,
-    "residual_relative": 0.20782954077470414,
-    "radius": 0.07898205399049785
+    "separation": 0.09229598125932008,
+    "residual_relative": 6.651671325774213e-10,
+    "radius": 0.07898205399049785,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -5518,9 +5564,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.5086935686370425,
-    "residual_relative": 0.20855863295114566,
-    "radius": 0.07905059894586143
+    "separation": 0.09137048112937288,
+    "residual_relative": 7.372614649756779e-10,
+    "radius": 0.07905059894586143,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -5549,9 +5596,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.5086937201499153,
-    "residual_relative": 0.20855863089201024,
-    "radius": 0.07905059894692246
+    "separation": 0.09137048369112567,
+    "residual_relative": 1.4326862233626195e-09,
+    "radius": 0.07905059894692246,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -5580,9 +5628,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.4957721078327419,
-    "residual_relative": 0.20954383244943364,
-    "radius": 0.07920722309952459
+    "separation": 0.0899801667904585,
+    "residual_relative": 9.544899676659847e-10,
+    "radius": 0.07920722309952459,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -5611,9 +5660,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.49577207968607745,
-    "residual_relative": 0.20954383259922985,
-    "radius": 0.07920722310154149
+    "separation": 0.08998016648680487,
+    "residual_relative": 9.5106160691138e-10,
+    "radius": 0.07920722310154149,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -5644,7 +5694,8 @@
     "ok": true,
     "separation": 0.39526991627420804,
     "residual_relative": 8.824871487490445e-12,
-    "radius": 0.07921391969246587
+    "radius": 0.07921391969246587,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -5673,9 +5724,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.4802111290664429,
-    "residual_relative": 0.21045055284200898,
-    "radius": 0.07952029722057942
+    "separation": 0.08833839963562706,
+    "residual_relative": 1.2204531143420866e-09,
+    "radius": 0.07952029722057942,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -5704,9 +5756,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.48021115991153446,
-    "residual_relative": 0.210450553757855,
-    "radius": 0.07952029722093439
+    "separation": 0.08833839986297443,
+    "residual_relative": 1.1675301971786179e-09,
+    "radius": 0.07952029722093439,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -5737,7 +5790,8 @@
     "ok": true,
     "separation": 0.4073307318435957,
     "residual_relative": 6.629647116249481e-12,
-    "radius": 0.07955765277683947
+    "radius": 0.07955765277683947,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -5766,9 +5820,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.542580481053528,
-    "residual_relative": 0.1982698841567647,
-    "radius": 0.07979310846476724
+    "separation": 0.09462490309873363,
+    "residual_relative": 1.1309296792591865e-09,
+    "radius": 0.07979310846476724,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -5799,7 +5854,8 @@
     "ok": true,
     "separation": 0.4184358071971034,
     "residual_relative": 1.8810382568478955e-12,
-    "radius": 0.07984153177265631
+    "radius": 0.07984153177265631,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -5830,7 +5886,8 @@
     "ok": true,
     "separation": 0.44692287586901325,
     "residual_relative": 1.6162100892230355e-12,
-    "radius": 0.07991259627412646
+    "radius": 0.07991259627412646,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -5861,7 +5918,8 @@
     "ok": true,
     "separation": 0.4282696726655833,
     "residual_relative": 9.18645321511919e-12,
-    "radius": 0.08006147557475629
+    "radius": 0.08006147557475629,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -5892,7 +5950,8 @@
     "ok": true,
     "separation": 0.44828042032286264,
     "residual_relative": 4.940014484574748e-12,
-    "radius": 0.0801529872636667
+    "radius": 0.0801529872636667,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -5923,7 +5982,8 @@
     "ok": true,
     "separation": 0.4365056167604707,
     "residual_relative": 1.2593640847685442e-11,
-    "radius": 0.08021189453267268
+    "radius": 0.08021189453267268,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -5954,7 +6014,8 @@
     "ok": true,
     "separation": 0.44683077152500167,
     "residual_relative": 4.0547793180847865e-12,
-    "radius": 0.08027033574898794
+    "radius": 0.08027033574898794,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -5985,7 +6046,8 @@
     "ok": true,
     "separation": 0.44280468879142193,
     "residual_relative": 4.768024501542746e-12,
-    "radius": 0.0802850666523921
+    "radius": 0.0802850666523921,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6014,9 +6076,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.5591110544593689,
-    "residual_relative": 0.18947099441095863,
-    "radius": 0.0806586767503511
+    "separation": 0.09594314212123467,
+    "residual_relative": 1.2481572323907394e-09,
+    "radius": 0.0806586767503511,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -6045,9 +6108,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.5660765012285567,
-    "residual_relative": 0.18160778818965967,
-    "radius": 0.08155242553451857
+    "separation": 0.09624331426396439,
+    "residual_relative": 1.4251779417117886e-09,
+    "radius": 0.08155242553451857,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -6078,7 +6142,8 @@
     "ok": true,
     "separation": 0.43625300535318234,
     "residual_relative": 2.0413518899222979e-13,
-    "radius": 0.08167620399253936
+    "radius": 0.08167620399253936,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6109,7 +6174,8 @@
     "ok": true,
     "separation": 0.4362530053601613,
     "residual_relative": 2.135007246357817e-13,
-    "radius": 0.08167620399254374
+    "radius": 0.08167620399254374,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6138,9 +6204,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.47056953128612916,
-    "residual_relative": 0.2165180028010105,
-    "radius": 0.08195365544291462
+    "separation": 0.0820831923593214,
+    "residual_relative": 1.164273664935736e-08,
+    "radius": 0.08195365544291462,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -6171,7 +6238,8 @@
     "ok": true,
     "separation": 0.4429450007954158,
     "residual_relative": 1.5178683787642213e-13,
-    "radius": 0.08197439199654173
+    "radius": 0.08197439199654173,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6202,7 +6270,8 @@
     "ok": true,
     "separation": 0.44294500079529675,
     "residual_relative": 3.071074383153849e-13,
-    "radius": 0.08197439199656535
+    "radius": 0.08197439199656535,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6233,7 +6302,8 @@
     "ok": true,
     "separation": 0.42807694801181617,
     "residual_relative": 1.4332668854171514e-12,
-    "radius": 0.08217243036962761
+    "radius": 0.08217243036962761,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6264,7 +6334,8 @@
     "ok": true,
     "separation": 0.44783805879517063,
     "residual_relative": 2.2599515847880335e-13,
-    "radius": 0.08218248571786953
+    "radius": 0.08218248571786953,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6295,7 +6366,8 @@
     "ok": true,
     "separation": 0.4478380588058725,
     "residual_relative": 3.0498203336569793e-13,
-    "radius": 0.08218248571791584
+    "radius": 0.08218248571791584,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6324,9 +6396,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.48883577370507136,
-    "residual_relative": 0.2097544058784955,
-    "radius": 0.08220234158214025
+    "separation": 0.08407999038768618,
+    "residual_relative": 1.0287266439936552e-08,
+    "radius": 0.08220234158214025,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -6357,7 +6430,8 @@
     "ok": true,
     "separation": 0.4508174772161376,
     "residual_relative": 6.377684460642503e-13,
-    "radius": 0.0823054142114543
+    "radius": 0.0823054142114543,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6388,7 +6462,8 @@
     "ok": true,
     "separation": 0.46752036413171544,
     "residual_relative": 3.6739615827958293e-13,
-    "radius": 0.08386404276071514
+    "radius": 0.08386404276071514,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6419,7 +6494,8 @@
     "ok": true,
     "separation": 0.33204933178644735,
     "residual_relative": 3.7891711840352065e-11,
-    "radius": 0.08391495628236555
+    "radius": 0.08391495628236555,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6450,7 +6526,8 @@
     "ok": true,
     "separation": 0.4096360653307052,
     "residual_relative": 3.217083768958932e-14,
-    "radius": 0.0883870832618092
+    "radius": 0.0883870832618092,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6481,7 +6558,8 @@
     "ok": true,
     "separation": 0.41345480651423194,
     "residual_relative": 5.601133462439139e-14,
-    "radius": 0.08871534723501248
+    "radius": 0.08871534723501248,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6512,7 +6590,8 @@
     "ok": true,
     "separation": 0.43575850491377444,
     "residual_relative": 1.7841186637232402e-14,
-    "radius": 0.08951751114308008
+    "radius": 0.08951751114308008,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6543,7 +6622,8 @@
     "ok": true,
     "separation": 0.39113183726483114,
     "residual_relative": 3.872892260711303e-14,
-    "radius": 0.09065375419497339
+    "radius": 0.09065375419497339,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6574,7 +6654,8 @@
     "ok": true,
     "separation": 0.6788067020013286,
     "residual_relative": 6.158546979107898e-11,
-    "radius": 0.09082063868027722
+    "radius": 0.09082063868027722,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6605,7 +6686,8 @@
     "ok": true,
     "separation": 0.45059366309758236,
     "residual_relative": 1.2862449274017134e-14,
-    "radius": 0.09084793096351171
+    "radius": 0.09084793096351171,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6636,7 +6718,8 @@
     "ok": true,
     "separation": 0.4741135723159773,
     "residual_relative": 5.683396254654223e-15,
-    "radius": 0.09085763198242712
+    "radius": 0.09085763198242712,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6667,7 +6750,8 @@
     "ok": true,
     "separation": 0.40605830656785,
     "residual_relative": 3.979408378904755e-13,
-    "radius": 0.09104917329174445
+    "radius": 0.09104917329174445,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6698,7 +6782,8 @@
     "ok": true,
     "separation": 0.41854647077782664,
     "residual_relative": 6.421974896349805e-14,
-    "radius": 0.09164370266340938
+    "radius": 0.09164370266340938,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6729,7 +6814,8 @@
     "ok": true,
     "separation": 0.49525178544955284,
     "residual_relative": 3.7836414635231654e-15,
-    "radius": 0.09193360789364119
+    "radius": 0.09193360789364119,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6760,7 +6846,8 @@
     "ok": true,
     "separation": 0.4372903069077992,
     "residual_relative": 1.7335137032925568e-14,
-    "radius": 0.09193703061618574
+    "radius": 0.09193703061618574,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6791,7 +6878,8 @@
     "ok": true,
     "separation": 0.466574332657654,
     "residual_relative": 1.1452539739285242e-15,
-    "radius": 0.09245049080723965
+    "radius": 0.09245049080723965,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6822,7 +6910,8 @@
     "ok": true,
     "separation": 0.5465263744088843,
     "residual_relative": 3.158082566909674e-15,
-    "radius": 0.09259799825560051
+    "radius": 0.09259799825560051,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6853,7 +6942,8 @@
     "ok": true,
     "separation": 0.47705245684565384,
     "residual_relative": 5.4598267487308025e-15,
-    "radius": 0.09274777728551305
+    "radius": 0.09274777728551305,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6884,7 +6974,8 @@
     "ok": true,
     "separation": 0.4975983046314659,
     "residual_relative": 3.5130830549155877e-15,
-    "radius": 0.09275877076957384
+    "radius": 0.09275877076957384,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6913,9 +7004,10 @@
    "extremality": 0.2944000000000001,
    "tier2": {
     "ok": true,
-    "separation": 0.5593355649330969,
-    "residual_relative": 0.16540668737805966,
-    "radius": 0.09277130226596825
+    "separation": 0.0955406608160117,
+    "residual_relative": 4.1628351472237825e-08,
+    "radius": 0.09277130226596825,
+    "inversion": 2
    },
    "collapsed_label": false
   },
@@ -6946,7 +7038,8 @@
     "ok": true,
     "separation": 0.4837976173922374,
     "residual_relative": 7.703713048723092e-15,
-    "radius": 0.09295895276735928
+    "radius": 0.09295895276735928,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -6977,7 +7070,8 @@
     "ok": true,
     "separation": 0.5042807680534748,
     "residual_relative": 4.840023217284715e-15,
-    "radius": 0.09325686255756936
+    "radius": 0.09325686255756936,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7008,7 +7102,8 @@
     "ok": true,
     "separation": 0.5140974394052419,
     "residual_relative": 1.0030457472429828e-15,
-    "radius": 0.09334192582800971
+    "radius": 0.09334192582800971,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7039,7 +7134,8 @@
     "ok": true,
     "separation": 0.3106567290754732,
     "residual_relative": 2.4020017394236564e-12,
-    "radius": 0.09337150383871663
+    "radius": 0.09337150383871663,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7070,7 +7166,8 @@
     "ok": true,
     "separation": 0.47000224149057157,
     "residual_relative": 3.631867139177387e-15,
-    "radius": 0.09406447714435341
+    "radius": 0.09406447714435341,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7101,7 +7198,8 @@
     "ok": true,
     "separation": 0.49444090500884325,
     "residual_relative": 2.8634395741747706e-15,
-    "radius": 0.09701590150066715
+    "radius": 0.09701590150066715,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7132,7 +7230,8 @@
     "ok": true,
     "separation": 0.5485542730704009,
     "residual_relative": 5.039668992708792e-15,
-    "radius": 0.0974882535918149
+    "radius": 0.0974882535918149,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7163,7 +7262,8 @@
     "ok": true,
     "separation": 0.5804347915974896,
     "residual_relative": 9.567995941746992e-13,
-    "radius": 0.09824938381217853
+    "radius": 0.09824938381217853,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7194,7 +7294,8 @@
     "ok": true,
     "separation": 0.6546795818793669,
     "residual_relative": 1.9592634716230253e-12,
-    "radius": 0.09865629529433688
+    "radius": 0.09865629529433688,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7225,7 +7326,8 @@
     "ok": true,
     "separation": 0.7649403538345149,
     "residual_relative": 4.642933881946715e-13,
-    "radius": 0.09920165232033053
+    "radius": 0.09920165232033053,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7256,7 +7358,8 @@
     "ok": true,
     "separation": 0.4721594100928526,
     "residual_relative": 2.0740831801325347e-15,
-    "radius": 0.09960074384631407
+    "radius": 0.09960074384631407,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7287,7 +7390,8 @@
     "ok": true,
     "separation": 0.5495935914196467,
     "residual_relative": 5.575666914454797e-15,
-    "radius": 0.10010178610389767
+    "radius": 0.10010178610389767,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7318,7 +7422,8 @@
     "ok": true,
     "separation": 0.5981611364027581,
     "residual_relative": 7.72049957883613e-15,
-    "radius": 0.1005247040010477
+    "radius": 0.1005247040010477,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7349,7 +7454,8 @@
     "ok": true,
     "separation": 0.5900858261510064,
     "residual_relative": 4.753863795171989e-15,
-    "radius": 0.10053852141005237
+    "radius": 0.10053852141005237,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7380,7 +7486,8 @@
     "ok": true,
     "separation": 0.610991705701812,
     "residual_relative": 8.426459507326456e-15,
-    "radius": 0.10075023709593763
+    "radius": 0.10075023709593763,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7411,7 +7518,8 @@
     "ok": true,
     "separation": 0.5692631847083925,
     "residual_relative": 1.6580260237827803e-14,
-    "radius": 0.10113008288825118
+    "radius": 0.10113008288825118,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7442,7 +7550,8 @@
     "ok": true,
     "separation": 0.7371409257711217,
     "residual_relative": 1.9118492189568465e-15,
-    "radius": 0.10159543344423028
+    "radius": 0.10159543344423028,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7473,7 +7582,8 @@
     "ok": true,
     "separation": 0.5004881624650238,
     "residual_relative": 1.6953122197093343e-14,
-    "radius": 0.10170166213862897
+    "radius": 0.10170166213862897,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7504,7 +7614,8 @@
     "ok": true,
     "separation": 0.6074946672547952,
     "residual_relative": 1.7801085491682017e-15,
-    "radius": 0.10223230408491907
+    "radius": 0.10223230408491907,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7535,7 +7646,8 @@
     "ok": true,
     "separation": 0.5815072123682185,
     "residual_relative": 4.902571499296258e-15,
-    "radius": 0.10253745887437689
+    "radius": 0.10253745887437689,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7566,7 +7678,8 @@
     "ok": true,
     "separation": 0.4666777722851451,
     "residual_relative": 9.17326706228383e-15,
-    "radius": 0.10262282101214192
+    "radius": 0.10262282101214192,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7597,7 +7710,8 @@
     "ok": true,
     "separation": 0.6721631905950421,
     "residual_relative": 4.053797367050824e-15,
-    "radius": 0.1029799310173244
+    "radius": 0.1029799310173244,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7628,7 +7742,8 @@
     "ok": true,
     "separation": 0.4543380046080578,
     "residual_relative": 4.9144899767427625e-14,
-    "radius": 0.10314447070224032
+    "radius": 0.10314447070224032,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7659,7 +7774,8 @@
     "ok": true,
     "separation": 0.49807711242525365,
     "residual_relative": 1.3654508763529143e-14,
-    "radius": 0.10355620003901898
+    "radius": 0.10355620003901898,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7690,7 +7806,8 @@
     "ok": true,
     "separation": 0.40856250048500803,
     "residual_relative": 2.1560467589723562e-14,
-    "radius": 0.10377609680536894
+    "radius": 0.10377609680536894,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7721,7 +7838,8 @@
     "ok": true,
     "separation": 0.6386402370633446,
     "residual_relative": 2.4276268632936632e-15,
-    "radius": 0.10388918029397347
+    "radius": 0.10388918029397347,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7752,7 +7870,8 @@
     "ok": true,
     "separation": 0.48170601489517484,
     "residual_relative": 3.0336984020143166e-14,
-    "radius": 0.10411525258623809
+    "radius": 0.10411525258623809,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7783,7 +7902,8 @@
     "ok": true,
     "separation": 0.5166471104083321,
     "residual_relative": 1.3472759967203785e-14,
-    "radius": 0.1046381694391041
+    "radius": 0.1046381694391041,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7814,7 +7934,8 @@
     "ok": true,
     "separation": 0.636441880434663,
     "residual_relative": 2.0816140527178948e-15,
-    "radius": 0.10481584417103888
+    "radius": 0.10481584417103888,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7845,7 +7966,8 @@
     "ok": true,
     "separation": 0.660548546647276,
     "residual_relative": 8.669541123817983e-15,
-    "radius": 0.1049505640776459
+    "radius": 0.1049505640776459,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7876,7 +7998,8 @@
     "ok": true,
     "separation": 0.6398618043842541,
     "residual_relative": 6.897957922083155e-15,
-    "radius": 0.10593370308112816
+    "radius": 0.10593370308112816,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7907,7 +8030,8 @@
     "ok": true,
     "separation": 0.5874113359469981,
     "residual_relative": 6.182322402579554e-15,
-    "radius": 0.10595472641616968
+    "radius": 0.10595472641616968,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7938,7 +8062,8 @@
     "ok": true,
     "separation": 0.6216060364329872,
     "residual_relative": 4.743112203996458e-15,
-    "radius": 0.10599622500986428
+    "radius": 0.10599622500986428,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -7969,7 +8094,8 @@
     "ok": true,
     "separation": 0.6294460315483387,
     "residual_relative": 6.167657088468749e-15,
-    "radius": 0.10612021435343504
+    "radius": 0.10612021435343504,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -8000,7 +8126,8 @@
     "ok": true,
     "separation": 0.6358162667730315,
     "residual_relative": 4.7675335095126415e-15,
-    "radius": 0.1062935160885697
+    "radius": 0.1062935160885697,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -8031,7 +8158,8 @@
     "ok": true,
     "separation": 0.6518071734797842,
     "residual_relative": 2.7760374396635056e-15,
-    "radius": 0.10664618093268831
+    "radius": 0.10664618093268831,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -8062,7 +8190,8 @@
     "ok": true,
     "separation": 0.6598780273404408,
     "residual_relative": 9.494110875801298e-15,
-    "radius": 0.1067724181688954
+    "radius": 0.1067724181688954,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -8093,7 +8222,8 @@
     "ok": true,
     "separation": 0.642117201422634,
     "residual_relative": 1.0032663851479172e-15,
-    "radius": 0.10680194040458289
+    "radius": 0.10680194040458289,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -8124,7 +8254,8 @@
     "ok": true,
     "separation": 0.6856351180437509,
     "residual_relative": 2.0202712686239455e-15,
-    "radius": 0.10687075124850791
+    "radius": 0.10687075124850791,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -8155,7 +8286,8 @@
     "ok": true,
     "separation": 0.6399268908356176,
     "residual_relative": 7.164396683645644e-16,
-    "radius": 0.1071321919769609
+    "radius": 0.1071321919769609,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -8186,7 +8318,8 @@
     "ok": true,
     "separation": 0.6200736289780273,
     "residual_relative": 1.7070546863337754e-15,
-    "radius": 0.10716809267380176
+    "radius": 0.10716809267380176,
+    "inversion": 0
    },
    "collapsed_label": false
   },
@@ -8217,7 +8350,8 @@
     "ok": true,
     "separation": 0.6649065954821844,
     "residual_relative": 2.689376187082805e-15,
-    "radius": 0.10744930111540542
+    "radius": 0.10744930111540542,
+    "inversion": 0
    },
    "collapsed_label": false
   }
@@ -8248,9 +8382,10 @@
    "extremality": 0.84,
    "tier2": {
     "ok": true,
-    "separation": 0.17903005645434852,
-    "residual_relative": 4.744908507837586e-12,
-    "radius": 0.0001
+    "separation": 0.16104097430060002,
+    "residual_relative": 4.745062212091333e-12,
+    "radius": 0.0001,
+    "inversion": 2
    },
    "collapsed_label": true
   },
@@ -8279,9 +8414,10 @@
    "extremality": 0.91,
    "tier2": {
     "ok": true,
-    "separation": 0.11844290984195065,
-    "residual_relative": 4.5682172563325855e-12,
-    "radius": 0.0001
+    "separation": 0.11365475054241102,
+    "residual_relative": 4.568419769284494e-12,
+    "radius": 0.0001,
+    "inversion": 2
    },
    "collapsed_label": true
   },
@@ -8310,9 +8446,10 @@
    "extremality": 0.96,
    "tier2": {
     "ok": true,
-    "separation": 0.0931426555842864,
-    "residual_relative": 6.315926050772134e-12,
-    "radius": 0.0001
+    "separation": 0.08947549310971203,
+    "residual_relative": 6.315904634242567e-12,
+    "radius": 0.0001,
+    "inversion": 2
    },
    "collapsed_label": true
   },
@@ -8341,9 +8478,10 @@
    "extremality": 0.99,
    "tier2": {
     "ok": true,
-    "separation": 0.09661690994045208,
-    "residual_relative": 7.495427070870176e-12,
-    "radius": 0.0001
+    "separation": 0.09155571021800114,
+    "residual_relative": 7.495582410813163e-12,
+    "radius": 0.0001,
+    "inversion": 2
    },
    "collapsed_label": true
   }

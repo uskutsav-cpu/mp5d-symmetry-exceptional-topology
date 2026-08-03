@@ -7,6 +7,7 @@
 \newcommand{\TODO}[1]{\textbf{[#1]}}
 \newcommand{\Rem}{\mathrm{Re}}
 \newcommand{\Imm}{\mathrm{Im}}
+\newcommand{\Ord}{\mathcal{O}}
 \renewcommand{\thesection}{S\arabic{section}}
 \renewcommand{\thetable}{S\Roman{table}}
 \renewcommand{\thefigure}{S\arabic{figure}}
@@ -218,6 +219,95 @@ re-derivation with invariant quantities; the reasoning did not.
 at large spin was attributed to near-extremality. It is not: ordinary modes
 continue to extremality $0.0103$ with residuals $\sim10^{-13}$. The controlling
 variable is $\mu$, through $\Rem\,\Omega\to0$.
+
+
+%-------------------------------------------------------------------------
+\section{Verification of the residual symmetry}\label{sec:parity}
+%-------------------------------------------------------------------------
+
+Figure~\ref{fig:parity} verifies Table~I of the main text. In the diagonal
+sector $(1,1)$ the relation $\omega(+\delta)=\omega(-\delta)$ holds to double
+precision; in the off-diagonal sector $(2,0)$ it fails at the $10^{-2}$ level.
+The second curve is a negative control: it shows that the evenness is a property
+of the sector, not an artifact of a $\delta$-blind solver.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.62\textwidth]{figures/figS1_parity.pdf}
+  \caption{Measured $\delta$-parity, $\ell=2$, $N=0$, $s=0.20$, $\mu=0.6$.}
+  \label{fig:parity}
+\end{figure}
+
+%-------------------------------------------------------------------------
+\section{The quasiresonant regime}\label{sec:quasi}
+%-------------------------------------------------------------------------
+
+As the scalar mass grows, branches migrate toward the threshold
+$\omega^2=\mu^2$ and become arbitrarily long lived. Tracking eleven branches
+across six sectors with an adaptive step in $\mu$, the damping falls through
+$8.6$ orders of magnitude along a single continuous branch, from $0.357$ at
+$\mu=0$ to $8.65\times10^{-10}$ at $\mu=2.968$, with $\Rem\,\omega\to\mu$
+(Fig.~\ref{fig:quasi}). Each walk terminates where double precision can no
+longer resolve the mode, so the minima are lower bounds on how far a branch was
+followed, not infima. The transition is a branch point in $\mu$, not a
+coalescence: the neighbouring overtone remains at $-\Imm\,\omega\sim0.1$
+throughout.
+
+This regime also settles a question about solver behaviour that proves to be
+physics rather than numerics. Exterior complex scaling requires
+$\tan\vartheta > -\Imm\,\Omega/\Rem\,\Omega$. As $\Rem\,\Omega\to0$ the outgoing
+wave ceases to oscillate and the required angle tends to $90^\circ$, so no
+admissible contour exists. We measure $\vartheta_{\min}=89.92^\circ$ and
+$89.81^\circ$ at the two points where the recurrence-free solvers fail, against
+$4.4^\circ$ at an ordinary near-extremal point where they succeed. This is a
+limit of the formulation, not a convergence failure: no increase of resolution,
+precision or domain decomposition removes it, which is why a multidomain
+refinement of the near-horizon region did not help. It follows that the
+difficulty is controlled by $\mu$, not by proximity to extremality --- ordinary
+modes continue smoothly to extremality $0.0103$ with residuals $\sim10^{-13}$
+over thirty-seven consecutive steps.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.96\textwidth]{figures/figS2_quasiresonance.pdf}
+  \caption{(a) Damping along four branches continued in $\mu$. (b) The minimum
+  admissible exterior-complex-scaling angle; as $\Rem\,\Omega\to0$ it reaches
+  $90^\circ$ and the method has no admissible contour.}
+  \label{fig:quasi}
+\end{figure}
+
+%-------------------------------------------------------------------------
+\section{Two diagnostics withdrawn}\label{sec:withdrawn}
+%-------------------------------------------------------------------------
+
+We record two diagnostics that were used in an earlier version of this work and
+are withdrawn, since both mistakes are natural and the second is subtle.
+
+\emph{The ratio of leading Taylor coefficients.} Under $F\mapsto gF$ with $g$
+holomorphic and nonvanishing, expanding about a simple root gives
+$\tilde a_1=g_0a_1$ and $\tilde a_2=g_0a_2+g_1a_1$, so
+$\tilde a_1/\tilde a_2=(a_1/a_2)/[1+(g_1/g_0)(a_1/a_2)]$: the ratio is only
+\emph{asymptotically} insensitive to normalization, with distortion
+$\Ord(|g'/g|d)$. Measured against $g=10^{7}e^{3\omega}$ the distortion follows
+$|1+3d|^{-1}$ to five decimals, from $1.0003$ at $d=10^{-4}$ to $1.4286$ at
+$d=0.1$. Decisively, the ratio measures the distance to the nearest zero
+\emph{or pole}; Leaver's continued fraction is meromorphic, and contour
+integration about the tightest candidate returns
+$\mathcal{N}-\mathcal{P}=0$ at every radius out to $0.20$, so the small values
+returned are pole distances.
+
+\emph{The discriminant as independent evidence.} Since $D=(\omega_+-\omega_-)^2$,
+its minimum is the square of the minimum separation --- numerically
+$0.5116^2=0.26176$, agreeing to sixteen digits. It is one quantity reported
+twice, and is not counted separately.
+
+A third defect found in the course of this: the diagnostics had been evaluated
+with the continued fraction inverted at index $0$ irrespective of the branch's
+own overtone. The inversions are not equivalent at finite depth --- at a tracked
+$N=2$ root the $N=2$ inversion gives $|F|=1.9\times10^{-13}$ while inversions
+$0,1,3$ give $7\times10^{-2}$, $1\times10^{-1}$ and $1.1$, values that are
+unchanged from depth $200$ to depth $3200$. A residual gate now rejects any
+expansion whose constant term is not small.
 
 %-------------------------------------------------------------------------
 \section{Reproduction}\label{sec:repro}

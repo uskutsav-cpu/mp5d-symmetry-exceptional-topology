@@ -90,22 +90,38 @@ def tier1_gaps(points: list[dict]) -> list[dict]:
 
 
 def tier2(rec: dict, radius_factor: float = 0.15, n: int = 32) -> dict:
-    """Scale-free separation at one candidate, via a Cauchy expansion."""
+    """Separation estimate at one candidate, via a Cauchy expansion.
+
+    The continued fraction must be inverted at the branch's OWN overtone index.
+    The inversions are not equivalent at finite depth -- their values at a
+    tracked root differ by O(1) and do not converge to one another as the depth
+    grows -- so evaluating an N=2 branch with the N=0 inversion produces a
+    function that does not vanish at the root, and every coefficient extracted
+    from it is meaningless.  The residual check below enforces this.
+    """
     w = complex(*rec["omega_a"])
     ell = rec["ell_a"]
+    inv = rec["N_a"]
 
     def F(z: complex) -> complex:
         return spectral_condition(z, rec["s"], rec["delta"], rec["mu"],
-                                  rec["m1"], rec["m2"], ell, 0, depth=200)
+                                  rec["m1"], rec["m2"], ell, inv, depth=200)
 
     radius = max(radius_factor * rec["gap"], 1e-4)
     try:
         out = root_separation(F, w, radius=radius, n=n)
     except Exception as exc:  # noqa: BLE001
         return {"ok": False, "error": str(exc)[:200]}
+    # Reject the estimate outright if F does not actually vanish at the point:
+    # a non-zero a0 means the expansion is not about a root of this function.
+    if out["residual_relative"] > 1e-3:
+        return {"ok": False, "error": "F does not vanish at the tracked root "
+                f"(relative residual {out['residual_relative']:.2e}); "
+                "wrong inversion index or unconverged root",
+                "residual_relative": out["residual_relative"]}
     return {"ok": True, "separation": out["separation"],
             "residual_relative": out["residual_relative"],
-            "radius": out["radius"]}
+            "radius": out["radius"], "inversion": inv}
 
 
 def main() -> int:

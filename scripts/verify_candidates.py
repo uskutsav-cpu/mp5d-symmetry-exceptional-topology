@@ -47,7 +47,13 @@ def commit_hash() -> str:
 
 
 def make_F(c: dict, depth: int = 200):
+    """Spectral condition for this candidate, inverted at its own overtone.
+
+    Using inversion 0 for a branch with N > 0 yields a function that does not
+    vanish at the tracked root, so every gate built on it is void.
+    """
     ell = c["ell_a"]
+    inv = c["N_a"]
 
     def F(z: complex, s=None, delta=None, mu=None) -> complex:
         return spectral_condition(
@@ -55,7 +61,7 @@ def make_F(c: dict, depth: int = 200):
             c["s"] if s is None else s,
             c["delta"] if delta is None else delta,
             c["mu"] if mu is None else mu,
-            c["m1"], c["m2"], ell, 0, depth=depth)
+            c["m1"], c["m2"], ell, inv, depth=depth)
 
     return F
 

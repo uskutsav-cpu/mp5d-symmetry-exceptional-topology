@@ -2,8 +2,8 @@
  "status": "complete",
  "description": "Bounded exclusion of EP2 over the searched atlas domain. The bound is on the scale-free root separation |a1/a2| and on the pairwise branch gap; it is NOT based on |dF/domega|, which is not invariant under rescaling of the spectral condition and therefore cannot bound anything.",
  "provenance": {
-  "commit": "2432876ea9048de2634e377fe61f27eac0e6674c",
-  "runtime_s": 77.3,
+  "commit": "129be1b554fd1a93b0d41322f674a95a33d896ba",
+  "runtime_s": 158.2,
   "solver": "leaver-cf",
   "precision": "double"
  },
@@ -54,9 +54,12 @@
   ]
  },
  "min_branch_gap": 0.5116202072812408,
- "min_root_separation": 0.3106567290754732,
  "n_atlas_points": 50558,
  "n_parameter_points": 4459,
  "n_collapsed_labels_excluded": 4,
- "verdict": null
+ "verdict": null,
+ "WITHDRAWN": {
+  "min_root_separation": "WITHDRAWN. |a1/a2| measures the distance to the nearest zero OR POLE; Leaver's CF is meromorphic and the contour integral returns zeros-minus-poles = 0 out to radius 0.20, so the quoted value was a pole distance. See docs/FAILED_APPROACHES.md.",
+  "min_abs_discriminant": "WITHDRAWN as independent. D = (w+ - w-)^2 is the square of the gap (0.5116^2 = 0.26176); one quantity reported twice."
+ }
 }

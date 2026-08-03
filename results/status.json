@@ -9,10 +9,9 @@
  "primary_result": "No EP2 in the searched domain; quantitative bounds; the U(2) multiplet channel is closed exactly by a direct-sum Jordan-structure theorem.",
  "bounds": {
   "min_branch_gap": 0.5116202072812408,
-  "min_root_separation": 0.3106567290754732,
-  "min_abs_discriminant": 0.26175523649849985,
   "condition_number_strongest": 8734.023424017041,
-  "condition_number_ordinary": 18.341836057972877
+  "condition_number_ordinary": 18.341836057972877,
+  "note": "One separation bound and one conditioning diagnostic. The former is a difference of tracked eigenvalues, each confirmed by ODE residual ~1e-12 and cross-solver agreement <= 2.06e-9."
  },
  "coverage": {
   "atlas_points": 50558,
@@ -109,5 +108,9 @@
  "ringdown": {
   "finding": "No exceptional phenomenology. The strongest interactions split in Im omega (0.53) rather than Re omega (8e-4 to 0.07): nearly equal oscillation frequencies, very different decay rates. The EP template beats a single damped exponential by only 2.4x while using twice the free amplitudes.",
   "note": "A large t_beat/tau (up to 1.4e4 here) is NOT sufficient evidence of near-EP behaviour; secular growth needs coalescence in the full complex frequency."
+ },
+ "WITHDRAWN": {
+  "min_root_separation": "WITHDRAWN. |a1/a2| measures the distance to the nearest zero OR POLE; Leaver's CF is meromorphic and the contour integral returns zeros-minus-poles = 0 out to radius 0.20, so the quoted value was a pole distance. See docs/FAILED_APPROACHES.md.",
+  "min_abs_discriminant": "WITHDRAWN as independent. D = (w+ - w-)^2 is the square of the gap (0.5116^2 = 0.26176); one quantity reported twice."
  }
 }

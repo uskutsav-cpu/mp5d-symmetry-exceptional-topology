@@ -312,3 +312,61 @@ continuation is resolution-independent at this spacing.
 *predictor* (trivial on the first step); this one was a bad *acceptance test*.
 Both produced small computed gaps that looked physical. Any branch-gap minimum
 must be traced back to the trajectory that produced it before it is believed.
+
+---
+
+## The `|a₁/a₂|` separation estimator, withdrawn as a bound
+
+**Attempted.** Use the ratio of the first two Taylor coefficients of the
+continued-fraction spectral condition about a converged root as a
+normalization-invariant estimate of the distance to the nearest partner root,
+and quote its minimum over the atlas as a bound excluding EP2.
+
+**Two independent defects, both fatal to the bound.**
+
+*1. It is only asymptotically insensitive to normalization, not invariant.*
+Under `F → gF` with `g` holomorphic and nonvanishing, expanding about a simple
+root gives `ã₁ = g₀a₁` and `ã₂ = g₀a₂ + g₁a₁`, hence
+
+```
+ã₁/ã₂ = (a₁/a₂) / (1 + (g₁/g₀)(a₁/a₂))
+```
+
+which returns `a₁/a₂` only as `a₁/a₂ → 0`. Measured against `g = 10⁷e^{3ω}`, the
+distortion follows `|1 + 3d|⁻¹` to five decimals: 1.0003 at `d = 10⁻⁴` but
+**1.4286 at `d = 0.1`**. The manuscript had quoted "agrees to 2 %", which was
+the small-`d` end of exactly this curve.
+
+*2. Decisively: it measures the distance to the nearest zero **or pole**.*
+Leaver's continued fraction is meromorphic, and its poles sit close to the
+roots. Contour integration around the tightest candidate returns
+`zeros − poles = 0` for every radius up to `0.20`, i.e. one zero and one pole
+inside. The reported minimum of `0.0821` is therefore the distance to a **pole
+of the continued fraction**, carrying no spectral meaning whatever.
+
+**A third defect found on the way.** The diagnostics had been evaluated with
+the continued fraction inverted at index `0` regardless of the branch's own
+overtone. The inversions are *not* equivalent at finite depth: at a tracked
+`N = 2` root the `N = 2` inversion gives `|F| = 1.9e-13` while inversions
+`0, 1, 3` give `7e-2`, `1e-1` and `1.1`, and these values are fully converged in
+depth (identical at depths 200 through 3200). Every coefficient extracted from
+the wrong inversion was meaningless. A residual gate now rejects any expansion
+whose `a₀` is not small, and the inversion index is threaded through from the
+branch label.
+
+**Consequence for the result.** The bound is withdrawn, not repaired. What
+survives is stronger for being narrower:
+
+* the pairwise gap between **tracked modes**, each independently confirmed by an
+  ODE residual (`~1e-12`) and by cross-solver agreement (`|A−C| ≤ 2.06e-9`);
+* the eigenvalue condition number from Solver C's collocation matrix, which is
+  pole-free.
+
+**Also withdrawn:** `min|D| = 0.2618` was quoted as a third independent bound.
+Since `D = (ω₊−ω₋)²` it is the square of the gap, `0.5116² = 0.26176`, agreeing
+to sixteen digits. It was one quantity reported twice.
+
+**Revisit?** A contour bound remains the right goal, but it needs a spectral
+condition that is *entire*. The Hill determinant as implemented returns a
+normalized tail ratio requiring Wynn acceleration and is not usable at fixed
+truncation. A Wronskian or hyperboloidal formulation would supply one.

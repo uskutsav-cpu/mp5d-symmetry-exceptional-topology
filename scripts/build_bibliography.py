@@ -1,86 +1,113 @@
-"""Generate ``manuscript/references.bib`` from the indexed corpus.
+"""Generate ``manuscript/references.bib`` from verified metadata only.
 
-The corpus (``bibliography/mandatory_sources.csv``) carries authors, short
-titles and identifiers for every source. This script emits a BibTeX entry for
-each, and records in the ``metadata_verified`` column which entries have been
-independently checked against the source rather than merely indexed.
+Sources of truth, in order:
 
-The distinction is load-bearing and is preserved in the output: every entry
-carries a ``note`` stating its verification status, so a reader of the ``.bib``
-can tell at a glance which references were confirmed and which were taken from
-the supplied index. Fabricating journal/volume/page data for unverified entries
-would be worse than omitting it, so unverified entries carry only what the
-corpus actually contains.
+1. ``bibliography/verified_metadata.json`` -- the authoritative arXiv record for
+   every entry carrying an arXiv identifier, fetched by
+   ``scripts/verify_bibliography.py`` (exact title, full author list, year, and
+   the DOI and journal reference where arXiv holds them).
+2. ``NON_ARXIV`` below -- entries without an arXiv identifier, each resolved
+   against CrossRef.
+
+Nothing is emitted that was not obtained from one of these.  In particular the
+generated file contains no provenance notes, no "metadata not verified"
+disclaimers and no internal commentary: a bibliography is part of the
+manuscript, not a laboratory notebook.
 """
 
 from __future__ import annotations
 
 import argparse
 import csv
+import json
 import pathlib
 import re
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 
-# Entries independently verified against the source (search or known-standard
-# reference), with the extra metadata that verification established.
-VERIFIED: dict[str, dict] = {
-    "A01": {"journal": "Annals of Physics", "volume": "172", "pages": "304",
-            "year": "1986"},
-    "A02": {"journal": "Living Reviews in Relativity", "volume": "11",
-            "pages": "6", "year": "2008"},
-    "A06": {"journal": "Progress of Theoretical Physics", "volume": "120",
-            "pages": "561", "year": "2008"},
-    "A15": {"year": "2023"},
-    "A16": {"journal": "Physics Letters B", "year": "2025"},
-    "A17": {"journal": "Physical Review D", "year": "2026"},
-    "B19": {"year": "2021"},
-    "B22": {"year": "2024"},
-    "B30": {"year": "2025"},
-    "C36": {"journal": "Physical Review X", "volume": "11", "pages": "031003",
-            "year": "2021"},
-    "D51": {"journal": "Proceedings of the Royal Society A", "volume": "402",
-            "pages": "285", "year": "1985"},
-    "E63": {"journal": "Reviews of Modern Physics", "volume": "93",
-            "pages": "015005", "year": "2021"},
-    "E65": {"journal": "Physical Review Letters", "volume": "127",
-            "pages": "186601", "year": "2021"},
-    "E66": {"year": "2022"},
-    "E67": {"journal": "Journal of Computational Physics", "year": "2020"},
-    "E71": {"publisher": "Springer", "year": "1995"},
-    "E72": {"publisher": "Princeton University Press", "year": "2005"},
-    "E73": {"publisher": "SIAM", "year": "2009"},
-    "E74": {"publisher": "Princeton University Press", "year": "2011"},
+# Entries with no arXiv identifier, each resolved against the CrossRef API.
+# Kato's monograph is the Springer "Classics in Mathematics" reprint; CrossRef
+# indexes only its individual chapters, so it is cited as a book, which needs no
+# DOI.
+NON_ARXIV: dict[str, dict] = {
+    "A01": dict(type="article", author=["Myers, R. C.", "Perry, M. J."],
+                title="Black holes in higher dimensional space-times",
+                journal="Annals of Physics", volume="172", pages="304--347",
+                year="1986", doi="10.1016/0003-4916(86)90186-7"),
+    "B32": dict(type="article", author=["Wang, Y.", "Wu, S."],
+                title="Coexistence of spectrally stable and unstable modes in "
+                      "black hole ringdowns",
+                journal="Physical Review D", volume="114", year="2026",
+                doi="10.1103/srxw-wsvq"),
+    "C34": dict(type="article", author=["Nollert, H.-P.", "Price, R. H."],
+                title="Quantifying excitations of quasinormal mode systems",
+                journal="Journal of Mathematical Physics", volume="40",
+                pages="980--1010", year="1999", doi="10.1063/1.532698"),
+    "C40": dict(type="article", author=["Gasper\\'in, E.", "Jaramillo, J. L."],
+                title="Energy scales and black hole pseudospectra: the "
+                      "structural role of the scalar product",
+                journal="Classical and Quantum Gravity", volume="39",
+                pages="115010", year="2022",
+                doi="10.1088/1361-6382/ac5054"),
+    "D51": dict(type="article", author=["Leaver, E. W."],
+                title="An analytic representation for the quasi-normal modes "
+                      "of Kerr black holes",
+                journal="Proceedings of the Royal Society A", volume="402",
+                pages="285--298", year="1985",
+                doi="10.1098/rspa.1985.0119"),
+    "D52": dict(type="article", author=["Leaver, E. W."],
+                title="Spectral decomposition of the perturbation response of "
+                      "the Schwarzschild geometry",
+                journal="Physical Review D", volume="34", pages="384--408",
+                year="1986", doi="10.1103/PhysRevD.34.384"),
+    "D53": dict(type="article", author=["Detweiler, S."],
+                title="Klein-Gordon equation and rotating black holes",
+                journal="Physical Review D", volume="22", pages="2323--2326",
+                year="1980", doi="10.1103/PhysRevD.22.2323"),
+    "E71": dict(type="book", author=["Kato, T."],
+                title="Perturbation Theory for Linear Operators",
+                publisher="Springer", series="Classics in Mathematics",
+                year="1995"),
+    "E72": dict(type="book", author=["Trefethen, L. N.", "Embree, M."],
+                title="Spectra and Pseudospectra: The Behavior of Nonnormal "
+                      "Matrices and Operators",
+                publisher="Princeton University Press", year="2005",
+                doi="10.1515/9780691213101"),
+    "E73": dict(type="book",
+                author=["Moore, R. E.", "Kearfott, R. B.", "Cloud, M. J."],
+                title="Introduction to Interval Analysis",
+                publisher="Society for Industrial and Applied Mathematics",
+                year="2009", doi="10.1137/1.9780898717716"),
+    "E74": dict(type="book", author=["Tucker, W."],
+                title="Validated Numerics: A Short Introduction to Rigorous "
+                      "Computations",
+                publisher="Princeton University Press", year="2011",
+                doi="10.1515/9781400838974"),
 }
 
-# Used for the benchmark but absent from the supplied corpus.
-EXTRA = [
-    {"key": "Matyjasek2021", "authors": "Matyjasek, J.",
-     "title": "Quasinormal modes of Schwarzschild-Tangherlini black holes",
-     "identifier": "arXiv:2107.04815", "year": "2021", "verified": True,
-     "note": "Source of the 12-digit ST5D benchmark reproduced here."},
-    {"key": "KravanjaVanBarel2000",
-     "authors": "Kravanja, P. and Van Barel, M.",
-     "title": "Computing the Zeros of Analytic Functions",
-     "identifier": "", "year": "2000", "publisher": "Springer",
-     "verified": True,
-     "note": "Contour-moment root finding used by the zero-counting routine."},
-]
+# Cited but absent from the supplied corpus; both verified.
+EXTRA: dict[str, dict] = {
+    "Matyjasek2021": dict(type="article", author=["Matyjasek, J."],
+                          title="Quasinormal modes of black holes in "
+                                "Einstein-Gauss-Bonnet and other theories: "
+                                "the Schwarzschild-Tangherlini case",
+                          eprint="2107.04815", year="2021"),
+    "KravanjaVanBarel2000": dict(
+        type="book", author=["Kravanja, P.", "Van Barel, M."],
+        title="Computing the Zeros of Analytic Functions",
+        publisher="Springer", series="Lecture Notes in Mathematics 1727",
+        year="2000", doi="10.1007/BFb0103927"),
+}
 
 
 def bibkey(row: dict) -> str:
     first = re.split(r"[;,]", row["authors"])[0].strip()
     first = re.sub(r"[^A-Za-z]", "", first) or "Anon"
     ident = row.get("identifier", "")
-    # New-style arXiv:YYMM.NNNNN
     m = re.search(r"\b(\d{2})(\d{2})\.\d{4,5}", ident)
     if m:
-        yy = int(m.group(1))
-        yr = f"20{yy:02d}"
+        yr = f"20{int(m.group(1)):02d}"
     else:
-        # Old-style arXiv:archive/YYMMNNN -- the year is the FIRST two digits
-        # of the seven-digit number, and 9x means 19xx.  Parsing these with a
-        # generic four-digit match produced keys like "Nollert2032".
         m = re.search(r"/(\d{2})(\d{2})(\d{3})\b", ident)
         if m:
             yy = int(m.group(1))
@@ -91,102 +118,68 @@ def bibkey(row: dict) -> str:
     return f"{first}{yr}{row['id']}"
 
 
-def fmt_authors(a: str) -> str:
-    parts = [p.strip() for p in a.split(";") if p.strip()]
-    if not parts:
-        return "{Unknown}"
-    return " and ".join(parts)
+def emit(key: str, rec: dict) -> str:
+    lines = [f"@{rec.get('type', 'article')}{{{key},"]
+    fields = [("author", " and ".join(rec["author"])),
+              ("title", "{" + rec["title"] + "}")]
+    for f in ("journal", "booktitle", "publisher", "series", "volume",
+              "pages", "year"):
+        if rec.get(f):
+            fields.append((f, rec[f]))
+    if rec.get("eprint"):
+        fields.append(("eprint", rec["eprint"]))
+        fields.append(("archivePrefix", "arXiv"))
+    if rec.get("doi"):
+        fields.append(("doi", rec["doi"]))
+    body = ",\n".join(f"  {k:<14}= {{{v}}}" for k, v in fields)
+    return lines[0] + "\n" + body + "\n}\n"
 
 
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--csv", default="bibliography/mandatory_sources.csv")
+    ap.add_argument("--verified", default="bibliography/verified_metadata.json")
     ap.add_argument("--out", default="manuscript/references.bib")
-    ap.add_argument("--update-csv", action="store_true",
-                    help="write the verification status back to the corpus")
     args = ap.parse_args()
 
     rows = list(csv.DictReader(open(ROOT / args.csv)))
-    lines = [
-        "% Generated by scripts/build_bibliography.py from",
-        "% bibliography/mandatory_sources.csv. Do not edit by hand.",
-        "%",
-        "% Every entry states whether its metadata was INDEPENDENTLY VERIFIED or",
-        "% merely INDEXED from the supplied corpus. Journal/volume/page fields",
-        "% appear only for verified entries: inventing them for the rest would",
-        "% be worse than omitting them.",
-        "",
-    ]
-    n_ver = 0
+    ver = json.loads((ROOT / args.verified).read_text())["records"]
+
+    out, keymap, incomplete = [], [], []
     for r in rows:
         key = bibkey(r)
-        r["_key"] = key
-        ident = r.get("identifier", "").strip()
-        extra = VERIFIED.get(r["id"], {})
-        verified = r["id"] in VERIFIED
-        n_ver += bool(verified)
-
-        is_book = ident == "book" or "publisher" in extra
-        etype = "book" if is_book else "article"
-        fields = [f"  author  = {{{fmt_authors(r['authors'])}}}",
-                  f"  title   = {{{r['short_title']}}}"]
-        for k in ("journal", "volume", "pages", "publisher", "year"):
-            if k in extra:
-                fields.append(f"  {k:<7} = {{{extra[k]}}}")
+        ident = (r.get("identifier") or "").strip()
         if ident.startswith("arXiv:"):
-            fields.append(f"  eprint  = {{{ident.split(':', 1)[1]}}}")
-            fields.append("  archivePrefix = {arXiv}")
-        elif ident and ident != "book":
-            fields.append(f"  note    = {{{ident}}}")
-        status = ("metadata independently verified" if verified
-                  else "INDEXED from the supplied corpus; metadata not "
-                       "independently verified")
-        fields.append(f"  note    = {{{status}.}}"
-                      if not (ident and not ident.startswith("arXiv:")
-                              and ident != "book")
-                      else f"  annote  = {{{status}.}}")
-        lines.append(f"@{etype}{{{key},")
-        lines.append(",\n".join(fields))
-        lines.append("}\n")
+            aid = ident.split(":", 1)[1]
+            v = ver.get(aid)
+            if not v:
+                incomplete.append(r["id"])
+                continue
+            jr = v.get("journal_ref") or ""
+            m = re.search(r"([A-Za-z .]+?)\s*\.?\s*(\d+)[,:]\s*([0-9\-]+)", jr)
+            rec = dict(type="article", author=v["authors"], title=v["title"],
+                       year=v["year"], eprint=aid, doi=v.get("doi"))
+            if m:
+                rec["journal"] = m.group(1).strip().rstrip(".")
+                rec["volume"] = m.group(2)
+                rec["pages"] = m.group(3)
+            out.append(emit(key, rec))
+        elif r["id"] in NON_ARXIV:
+            out.append(emit(key, NON_ARXIV[r["id"]]))
+        else:
+            incomplete.append(r["id"])
+        keymap.append(f"{r['id']}\t{key}\t{r['short_title']}")
 
-    for e in EXTRA:
-        n_ver += 1
-        fields = [f"  author  = {{{e['authors']}}}",
-                  f"  title   = {{{e['title']}}}"]
-        for k in ("publisher", "year"):
-            if k in e:
-                fields.append(f"  {k:<7} = {{{e[k]}}}")
-        if e["identifier"].startswith("arXiv:"):
-            fields.append(f"  eprint  = {{{e['identifier'].split(':', 1)[1]}}}")
-            fields.append("  archivePrefix = {arXiv}")
-        fields.append(f"  note    = {{{e['note']} Metadata independently "
-                      f"verified.}}")
-        lines.append(f"@{'book' if 'publisher' in e else 'article'}{{{e['key']},")
-        lines.append(",\n".join(fields))
-        lines.append("}\n")
+    for k, rec in EXTRA.items():
+        out.append(emit(k, rec))
 
-    out = ROOT / args.out
-    out.write_text("\n".join(lines))
-    print(f"wrote {out}: {len(rows) + len(EXTRA)} entries, "
-          f"{n_ver} independently verified")
-
-    if args.update_csv:
-        p = ROOT / args.csv
-        with open(p, "w", newline="") as fh:
-            w = csv.DictWriter(fh, fieldnames=[c for c in rows[0]
-                                               if not c.startswith("_")])
-            w.writeheader()
-            for r in rows:
-                r["metadata_verified"] = "1" if r["id"] in VERIFIED else "0"
-                w.writerow({k: v for k, v in r.items()
-                            if not k.startswith("_")})
-        print(f"updated {p}")
-
-    # emit the citation-key map so the manuscript can reference by corpus id
-    keymap = ROOT / "manuscript" / "citekeys.txt"
-    keymap.write_text("\n".join(f"{r['id']}\t{r['_key']}\t{r['short_title']}"
-                                for r in rows) + "\n")
-    print(f"wrote {keymap}")
+    (ROOT / args.out).write_text("\n".join(out))
+    (ROOT / "manuscript" / "citekeys.txt").write_text("\n".join(keymap) + "\n")
+    print(f"wrote {args.out}: {len(out)} entries")
+    if incomplete:
+        print(f"INCOMPLETE (not emitted): {incomplete}")
+        return 1
+    print("every emitted entry carries verified metadata")
     return 0
 
 
