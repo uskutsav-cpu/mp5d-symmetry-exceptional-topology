@@ -153,8 +153,33 @@ def verify(c: dict, depth: int, monodromy_points: int) -> dict:
     failed = [g for g, v in out["gates"].items() if not v.get("pass")]
     out["gates_passed"] = passed
     out["gates_failed"] = failed
-    out["verdict"] = ("VERIFIED_EP2" if not failed else
-                      "REJECTED" if len(passed) <= 1 else "UNRESOLVED")
+
+    # G2 and G3 are PRECONDITIONS -- they establish only that two distinct roots
+    # sit near each other, which is what makes something a candidate in the
+    # first place.  The EP-specific evidence is G1 (coalescence), G4 (monodromy)
+    # and G6 (square-root splitting).  Counting G2/G3 toward an EP verdict would
+    # let every ordinary crossing look half-verified.
+    decisive = ("G1", "G4", "G6")
+    dec_pass = [g for g in decisive if out["gates"].get(g, {}).get("pass")]
+    dec_fail = [g for g in decisive if not out["gates"].get(g, {}).get("pass")]
+    preconditions_met = all(out["gates"].get(g, {}).get("pass") for g in ("G2", "G3"))
+
+    if not dec_fail:
+        verdict, classification = "VERIFIED_EP2", "exceptional point of order 2"
+    elif not dec_pass:
+        verdict = "REJECTED"
+        classification = ("avoided or ordinary crossing: two distinct roots "
+                          "present (G2, G3) but no coalescence, no monodromy "
+                          "exchange and no square-root splitting"
+                          if preconditions_met else
+                          "not a coalescence; preconditions not met either")
+    else:
+        verdict, classification = "UNRESOLVED", "mixed decisive evidence"
+
+    out["decisive_gates_passed"] = dec_pass
+    out["decisive_gates_failed"] = dec_fail
+    out["verdict"] = verdict
+    out["classification"] = classification
     return out
 
 

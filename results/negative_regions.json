@@ -2,7 +2,7 @@
  "status": "complete",
  "description": "Bounded exclusion of EP2 over the searched atlas domain. The bound is on the scale-free root separation |a1/a2| and on the pairwise branch gap; it is NOT based on |dF/domega|, which is not invariant under rescaling of the spectral condition and therefore cannot bound anything.",
  "provenance": {
-  "commit": "309b9a6ff520e0f8cdc89120c586763a89976db9",
+  "commit": "3ccb7a2174f3d3332124a6fd0da8020c81dd778f",
   "runtime_s": 33.0,
   "solver": "leaver-cf",
   "precision": "double"
@@ -51,12 +51,34 @@
   "mu_range": [
    0.0,
    1.8
-  ]
+  ],
+  "r_minus_max": 0.22870680067498927,
+  "extremality_min_actual": 0.2944000000000001,
+  "naming_note": "z_minus = r_minus^2; prior work's r2 is r_minus. The guard z_minus<=0.20 means r_minus<=0.447, but the atlas actually reaches r_minus=0.2287."
  },
- "min_branch_gap": 0.5116202072685984,
- "min_root_separation": 0.3063135039501837,
- "n_atlas_points": 35728,
- "n_parameter_points": 3136,
+ "min_branch_gap": 0.5116202072812408,
+ "min_root_separation": 0.3106567290754732,
+ "n_atlas_points": 50558,
+ "n_parameter_points": 4459,
  "n_collapsed_labels_excluded": 4,
- "verdict": null
+ "verdict": "No EP2 in the searched domain. Branch gap >= 0.5116, scale-free root separation >= 0.3107, min |D| >= 0.2618, condition number at the strongest interaction 8.73e3 (finite). The ten tightest candidates were rejected by the EP gate: G2/G3 pass (two distinct roots present) while G1/G4/G6 fail (no coalescence, no monodromy exchange, no square-root splitting) -- i.e. avoided crossings.",
+ "bounds": {
+  "min_branch_gap": 0.5116202072812408,
+  "min_root_separation": 0.3106567290754732,
+  "min_abs_discriminant": 0.26175523649849985,
+  "condition_number_strongest_interaction": 8734.023424017041,
+  "condition_number_ordinary_control": 18.341836057972877
+ },
+ "limitations": [
+  "minimum attained on the box boundary (s=0.42, delta=-0.20, mu=1.8)",
+  "mu > 1.8 covered only by a targeted probe, not by the atlas",
+  "quasiresonant regime not searched: Solvers C/D inapplicable by formulation",
+  "overtones N>3 and higher l not searched",
+  "bounded numerical exclusion over a declared domain, NOT a theorem"
+ ],
+ "independent_validation": {
+  "solverA_vs_solverC_max_difference": 2.0564991397232055e-09,
+  "n_points": 9,
+  "max_r_minus": 0.22870680067498927
+ }
 }
