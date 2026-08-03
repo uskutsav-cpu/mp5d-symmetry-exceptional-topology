@@ -267,3 +267,48 @@ two labels is evidence about the labels first and about the physics second.*
 A minimal extract documenting the defect is kept at
 `results/atlas_v1_collapse_extract.json`; the full 13 MB superseded atlas was
 not worth carrying in a public repository.
+
+---
+
+## Branch jump at large `s` admitted by a `|ω|`-relative tolerance (fixed)
+
+**Attempted.** Guard branch identity with `miss > predictor_tol · max(|ω|, 1)`,
+`predictor_tol = 0.12`, on the `s`-grid `[0, 0.04, 0.08, 0.14, 0.20, 0.27,
+0.34, 0.42]`.
+
+**Symptom.** The gap table for sector `(1,1)`, `l = 4`, `N = 2` vs `N = 3`,
+`δ = 0` was smooth and slowly decreasing out to `s = 0.27` (0.8373 → 0.7802)
+and then jumped non-monotonically to 1.0637 at `s = 0.34` and 1.3329 at
+`s = 0.42`.
+
+**Mechanism.** The `N = 3` branch jumped at the `0.27 → 0.34` step. Its
+`Im ω` had been decreasing smoothly (`−2.6477, −2.6429, −2.6349, −2.6159,
+−2.5857, −2.5299`) and then *reversed* to `−2.7617`. The predictor miss was
+`2.50e-1`, but the tolerance at `|ω| ≈ 3.66` was `0.12 × 3.66 ≈ 0.44`, so the
+guard did not fire. **A tolerance proportional to `|ω|` is not a branch-identity
+test** — it is a constant, and at large `|ω|` it is a very weak one.
+
+This contaminated the reported minimum branch gap: the tightest "candidate"
+(`gap = 0.5116` at `s = 0.42`) sat on the jumped branch.
+
+**Fix.** The predictor miss is the local truncation error of the extrapolator,
+so along a genuine branch it follows a smooth trend. The tolerance is now taken
+from the branch's **own history**:
+
+```
+allowed = max(4 × median(previous misses),  0.02 × max(|ω|, 1))
+```
+
+At the offending step this gives `allowed = 2.25e-1 < 2.50e-1`, so the jump is
+caught. It does not fire on the legitimate `N = 2` walk over the same range.
+
+**Also fixed:** the `s` grid. With steps `≤ 0.05` the `N = 3` branch continues
+smoothly all the way to `s = 0.42`, ending at `2.569781 − 2.226019i` — not the
+jumped `2.389498 − 2.873153i`. An 11-point (`≤ 0.05`) and a 12-point (`≤ 0.04`)
+grid give **identical** endpoints on all four hardest branches tested, so the
+continuation is resolution-independent at this spacing.
+
+**Lesson, distinct from the earlier collapse.** The first defect was a bad
+*predictor* (trivial on the first step); this one was a bad *acceptance test*.
+Both produced small computed gaps that looked physical. Any branch-gap minimum
+must be traced back to the trajectory that produced it before it is believed.

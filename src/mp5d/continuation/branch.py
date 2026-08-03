@@ -107,6 +107,7 @@ def extrapolate(history: list[complex], targets: list[float], nxt: float) -> com
 def continue_along(label: BranchLabel, path: list[tuple[float, float, float]],
                    seed: complex, *, depth: int = 200, angular_N: int = 40,
                    M: float = 1.0, predictor_tol: float = 0.12,
+                   miss_growth: float = 4.0, miss_floor: float = 0.02,
                    depth_schedule: tuple[int, ...] = (100, 200),
                    commit: str = "", parent: str | None = None,
                    solver: str = "leaver-cf") -> tuple[list[AtlasPoint], list[dict]]:
@@ -120,6 +121,7 @@ def continue_along(label: BranchLabel, path: list[tuple[float, float, float]],
     points: list[AtlasPoint] = []
     failures: list[dict] = []
     hist: list[complex] = []
+    misses: list[float] = []
     # arc-length-like parameter for the extrapolation
     ts: list[float] = []
     prev_pt: tuple[float, float, float] | None = None
@@ -157,14 +159,29 @@ def continue_along(label: BranchLabel, path: list[tuple[float, float, float]],
 
         w = complex(sol.omega)
         miss = abs(w - guess)
-        scale = max(abs(w), 1.0)
-        if hist and miss > predictor_tol * scale:
+        # Identity check against the branch's OWN history, not against |omega|.
+        # A fixed relative tolerance is useless here: at |omega| ~ 3.7 a
+        # tolerance of 0.12|omega| is 0.44, which happily admits a jump to a
+        # neighbouring overtone.  The predictor miss is the local truncation
+        # error, so it should follow a smooth trend along the walk; a jump shows
+        # up as a sudden multiple of the running median.
+        if misses:
+            allowed = max(miss_growth * float(np.median(misses)),
+                          miss_floor * max(abs(w), 1.0))
+        else:
+            allowed = predictor_tol * max(abs(w), 1.0)
+        if hist and miss > allowed:
             failures.append({"reason": "predictor_miss", "miss": miss,
+                             "allowed": allowed,
+                             "median_prior_miss": float(np.median(misses))
+                             if misses else None,
                              "s": s, "delta": delta, "mu": mu,
                              "branch": label.key,
                              "omega": [w.real, w.imag],
                              "predicted": [guess.real, guess.imag]})
             break
+        if hist:
+            misses.append(miss)
 
         lam = complex(sol.Lambda)
         points.append(AtlasPoint(

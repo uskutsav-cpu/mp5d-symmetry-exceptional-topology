@@ -39,12 +39,14 @@ from mp5d.geometry import MPGeometry, sdelta_to_ab  # noqa: E402
 SECTORS = [(0, 0), (1, 1), (-1, -1), (1, 0), (2, 0), (2, 1), (2, 2)]
 
 MU_GRID = [0.0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8]
-# The first step off s=0 has only one history point, so the predictor is
-# trivial and a highly damped overtone can be captured by a neighbouring
-# branch.  That happened with l=6, N=3 -> N=2 on a 0 -> 0.12 first step.
-# Finer early steps fix it; later steps can be coarser because the quadratic
-# predictor is then active.
-S_GRID = [0.0, 0.04, 0.08, 0.14, 0.20, 0.27, 0.34, 0.42]
+# Step size in s is the binding constraint on branch identity, at BOTH ends:
+#   * the first step off s=0 has only one history point, so the predictor is
+#     trivial (l=6 N=3 was captured by N=2 on a 0 -> 0.12 first step);
+#   * at large s the branches move fast, and a 0.27 -> 0.34 step let l=4 N=3
+#     jump (Im omega reversing from -2.530 to -2.762).
+# Steps of <= 0.05 hold every branch tested.  Verified resolution-independent:
+# an 11-point (<=0.05) and a 12-point (<=0.04) grid give identical endpoints.
+S_GRID = [0.0, 0.04, 0.08, 0.12, 0.16, 0.20, 0.25, 0.29, 0.33, 0.37, 0.42]
 DELTA_POS = [0.05, 0.10, 0.15, 0.20]
 
 
