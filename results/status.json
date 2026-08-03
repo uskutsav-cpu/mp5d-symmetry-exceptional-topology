@@ -62,13 +62,40 @@
   "13_near_extremal_classification": "COMPLETE",
   "14_effective_models": "COMPLETE",
   "15_pseudospectra": "COMPLETE",
-  "16_certification": "PARTIAL",
+  "16_certification": "PARTIAL (angular enclosed; radial blocked by DFT aliasing bound)",
   "17_reproducibility": "COMPLETE",
-  "18_novelty_audit": "NOT STARTED",
-  "19_manuscript": "PARTIAL",
+  "18_novelty_audit": "COMPLETE",
+  "19_manuscript": "COMPLETE (draft; authorship intentionally unassigned)",
   "E_wronskian_solver": "NOT STARTED (deferred by evidence; see gate 13)",
   "F_hyperboloidal_solver": "NOT STARTED (now the evidence-based next gate)",
-  "raw_tail_higher_orders": "BLOCKED (Gaussian reduction degrades past n~500-800)"
+  "raw_tail_higher_orders": "BLOCKED (Gaussian reduction degrades past n~500-800)",
+  "20_time_domain_ringdown": "COMPLETE",
+  "21_figures": "COMPLETE"
  },
- "next_scientific_gate": "Hyperboloidal formulation (Solver F): the only method that remains applicable in the quasiresonant regime, which is the one region of the spectrum this search could not cover."
+ "next_scientific_gate": "Hyperboloidal formulation (Solver F): the only method that remains applicable in the quasiresonant regime, which is the one region of the spectrum this search could not cover.",
+ "manuscript": {
+  "documents": [
+   "main.tex",
+   "supplement.tex",
+   "cover_letter_prd.tex",
+   "cover_letter_prl.tex",
+   "response_template.tex"
+  ],
+  "figures": 5,
+  "compiles": true,
+  "engine": "tectonic",
+  "build": "./scripts/build_manuscript.sh",
+  "unassigned": [
+   "authors",
+   "affiliation",
+   "acknowledgments",
+   "referee suggestions"
+  ],
+  "target": "PRD. PRL explicitly declined -- see cover_letter_prl.tex for the reasoning, recorded so the decision is deliberate rather than an omission.",
+  "not_submitted": true
+ },
+ "ringdown": {
+  "finding": "No exceptional phenomenology. The strongest interactions split in Im omega (0.53) rather than Re omega (8e-4 to 0.07): nearly equal oscillation frequencies, very different decay rates. The EP template beats a single damped exponential by only 2.4x while using twice the free amplitudes.",
+  "note": "A large t_beat/tau (up to 1.4e4 here) is NOT sufficient evidence of near-EP behaviour; secular growth needs coalescence in the full complex frequency."
+ }
 }

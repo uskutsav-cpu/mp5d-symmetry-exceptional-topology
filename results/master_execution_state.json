@@ -23,13 +23,15 @@
   "13_near_extremal_classification": "COMPLETE",
   "14_effective_models": "COMPLETE",
   "15_pseudospectra": "COMPLETE",
-  "16_certification": "PARTIAL",
+  "16_certification": "PARTIAL (angular enclosed; radial blocked by DFT aliasing bound)",
   "17_reproducibility": "COMPLETE",
-  "18_novelty_audit": "NOT STARTED",
-  "19_manuscript": "PARTIAL",
+  "18_novelty_audit": "COMPLETE",
+  "19_manuscript": "COMPLETE (draft; authorship intentionally unassigned)",
   "E_wronskian_solver": "NOT STARTED (deferred by evidence; see gate 13)",
   "F_hyperboloidal_solver": "NOT STARTED (now the evidence-based next gate)",
-  "raw_tail_higher_orders": "BLOCKED (Gaussian reduction degrades past n~500-800)"
+  "raw_tail_higher_orders": "BLOCKED (Gaussian reduction degrades past n~500-800)",
+  "20_time_domain_ringdown": "COMPLETE",
+  "21_figures": "COMPLETE"
  },
  "checkpoints": {
   "atlas": "data/full_branch_atlas/ (untracked, ~24MB; sha256 per shard in results/full_branch_atlas.json)"

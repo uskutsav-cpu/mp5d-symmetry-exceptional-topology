@@ -1,0 +1,69 @@
+% Referee response template.
+% Structure only; no responses written, because no report exists.
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,xcolor}
+\newcommand{\TODO}[1]{\textbf{[#1]}}
+\newcommand{\refpoint}[1]{\medskip\noindent\textbf{Referee:} \emph{#1}\par\medskip\noindent\textbf{Response:} }
+\begin{document}
+\begin{center}
+{\Large Response to the Referee Report}\\[2mm]
+\emph{Symmetry control of exceptional structure in the massive scalar
+quasinormal spectrum of doubly rotating five-dimensional Myers--Perry black
+holes}\\[2mm]
+\TODO{manuscript number}
+\end{center}
+
+\noindent We thank the referee for their reading of the manuscript. Changes in
+the revised version are marked in \textcolor{blue}{blue}. Below we reproduce
+each point in italics and respond beneath it.
+
+\section*{Anticipated points}
+
+The following are objections we expect and for which the evidence already
+exists in the manuscript or the public repository. They are listed so that the
+response can be specific rather than defensive.
+
+\refpoint{The result is negative; how do you know you simply did not look hard
+enough, or that your detector could not fire?}
+The detector is validated on closed-form problems with known exceptional
+structure ($\lambda^2-t$, $\lambda^3-t$, Jordan blocks) \emph{and} on negative
+controls where it must stay silent (avoided crossings, semisimple and
+block-diagonal degeneracies). See Supplemental Material, Sec.~S4. Separately,
+the exclusion is quantitative: three rescaling-invariant diagnostics are bounded
+away from zero, so the statement is a bound rather than an absence of sightings.
+
+\refpoint{Exceptional lines are known in Myers--Perry--de Sitter. Is your result
+in conflict?}
+No. That mechanism relies on the cosmological horizon and the near-Nariai
+P\"oschl--Teller limit, neither of which has a $\Lambda=0$ analogue. This is
+stated in Sec.~X of the manuscript and in the novelty audit in the repository.
+
+\refpoint{Why not simply use $|dF/d\omega|$ as the exceptional-point diagnostic?}
+Because it is not invariant: the spectral condition is defined up to a
+nonvanishing analytic factor, so $|dF/d\omega|$ at a root can be rescaled at
+will. We exhibit two conditions with identical zeros whose $|dF/d\omega|$ differ
+by more than $10^5$. See Sec.~V.
+
+\refpoint{The minimum gap sits on the boundary of your search box.}
+Correct, and stated. A probe beyond the box shows the gap falling further at
+larger $s$ but rising again at larger $\mu$, so it does not extrapolate to zero;
+we make no claim outside the declared domain.
+
+\refpoint{Can the no-go be promoted to the unseparated problem / to a continuum
+theorem?}
+The no-go already \emph{is} a statement about the unseparated pencil: the
+decomposition is over $(m_1,m_2)$ only and uses the torus action, not separation
+of variables in $\theta$. It is not a numerical statement and carries no
+discretization. Certification of the \emph{numerical} results is a separate
+matter and is deliberately limited; see Supplemental Material, Sec.~S5.
+
+\section*{Referee report}
+
+\refpoint{\TODO{referee point 1}}
+\TODO{response}
+
+\refpoint{\TODO{referee point 2}}
+\TODO{response}
+
+\end{document}

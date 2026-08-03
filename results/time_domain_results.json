@@ -1,4 +1,379 @@
 {
-  "status": "not_started",
-  "records": []
+ "status": "complete",
+ "provenance": {
+  "commit": "0a461327494ca77eacffdbc4a25693bdc3624c85",
+  "runtime_s": 0.0
+ },
+ "model": "2x2 effective propagator; exact for two interacting branches. Uses only eigenvalue differences, so it is invariant under rescaling of the spectral condition (residue-based excitation factors are not).",
+ "question": "No EP survived verification, so: how close does the ringdown come to EP phenomenology anyway?",
+ "answer": "Not close. The strongest interactions split almost entirely in Im omega (damping) rather than Re omega (frequency): the two branches do not coalesce, one simply decays faster. The EP template beats a single damped exponential by only ~2.4x while using twice as many free amplitudes, which is not evidence of secular growth. A large t_beat/tau here reflects near-equal oscillation frequencies, NOT an approach to an EP.",
+ "n_cases": 6,
+ "cases": [
+  {
+   "omega_plus": [
+    2.5094126155849015,
+    -1.5480379310838372
+   ],
+   "omega_minus": [
+    2.5786462808539357,
+    -2.0549520619698436
+   ],
+   "omega_bar": [
+    2.5440294482194186,
+    -1.8014949965268405
+   ],
+   "discriminant_D": [
+    -0.2521686356853305,
+    -0.07019104651581029
+   ],
+   "abs_D": 0.2617552364984998,
+   "Delta": [
+    0.03461683263451709,
+    -0.25345706544300317
+   ],
+   "delta_Re": 0.06923366526903418,
+   "delta_Im": 0.5069141308860063,
+   "splitting_character": "damping-dominated",
+   "t_beat": 90.75332474113337,
+   "tau_damping": 0.5550945197893593,
+   "beat_over_damping": 163.4916604393273,
+   "window_n_tau": 4.0,
+   "ep_surrogate_rel_error": 0.004525505629426987,
+   "single_mode_rel_error": 0.010665371468497768,
+   "ep_over_single_improvement": 2.3567248263147564,
+   "ep_surrogate_A": [
+    1.9907912107442132,
+    -0.0025961800489785543
+   ],
+   "ep_surrogate_B": [
+    0.068061606229113,
+    0.019110335111786576
+   ],
+   "ep_phenomenology": false,
+   "parameters": {
+    "m1": 2,
+    "m2": 0,
+    "s": 0.42,
+    "delta": -0.2,
+    "mu": 1.8
+   },
+   "branches": [
+    "m2_0__l4__N2",
+    "m2_0__l4__N3"
+   ],
+   "branch_gap": 0.5116202072812408
+  },
+  {
+   "omega_plus": [
+    2.5476426974650277,
+    -1.5522262891222156
+   ],
+   "omega_minus": [
+    2.594208551786517,
+    -2.0636143215882203
+   ],
+   "omega_bar": [
+    2.5709256246257723,
+    -1.807920305355218
+   ],
+   "discriminant_D": [
+    -0.25934934096076134,
+    -0.04762644124313003
+   ],
+   "abs_D": 0.2636860985381417,
+   "Delta": [
+    0.02328292716074465,
+    -0.25569401623300236
+   ],
+   "delta_Re": 0.0465658543214893,
+   "delta_Im": 0.5113880324660047,
+   "splitting_character": "damping-dominated",
+   "t_beat": 134.93117218038475,
+   "tau_damping": 0.5531217261280338,
+   "beat_over_damping": 243.94480601029866,
+   "window_n_tau": 4.0,
+   "ep_surrogate_rel_error": 0.004528040091382608,
+   "single_mode_rel_error": 0.010669057312707085,
+   "ep_over_single_improvement": 2.356219710380117,
+   "ep_surrogate_A": [
+    1.9905889607928657,
+    -0.0017499575773253903
+   ],
+   "ep_surrogate_B": [
+    0.06978734942811844,
+    0.012925212809654823
+   ],
+   "ep_phenomenology": false,
+   "parameters": {
+    "m1": 2,
+    "m2": 0,
+    "s": 0.42,
+    "delta": -0.15,
+    "mu": 1.8
+   },
+   "branches": [
+    "m2_0__l4__N2",
+    "m2_0__l4__N3"
+   ],
+   "branch_gap": 0.5135037473457634
+  },
+  {
+   "omega_plus": [
+    2.5840825863466432,
+    -1.5545070485421109
+   ],
+   "omega_minus": [
+    2.611474388197805,
+    -2.070648469706074
+   ],
+   "omega_bar": [
+    2.5977784872722243,
+    -1.8125777591240924
+   ],
+   "discriminant_D": [
+    -0.26565165583250216,
+    -0.028276087071400478
+   ],
+   "abs_D": 0.2671522774498088,
+   "Delta": [
+    0.013695900925580817,
+    -0.2580707105819815
+   ],
+   "delta_Re": 0.027391801851161635,
+   "delta_Im": 0.516141421163963,
+   "splitting_character": "damping-dominated",
+   "t_beat": 229.38196403874497,
+   "tau_damping": 0.5517004691060751,
+   "beat_over_damping": 415.77264636083146,
+   "window_n_tau": 4.0,
+   "ep_surrogate_rel_error": 0.0045654089945649816,
+   "single_mode_rel_error": 0.010754971872022817,
+   "ep_over_single_improvement": 2.355752110013883,
+   "ep_surrogate_A": [
+    1.9904049207079115,
+    -0.0010341043422236842
+   ],
+   "ep_surrogate_B": [
+    0.0713239152107646,
+    0.007656464067524021
+   ],
+   "ep_phenomenology": false,
+   "parameters": {
+    "m1": 2,
+    "m2": 0,
+    "s": 0.42,
+    "delta": -0.1,
+    "mu": 1.8
+   },
+   "branches": [
+    "m2_0__l4__N2",
+    "m2_0__l4__N3"
+   ],
+   "branch_gap": 0.5168677562489352
+  },
+  {
+   "omega_plus": [
+    2.6186711154311473,
+    -1.5547823383295003
+   ],
+   "omega_minus": [
+    2.6307578011247488,
+    -2.075941575466884
+   ],
+   "omega_bar": [
+    2.624714458277948,
+    -1.8153619568981922
+   ],
+   "discriminant_D": [
+    -0.271460862482564,
+    -0.012598175791193374
+   ],
+   "abs_D": 0.27175303842467585,
+   "Delta": [
+    0.006043342846800748,
+    -0.26057961856869194
+   ],
+   "delta_Re": 0.012086685693601495,
+   "delta_Im": 0.5211592371373839,
+   "splitting_character": "damping-dominated",
+   "t_beat": 519.843525881194,
+   "tau_damping": 0.550854333043667,
+   "beat_over_damping": 943.7041604245404,
+   "window_n_tau": 4.0,
+   "ep_surrogate_rel_error": 0.004631219067608507,
+   "single_mode_rel_error": 0.010907818672196852,
+   "ep_over_single_improvement": 2.3552802216781092,
+   "ep_surrogate_A": [
+    1.9902217677217402,
+    -0.0004595365614072394
+   ],
+   "ep_surrogate_B": [
+    0.07278895305803082,
+    0.0034071156602889377
+   ],
+   "ep_phenomenology": false,
+   "parameters": {
+    "m1": 2,
+    "m2": 0,
+    "s": 0.42,
+    "delta": -0.05,
+    "mu": 1.8
+   },
+   "branches": [
+    "m2_0__l4__N2",
+    "m2_0__l4__N3"
+   ],
+   "branch_gap": 0.5212993750472715
+  },
+  {
+   "omega_plus": [
+    2.6515845215717517,
+    -1.5528837357932586
+   ],
+   "omega_minus": [
+    2.65239280141559,
+    -2.079305073102901
+   ],
+   "omega_bar": [
+    2.6519886614936707,
+    -1.8160944044480796
+   ],
+   "discriminant_D": [
+    -0.2771187710585662,
+    -0.0008509915126277486
+   ],
+   "abs_D": 0.27712007769117813,
+   "Delta": [
+    0.0004041399219192332,
+    -0.2632106686548211
+   ],
+   "delta_Re": 0.0008082798438384664,
+   "delta_Im": 0.5264213373096422,
+   "splitting_character": "damping-dominated",
+   "t_beat": 7773.527145426717,
+   "tau_damping": 0.5506321684328438,
+   "beat_over_damping": 14117.459151634712,
+   "window_n_tau": 4.0,
+   "ep_surrogate_rel_error": 0.004720454885116682,
+   "single_mode_rel_error": 0.01111556054348371,
+   "ep_over_single_improvement": 2.3547647025566163,
+   "ep_surrogate_A": [
+    1.9900232233891473,
+    -3.1031678408268555e-05
+   ],
+   "ep_surrogate_B": [
+    0.07429022755633105,
+    0.00023013256471363325
+   ],
+   "ep_phenomenology": false,
+   "parameters": {
+    "m1": 2,
+    "m2": 0,
+    "s": 0.42,
+    "delta": 0.0,
+    "mu": 1.8
+   },
+   "branches": [
+    "m2_0__l4__N2",
+    "m2_0__l4__N3"
+   ],
+   "branch_gap": 0.5264219578353263
+  },
+  {
+   "omega_plus": [
+    2.6515845215718534,
+    -1.5528837357932936
+   ],
+   "omega_minus": [
+    2.6523928014123688,
+    -2.0793050731035296
+   ],
+   "omega_bar": [
+    2.651988661492111,
+    -1.8160944044484117
+   ],
+   "discriminant_D": [
+    -0.2771187710591967,
+    -0.0008509915091299863
+   ],
+   "abs_D": 0.27712007769179786,
+   "Delta": [
+    0.0004041399202576734,
+    -0.263210668655118
+   ],
+   "delta_Re": 0.0008082798405153468,
+   "delta_Im": 0.526421337310236,
+   "splitting_character": "damping-dominated",
+   "t_beat": 7773.527177386391,
+   "tau_damping": 0.550632168432743,
+   "beat_over_damping": 14117.459209679082,
+   "window_n_tau": 4.0,
+   "ep_surrogate_rel_error": 0.004720454885125669,
+   "single_mode_rel_error": 0.011115560543504693,
+   "ep_over_single_improvement": 2.3547647025565785,
+   "ep_surrogate_A": [
+    1.990023223389118,
+    -3.103167828059055e-05
+   ],
+   "ep_surrogate_B": [
+    0.07429022755649013,
+    0.00023013256376814447
+   ],
+   "ep_phenomenology": false,
+   "parameters": {
+    "m1": 1,
+    "m2": 1,
+    "s": 0.42,
+    "delta": 0.0,
+    "mu": 1.8
+   },
+   "branches": [
+    "m1_1__l4__N2",
+    "m1_1__l4__N3"
+   ],
+   "branch_gap": 0.5264219578359149
+  }
+ ],
+ "ep_limit_control": {
+  "omega_plus": [
+   2.5094126155849015,
+   -1.5480379310838372
+  ],
+  "omega_minus": [
+   2.5094126155859016,
+   -1.5480379310838372
+  ],
+  "omega_bar": [
+   2.5094126155854015,
+   -1.5480379310838372
+  ],
+  "discriminant_D": [
+   1.0001778090679956e-24,
+   0.0
+  ],
+  "abs_D": 1.0001778090679956e-24,
+  "Delta": [
+   5.000444502911705e-13,
+   0.0
+  ],
+  "delta_Re": 1.000088900582341e-12,
+  "delta_Im": 0.0,
+  "splitting_character": "frequency-dominated",
+  "t_beat": 6282626778000.391,
+  "tau_damping": 0.6459790034342788,
+  "beat_over_damping": 9725744559187.639,
+  "window_n_tau": 4.0,
+  "ep_surrogate_rel_error": 4.221957479365241e-15,
+  "single_mode_rel_error": 4.214143832476878e-15,
+  "ep_over_single_improvement": 0.9981492833770704,
+  "ep_surrogate_A": [
+   1.9999999999999913,
+   5.0536985115461495e-17
+  ],
+  "ep_surrogate_B": [
+   7.942460249401913e-16,
+   -1.3421771937152601e-18
+  ],
+  "ep_phenomenology": false
+ }
 }

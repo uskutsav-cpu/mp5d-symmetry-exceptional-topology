@@ -37,4 +37,7 @@ echo "==> published benchmarks"
 $PY scripts/first_qnm.py
 $PY scripts/rotating_validation.py
 
+echo "==> manuscript (requires tectonic)"
+./scripts/build_manuscript.sh || echo "manuscript build skipped"
+
 echo "done."
