@@ -66,4 +66,5 @@ PYTHONPATH=src .venv/bin/python -m pytest -q
 
 `uv` and Julia are not installed. `python-flint` (Arb) **is** available.
 
-See `SOLVERS.md` and `STATUS_SCHEMA.md` in this directory.
+See `SOLVERS.md`, `STATUS_SCHEMA.md`, `SCIENTIFIC_GATES.md` and
+`ACCEPTANCE.md` in this directory.

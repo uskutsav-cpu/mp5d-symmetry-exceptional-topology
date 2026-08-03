@@ -2,7 +2,7 @@
 % Values transcribed from results/*.json; see docs/ for the narrative versions.
 \documentclass[aps,prd,onecolumn,superscriptaddress,nofootinbib]{revtex4-2}
 
-\usepackage{amsmath,amssymb,amsthm,graphicx,hyperref,booktabs}
+\usepackage{amsmath,amssymb,amsthm,graphicx,hyperref,booktabs,float}
 
 \newcommand{\TODO}[1]{\textbf{[#1]}}
 \newcommand{\Rem}{\mathrm{Re}}
@@ -33,20 +33,19 @@ $M-(|a|+|b|)^2$, zero at extremality. The independence rule is that any claim
 requires agreement between one recurrence solver and one recurrence-free
 solver; two wrappers around one discretization do not count.
 
-\begin{table}[h]
-\centering
-\begin{tabular}{llccl}
+\begin{table}[H]
+\centering\small
+\begin{tabular}{llcp{3.1cm}p{4.6cm}}
 \toprule
-Solver & Formulation & Recurrence-free & Validated domain & Known failure \\
+Solver & Formulation & Rec.-free & Validated domain & Known failure \\
 \midrule
 A & Leaver continued fraction, Gaussian-reduced & no &
   $r_-\le0.2287$, extremality $\ge0.294$ &
-  drifts $2$--$6\times10^{-4}$/depth doubling in the \\
-  & & & & quasiresonant regime \\
+  drifts $2$--$6\times10^{-4}$ per depth doubling in the quasiresonant regime \\
 B & raw recurrence, Hill determinant, Wynn & no & as A &
   shares A's recurrence; not independent of A \\
 C & exterior complex-scaled Chebyshev collocation & yes &
-  as A, if $\theta_{\min}<90^\circ$ &
+  as A, provided $\theta_{\min}<90^\circ$ &
   no admissible contour as $\Rem\,\Omega\to0$ \\
 D & multidomain near-horizon spectral & yes & ordinary modes &
   same formulation limit as C \\
@@ -86,9 +85,9 @@ Three solvers agree below $10^{-5}$ on $10/10$ benchmark points.
 \section{Atlas census}\label{sec:atlas}
 %-------------------------------------------------------------------------
 
-\begin{table}[h]
+\begin{table}[H]
 \centering
-\begin{tabular}{lrrr}
+\begin{tabular}{lr}
 \toprule
 Quantity & Value \\
 \midrule
@@ -116,9 +115,9 @@ Each gate condition names the routine implementing it; each routine is
 validated on closed-form synthetic problems, including negative controls in
 which the detector must \emph{not} fire.
 
-\begin{table}[h]
-\centering
-\begin{tabular}{clll}
+\begin{table}[H]
+\centering\small
+\begin{tabular}{clp{7.0cm}l}
 \toprule
 & Condition & Synthetic validation & Ten tightest candidates \\
 \midrule
