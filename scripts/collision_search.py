@@ -178,6 +178,14 @@ def main() -> int:
         "min_branch_gap": genuine_tested[0]["gap"] if genuine_tested else None,
         "min_root_separation": min(seps) if seps else None,
         "candidates": genuine_tested[:200],
+        # Every tier-2 evaluation, including the random subsample, whose ranks
+        # generally fall outside the top 200.  Without this the quoted
+        # min_root_separation would not be recoverable from the saved records,
+        # and a figure drawn from `candidates` alone would disagree with the
+        # reported bound.
+        "tier2_evaluated": [g for g in gaps
+                            if g.get("tier2", {}).get("ok")
+                            and not g.get("collapsed_label")],
         "collapsed_examples": [g for g in gaps if g.get("collapsed_label")][:10],
     }
     pathlib.Path(args.out).write_text(json.dumps(result, indent=1) + "\n")
