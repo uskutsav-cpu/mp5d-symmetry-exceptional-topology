@@ -1,0 +1,238 @@
+{
+  "schema_version": 1,
+  "source": {
+    "title": "Accurate Quasinormal Modes of the Five-Dimensional Schwarzschild-Tangherlini Black Holes",
+    "author": "Jerzy Matyjasek",
+    "arxiv": "2107.04815v1",
+    "url": "https://arxiv.org/pdf/2107.04815v1",
+    "verification": "Tables I, II and III visually rechecked in PDF screenshots on 2026-09-09",
+    "column": "continued fraction / Hill determinant; NOT WKB column",
+    "physical_conventions": {
+      "dimension": 5,
+      "field": "massless scalar",
+      "j": 0,
+      "horizon_radius": "1",
+      "M_in_repository": "1",
+      "a": "0",
+      "b": "0",
+      "mu": "0",
+      "published_frequency": "omega_tilde = omega / T_H",
+      "T_H": "1/(2*pi)",
+      "repository_frequency": "omega = omega_tilde / (2*pi)",
+      "frequency_sheet": "Re(omega)>0, Im(omega)<0",
+      "boundary": "ingoing at horizon, outgoing at infinity"
+    }
+  },
+  "records": [
+    {
+      "id": "Matyjasek2021-l0-n0",
+      "ell": 0,
+      "overtone": 0,
+      "table": "I",
+      "printed_page": 12,
+      "pdf_page_index": 11,
+      "omega_tilde": [
+        "3.35418783669",
+        "-2.40881848257"
+      ],
+      "printed_decimal_places": 11,
+      "rounding_radius_each_component": "0.000000000005"
+    },
+    {
+      "id": "Matyjasek2021-l0-n1",
+      "ell": 0,
+      "overtone": 1,
+      "table": "I",
+      "printed_page": 12,
+      "pdf_page_index": 11,
+      "omega_tilde": [
+        "2.33646259225",
+        "-8.31019918700"
+      ],
+      "printed_decimal_places": 11,
+      "rounding_radius_each_component": "0.000000000005"
+    },
+    {
+      "id": "Matyjasek2021-l0-n2",
+      "ell": 0,
+      "overtone": 2,
+      "table": "I",
+      "printed_page": 12,
+      "pdf_page_index": 11,
+      "omega_tilde": [
+        "1.88699812446",
+        "-14.78624149094"
+      ],
+      "printed_decimal_places": 11,
+      "rounding_radius_each_component": "0.000000000005"
+    },
+    {
+      "id": "Matyjasek2021-l0-n3",
+      "ell": 0,
+      "overtone": 3,
+      "table": "I",
+      "printed_page": 12,
+      "pdf_page_index": 11,
+      "omega_tilde": [
+        "1.69259527010",
+        "-21.21981386107"
+      ],
+      "printed_decimal_places": 11,
+      "rounding_radius_each_component": "0.000000000005"
+    },
+    {
+      "id": "Matyjasek2021-l0-n4",
+      "ell": 0,
+      "overtone": 4,
+      "table": "I",
+      "printed_page": 12,
+      "pdf_page_index": 11,
+      "omega_tilde": [
+        "1.58414637600",
+        "-27.60684313053"
+      ],
+      "printed_decimal_places": 11,
+      "rounding_radius_each_component": "0.000000000005"
+    },
+    {
+      "id": "Matyjasek2021-l1-n0",
+      "ell": 1,
+      "overtone": 0,
+      "table": "II",
+      "printed_page": 12,
+      "pdf_page_index": 11,
+      "omega_tilde": [
+        "6.38382253011",
+        "-2.27657411582"
+      ],
+      "printed_decimal_places": 11,
+      "rounding_radius_each_component": "0.000000000005"
+    },
+    {
+      "id": "Matyjasek2021-l1-n1",
+      "ell": 1,
+      "overtone": 1,
+      "table": "II",
+      "printed_page": 12,
+      "pdf_page_index": 11,
+      "omega_tilde": [
+        "5.38079295983",
+        "-7.27345089157"
+      ],
+      "printed_decimal_places": 11,
+      "rounding_radius_each_component": "0.000000000005"
+    },
+    {
+      "id": "Matyjasek2021-l1-n2",
+      "ell": 1,
+      "overtone": 2,
+      "table": "II",
+      "printed_page": 12,
+      "pdf_page_index": 11,
+      "omega_tilde": [
+        "4.16851774973",
+        "-13.25239223151"
+      ],
+      "printed_decimal_places": 11,
+      "rounding_radius_each_component": "0.000000000005"
+    },
+    {
+      "id": "Matyjasek2021-l1-n3",
+      "ell": 1,
+      "overtone": 3,
+      "table": "II",
+      "printed_page": 12,
+      "pdf_page_index": 11,
+      "omega_tilde": [
+        "3.40134506823",
+        "-19.70845126683"
+      ],
+      "printed_decimal_places": 11,
+      "rounding_radius_each_component": "0.000000000005"
+    },
+    {
+      "id": "Matyjasek2021-l1-n4",
+      "ell": 1,
+      "overtone": 4,
+      "table": "II",
+      "printed_page": 12,
+      "pdf_page_index": 11,
+      "omega_tilde": [
+        "2.95415287238",
+        "-26.21483703856"
+      ],
+      "printed_decimal_places": 11,
+      "rounding_radius_each_component": "0.000000000005"
+    },
+    {
+      "id": "Matyjasek2021-l2-n0",
+      "ell": 2,
+      "overtone": 0,
+      "table": "III",
+      "printed_page": 13,
+      "pdf_page_index": 12,
+      "omega_tilde": [
+        "9.49117521848",
+        "-2.24647282923"
+      ],
+      "printed_decimal_places": 11,
+      "rounding_radius_each_component": "0.000000000005"
+    },
+    {
+      "id": "Matyjasek2021-l2-n1",
+      "ell": 2,
+      "overtone": 1,
+      "table": "III",
+      "printed_page": 13,
+      "pdf_page_index": 12,
+      "omega_tilde": [
+        "8.75072206831",
+        "-6.94013514280"
+      ],
+      "printed_decimal_places": 11,
+      "rounding_radius_each_component": "0.000000000005"
+    },
+    {
+      "id": "Matyjasek2021-l2-n2",
+      "ell": 2,
+      "overtone": 2,
+      "table": "III",
+      "printed_page": 13,
+      "pdf_page_index": 12,
+      "omega_tilde": [
+        "7.50107062040",
+        "-12.22543669696"
+      ],
+      "printed_decimal_places": 11,
+      "rounding_radius_each_component": "0.000000000005"
+    },
+    {
+      "id": "Matyjasek2021-l2-n3",
+      "ell": 2,
+      "overtone": 3,
+      "table": "III",
+      "printed_page": 13,
+      "pdf_page_index": 12,
+      "omega_tilde": [
+        "6.24820058005",
+        "-18.21482743438"
+      ],
+      "printed_decimal_places": 11,
+      "rounding_radius_each_component": "0.000000000005"
+    },
+    {
+      "id": "Matyjasek2021-l2-n4",
+      "ell": 2,
+      "overtone": 4,
+      "table": "III",
+      "printed_page": 13,
+      "pdf_page_index": 12,
+      "omega_tilde": [
+        "5.31531126304",
+        "-24.59655935942"
+      ],
+      "printed_decimal_places": 11,
+      "rounding_radius_each_component": "0.000000000005"
+    }
+  ]
+}

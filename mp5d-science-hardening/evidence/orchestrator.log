@@ -1,0 +1,11 @@
+bundle-installer-tests: returncode=0
+new-tests: returncode=0
+candidates: returncode=2
+boundary: returncode=2
+benchmarks: returncode=2
+lean: returncode=2
+claims: returncode=0
+convergence: returncode=2
+schema: returncode=0
+provenance-authority: returncode=1
+freeze: returncode=2

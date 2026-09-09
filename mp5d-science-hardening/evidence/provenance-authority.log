@@ -1,0 +1,20 @@
+/mnt/data/mp5d-hardening/evidence/candidates.json: exact source commit missing
+/mnt/data/mp5d-hardening/evidence/candidates.json: dirty checkout cannot be authoritative
+/mnt/data/mp5d-hardening/evidence/candidates.json: development result is not authoritative
+/mnt/data/mp5d-hardening/evidence/candidates.json: generating commit is not the exact requested science-freeze commit
+/mnt/data/mp5d-hardening/evidence/benchmarks.json: exact source commit missing
+/mnt/data/mp5d-hardening/evidence/benchmarks.json: dirty checkout cannot be authoritative
+/mnt/data/mp5d-hardening/evidence/benchmarks.json: development result is not authoritative
+/mnt/data/mp5d-hardening/evidence/benchmarks.json: generating commit is not the exact requested science-freeze commit
+/mnt/data/mp5d-hardening/evidence/boundary.json: exact source commit missing
+/mnt/data/mp5d-hardening/evidence/boundary.json: dirty checkout cannot be authoritative
+/mnt/data/mp5d-hardening/evidence/boundary.json: development result is not authoritative
+/mnt/data/mp5d-hardening/evidence/boundary.json: generating commit is not the exact requested science-freeze commit
+/mnt/data/mp5d-hardening/evidence/convergence.json: exact source commit missing
+/mnt/data/mp5d-hardening/evidence/convergence.json: dirty checkout cannot be authoritative
+/mnt/data/mp5d-hardening/evidence/convergence.json: development result is not authoritative
+/mnt/data/mp5d-hardening/evidence/convergence.json: generating commit is not the exact requested science-freeze commit
+/mnt/data/mp5d-hardening/evidence/lean.json: exact source commit missing
+/mnt/data/mp5d-hardening/evidence/lean.json: dirty checkout cannot be authoritative
+/mnt/data/mp5d-hardening/evidence/lean.json: development result is not authoritative
+/mnt/data/mp5d-hardening/evidence/lean.json: generating commit is not the exact requested science-freeze commit

@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "source": {
+    "repository": "uskutsav-cpu/mp5d-symmetry-exceptional-topology",
+    "commit": "72abf0bf68d41d07de0fbd5056c40b7a713a6cb5",
+    "path": "results/all_collision_candidates.json",
+    "git_blob": "12b4eb0daeca363f96acee95fb8f4af7f9ef5bfa",
+    "content_selection": "first ten candidates: labels, parameters and explicitly tracked omega_a/omega_b; not meromorphic contour-moment roots"
+  },
+  "records": [
+    {
+      "id": "legacy-interaction-01",
+      "s": "0.42",
+      "delta": "-0.2",
+      "mu": "1.8",
+      "m1": 2,
+      "m2": 0,
+      "ell": 4,
+      "branches": [
+        "m2_0__l4__N2",
+        "m2_0__l4__N3"
+      ],
+      "overtone_labels": [
+        2,
+        3
+      ],
+      "saved_frequencies": [
+        [
+          2.5094126155849015,
+          -1.5480379310838372
+        ],
+        [
+          2.5786462808539357,
+          -2.0549520619698436
+        ]
+      ],
+      "saved_gap": 0.5116202072812408,
+      "expected_classification": "REVALIDATE_NOT_ASSUME_PHYSICAL",
+      "source_role": "HISTORICAL_REGRESSION_INPUT_NOT_VERIFIED_EVIDENCE"
+    },
+    {
+      "id": "legacy-interaction-02",
+      "s": "0.42",
+      "delta": "-0.15",
+      "mu": "1.8",
+      "m1": 2,
+      "m2": 0,
+      "ell": 4,
+      "branches": [
+        "m2_0__l4__N2",
+        "m2_0__l4__N3"
+      ],
+      "overtone_labels": [
+        2,
+        3
+      ],
+      "saved_frequencies": [
+        [
+          2.5476426974650277,
+          -1.5522262891222156
+        ],
+        [
+          2.594208551786517,
+          -2.0636143215882203
+        ]
+      ],
+      "saved_gap": 0.5135037473457634,
+      "expected_classification": "REVALIDATE_NOT_ASSUME_PHYSICAL",
+      "source_role": "HISTORICAL_REGRESSION_INPUT_NOT_VERIFIED_EVIDENCE"
+    },
+    {
+      "id": "legacy-interaction-03",
+      "s": "0.42",
+      "delta": "-0.1",
+      "mu": "1.8",
+      "m1": 2,
+      "m2": 0,
+      "ell": 4,
+      "branches": [
+        "m2_0__l4__N2",
+        "m2_0__l4__N3"
+      ],
+      "overtone_labels": [
+        2,
+        3
+      ],
+      "saved_frequencies": [
+        [
+          2.5840825863466432,
+          -1.5545070485421109
+        ],
+        [
+          2.611474388197805,
+          -2.070648469706074
+        ]
+      ],
+      "saved_gap": 0.5168677562489352,
+      "expected_classification": "REVALIDATE_NOT_ASSUME_PHYSICAL",
+      "source_role": "HISTORICAL_REGRESSION_INPUT_NOT_VERIFIED_EVIDENCE"
+    },
+    {
+      "id": "legacy-interaction-04",
+      "s": "0.42",
+      "delta": "-0.05",
+      "mu": "1.8",
+      "m1": 2,
+      "m2": 0,
+      "ell": 4,
+      "branches": [
+        "m2_0__l4__N2",
+        "m2_0__l4__N3"
+      ],
+      "overtone_labels": [
+        2,
+        3
+      ],
+      "saved_frequencies": [
+        [
+          2.6186711154311473,
+          -1.5547823383295003
+        ],
+        [
+          2.6307578011247488,
+          -2.075941575466884
+        ]
+      ],
+      "saved_gap": 0.5212993750472715,
+      "expected_classification": "REVALIDATE_NOT_ASSUME_PHYSICAL",
+      "source_role": "HISTORICAL_REGRESSION_INPUT_NOT_VERIFIED_EVIDENCE"
+    },
+    {
+      "id": "legacy-interaction-05",
+      "s": "0.42",
+      "delta": "0",
+      "mu": "1.8",
+      "m1": 2,
+      "m2": 0,
+      "ell": 4,
+      "branches": [
+        "m2_0__l4__N2",
+        "m2_0__l4__N3"
+      ],
+      "overtone_labels": [
+        2,
+        3
+      ],
+      "saved_frequencies": [
+        [
+          2.6515845215717517,
+          -1.5528837357932586
+        ],
+        [
+          2.65239280141559,
+          -2.079305073102901
+        ]
+      ],
+      "saved_gap": 0.5264219578353263,
+      "expected_classification": "REVALIDATE_NOT_ASSUME_PHYSICAL",
+      "source_role": "HISTORICAL_REGRESSION_INPUT_NOT_VERIFIED_EVIDENCE"
+    },
+    {
+      "id": "legacy-interaction-06",
+      "s": "0.42",
+      "delta": "0",
+      "mu": "1.8",
+      "m1": 1,
+      "m2": 1,
+      "ell": 4,
+      "branches": [
+        "m1_1__l4__N2",
+        "m1_1__l4__N3"
+      ],
+      "overtone_labels": [
+        2,
+        3
+      ],
+      "saved_frequencies": [
+        [
+          2.6515845215718534,
+          -1.5528837357932936
+        ],
+        [
+          2.6523928014123688,
+          -2.0793050731035296
+        ]
+      ],
+      "saved_gap": 0.5264219578359149,
+      "expected_classification": "REVALIDATE_NOT_ASSUME_PHYSICAL",
+      "source_role": "HISTORICAL_REGRESSION_INPUT_NOT_VERIFIED_EVIDENCE"
+    },
+    {
+      "id": "legacy-interaction-07",
+      "s": "0.42",
+      "delta": "0.05",
+      "mu": "1.8",
+      "m1": 1,
+      "m2": 1,
+      "ell": 4,
+      "branches": [
+        "m1_1__l4__N2",
+        "m1_1__l4__N3"
+      ],
+      "overtone_labels": [
+        2,
+        3
+      ],
+      "saved_frequencies": [
+        [
+          2.650144734195214,
+          -1.5515721253877934
+        ],
+        [
+          2.6534069434632,
+          -2.078109046416531
+        ]
+      ],
+      "saved_gap": 0.5265470265947109,
+      "expected_classification": "REVALIDATE_NOT_ASSUME_PHYSICAL",
+      "source_role": "HISTORICAL_REGRESSION_INPUT_NOT_VERIFIED_EVIDENCE"
+    },
+    {
+      "id": "legacy-interaction-08",
+      "s": "0.42",
+      "delta": "-0.05",
+      "mu": "1.8",
+      "m1": 1,
+      "m2": 1,
+      "ell": 4,
+      "branches": [
+        "m1_1__l4__N2",
+        "m1_1__l4__N3"
+      ],
+      "overtone_labels": [
+        2,
+        3
+      ],
+      "saved_frequencies": [
+        [
+          2.6501447341951883,
+          -1.5515721253878028
+        ],
+        [
+          2.653406943468258,
+          -2.078109046425117
+        ]
+      ],
+      "saved_gap": 0.526547026603319,
+      "expected_classification": "REVALIDATE_NOT_ASSUME_PHYSICAL",
+      "source_role": "HISTORICAL_REGRESSION_INPUT_NOT_VERIFIED_EVIDENCE"
+    },
+    {
+      "id": "legacy-interaction-09",
+      "s": "0.42",
+      "delta": "0.1",
+      "mu": "1.8",
+      "m1": 1,
+      "m2": 1,
+      "ell": 4,
+      "branches": [
+        "m1_1__l4__N2",
+        "m1_1__l4__N3"
+      ],
+      "overtone_labels": [
+        2,
+        3
+      ],
+      "saved_frequencies": [
+        [
+          2.6457577659814393,
+          -1.5475615983105742
+        ],
+        [
+          2.656443756217208,
+          -2.0744572409396858
+        ]
+      ],
+      "saved_gap": 0.5270039929724095,
+      "expected_classification": "REVALIDATE_NOT_ASSUME_PHYSICAL",
+      "source_role": "HISTORICAL_REGRESSION_INPUT_NOT_VERIFIED_EVIDENCE"
+    },
+    {
+      "id": "legacy-interaction-10",
+      "s": "0.42",
+      "delta": "-0.1",
+      "mu": "1.8",
+      "m1": 1,
+      "m2": 1,
+      "ell": 4,
+      "branches": [
+        "m1_1__l4__N2",
+        "m1_1__l4__N3"
+      ],
+      "overtone_labels": [
+        2,
+        3
+      ],
+      "saved_frequencies": [
+        [
+          2.645757765981429,
+          -1.5475615983105384
+        ],
+        [
+          2.6564437562009062,
+          -2.0744572409470554
+        ]
+      ],
+      "saved_gap": 0.5270039929794831,
+      "expected_classification": "REVALIDATE_NOT_ASSUME_PHYSICAL",
+      "source_role": "HISTORICAL_REGRESSION_INPUT_NOT_VERIFIED_EVIDENCE"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "formal_domain_proposal": {
+    "s": [
+      0,
+      0.42
+    ],
+    "delta": [
+      -0.2,
+      0.2
+    ],
+    "mu": [
+      0,
+      1.8
+    ],
+    "overtones": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "status": "BLOCKED_ON_ROOT_IDENTITY_REPAIR",
+  "axes": {
+    "cf_depth": [
+      160,
+      240,
+      320,
+      480
+    ],
+    "angular_n": [
+      24,
+      40,
+      64
+    ],
+    "precision_dps": [
+      30,
+      50,
+      80
+    ],
+    "radial_n": [
+      160,
+      220,
+      280,
+      360
+    ],
+    "contour_length": [
+      40,
+      60,
+      90
+    ],
+    "scaling_angle_deg": [
+      60,
+      65,
+      70
+    ],
+    "continuation_step": [
+      0.01,
+      0.005,
+      0.0025
+    ]
+  },
+  "adaptive_boundary": {
+    "initial": [
+      0.42,
+      -0.2,
+      1.8
+    ],
+    "initial_radius": [
+      0.02,
+      0.025,
+      0.1
+    ],
+    "parameter_tolerance": 0.0001,
+    "gap_tolerance": 1e-07,
+    "independent_continuation_directions": [
+      "forward",
+      "reverse"
+    ],
+    "max_evaluations": 10000
+  },
+  "higher_modes": {
+    "overtones": [
+      4,
+      5
+    ],
+    "ell_offsets": [
+      0,
+      2,
+      4
+    ],
+    "scope": "OUT_OF_DOMAIN_ROBUSTNESS_PROBE"
+  },
+  "rule": "Never execute adaptive or higher-mode work using a candidate that failed root identity; never call a skipped axis converged."
+}

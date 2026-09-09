@@ -1,0 +1,164 @@
+{
+  "created_utc": "2026-09-09T21:40:30.980849+00:00",
+  "scope": "STANDALONE_DEVELOPMENT_CHECKS_NOT_FULL_UPSTREAM_INTEGRATION",
+  "software_and_schema_checks_pass": true,
+  "all_scientific_and_authority_gates_pass": false,
+  "overall_status": "SCIENCE_FREEZE_BLOCKED",
+  "checks": [
+    {
+      "name": "new-tests",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "pytest",
+        "-c",
+        "/mnt/data/mp5d-hardening/overlay/pytest-science.ini",
+        "/mnt/data/mp5d-hardening/overlay/tests/submission",
+        "-q",
+        "--strict-markers",
+        "--junitxml=/mnt/data/mp5d-hardening/evidence/new-tests.xml"
+      ],
+      "returncode": 0,
+      "runtime_seconds": 7.584115783000016,
+      "execution_error": null
+    },
+    {
+      "name": "bundle-installer-tests",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-m",
+        "pytest",
+        "/mnt/data/mp5d-hardening/test_bundle_installer.py",
+        "-q",
+        "--junitxml=/mnt/data/mp5d-hardening/evidence/bundle-installer-tests.xml"
+      ],
+      "returncode": 0,
+      "runtime_seconds": 1.819115803999921,
+      "execution_error": null
+    },
+    {
+      "name": "candidates",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/mp5d-hardening/RESUME_CANDIDATES.py",
+        "--output",
+        "/mnt/data/mp5d-hardening/evidence/candidates.json"
+      ],
+      "returncode": 2,
+      "runtime_seconds": 45.190663806999964,
+      "execution_error": null
+    },
+    {
+      "name": "benchmarks",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/mp5d-hardening/overlay/scripts/run_benchmark_audit.py",
+        "--development",
+        "--output",
+        "/mnt/data/mp5d-hardening/evidence/benchmarks.json"
+      ],
+      "returncode": 2,
+      "runtime_seconds": 42.8883377129996,
+      "execution_error": null
+    },
+    {
+      "name": "boundary",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/mp5d-hardening/overlay/scripts/run_boundary_or_ladders.py",
+        "boundary",
+        "--development",
+        "--output",
+        "/mnt/data/mp5d-hardening/evidence/boundary.json"
+      ],
+      "returncode": 2,
+      "runtime_seconds": 2.3695092429998112,
+      "execution_error": null
+    },
+    {
+      "name": "convergence",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/mp5d-hardening/overlay/scripts/run_boundary_or_ladders.py",
+        "ladders",
+        "--development",
+        "--output",
+        "/mnt/data/mp5d-hardening/evidence/convergence.json"
+      ],
+      "returncode": 2,
+      "runtime_seconds": 33.30584275700039,
+      "execution_error": null
+    },
+    {
+      "name": "lean",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/mp5d-hardening/overlay/scripts/check_lean.py",
+        "--development",
+        "--output",
+        "/mnt/data/mp5d-hardening/evidence/lean.json"
+      ],
+      "returncode": 2,
+      "runtime_seconds": 0.6655095730002358,
+      "execution_error": null
+    },
+    {
+      "name": "claims",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/mp5d-hardening/overlay/scripts/check_claim_consistency.py"
+      ],
+      "returncode": 0,
+      "runtime_seconds": 0.6150660319999588,
+      "execution_error": null
+    },
+    {
+      "name": "schema",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/mp5d-hardening/overlay/scripts/check_result_schema.py",
+        "/mnt/data/mp5d-hardening/evidence/candidates.json",
+        "/mnt/data/mp5d-hardening/evidence/benchmarks.json",
+        "/mnt/data/mp5d-hardening/evidence/boundary.json",
+        "/mnt/data/mp5d-hardening/evidence/convergence.json",
+        "/mnt/data/mp5d-hardening/evidence/lean.json"
+      ],
+      "returncode": 0,
+      "runtime_seconds": 0.6154954180001369,
+      "execution_error": null
+    },
+    {
+      "name": "provenance-authority",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/mp5d-hardening/overlay/scripts/check_provenance.py",
+        "/mnt/data/mp5d-hardening/evidence/candidates.json",
+        "/mnt/data/mp5d-hardening/evidence/benchmarks.json",
+        "/mnt/data/mp5d-hardening/evidence/boundary.json",
+        "/mnt/data/mp5d-hardening/evidence/convergence.json",
+        "/mnt/data/mp5d-hardening/evidence/lean.json",
+        "--expected-commit",
+        "72abf0bf68d41d07de0fbd5056c40b7a713a6cb5"
+      ],
+      "returncode": 1,
+      "runtime_seconds": 0.6155992730000435,
+      "execution_error": null
+    },
+    {
+      "name": "freeze",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "/mnt/data/mp5d-hardening/overlay/scripts/check_science_freeze.py",
+        "--artifact-dir",
+        "/mnt/data/mp5d-hardening/evidence",
+        "--expected-commit",
+        "72abf0bf68d41d07de0fbd5056c40b7a713a6cb5",
+        "--output",
+        "/mnt/data/mp5d-hardening/evidence/freeze.json"
+      ],
+      "returncode": 2,
+      "runtime_seconds": 0.6657425759999569,
+      "execution_error": null
+    }
+  ]
+}

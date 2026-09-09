@@ -1,0 +1,30 @@
+claim registry explicitly marks science as not ready
+there are no active supported submission claims
+benchmarks.json: exact source commit missing
+benchmarks.json: dirty checkout cannot be authoritative
+benchmarks.json: development result is not authoritative
+benchmarks.json: generating commit is not the exact requested science-freeze commit
+benchmarks.json: scientific status not accepted
+candidates.json: exact source commit missing
+candidates.json: dirty checkout cannot be authoritative
+candidates.json: development result is not authoritative
+candidates.json: generating commit is not the exact requested science-freeze commit
+candidates.json: scientific status not accepted
+atlas.json: required artifact missing
+boundary.json: exact source commit missing
+boundary.json: dirty checkout cannot be authoritative
+boundary.json: development result is not authoritative
+boundary.json: generating commit is not the exact requested science-freeze commit
+boundary.json: scientific status not accepted
+convergence.json: exact source commit missing
+convergence.json: dirty checkout cannot be authoritative
+convergence.json: development result is not authoritative
+convergence.json: generating commit is not the exact requested science-freeze commit
+convergence.json: scientific status not accepted
+robustness.json: required artifact missing
+bibliography.json: required artifact missing
+lean.json: exact source commit missing
+lean.json: dirty checkout cannot be authoritative
+lean.json: development result is not authoritative
+lean.json: generating commit is not the exact requested science-freeze commit
+lean.json: scientific status not accepted

@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "science_ready": false,
+  "quasiresonant_scope": "EXCLUDED",
+  "exclusion_reason": "No independently validated massive MP5D hyperboloidal radiation/Gevrey selection; the implemented Poschl-Teller pencil is a testbed only.",
+  "historical_results_authority": "HISTORICAL_ONLY",
+  "claims": [
+    {
+      "id": "radial-polynomial-identity",
+      "active": false,
+      "status": "DEVELOPMENT_VERIFIED",
+      "scope": "FINITE_ALGEBRA",
+      "evidence_files": [
+        "benchmarks.json"
+      ]
+    },
+    {
+      "id": "legacy-minimum-gap",
+      "active": false,
+      "status": "REVALIDATION_REQUIRED",
+      "scope": "BOUNDED_NUMERICAL_SCAN",
+      "evidence_files": [
+        "candidates.json"
+      ]
+    },
+    {
+      "id": "global-no-ep",
+      "active": false,
+      "status": "NOT_ESTABLISHED",
+      "scope": "UNSUPPORTED",
+      "evidence_files": []
+    }
+  ],
+  "required_artifacts": {
+    "benchmarks.json": {
+      "kind": "benchmark-and-algebra-audit",
+      "accepted_statuses": [
+        "SUBMISSION_BENCHMARK_PASS"
+      ]
+    },
+    "candidates.json": {
+      "kind": "candidate-regression-audit",
+      "accepted_statuses": [
+        "POINTWISE_CHECKS_PASS"
+      ]
+    },
+    "atlas.json": {
+      "kind": "fresh-branch-atlas",
+      "accepted_statuses": [
+        "VALIDATED"
+      ]
+    },
+    "boundary.json": {
+      "kind": "boundary-refinement",
+      "accepted_statuses": [
+        "LOCALLY_STABLE_NUMERICAL_MINIMUM"
+      ]
+    },
+    "convergence.json": {
+      "kind": "dangerous-point-convergence",
+      "accepted_statuses": [
+        "PASS"
+      ]
+    },
+    "robustness.json": {
+      "kind": "higher-mode-probe",
+      "accepted_statuses": [
+        "VALIDATED_OUT_OF_DOMAIN_PROBE"
+      ]
+    },
+    "bibliography.json": {
+      "kind": "bibliography-convention-audit",
+      "accepted_statuses": [
+        "ALL_SUBMISSION_INPUTS_VERIFIED"
+      ]
+    },
+    "lean.json": {
+      "kind": "lean-kernel-build",
+      "accepted_statuses": [
+        "BUILD_PASS"
+      ]
+    }
+  }
+}
