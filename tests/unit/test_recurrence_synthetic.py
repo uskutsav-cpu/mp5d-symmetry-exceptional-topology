@@ -65,9 +65,7 @@ def test_recurrence_row_matches_direct_series_substitution():
     w = recurrence_width(A3, B3, C3)
     for k in range(2, 9):
         row = recurrence_row(k, A3, B3, C3, w)
-        viarow = sum(
-            row[i] * a[k + 1 - i] for i in range(w) if 0 <= k + 1 - i < len(a)
-        )
+        viarow = sum(row[i] * a[k + 1 - i] for i in range(w) if 0 <= k + 1 - i < len(a))
         assert abs(viarow - direct(k)) < 1e-11
 
 
@@ -109,9 +107,7 @@ def test_widening_preserves_the_forward_solution(g):
         a[0] = 1.0
         for n in range(depth):
             row = recurrence_row(n, A, B, C, w)
-            acc = sum(
-                row[i] * a[n + 1 - i] for i in range(1, w) if 0 <= n + 1 - i < len(a)
-            )
+            acc = sum(row[i] * a[n + 1 - i] for i in range(1, w) if 0 <= n + 1 - i < len(a))
             a[n + 1] = -acc / row[0]
         return a
 
@@ -131,17 +127,13 @@ def test_generated_sequence_satisfies_both_recurrences():
     a[0] = 1.0
     for n in range(depth):
         row = recurrence_row(n, Aw, Bw, Cw, w)
-        acc = sum(
-            row[i] * a[n + 1 - i] for i in range(1, w) if 0 <= n + 1 - i < len(a)
-        )
+        acc = sum(row[i] * a[n + 1 - i] for i in range(1, w) if 0 <= n + 1 - i < len(a))
         a[n + 1] = -acc / row[0]
 
     alpha, beta, gamma = reduce_to_three_term(Aw, Bw, Cw, depth=depth)
     for n in range(1, depth - 1):
         res = alpha[n] * a[n + 1] + beta[n] * a[n] + gamma[n] * a[n - 1]
-        scale = max(
-            abs(alpha[n] * a[n + 1]), abs(beta[n] * a[n]), abs(gamma[n] * a[n - 1])
-        )
+        scale = max(abs(alpha[n] * a[n + 1]), abs(beta[n] * a[n]), abs(gamma[n] * a[n - 1]))
         assert abs(res) < 1e-8 * max(scale, 1e-300), f"3-term fails at n={n}"
 
 

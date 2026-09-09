@@ -53,9 +53,9 @@ def test_degeneracy_is_lifted_only_by_the_product_s_delta():
         A1 = angular_eigenvalue(2, 0, 0, c2, N=40)
         A2 = angular_eigenvalue(1, 1, 0, c2, N=40)
         a_l.append(abs(A1 - A2))
-    assert a_l[0] == pytest.approx(0.0, abs=1e-10)   # s = 0
-    assert a_l[1] == pytest.approx(0.0, abs=1e-10)   # delta = 0
-    assert a_l[2] > 1e-3                             # generic point: split
+    assert a_l[0] == pytest.approx(0.0, abs=1e-10)  # s = 0
+    assert a_l[1] == pytest.approx(0.0, abs=1e-10)  # delta = 0
+    assert a_l[2] > 1e-3  # generic point: split
 
 
 @pytest.mark.parametrize(
@@ -110,10 +110,7 @@ def test_convergence_in_truncation():
     # the geometric decay itself can be checked.
     c2 = 4000.0 - 1500.0j
     ref = angular_eigenvalue(1, 1, 1, c2, N=400, n_steps=40)
-    errs = [
-        abs(angular_eigenvalue(1, 1, 1, c2, N=N, n_steps=40) - ref)
-        for N in (12, 24, 36, 60)
-    ]
+    errs = [abs(angular_eigenvalue(1, 1, 1, c2, N=N, n_steps=40) - ref) for N in (12, 24, 36, 60)]
     assert errs[0] > 1e-6, f"stress c2 too small to resolve truncation: {errs}"
     assert errs[-1] < 1e-8, f"not converged: {errs}"
     assert all(x > y for x, y in zip(errs, errs[1:], strict=False)), f"non-monotone: {errs}"

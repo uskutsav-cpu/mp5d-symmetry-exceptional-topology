@@ -67,9 +67,7 @@ __all__ = [
 SOLVER_VERSION = "leaver-hill-B/1.0"
 
 
-def polynomial_coefficients(
-    fn, degree_bound: int, tol: float = 1e-8
-) -> np.ndarray:
+def polynomial_coefficients(fn, degree_bound: int, tol: float = 1e-8) -> np.ndarray:
     """Exact polynomial coefficients of ``fn`` via FFT on the unit circle.
 
     ``fn`` must be a polynomial of degree <= ``degree_bound``.  Raises if the
@@ -139,9 +137,7 @@ class LeaverProblem:
     def Lambda_of(self, omega: complex) -> complex:
         g = self.geo
         c2 = (omega**2 - self.mu**2) * (g.a**2 - g.b**2)
-        Ahat = angular_eigenvalue(
-            self.m1, self.m2, self.n_ang, c2, N=self.angular_N, n_steps=6
-        )
+        Ahat = angular_eigenvalue(self.m1, self.m2, self.n_ang, c2, N=self.angular_N, n_steps=6)
         return Ahat - (omega**2 - self.mu**2) * g.b**2
 
     # -- ODE for y in the Leaver variable --------------------------------
@@ -213,6 +209,7 @@ class LeaverProblem:
             def f(uu):
                 P = self._P(uu, omega, Lam)
                 return P[idx] * self._clearing(uu)
+
             return f
 
         A = polynomial_coefficients(mk(0), degree_bound)

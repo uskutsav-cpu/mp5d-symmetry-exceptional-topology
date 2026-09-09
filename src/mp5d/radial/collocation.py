@@ -146,8 +146,7 @@ class RadialCollocation:
         rest = ell - abs(m1) - abs(m2)
         if rest < 0 or rest % 2 != 0:
             raise ValueError(
-                f"l={ell} incompatible with (m1,m2)=({m1},{m2}): "
-                "need l - |m1| - |m2| >= 0 and even"
+                f"l={ell} incompatible with (m1,m2)=({m1},{m2}): need l - |m1| - |m2| >= 0 and even"
             )
         self.n_ang = rest // 2
 
@@ -160,9 +159,7 @@ class RadialCollocation:
         """Coupled angular separation constant at this ``omega``."""
         g = self.geo
         c2 = (omega**2 - self.mu**2) * (g.a**2 - g.b**2)
-        Ahat = angular_eigenvalue(
-            self.m1, self.m2, self.n_ang, c2, N=self.angular_N, n_steps=6
-        )
+        Ahat = angular_eigenvalue(self.m1, self.m2, self.n_ang, c2, N=self.angular_N, n_steps=6)
         return Ahat - (omega**2 - self.mu**2) * g.b**2
 
     def _coeffs(self, omega: complex, Lam: complex, x: np.ndarray):
@@ -245,9 +242,7 @@ class RadialCollocation:
         that.  Reported separately for the two endpoints by evaluating the
         expansion's convergence toward ``x = -1`` and ``x = +1``.
         """
-        tail = np.abs(coeff[-max(3, self.N // 10):]).max() / max(
-            np.abs(coeff).max(), 1e-300
-        )
+        tail = np.abs(coeff[-max(3, self.N // 10) :]).max() / max(np.abs(coeff).max(), 1e-300)
         fm = abs(C.chebval(-1.0, coeff))
         fp = abs(C.chebval(1.0, coeff))
         nrm = max(np.abs(C.chebval(self.x, coeff)).max(), 1e-300)
@@ -338,8 +333,12 @@ def solve_qnm(
         resolution=resolution,
         mode_labels={"m1": m1, "m2": m2, "l": ell, "n": prob.n_ang, "overtone": overtone},
         parameters={
-            "a": a, "b": b, "s": geo.s, "delta": geo.delta,
-            "mu": field_mass, "M": M,
+            "a": a,
+            "b": b,
+            "s": geo.s,
+            "delta": geo.delta,
+            "mu": field_mass,
+            "M": M,
         },
         solver=SOLVER_VERSION,
         commit=commit,

@@ -34,9 +34,9 @@ def angular_spectrum_fd(m1: int, m2: int, c2: complex, N: int = 400):
     u = np.linspace(0.0, 1.0, N)
     h = u[1] - u[0]
 
-    p = u * (1.0 - u)                      # coefficient of f''
-    q = (alpha + 1) - (alpha + beta + 2) * u   # coefficient of f'
-    rr = c2 * u / 4.0                       # zeroth order
+    p = u * (1.0 - u)  # coefficient of f''
+    q = (alpha + 1) - (alpha + beta + 2) * u  # coefficient of f'
+    rr = c2 * u / 4.0  # zeroth order
 
     A = np.zeros((N, N), dtype=complex)
     # interior: standard second-order central differences

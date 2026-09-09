@@ -29,15 +29,20 @@ def test_solver_c_uses_no_recurrence_machinery():
     import inspect
 
     code = inspect.getsource(sc)
-    for forbidden in ("reduce_to_three_term", "continued_fraction",
-                      "hill_determinant", "wynn_epsilon", "recurrence_row"):
+    for forbidden in (
+        "reduce_to_three_term",
+        "continued_fraction",
+        "hill_determinant",
+        "wynn_epsilon",
+        "recurrence_row",
+    ):
         assert forbidden not in code, f"Solver C must not use {forbidden}"
 
 
 def test_minimum_scaling_angle_formula():
     """Outgoing decays iff tan(theta) > -Om_I/Om_R."""
     th = min_scaling_angle(W_FUND, 0.0)
-    assert 0.60 < th < 0.65          # ~35.7 degrees
+    assert 0.60 < th < 0.65  # ~35.7 degrees
     assert abs(np.degrees(th) - 35.68) < 0.1
 
 
@@ -52,8 +57,18 @@ def test_sigma_min_dips_only_at_the_qnm():
 
 
 def test_static_fundamental():
-    r = solve_qnm_c(0, 0, 0.0, 0, 0, 0, initial_frequency=W_FUND * 1.02,
-                    theta=np.radians(60), L=60.0, resolution=220)
+    r = solve_qnm_c(
+        0,
+        0,
+        0.0,
+        0,
+        0,
+        0,
+        initial_frequency=W_FUND * 1.02,
+        theta=np.radians(60),
+        L=60.0,
+        resolution=220,
+    )
     assert abs(r.omega - W_FUND) < 1e-5
 
 
@@ -65,39 +80,92 @@ def test_static_overtone_requires_a_large_enough_angle():
     need = np.degrees(min_scaling_angle(W_OVER, 0.0))
     assert 74 < need < 75
 
-    bad = solve_qnm_c(0, 0, 0.0, 0, 0, 0, initial_frequency=W_OVER * 1.02,
-                      theta=np.radians(60), L=90.0, resolution=300)
+    bad = solve_qnm_c(
+        0,
+        0,
+        0.0,
+        0,
+        0,
+        0,
+        initial_frequency=W_OVER * 1.02,
+        theta=np.radians(60),
+        L=90.0,
+        resolution=300,
+    )
     assert abs(bad.omega - W_OVER) > 1e-2, "expected failure below the criterion"
 
-    good = solve_qnm_c(0, 0, 0.0, 0, 0, 0, initial_frequency=W_OVER * 1.02,
-                       theta=np.radians(82), L=90.0, resolution=300)
+    good = solve_qnm_c(
+        0,
+        0,
+        0.0,
+        0,
+        0,
+        0,
+        initial_frequency=W_OVER * 1.02,
+        theta=np.radians(82),
+        L=90.0,
+        resolution=300,
+    )
     assert abs(good.omega - W_OVER) < 1e-6
 
 
 @pytest.mark.parametrize("theta_deg", [45, 55, 65, 75])
 def test_physical_mode_is_invariant_under_scaling_angle(theta_deg):
     """A resonance must not move with theta; a continuum artifact would."""
-    r = solve_qnm_c(0, 0, 0.0, 0, 0, 0, initial_frequency=W_FUND * 1.02,
-                    theta=np.radians(theta_deg), L=60.0, resolution=220)
+    r = solve_qnm_c(
+        0,
+        0,
+        0.0,
+        0,
+        0,
+        0,
+        initial_frequency=W_FUND * 1.02,
+        theta=np.radians(theta_deg),
+        L=60.0,
+        resolution=220,
+    )
     assert abs(r.omega - W_FUND) < 1e-5
 
 
 @pytest.mark.parametrize("L", [40.0, 90.0])
 def test_invariant_under_contour_length(L):
-    r = solve_qnm_c(0, 0, 0.0, 0, 0, 0, initial_frequency=W_FUND * 1.02,
-                    theta=np.radians(60), L=L, resolution=260)
+    r = solve_qnm_c(
+        0,
+        0,
+        0.0,
+        0,
+        0,
+        0,
+        initial_frequency=W_FUND * 1.02,
+        theta=np.radians(60),
+        L=L,
+        resolution=260,
+    )
     assert abs(r.omega - W_FUND) < 1e-5
 
 
-@pytest.mark.parametrize("a,b,mu,m1,m2,ell,ref", [
-    (0.2, 0.3, 0.1, 1, 1, 2, 1.68112 - 0.3472j),
-    (0.4, 0.2, 0.9, 1, 1, 2, 1.82222 - 0.311152j),
-    (0.3, 0.1, 0.1, 1, 1, 4, 2.6344 - 0.349097j),
-])
+@pytest.mark.parametrize(
+    "a,b,mu,m1,m2,ell,ref",
+    [
+        (0.2, 0.3, 0.1, 1, 1, 2, 1.68112 - 0.3472j),
+        (0.4, 0.2, 0.9, 1, 1, 2, 1.82222 - 0.311152j),
+        (0.3, 0.1, 0.1, 1, 1, 4, 2.6344 - 0.349097j),
+    ],
+)
 def test_rotating_two_spin_modes(a, b, mu, m1, m2, ell, ref):
     """Huang-Huang Table III, reproduced by a solver with no recurrence in it."""
-    r = solve_qnm_c(a, b, mu, m1, m2, ell, initial_frequency=ref * 1.01,
-                    theta=np.radians(55), L=70.0, resolution=280)
+    r = solve_qnm_c(
+        a,
+        b,
+        mu,
+        m1,
+        m2,
+        ell,
+        initial_frequency=ref * 1.01,
+        theta=np.radians(55),
+        L=70.0,
+        resolution=280,
+    )
     assert abs(r.omega - ref) < 2e-4
 
 
@@ -105,6 +173,16 @@ def test_rotating_two_spin_modes(a, b, mu, m1, m2, ell, ref):
 def test_large_r2_beyond_the_published_cfm_limit():
     """r2 = 0.140, past the r2 ~ 0.1 limit Huang-Huang state for their CFM."""
     ref = 2.77349 - 0.332904j
-    r = solve_qnm_c(0.3, 0.4, 0.1, 1, 1, 4, initial_frequency=ref * 1.01,
-                    theta=np.radians(55), L=70.0, resolution=280)
+    r = solve_qnm_c(
+        0.3,
+        0.4,
+        0.1,
+        1,
+        1,
+        4,
+        initial_frequency=ref * 1.01,
+        theta=np.radians(55),
+        L=70.0,
+        resolution=280,
+    )
     assert abs(r.omega - ref) < 3e-4

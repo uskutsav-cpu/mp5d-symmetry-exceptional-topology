@@ -73,16 +73,12 @@ def W_of_z(geo: MPGeometry, z: complex, omega: complex, m1: int, m2: int) -> com
     return (z + a**2) * (z + b**2) * omega - m1 * a * (z + b**2) - m2 * b * (z + a**2)
 
 
-def c0_const(
-    geo: MPGeometry, omega: complex, m1: int, m2: int, Lambda: complex
-) -> complex:
+def c0_const(geo: MPGeometry, omega: complex, m1: int, m2: int, Lambda: complex) -> complex:
     a, b = geo.a, geo.b
     return -Lambda - (a**2 + b**2) * omega**2 + 2 * omega * (a * m1 + b * m2)
 
 
-def horizon_exponent(
-    geo: MPGeometry, omega: complex, m1: int, m2: int
-) -> complex:
+def horizon_exponent(geo: MPGeometry, omega: complex, m1: int, m2: int) -> complex:
     """``sigma_+ = (w - m1 Omega_a - m2 Omega_b) / (2 kappa)``.
 
     The physical (ingoing) QNM solution behaves as ``(z - z_+)^{-i sigma_+}``.
@@ -96,9 +92,7 @@ def horizon_exponent(
     return (omega - m1 * geo.Omega_a - m2 * geo.Omega_b) / (2.0 * geo.kappa)
 
 
-def inner_horizon_exponent(
-    geo: MPGeometry, omega: complex, m1: int, m2: int
-) -> complex:
+def inner_horizon_exponent(geo: MPGeometry, omega: complex, m1: int, m2: int) -> complex:
     """Indicial exponent scale at the inner horizon ``z_-``.
 
     ``sigma_- = W(z_-) / (2 r_- (z_- - z_+))``; solutions go as

@@ -10,8 +10,10 @@ from mp5d.radial.highprec import (
     solve_qnm_mp,
 )
 
-REF_ST5D = ("0.533835574268276465288894914625582866112313851"
-            " - 0.383375368512460197238361437790785932867003806j")
+REF_ST5D = (
+    "0.533835574268276465288894914625582866112313851"
+    " - 0.383375368512460197238361437790785932867003806j"
+)
 
 
 def test_tail_order_zero_is_the_identity():
@@ -63,8 +65,19 @@ def test_tail_improves_depth_convergence():
         ref = mp.mpmathify(REF_ST5D)
 
     def digits(depth, tail_order):
-        s = solve_qnm_mp(0.0, 0.0, 0.0, 0, 0, 0, 0, initial_frequency=0.53 - 0.38j,
-                         dps=50, depth=depth, tail_order=tail_order)
+        s = solve_qnm_mp(
+            0.0,
+            0.0,
+            0.0,
+            0,
+            0,
+            0,
+            0,
+            initial_frequency=0.53 - 0.38j,
+            dps=50,
+            depth=depth,
+            tail_order=tail_order,
+        )
         with mp.workdps(50):
             d = abs(mp.mpmathify(s.omega_str) - ref)
             return float(-mp.log10(d)) if d > 0 else 50.0
@@ -78,8 +91,10 @@ def test_tail_improves_depth_convergence():
 @pytest.mark.slow
 def test_tail_does_not_move_the_converged_root():
     """At large depth the tail must not shift a converged answer."""
-    base = solve_qnm_mp(0.0, 0.0, 0.0, 0, 0, 0, 0, initial_frequency=0.53 - 0.38j,
-                        dps=40, depth=600, tail_order=0)
-    tailed = solve_qnm_mp(0.0, 0.0, 0.0, 0, 0, 0, 0, initial_frequency=0.53 - 0.38j,
-                          dps=40, depth=600, tail_order=1)
+    base = solve_qnm_mp(
+        0.0, 0.0, 0.0, 0, 0, 0, 0, initial_frequency=0.53 - 0.38j, dps=40, depth=600, tail_order=0
+    )
+    tailed = solve_qnm_mp(
+        0.0, 0.0, 0.0, 0, 0, 0, 0, initial_frequency=0.53 - 0.38j, dps=40, depth=600, tail_order=1
+    )
     assert abs(base.omega - tailed.omega) < 1e-12

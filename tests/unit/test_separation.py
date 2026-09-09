@@ -62,12 +62,7 @@ def test_separated_potentials_match_implementation():
     # radial part, as coded in mp5d.radial
     W = Pi_ * w - m1 * a * (r**2 + b**2) - m2 * b * (r**2 + a**2)
     G = a * b * w - a * m2 - b * m1
-    rad = (
-        W**2 / (r**2 * rrDel)
-        - G**2 / r**2
-        - a**2 * w**2
-        + 2 * w * (a * m1 + b * m2)
-    )
+    rad = W**2 / (r**2 * rrDel) - G**2 / r**2 - a**2 * w**2 + 2 * w * (a * m1 + b * m2)
     assert sp.cancel(sp.together(Q - ang - rad)) == 0
 
 
@@ -77,21 +72,12 @@ def test_symmetrized_radial_potential_is_exchange_invariant():
     Sig, Pi_, rrDel, _, _ = _pieces()
     W = Pi_ * w - m1 * a * (r**2 + b**2) - m2 * b * (r**2 + a**2)
     G = a * b * w - a * m2 - b * m1
-    rad_sym = (
-        W**2 / (r**2 * rrDel)
-        - G**2 / r**2
-        - (a**2 + b**2) * w**2
-        + 2 * w * (a * m1 + b * m2)
-    )
+    rad_sym = W**2 / (r**2 * rrDel) - G**2 / r**2 - (a**2 + b**2) * w**2 + 2 * w * (a * m1 + b * m2)
     swap = {a: b, b: a, m1: m2, m2: m1}
     assert sp.cancel(sp.together(rad_sym - rad_sym.subs(swap, simultaneous=True))) == 0
 
     # angular side: under the swap, u = cos^2 t -> 1 - u = sin^2 t
-    ang_sym = (
-        -(m1**2) / (1 - u)
-        - m2**2 / u
-        + (w**2 - mu**2) * (a**2 * u + b**2 * (1 - u))
-    )
+    ang_sym = -(m1**2) / (1 - u) - m2**2 / u + (w**2 - mu**2) * (a**2 * u + b**2 * (1 - u))
     swapped = ang_sym.subs(swap, simultaneous=True).subs(u, 1 - u)
     assert sp.cancel(sp.together(ang_sym - swapped)) == 0
 
