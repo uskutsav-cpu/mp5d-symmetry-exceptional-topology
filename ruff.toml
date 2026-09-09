@@ -6,6 +6,7 @@ select = ["E", "F", "W", "I", "UP", "B"]
 ignore = ["E741"]  # ambiguous name 'l' is standard notation for angular momentum here
 
 [lint.per-file-ignores]
+"scripts/*.py" = ["E402"]
 "tests/**" = ["E501"]
 # Each transcribed table row is kept on one line so it lines up visually with
 # the corresponding row of the source paper; wrapping them would make
