@@ -1,7 +1,14 @@
 import numpy as np
 import pytest
 
-from mp5d_science.evidence import *
+from mp5d_science.evidence import (
+    WITHDRAWN,
+    EP2Evidence,
+    SolverEvidence,
+    evaluate_ep2,
+    jordan_test,
+    puiseux_test,
+)
 
 
 def witnesses(omega=0j, lineage="contour"):

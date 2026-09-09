@@ -1,7 +1,15 @@
 import numpy as np
 import pytest
 
-from mp5d_science.spectral import *
+from mp5d_science.spectral import (
+    AnalyticityError,
+    AnalyticSpectralFunction,
+    ContourFailure,
+    count_zeros,
+    finite_determinant,
+    polynomial_spectral,
+    roots_in_disc,
+)
 
 
 def test_raw_meromorphic_cf_is_not_accepted():

@@ -195,7 +195,7 @@ def physical_ladders(anchor: PairAnchor, base: Resolution, axes: dict):
     reports = {}
     for axis, levels in axis_ladders(base, axes).items():
 
-        def evaluate(level):
+        def evaluate(level, axis=axis):
             evaluator = PairEvaluator(anchor, level)
             A, C = evaluator.preflight()
             if axis == "continuation_step":

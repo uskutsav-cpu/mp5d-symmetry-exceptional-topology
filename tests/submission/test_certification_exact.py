@@ -1,7 +1,11 @@
 import pytest
 import sympy as sp
 
-from mp5d_science.certification import *
+from mp5d_science.certification import (
+    Interval,
+    krawczyk_polynomial,
+    radial_finite_polynomial,
+)
 
 
 def test_exact_interval_arithmetic():

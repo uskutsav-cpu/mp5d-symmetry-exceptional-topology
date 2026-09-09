@@ -123,10 +123,13 @@ def assign(
     previous: Sequence[Mode],
     candidates: Sequence[Mode],
     predictions: Sequence[complex],
-    policy: TrackingPolicy = TrackingPolicy(),
+    policy: TrackingPolicy | None = None,
     *,
     enforce_motion: bool = True,
 ) -> tuple[list[Mode], dict]:
+    if policy is None:
+        policy = TrackingPolicy()
+
     """Globally minimum-cost one-to-one assignment, with ambiguity rejection.
 
     Compare the best matching with all alternatives formed by banning one of
@@ -200,8 +203,11 @@ def continue_branches(
     solver: RootSolver,
     path: Sequence[Sequence[float]],
     seeds: Sequence[Mode],
-    policy: TrackingPolicy = TrackingPolicy(),
+    policy: TrackingPolicy | None = None,
 ) -> TrackResult:
+    if policy is None:
+        policy = TrackingPolicy()
+
     """Traverse every requested segment, bisecting ambiguous steps in-place.
 
     ``solver`` must locate each candidate independently of branch assignment.
