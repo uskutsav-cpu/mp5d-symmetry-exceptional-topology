@@ -60,7 +60,7 @@ def dft_polynomial_coefficients(fn, degree_bound: int, tol=None):
         return [mp.mpc(0)] * (degree_bound + 1)
     if tol is None:
         tol = mp.mpf(10) ** (-(mp.mp.dps - 6))
-    tail = max((abs(c) for c in coef[degree_bound + 1:]), default=mp.mpf(0)) / scale
+    tail = max((abs(c) for c in coef[degree_bound + 1 :]), default=mp.mpf(0)) / scale
     if tail > tol:
         raise ValueError(
             f"coefficient tail {mp.nstr(tail, 5)} exceeds {mp.nstr(tol, 5)}: "
@@ -71,6 +71,7 @@ def dft_polynomial_coefficients(fn, degree_bound: int, tol=None):
 
 def _reduce_three_term_mp(A, B, C, depth: int):
     """Gaussian reduction, mpmath arithmetic.  Mirrors the double-precision one."""
+
     def g(arr, j):
         return arr[j] if 0 <= j < len(arr) else mp.mpc(0)
 
@@ -155,8 +156,7 @@ def asymptotic_ratio(n, c, order: int = 1):
     return 1 + u1 / mp.sqrt(n)
 
 
-def _cf_inverted_mp(alpha, beta, gamma, inversion: int, depth: int,
-                    c=None, tail_order: int = 0):
+def _cf_inverted_mp(alpha, beta, gamma, inversion: int, depth: int, c=None, tail_order: int = 0):
     """Backward evaluation.  ``tail_order > 0`` closes the truncation with the
     asymptotic minimal-solution ratio instead of the crude ``frac = 0``.
 
@@ -232,8 +232,16 @@ class MPSolution:
 class HighPrecisionProblem:
     """Arbitrary-precision MP5D radial problem for one ``(m1, m2, l)`` sector."""
 
-    def __init__(self, geo: MPGeometry, mu, m1: int, m2: int, ell: int,
-                 dps: int = 50, angular_depth: int = 200):
+    def __init__(
+        self,
+        geo: MPGeometry,
+        mu,
+        m1: int,
+        m2: int,
+        ell: int,
+        dps: int = 50,
+        angular_depth: int = 200,
+    ):
         self.geo = geo
         self.m1, self.m2, self.ell = m1, m2, ell
         self.dps = dps
@@ -303,8 +311,14 @@ class HighPrecisionProblem:
         dDelta = 2 * r - 2 * w / (r2 * r)
         W = (r2 + a**2) * (r2 + b**2) * omega - m1 * a * (r2 + b**2) - m2 * b * (r2 + a**2)
         G = a * b * omega - a * m2 - b * m1
-        V = (W**2 / (r2 * r2 * Delta) - G**2 / r2 - (a**2 + b**2) * omega**2
-             + 2 * omega * (a * m1 + b * m2) - mu**2 * r2 - Lam)
+        V = (
+            W**2 / (r2 * r2 * Delta)
+            - G**2 / r2
+            - (a**2 + b**2) * omega**2
+            + 2 * omega * (a * m1 + b * m2)
+            - mu**2 * r2
+            - Lam
+        )
 
         dudr = (1 - u) ** 2 / d
         d2udr2 = -2 * (1 - u) ** 3 / d**2
@@ -322,8 +336,7 @@ class HighPrecisionProblem:
         c = mp.mpc(0, 1) * Om * d
 
         LF = -mp.mpc(0, 1) * sig / u - mp.mpf("1.5") / (1 - u) + c / (1 - u) ** 2
-        LFp = (mp.mpc(0, 1) * sig / u**2 - mp.mpf("1.5") / (1 - u) ** 2
-               + 2 * c / (1 - u) ** 3)
+        LFp = mp.mpc(0, 1) * sig / u**2 - mp.mpf("1.5") / (1 - u) ** 2 + 2 * c / (1 - u) ** 3
         FppF = LFp + LF * LF
         return (A_u, 2 * A_u * LF + B_u, A_u * FppF + B_u * LF + V)
 
@@ -341,9 +354,12 @@ class HighPrecisionProblem:
     def poly_ABC(self, omega, Lam, degree_bound: int = 32):
         out = []
         for idx in range(3):
+
             def f(u, idx=idx):
                 return self._P(u, omega, Lam)[idx] * self._clearing(u)
+
             out.append(dft_polynomial_coefficients(f, degree_bound))
+
         # strip the common power of u introduced by the clearing factor
         def val(arr):
             big = max(abs(x) for x in arr)
@@ -352,6 +368,7 @@ class HighPrecisionProblem:
                 if abs(x) > thr:
                     return i
             return len(arr)
+
         k = min(val(a) for a in out)
         return [a[k:] for a in out] if k else out
 
@@ -362,8 +379,9 @@ class HighPrecisionProblem:
             Om = -Om
         return mp.mpc(0, 1) * Om * (self.rp - self.rm)
 
-    def cf_value(self, omega, depth: int, inversion: int, degree_bound: int = 32,
-                 tail_order: int = 0):
+    def cf_value(
+        self, omega, depth: int, inversion: int, degree_bound: int = 32, tail_order: int = 0
+    ):
         Lam = self.Lambda(omega)
         A, B, C = self.poly_ABC(omega, Lam, degree_bound)
         al, be, ga = _reduce_three_term_mp(A, B, C, depth)
@@ -371,9 +389,22 @@ class HighPrecisionProblem:
         return _cf_inverted_mp(al, be, ga, inversion, depth, c, tail_order)
 
 
-def solve_qnm_mp(a, b, mu, m1, m2, ell, overtone=0, initial_frequency=None,
-                 dps: int = 50, depth: int = 300, degree_bound: int = 32,
-                 M: float = 1.0, maxiter: int = 60, tail_order: int = 0) -> MPSolution:
+def solve_qnm_mp(
+    a,
+    b,
+    mu,
+    m1,
+    m2,
+    ell,
+    overtone=0,
+    initial_frequency=None,
+    dps: int = 50,
+    depth: int = 300,
+    degree_bound: int = 32,
+    M: float = 1.0,
+    maxiter: int = 60,
+    tail_order: int = 0,
+) -> MPSolution:
     """Solve one QNM entirely at ``dps`` decimal digits."""
     if initial_frequency is None:
         raise ValueError("initial_frequency is required")
@@ -384,13 +415,21 @@ def solve_qnm_mp(a, b, mu, m1, m2, ell, overtone=0, initial_frequency=None,
         w0 = mp.mpc(initial_frequency.real, initial_frequency.imag)
         root, iters, ok = _muller_mp(
             lambda w: prob.cf_value(w, depth, overtone, degree_bound, tail_order),
-            w0, tol, maxiter, mp.mpf("0.05"),
+            w0,
+            tol,
+            maxiter,
+            mp.mpf("0.05"),
         )
         res = abs(prob.cf_value(root, depth, overtone, degree_bound, tail_order))
         lam = prob.Lambda(root)
         return MPSolution(
-            omega=complex(root), Lambda=complex(lam), cf_residual=float(res),
-            dps=dps, depth=depth, converged=ok, iterations=iters,
+            omega=complex(root),
+            Lambda=complex(lam),
+            cf_residual=float(res),
+            dps=dps,
+            depth=depth,
+            converged=ok,
+            iterations=iters,
             omega_str=mp.nstr(root, dps, strip_zeros=False),
             lambda_str=mp.nstr(lam, dps, strip_zeros=False),
         )

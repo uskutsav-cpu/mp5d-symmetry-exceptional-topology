@@ -59,33 +59,49 @@ def run_benchmarks(depth_schedule, sizes):
         seed = wref * 1.04 + 0.01  # deliberately off the answer
         t0 = time.time()
         A = solve_qnm_cf(
-            0.0, 0.0, 0.0, m1, m2, spec["l"], overtone=spec["n"],
-            initial_frequency=seed, depth_schedule=depth_schedule,
+            0.0,
+            0.0,
+            0.0,
+            m1,
+            m2,
+            spec["l"],
+            overtone=spec["n"],
+            initial_frequency=seed,
+            depth_schedule=depth_schedule,
         )
         B = solve_qnm_hill(
-            0.0, 0.0, 0.0, m1, m2, spec["l"], overtone=spec["n"],
-            initial_frequency=seed, sizes=sizes,
+            0.0,
+            0.0,
+            0.0,
+            m1,
+            m2,
+            spec["l"],
+            overtone=spec["n"],
+            initial_frequency=seed,
+            sizes=sizes,
         )
-        out.append({
-            "case": key,
-            "mode_labels": {"m1": m1, "m2": m2, "l": spec["l"], "overtone": spec["n"]},
-            "parameters": {"a": 0.0, "b": 0.0, "mu": 0.0, "M": 1.0},
-            "omega_solverA": [A.omega.real, A.omega.imag],
-            "omega_solverB": [B.omega.real, B.omega.imag],
-            "published_omega": [wref.real, wref.imag],
-            "published_omega_over_TH": list(spec["wt"]),
-            "published_source": "Matyjasek, arXiv:2107.04815, Tables I-II",
-            "absolute_error": abs(A.omega - wref),
-            "relative_error": abs(A.omega - wref) / abs(wref),
-            "solverAB_difference": abs(A.omega - B.omega),
-            "cf_residual": A.cf_residual,
-            "ode_residual": A.ode_residual,
-            "depth_table": [[d, w.real, w.imag] for d, w in A.depth_table],
-            "hill_size_table": [[d, w.real, w.imag] for d, w in B.depth_table],
-            "precision": "double",
-            "evidence_level": "cross-solver verified",
-            "runtime_s": round(time.time() - t0, 2),
-        })
+        out.append(
+            {
+                "case": key,
+                "mode_labels": {"m1": m1, "m2": m2, "l": spec["l"], "overtone": spec["n"]},
+                "parameters": {"a": 0.0, "b": 0.0, "mu": 0.0, "M": 1.0},
+                "omega_solverA": [A.omega.real, A.omega.imag],
+                "omega_solverB": [B.omega.real, B.omega.imag],
+                "published_omega": [wref.real, wref.imag],
+                "published_omega_over_TH": list(spec["wt"]),
+                "published_source": "Matyjasek, arXiv:2107.04815, Tables I-II",
+                "absolute_error": abs(A.omega - wref),
+                "relative_error": abs(A.omega - wref) / abs(wref),
+                "solverAB_difference": abs(A.omega - B.omega),
+                "cf_residual": A.cf_residual,
+                "ode_residual": A.ode_residual,
+                "depth_table": [[d, w.real, w.imag] for d, w in A.depth_table],
+                "hill_size_table": [[d, w.real, w.imag] for d, w in B.depth_table],
+                "precision": "double",
+                "evidence_level": "cross-solver verified",
+                "runtime_s": round(time.time() - t0, 2),
+            }
+        )
     return out
 
 
@@ -93,10 +109,12 @@ def run_symmetry_checks(depth_schedule):
     sch = depth_schedule
     checks = {}
 
-    P = solve_qnm_cf(0.30, 0.15, 0.20, 1, 0, 1, 0,
-                     initial_frequency=1.02 - 0.36j, depth_schedule=sch)
-    Q = solve_qnm_cf(0.15, 0.30, 0.20, 0, 1, 1, 0,
-                     initial_frequency=1.02 - 0.36j, depth_schedule=sch)
+    P = solve_qnm_cf(
+        0.30, 0.15, 0.20, 1, 0, 1, 0, initial_frequency=1.02 - 0.36j, depth_schedule=sch
+    )
+    Q = solve_qnm_cf(
+        0.15, 0.30, 0.20, 0, 1, 1, 0, initial_frequency=1.02 - 0.36j, depth_schedule=sch
+    )
     checks["exchange_symmetry"] = {
         "description": "(a,m1)<->(b,m2) is an exact identity; residual measures numerical error",
         "omega_1": [P.omega.real, P.omega.imag],
@@ -106,8 +124,9 @@ def run_symmetry_checks(depth_schedule):
 
     trio = []
     for m1, m2 in [(1, 1), (2, 0), (0, 2)]:
-        S = solve_qnm_cf(0.25, 0.25, 0.15, m1, m2, 2, 0,
-                         initial_frequency=1.30 - 0.35j, depth_schedule=sch)
+        S = solve_qnm_cf(
+            0.25, 0.25, 0.15, m1, m2, 2, 0, initial_frequency=1.30 - 0.35j, depth_schedule=sch
+        )
         trio.append(S.omega)
     checks["u2_multiplet_degeneracy"] = {
         "description": (
@@ -120,8 +139,9 @@ def run_symmetry_checks(depth_schedule):
 
     split = []
     for m1, m2 in [(1, 1), (2, 0)]:
-        S = solve_qnm_cf(0.35, 0.15, 0.15, m1, m2, 2, 0,
-                         initial_frequency=1.30 - 0.35j, depth_schedule=sch)
+        S = solve_qnm_cf(
+            0.35, 0.15, 0.15, m1, m2, 2, 0, initial_frequency=1.30 - 0.35j, depth_schedule=sch
+        )
         split.append(S.omega)
     checks["degeneracy_lifted_off_equal_spin"] = {
         "description": "delta != 0 must split what delta = 0 held degenerate",
@@ -176,8 +196,7 @@ def main() -> None:
         )
     for k, v in checks.items():
         key = (
-            "residual" if "residual" in v
-            else ("max_spread" if "max_spread" in v else "splitting")
+            "residual" if "residual" in v else ("max_spread" if "max_spread" in v else "splitting")
         )
         print(f"  {k}: {key} = {v[key]:.3e}")
 

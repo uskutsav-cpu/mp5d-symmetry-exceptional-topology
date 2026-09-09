@@ -39,9 +39,7 @@ def test_fft_recovery_is_not_index_reversed():
     assert np.abs(got[1:]).max() < 1e-12
 
 
-@pytest.mark.parametrize(
-    "a,b", [(0.0, 0.0), (0.3, 0.0), (0.25, 0.25), (0.35, 0.12)]
-)
+@pytest.mark.parametrize("a,b", [(0.0, 0.0), (0.3, 0.0), (0.25, 0.25), (0.35, 0.12)])
 def test_leaver_ode_coefficients_are_polynomial_after_clearing(a, b):
     """The clearing factor removes every pole, for single, equal and unequal spins.
 

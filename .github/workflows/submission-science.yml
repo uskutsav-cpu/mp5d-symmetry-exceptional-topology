@@ -1,0 +1,40 @@
+name: Submission science (strict)
+on:
+  workflow_dispatch:
+    inputs:
+      source_commit:
+        description: Exact reviewed 40-character commit SHA
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  submission:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.source_commit }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13.5'
+      - name: Check requested commit
+        env:
+          EXPECTED_SHA: ${{ inputs.source_commit }}
+        run: |
+          set -euo pipefail
+          [[ "$EXPECTED_SHA" =~ ^[0-9a-f]{40}$ ]]
+          [[ "$(git rev-parse HEAD)" == "$EXPECTED_SHA" ]]
+      - name: Reproduce submission science
+        run: bash scripts/reproduce_submission_science.sh "${RUNNER_TEMP}/mp5d-science"
+      - name: Preserve successes AND failures for inspection
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: science-evidence-${{ inputs.source_commit }}
+          path: |
+            ${{ runner.temp }}/mp5d-science/*.json
+            ${{ runner.temp }}/mp5d-science/*.xml
+          if-no-files-found: warn

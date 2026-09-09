@@ -25,8 +25,15 @@ def index(records):
 
 
 def test_all_manifest_files_exist():
-    for n in ["table_ii", "table_iii", "table_iv", "table_v", "table_vi",
-              "table_vii", "provenance"]:
+    for n in [
+        "table_ii",
+        "table_iii",
+        "table_iv",
+        "table_v",
+        "table_vi",
+        "table_vii",
+        "provenance",
+    ]:
         assert (MAN / f"{n}.json").exists(), n
 
 

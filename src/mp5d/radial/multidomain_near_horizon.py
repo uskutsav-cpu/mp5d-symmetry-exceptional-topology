@@ -93,9 +93,20 @@ class MultidomainResult:
 class MultidomainProblem:
     """Two-domain complex-scaled collocation with a resolved near-horizon region."""
 
-    def __init__(self, geo: MPGeometry, mu: float, m1: int, m2: int, ell: int,
-                 theta: float = 1.0, Y_m: float = 8.0, L: float = 60.0,
-                 n_inner: int = 90, n_outer: int = 200, angular_N: int = 60):
+    def __init__(
+        self,
+        geo: MPGeometry,
+        mu: float,
+        m1: int,
+        m2: int,
+        ell: int,
+        theta: float = 1.0,
+        Y_m: float = 8.0,
+        L: float = 60.0,
+        n_inner: int = 90,
+        n_outer: int = 200,
+        angular_N: int = 60,
+    ):
         self.geo, self.mu = geo, mu
         self.m1, self.m2, self.ell = m1, m2, ell
         self.theta, self.Y_m, self.L = theta, Y_m, L
@@ -106,25 +117,22 @@ class MultidomainProblem:
             raise ValueError(f"l={ell} incompatible with (m1,m2)=({m1},{m2})")
         self.k_ang = rest // 2
 
-        self.dr = geo.r_plus - geo.r_minus          # the resolved scale
-        self.r_m = geo.r_plus + Y_m * self.dr       # matching radius
+        self.dr = geo.r_plus - geo.r_minus  # the resolved scale
+        self.r_m = geo.r_plus + Y_m * self.dr  # matching radius
 
         # inner: y in [0, Y_m];  r = r_+ + y * dr
-        (self.y, self.Vi, self.D1i, self.D2i, self.D1ci, self.sci) = _cheb_blocks(
-            n_inner, Y_m)
+        (self.y, self.Vi, self.D1i, self.D2i, self.D1ci, self.sci) = _cheb_blocks(n_inner, Y_m)
         # outer: t in [0, L];    r = r_m + t e^{i theta}
-        (self.t, self.Vo, self.D1o, self.D2o, self.D1co, self.sco) = _cheb_blocks(
-            n_outer, L)
+        (self.t, self.Vo, self.D1o, self.D2o, self.D1co, self.sco) = _cheb_blocks(n_outer, L)
 
-        self.Vi_end, self.D1i_end = _edge(n_inner, 1.0, self.D1ci, self.sci)   # y = Y_m
-        self.Vo_0, self.D1o_0 = _edge(n_outer, -1.0, self.D1co, self.sco)      # t = 0
-        self.Vo_end, _ = _edge(n_outer, 1.0, self.D1co, self.sco)              # t = L
+        self.Vi_end, self.D1i_end = _edge(n_inner, 1.0, self.D1ci, self.sci)  # y = Y_m
+        self.Vo_0, self.D1o_0 = _edge(n_outer, -1.0, self.D1co, self.sco)  # t = 0
+        self.Vo_end, _ = _edge(n_outer, 1.0, self.D1co, self.sco)  # t = L
 
     def Lambda_of(self, omega: complex) -> complex:
         g = self.geo
         c2 = (omega**2 - self.mu**2) * (g.a**2 - g.b**2)
-        Ahat = angular_eigenvalue(self.m1, self.m2, self.k_ang, c2,
-                                  N=self.angular_N, n_steps=6)
+        Ahat = angular_eigenvalue(self.m1, self.m2, self.k_ang, c2, N=self.angular_N, n_steps=6)
         return Ahat - (omega**2 - self.mu**2) * g.b**2
 
     def _potential(self, r, omega, Lam):
@@ -134,12 +142,16 @@ class MultidomainProblem:
         r2 = r * r
         Delta = r2 + (a**2 + b**2 - M) + (a**2 * b**2) / r2
         dDelta = 2.0 * r - 2.0 * (a**2 * b**2) / (r2 * r)
-        W = ((r2 + a**2) * (r2 + b**2) * omega
-             - m1 * a * (r2 + b**2) - m2 * b * (r2 + a**2))
+        W = (r2 + a**2) * (r2 + b**2) * omega - m1 * a * (r2 + b**2) - m2 * b * (r2 + a**2)
         G = a * b * omega - a * m2 - b * m1
-        V = (W**2 / (r2 * r2 * Delta) - G**2 / r2
-             - (a**2 + b**2) * omega**2 + 2.0 * omega * (a * m1 + b * m2)
-             - mu**2 * r2 - Lam)
+        V = (
+            W**2 / (r2 * r2 * Delta)
+            - G**2 / r2
+            - (a**2 + b**2) * omega**2
+            + 2.0 * omega * (a * m1 + b * m2)
+            - mu**2 * r2
+            - Lam
+        )
         return Delta, Delta / r + dDelta, V
 
     def matrix(self, omega: complex, Lam: complex | None = None) -> np.ndarray:
@@ -197,14 +209,26 @@ class MultidomainProblem:
         return float(S[-1] / S[0])
 
 
-def solve_qnm_multidomain(a: float, b: float, mu: float, m1: int, m2: int, ell: int,
-                          initial_frequency: complex, theta: float = 1.0,
-                          Y_m: float = 8.0, L: float = 60.0, n_inner: int = 90,
-                          n_outer: int = 200, M: float = 1.0, tol: float = 1e-11,
-                          maxiter: int = 50, angular_N: int = 60) -> MultidomainResult:
+def solve_qnm_multidomain(
+    a: float,
+    b: float,
+    mu: float,
+    m1: int,
+    m2: int,
+    ell: int,
+    initial_frequency: complex,
+    theta: float = 1.0,
+    Y_m: float = 8.0,
+    L: float = 60.0,
+    n_inner: int = 90,
+    n_outer: int = 200,
+    M: float = 1.0,
+    tol: float = 1e-11,
+    maxiter: int = 50,
+    angular_N: int = 60,
+) -> MultidomainResult:
     geo = MPGeometry(a=a, b=b, M=M)
-    prob = MultidomainProblem(geo, mu, m1, m2, ell, theta, Y_m, L,
-                              n_inner, n_outer, angular_N)
+    prob = MultidomainProblem(geo, mu, m1, m2, ell, theta, Y_m, L, n_inner, n_outer, angular_N)
 
     def f(w: complex) -> complex:
         Mat = prob.matrix(w)
@@ -239,8 +263,15 @@ def solve_qnm_multidomain(a: float, b: float, mu: float, m1: int, m2: int, ell: 
             break
     omega = xs[-1]
     return MultidomainResult(
-        omega=omega, Lambda=prob.Lambda_of(omega),
-        smallest_singular_value=prob.sigma_min(omega), residual=float(abs(fs[-1])),
-        theta=theta, Y_m=Y_m, L=L, n_inner=n_inner, n_outer=n_outer,
-        converged=ok, iterations=it,
+        omega=omega,
+        Lambda=prob.Lambda_of(omega),
+        smallest_singular_value=prob.sigma_min(omega),
+        residual=float(abs(fs[-1])),
+        theta=theta,
+        Y_m=Y_m,
+        L=L,
+        n_inner=n_inner,
+        n_outer=n_outer,
+        converged=ok,
+        iterations=it,
     )

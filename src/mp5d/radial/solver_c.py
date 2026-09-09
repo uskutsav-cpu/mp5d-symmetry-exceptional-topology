@@ -90,9 +90,18 @@ class SolverCResult:
 class SolverCProblem:
     """Assembles the complex-scaled collocation matrix for one sector."""
 
-    def __init__(self, geo: MPGeometry, mu: float, m1: int, m2: int, ell: int,
-                 theta: float = 1.0, L: float = 60.0, resolution: int = 200,
-                 angular_N: int = 60):
+    def __init__(
+        self,
+        geo: MPGeometry,
+        mu: float,
+        m1: int,
+        m2: int,
+        ell: int,
+        theta: float = 1.0,
+        L: float = 60.0,
+        resolution: int = 200,
+        angular_N: int = 60,
+    ):
         self.geo, self.mu = geo, mu
         self.m1, self.m2, self.ell = m1, m2, ell
         self.theta, self.L, self.N = theta, L, resolution
@@ -104,7 +113,7 @@ class SolverCProblem:
 
         # Chebyshev basis on [0, L]; interior Gauss points for the ODE rows
         j = np.arange(self.N - 1)
-        t = np.cos(np.pi * (2 * j + 1) / (2 * (self.N - 1)))   # in (-1,1)
+        t = np.cos(np.pi * (2 * j + 1) / (2 * (self.N - 1)))  # in (-1,1)
         self.rho = 0.5 * self.L * (t + 1.0)
         ident = np.eye(self.N)
         D1 = np.zeros((self.N, self.N))
@@ -121,8 +130,7 @@ class SolverCProblem:
     def Lambda_of(self, omega: complex) -> complex:
         g = self.geo
         c2 = (omega**2 - self.mu**2) * (g.a**2 - g.b**2)
-        Ahat = angular_eigenvalue(self.m1, self.m2, self.k_ang, c2,
-                                  N=self.angular_N, n_steps=6)
+        Ahat = angular_eigenvalue(self.m1, self.m2, self.k_ang, c2, N=self.angular_N, n_steps=6)
         return Ahat - (omega**2 - self.mu**2) * g.b**2
 
     def matrix(self, omega: complex, Lam: complex | None = None) -> np.ndarray:
@@ -139,12 +147,16 @@ class SolverCProblem:
         r2 = r * r
         Delta = r2 + (a**2 + b**2 - M) + (a**2 * b**2) / r2
         dDelta = 2.0 * r - 2.0 * (a**2 * b**2) / (r2 * r)
-        W = ((r2 + a**2) * (r2 + b**2) * omega
-             - m1 * a * (r2 + b**2) - m2 * b * (r2 + a**2))
+        W = (r2 + a**2) * (r2 + b**2) * omega - m1 * a * (r2 + b**2) - m2 * b * (r2 + a**2)
         G = a * b * omega - a * m2 - b * m1
-        Vpot = (W**2 / (r2 * r2 * Delta) - G**2 / r2
-                - (a**2 + b**2) * omega**2 + 2.0 * omega * (a * m1 + b * m2)
-                - mu**2 * r2 - Lam)
+        Vpot = (
+            W**2 / (r2 * r2 * Delta)
+            - G**2 / r2
+            - (a**2 + b**2) * omega**2
+            + 2.0 * omega * (a * m1 + b * m2)
+            - mu**2 * r2
+            - Lam
+        )
 
         sig = (omega - m1 * g.Omega_a - m2 * g.Omega_b) / (2.0 * g.kappa)
         p = -1j * sig  # R = (r-r_+)^{-i sigma} f = (rho e^{i th})^{p} f
@@ -171,10 +183,22 @@ class SolverCProblem:
         return float(S[-1] / S[0]), float(S[-2] / S[-1])
 
 
-def solve_qnm_c(a: float, b: float, mu: float, m1: int, m2: int, ell: int,
-                initial_frequency: complex, theta: float = 1.0, L: float = 60.0,
-                resolution: int = 200, M: float = 1.0, tol: float = 1e-11,
-                maxiter: int = 60, angular_N: int = 60) -> SolverCResult:
+def solve_qnm_c(
+    a: float,
+    b: float,
+    mu: float,
+    m1: int,
+    m2: int,
+    ell: int,
+    initial_frequency: complex,
+    theta: float = 1.0,
+    L: float = 60.0,
+    resolution: int = 200,
+    M: float = 1.0,
+    tol: float = 1e-11,
+    maxiter: int = 60,
+    angular_N: int = 60,
+) -> SolverCResult:
     """Root of the complex-scaled collocation condition, by Muller on sigma_min."""
     geo = MPGeometry(a=a, b=b, M=M)
     prob = SolverCProblem(geo, mu, m1, m2, ell, theta, L, resolution, angular_N)
@@ -184,7 +208,7 @@ def solve_qnm_c(a: float, b: float, mu: float, m1: int, m2: int, ell: int,
         U, S, Vh = np.linalg.svd(Mat)
         u = U[:, -1]
         v = Vh[-1, :].conj()
-        return u.conj() @ (Mat @ v)   # analytic near a simple root
+        return u.conj() @ (Mat @ v)  # analytic near a simple root
 
     omega = initial_frequency
     h = 1e-5 * max(abs(omega), 1.0)
@@ -216,7 +240,14 @@ def solve_qnm_c(a: float, b: float, mu: float, m1: int, m2: int, ell: int,
     omega = xs[-1]
     smin, gap = prob.sigma_min(omega)
     return SolverCResult(
-        omega=omega, Lambda=prob.Lambda_of(omega), smallest_singular_value=smin,
-        singular_value_gap=gap, residual=float(abs(fs[-1])), theta=theta, L=L,
-        resolution=resolution, converged=ok, iterations=it,
+        omega=omega,
+        Lambda=prob.Lambda_of(omega),
+        smallest_singular_value=smin,
+        singular_value_gap=gap,
+        residual=float(abs(fs[-1])),
+        theta=theta,
+        L=L,
+        resolution=resolution,
+        converged=ok,
+        iterations=it,
     )

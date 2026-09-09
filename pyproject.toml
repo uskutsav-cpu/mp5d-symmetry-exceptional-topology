@@ -21,7 +21,7 @@ certify = ["python-flint>=0.9"]
 dev = ["pytest>=8.0"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/mp5d"]
+packages = ["src/mp5d", "src/mp5d_science"]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
@@ -29,3 +29,10 @@ testpaths = ["tests"]
 markers = [
   "slow: long-running searches, excluded from CI smoke runs",
 ]
+
+
+[tool.ruff.lint]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/**/*.py" = ["E402"]

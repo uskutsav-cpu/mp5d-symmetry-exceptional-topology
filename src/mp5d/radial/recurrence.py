@@ -125,17 +125,11 @@ def recurrence_row(k: int, A, B, C, width: int):
     out = np.zeros(width, dtype=complex)
     for i in range(width):
         m = k + 1 - i  # index of the unknown a_m
-        out[i] = (
-            g(A, i + 1) * m * (m - 1)
-            + g(B, i) * m
-            + g(C, i - 1)
-        )
+        out[i] = g(A, i + 1) * m * (m - 1) + g(B, i) * m + g(C, i - 1)
     return out
 
 
-def reduce_to_three_term(
-    A, B, C, depth: int, diagnostics: ReductionDiagnostics | None = None
-):
+def reduce_to_three_term(A, B, C, depth: int, diagnostics: ReductionDiagnostics | None = None):
     """Reduce the raw recurrence to ``alpha_n a_{n+1} + beta_n a_n + gamma_n a_{n-1} = 0``.
 
     Returns ``(alpha, beta, gamma)`` arrays of length ``depth``.  ``gamma[0]`` is
@@ -175,9 +169,7 @@ def reduce_to_three_term(
                 if diagnostics is not None:
                     diagnostics.note(j, piv)
                 if piv == 0:
-                    raise ZeroDivisionError(
-                        f"zero pivot gamma[{j}] during reduction at n={n}"
-                    )
+                    raise ZeroDivisionError(f"zero pivot gamma[{j}] during reduction at n={n}")
                 f = row[i] / piv
                 # a_m -> -(alpha_j a_{m+2} + beta_j a_{m+1})/gamma_j
                 # a_{m+2} sits at position i-2, a_{m+1} at position i-1
@@ -209,9 +201,7 @@ def continued_fraction(alpha, beta, gamma, depth: int | None = None, tiny: float
     return beta[0] - frac
 
 
-def continued_fraction_lentz(
-    alpha, beta, gamma, depth: int, tiny: float = 1e-300
-):
+def continued_fraction_lentz(alpha, beta, gamma, depth: int, tiny: float = 1e-300):
     """Modified Lentz evaluation of the same continued fraction (top-down).
 
     Provided as an independent evaluation path: Lentz and the backward

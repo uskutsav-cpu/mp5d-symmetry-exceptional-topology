@@ -59,17 +59,15 @@ def test_horizon_indicial_exponent_derivation():
     zp, zm, x, s = sp.symbols("z_p z_m x s", positive=True)
     Wp = sp.Symbol("W_p")
 
-    Pf = x * (x + zp - zm)                       # P(z_+ + x)
-    Wf = Wp + sp.Symbol("W1") * x                # W is analytic at z_+
+    Pf = x * (x + zp - zm)  # P(z_+ + x)
+    Wf = Wp + sp.Symbol("W1") * x  # W is analytic at z_+
     zf = zp + x
     R = x**s
 
-    ode = 4 * (Pf * sp.diff(R, x, 2) + sp.diff(Pf, x) * sp.diff(R, x)) + (
-        Wf**2 / (zf * Pf)
-        - sp.Symbol("Gsq") / zf
-        + sp.Symbol("c0")
-        - sp.Symbol("musq") * zf
-    ) * R
+    ode = (
+        4 * (Pf * sp.diff(R, x, 2) + sp.diff(Pf, x) * sp.diff(R, x))
+        + (Wf**2 / (zf * Pf) - sp.Symbol("Gsq") / zf + sp.Symbol("c0") - sp.Symbol("musq") * zf) * R
+    )
 
     # leading behaviour is x^(s-1); its coefficient is the indicial polynomial
     indicial = sp.simplify(sp.limit(sp.expand(ode / x ** (s - 1)), x, 0))
@@ -93,9 +91,7 @@ def test_W_at_horizon_factorizes_through_angular_velocities():
     assert sp.expand(sp.cancel(sp.together(Wp - target))) == 0
 
 
-@pytest.mark.parametrize(
-    "aa,bb,m1v,m2v", [(0.3, 0.2, 1, 0), (0.25, 0.25, 2, 2), (0.4, 0.1, -1, 3)]
-)
+@pytest.mark.parametrize("aa,bb,m1v,m2v", [(0.3, 0.2, 1, 0), (0.25, 0.25, 2, 2), (0.4, 0.1, -1, 3)])
 def test_horizon_exponent_equals_surface_gravity_form(aa, bb, m1v, m2v):
     """Numeric identity sigma_+ = W(z_+)/(2 r_+ (z_+-z_-)) = (w - m.Om)/(2 kappa)."""
     geo = MPGeometry(a=aa, b=bb)
@@ -119,9 +115,7 @@ def test_G_matches_symbolic():
     geo = MPGeometry(a=0.31, b=0.17)
     omega = 0.5 + 0.2j
     got = G_const(geo, omega, 2, -1)
-    want = complex(
-        G.subs({a: geo.a, b: geo.b, w: omega, m1: 2, m2: -1}).evalf()
-    )
+    want = complex(G.subs({a: geo.a, b: geo.b, w: omega, m1: 2, m2: -1}).evalf())
     assert got == pytest.approx(want)
 
 

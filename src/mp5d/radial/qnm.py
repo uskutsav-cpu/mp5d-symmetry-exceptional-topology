@@ -148,9 +148,7 @@ def ode_residual(prob: LeaverProblem, omega: complex, depth: int, degree_bound: 
         yp = np.polyval((n * a)[::-1][:-1], x)
         ypp = np.polyval((n * (n - 1) * a)[::-1][:-2], x)
         val = (
-            np.polyval(A[::-1], x) * ypp
-            + np.polyval(B[::-1], x) * yp
-            + np.polyval(C[::-1], x) * y
+            np.polyval(A[::-1], x) * ypp + np.polyval(B[::-1], x) * yp + np.polyval(C[::-1], x) * y
         )
         scale = (
             abs(np.polyval(A[::-1], x) * ypp)

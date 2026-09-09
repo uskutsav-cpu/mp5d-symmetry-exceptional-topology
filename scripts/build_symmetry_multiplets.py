@@ -55,9 +55,7 @@ def build(l_max: int) -> dict:
                     "su2_irrep_dim": l + 1,
                     "degeneracy": len(block),
                     "states_n_m1_m2": [list(t) for t in block],
-                    "diagonal_sector_members": [
-                        list(t) for t in block if t[1] == t[2]
-                    ],
+                    "diagonal_sector_members": [list(t) for t in block if t[1] == t[2]],
                     "defective_possible": False,
                     "reason": (
                         "members carry distinct (m1,m2), which label blocks that "

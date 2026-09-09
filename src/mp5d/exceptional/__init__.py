@@ -6,5 +6,4 @@ from .ep_solver import (
     spectral_condition,
 )
 
-__all__ = ["EPCandidate", "PARAM_NAMES", "d_spectral_condition", "solve_ep2",
-           "spectral_condition"]
+__all__ = ["EPCandidate", "PARAM_NAMES", "d_spectral_condition", "solve_ep2", "spectral_condition"]

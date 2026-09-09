@@ -35,21 +35,37 @@ from ..geometry import MPGeometry
 from ..radial.leaver import LeaverProblem
 from ..radial.recurrence import continued_fraction_inverted, reduce_to_three_term
 
-__all__ = ["EPCandidate", "spectral_condition", "d_spectral_condition",
-           "solve_ep2", "PARAM_NAMES"]
+__all__ = ["EPCandidate", "spectral_condition", "d_spectral_condition", "solve_ep2", "PARAM_NAMES"]
 
 PARAM_NAMES = ("s", "delta", "mu")
 
 
-def _problem(s: float, delta: float, mu: float, m1: int, m2: int, ell: int,
-             M: float = 1.0, angular_N: int = 50) -> LeaverProblem:
+def _problem(
+    s: float,
+    delta: float,
+    mu: float,
+    m1: int,
+    m2: int,
+    ell: int,
+    M: float = 1.0,
+    angular_N: int = 50,
+) -> LeaverProblem:
     geo = MPGeometry(a=s + delta, b=s - delta, M=M)
     return LeaverProblem(geo, mu, m1, m2, ell, depth=400, angular_N=angular_N)
 
 
-def spectral_condition(omega: complex, s: float, delta: float, mu: float,
-                       m1: int, m2: int, ell: int, overtone: int = 0,
-                       depth: int = 300, degree_bound: int = 32) -> complex:
+def spectral_condition(
+    omega: complex,
+    s: float,
+    delta: float,
+    mu: float,
+    m1: int,
+    m2: int,
+    ell: int,
+    overtone: int = 0,
+    depth: int = 300,
+    degree_bound: int = 32,
+) -> complex:
     """``F(omega, p)``: Solver A's continued-fraction condition.
 
     ``Lambda`` is recomputed inside, so the omega-dependence is total.
@@ -60,9 +76,18 @@ def spectral_condition(omega: complex, s: float, delta: float, mu: float,
     return continued_fraction_inverted(al, be, ga, overtone, depth)
 
 
-def d_spectral_condition(omega: complex, s: float, delta: float, mu: float,
-                         m1: int, m2: int, ell: int, overtone: int = 0,
-                         depth: int = 300, h: float = 1e-6) -> complex:
+def d_spectral_condition(
+    omega: complex,
+    s: float,
+    delta: float,
+    mu: float,
+    m1: int,
+    m2: int,
+    ell: int,
+    overtone: int = 0,
+    depth: int = 300,
+    h: float = 1e-6,
+) -> complex:
     """``dF/domega`` by a central difference.  ``F`` is analytic in ``omega``."""
     hh = h * max(abs(omega), 1.0)
     fp = spectral_condition(omega + hh, s, delta, mu, m1, m2, ell, overtone, depth)
@@ -88,20 +113,32 @@ class EPCandidate:
     def to_dict(self):
         return {
             "omega": [self.omega.real, self.omega.imag],
-            "params": self.params, "fixed_param": self.fixed_param,
-            "residual_F": self.residual_F, "residual_dF": self.residual_dF,
-            "converged": self.converged, "iterations": self.iterations,
-            "mode_labels": {"m1": self.m1, "m2": self.m2, "l": self.ell,
-                            "overtone": self.overtone},
+            "params": self.params,
+            "fixed_param": self.fixed_param,
+            "residual_F": self.residual_F,
+            "residual_dF": self.residual_dF,
+            "converged": self.converged,
+            "iterations": self.iterations,
+            "mode_labels": {"m1": self.m1, "m2": self.m2, "l": self.ell, "overtone": self.overtone},
             "history": self.history,
         }
 
 
-def solve_ep2(omega0: complex, s0: float, delta0: float, mu0: float,
-              m1: int, m2: int, ell: int, overtone: int = 0,
-              free: tuple[str, str] = ("delta", "mu"),
-              depth: int = 300, tol: float = 1e-10, maxiter: int = 40,
-              step_limit: float = 0.25) -> EPCandidate:
+def solve_ep2(
+    omega0: complex,
+    s0: float,
+    delta0: float,
+    mu0: float,
+    m1: int,
+    m2: int,
+    ell: int,
+    overtone: int = 0,
+    free: tuple[str, str] = ("delta", "mu"),
+    depth: int = 300,
+    tol: float = 1e-10,
+    maxiter: int = 40,
+    step_limit: float = 0.25,
+) -> EPCandidate:
     """Newton on ``[F, dF/domega] = 0`` in ``(omega, p_free1, p_free2)``.
 
     ``free`` names the two real parameters allowed to vary; the third is held
@@ -127,10 +164,8 @@ def solve_ep2(omega0: complex, s0: float, delta0: float, mu0: float,
         geo = MPGeometry(a=q["s"] + q["delta"], b=q["s"] - q["delta"], M=1.0)
         if not geo.has_horizon or geo.extremality <= 1e-6:
             raise ValueError("left the sub-extremal region")
-        F = spectral_condition(om, q["s"], q["delta"], q["mu"], m1, m2, ell,
-                               overtone, depth)
-        dF = d_spectral_condition(om, q["s"], q["delta"], q["mu"], m1, m2, ell,
-                                  overtone, depth)
+        F = spectral_condition(om, q["s"], q["delta"], q["mu"], m1, m2, ell, overtone, depth)
+        dF = d_spectral_condition(om, q["s"], q["delta"], q["mu"], m1, m2, ell, overtone, depth)
         # normalize dF by the local scale of F so the two blocks are comparable
         return np.array([F.real, F.imag, dF.real, dF.imag]), F, dF
 
@@ -170,15 +205,21 @@ def solve_ep2(omega0: complex, s0: float, delta0: float, mu0: float,
     q = dict(p)
     q[free[0]], q[free[1]] = x[2], x[3]
     try:
-        F = spectral_condition(om, q["s"], q["delta"], q["mu"], m1, m2, ell,
-                               overtone, depth)
-        dF = d_spectral_condition(om, q["s"], q["delta"], q["mu"], m1, m2, ell,
-                                  overtone, depth)
+        F = spectral_condition(om, q["s"], q["delta"], q["mu"], m1, m2, ell, overtone, depth)
+        dF = d_spectral_condition(om, q["s"], q["delta"], q["mu"], m1, m2, ell, overtone, depth)
     except Exception:
         F = dF = complex("nan")
     return EPCandidate(
-        omega=om, params=q, fixed_param=fixed_name,
-        residual_F=float(abs(F)), residual_dF=float(abs(dF)),
-        converged=converged, iterations=it, m1=m1, m2=m2, ell=ell,
-        overtone=overtone, history=hist,
+        omega=om,
+        params=q,
+        fixed_param=fixed_name,
+        residual_F=float(abs(F)),
+        residual_dF=float(abs(dF)),
+        converged=converged,
+        iterations=it,
+        m1=m1,
+        m2=m2,
+        ell=ell,
+        overtone=overtone,
+        history=hist,
     )
