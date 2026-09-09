@@ -83,7 +83,9 @@ def test_forward_reverse_and_step_halving(steps):
     assert abs(forward.modes[-1][0].omega - (-1.9 - 0.5j)) < 1e-12
     reverse = continue_branches(line_solver, path[::-1], forward.modes[-1])
     assert reverse.complete
-    assert max(abs(a.omega - b.omega) for a, b in zip(reverse.modes[-1], start, strict=True)) < 1e-12
+    assert (
+        max(abs(a.omega - b.omega) for a, b in zip(reverse.modes[-1], start, strict=True)) < 1e-12
+    )
 
 
 def test_adaptive_retry_is_real_not_just_documented():
