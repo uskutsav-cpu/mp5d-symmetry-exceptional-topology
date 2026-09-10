@@ -5,3 +5,7 @@ __pycache__/
 *.egg-info/
 .DS_Store
 scratch/
+logs/
+data/atlas_v1_superseded/
+data/full_branch_atlas/
+manuscript/build/

@@ -1,0 +1,311 @@
+{
+ "status": "complete",
+ "provenance": {
+  "commit": "153ab278d1467b781cbf48ab8063c117cfd2b4ee",
+  "precision": "double",
+  "solverC_theta_deg": 60.0,
+  "solverC_resolution": 260,
+  "runtime_s": 22.6
+ },
+ "purpose": "validate the atlas domain, which extends beyond the previously validated r_- <= 0.19, using the recurrence-free Solver C",
+ "naming_note": "prior work's r2 is the inner horizon RADIUS r_-; z_minus = r_-^2. The atlas guard z_minus <= 0.20 is r_- <= 0.447.",
+ "n_compared": 9,
+ "max_difference": 2.0564991397232055e-09,
+ "median_difference": 6.395330237501225e-13,
+ "max_r_minus_compared": 0.22870680067498927,
+ "records": [
+  {
+   "label": "static",
+   "m1": 1,
+   "m2": 1,
+   "ell": 2,
+   "s": 0.0,
+   "delta": 0.0,
+   "mu": 0.0,
+   "a": 0.0,
+   "b": 0.0,
+   "r_minus": 0.0,
+   "z_minus": 0.0,
+   "extremality": 1.0,
+   "solverA": [
+    1.5105674517727279,
+    -0.3575372552930916
+   ],
+   "solverA_residual": 1.8849285295218947e-14,
+   "solverA_converged": true,
+   "min_scaling_angle_deg": 13.31631642420806,
+   "quasiresonant": false,
+   "solverC": [
+    1.5105674517727474,
+    -0.35753725529260705
+   ],
+   "solverC_theta_deg": 40.0,
+   "solverC_L": 60.0,
+   "solverC_converged": true,
+   "difference": 4.849506562470376e-13
+  },
+  {
+   "label": "equal-spin, mid s",
+   "m1": 1,
+   "m2": 1,
+   "ell": 2,
+   "s": 0.2,
+   "delta": 0.0,
+   "mu": 0.0,
+   "a": 0.2,
+   "b": 0.2,
+   "r_minus": 0.04174243050441632,
+   "z_minus": 0.001742430504416026,
+   "extremality": 0.84,
+   "solverA": [
+    1.6374993522969916,
+    -0.3521809222109925
+   ],
+   "solverA_residual": 1.1007056533505868e-14,
+   "solverA_converged": true,
+   "min_scaling_angle_deg": 12.137845264786906,
+   "quasiresonant": false,
+   "solverC": [
+    1.6374993522969992,
+    -0.352180922211632
+   ],
+   "solverC_theta_deg": 40.0,
+   "solverC_L": 90.0,
+   "solverC_converged": true,
+   "difference": 6.395330237501225e-13
+  },
+  {
+   "label": "equal-spin, max s",
+   "m1": 1,
+   "m2": 1,
+   "ell": 2,
+   "s": 0.42,
+   "delta": 0.0,
+   "mu": 0.0,
+   "a": 0.42,
+   "b": 0.42,
+   "r_minus": 0.22870680067498927,
+   "z_minus": 0.05230680067498927,
+   "extremality": 0.2944000000000001,
+   "solverA": [
+    1.8941142008254603,
+    -0.30095933375116396
+   ],
+   "solverA_residual": 7.061071350938852e-14,
+   "solverA_converged": true,
+   "min_scaling_angle_deg": 9.028359470294255,
+   "quasiresonant": false,
+   "solverC": [
+    1.8941142008254483,
+    -0.3009593337514056
+   ],
+   "solverC_theta_deg": 40.0,
+   "solverC_L": 90.0,
+   "solverC_converged": true,
+   "difference": 2.4193734615415063e-13
+  },
+  {
+   "label": "equal-spin, max s, max mu",
+   "m1": 1,
+   "m2": 1,
+   "ell": 2,
+   "s": 0.42,
+   "delta": 0.0,
+   "mu": 1.8,
+   "a": 0.42,
+   "b": 0.42,
+   "r_minus": 0.22870680067498927,
+   "z_minus": 0.05230680067498927,
+   "extremality": 0.2944000000000001,
+   "solverA": [
+    2.203467010391276,
+    -0.21785385170053007
+   ],
+   "solverA_residual": 8.178421354301018e-14,
+   "solverA_converged": true,
+   "min_scaling_angle_deg": 15.740891343866185,
+   "quasiresonant": false,
+   "solverC": [
+    2.2034670103912757,
+    -0.21785385169980734
+   ],
+   "solverC_theta_deg": 40.0,
+   "solverC_L": 60.0,
+   "solverC_converged": true,
+   "difference": 7.227275698935249e-13
+  },
+  {
+   "label": "two-spin, large delta",
+   "m1": 1,
+   "m2": 1,
+   "ell": 2,
+   "s": 0.33,
+   "delta": 0.2,
+   "mu": 0.6,
+   "a": 0.53,
+   "b": 0.13,
+   "r_minus": 0.08262477007572509,
+   "z_minus": 0.006826852630066438,
+   "extremality": 0.5644,
+   "solverA": [
+    1.805157265430612,
+    -0.3202036155272271
+   ],
+   "solverA_residual": 2.4251135393021003e-14,
+   "solverA_converged": true,
+   "min_scaling_angle_deg": 11.231356916955002,
+   "quasiresonant": false,
+   "solverC": [
+    1.805157265430604,
+    -0.32020361552785237
+   ],
+   "solverC_theta_deg": 40.0,
+   "solverC_L": 90.0,
+   "solverC_converged": true,
+   "difference": 6.253287008728608e-13
+  },
+  {
+   "label": "domain corner",
+   "m1": 1,
+   "m2": 1,
+   "ell": 2,
+   "s": 0.42,
+   "delta": 0.2,
+   "mu": 1.8,
+   "a": 0.62,
+   "b": 0.21999999999999997,
+   "r_minus": 0.18696437017057327,
+   "z_minus": 0.03495567571327915,
+   "extremality": 0.2944000000000001,
+   "solverA": [
+    1.7027794835019943,
+    -0.00026860326040670793
+   ],
+   "solverA_residual": 3.3660099509256387e-09,
+   "solverA_converged": true,
+   "min_scaling_angle_deg": 89.92304790225421,
+   "quasiresonant": true,
+   "solverC_status": "not applicable: required scaling angle 89.92 deg -> 90 deg as Re(Omega) -> 0 (quasiresonant limit). This is a formulation limit of exterior complex scaling, not a convergence failure."
+  },
+  {
+   "label": "off-diagonal, max s",
+   "m1": 2,
+   "m2": 0,
+   "ell": 2,
+   "s": 0.42,
+   "delta": 0.0,
+   "mu": 1.2,
+   "a": 0.42,
+   "b": 0.42,
+   "r_minus": 0.22870680067498927,
+   "z_minus": 0.05230680067498927,
+   "extremality": 0.2944000000000001,
+   "solverA": [
+    2.0253612054142867,
+    -0.2679843328892912
+   ],
+   "solverA_residual": 5.730776310164872e-14,
+   "solverA_converged": true,
+   "min_scaling_angle_deg": 11.36878005161287,
+   "quasiresonant": false,
+   "solverC": [
+    2.0253612054142733,
+    -0.26798433288978574
+   ],
+   "solverC_theta_deg": 40.0,
+   "solverC_L": 90.0,
+   "solverC_converged": true,
+   "difference": 4.947282638978711e-13
+  },
+  {
+   "label": "odd l, large s",
+   "m1": 2,
+   "m2": 1,
+   "ell": 3,
+   "s": 0.37,
+   "delta": 0.15,
+   "mu": 0.9,
+   "a": 0.52,
+   "b": 0.22,
+   "r_minus": 0.1406661662924681,
+   "z_minus": 0.019786970339420284,
+   "extremality": 0.4524,
+   "solverA": [
+    2.504047106858818,
+    -0.9332012026005586
+   ],
+   "solverA_residual": 8.905905731526218e-14,
+   "solverA_converged": true,
+   "min_scaling_angle_deg": 22.760315327976283,
+   "quasiresonant": false,
+   "solverC": [
+    2.5040471068588266,
+    -0.9332012025884274
+   ],
+   "solverC_theta_deg": 40.0,
+   "solverC_L": 90.0,
+   "solverC_converged": true,
+   "difference": 1.213118787984077e-11
+  },
+  {
+   "label": "odd l, corner",
+   "m1": 1,
+   "m2": 0,
+   "ell": 1,
+   "s": 0.42,
+   "delta": 0.1,
+   "mu": 1.5,
+   "a": 0.52,
+   "b": 0.31999999999999995,
+   "r_minus": 0.2186047492316249,
+   "z_minus": 0.0477880363866216,
+   "extremality": 0.2944000000000001,
+   "solverA": [
+    1.1982326129054708,
+    -0.727056187523348
+   ],
+   "solverA_residual": 4.027423504350357e-13,
+   "solverA_converged": true,
+   "min_scaling_angle_deg": 63.810810365709706,
+   "quasiresonant": false,
+   "solverC": [
+    1.1982326128836212,
+    -0.7270561895797311
+   ],
+   "solverC_theta_deg": 79.76351295713714,
+   "solverC_L": 90.0,
+   "solverC_converged": true,
+   "difference": 2.0564991397232055e-09
+  },
+  {
+   "label": "high l, max s",
+   "m1": 2,
+   "m2": 2,
+   "ell": 4,
+   "s": 0.42,
+   "delta": 0.0,
+   "mu": 0.6,
+   "a": 0.42,
+   "b": 0.42,
+   "r_minus": 0.22870680067498927,
+   "z_minus": 0.05230680067498927,
+   "extremality": 0.2944000000000001,
+   "solverA": [
+    3.2884554373139046,
+    -0.8750725659143348
+   ],
+   "solverA_residual": 8.231647243689167e-14,
+   "solverA_converged": true,
+   "min_scaling_angle_deg": 15.356229303003998,
+   "quasiresonant": false,
+   "solverC": [
+    3.2884554373139876,
+    -0.875072565927626
+   ],
+   "solverC_theta_deg": 40.0,
+   "solverC_L": 90.0,
+   "solverC_converged": true,
+   "difference": 1.329140539566346e-11
+  }
+ ]
+}

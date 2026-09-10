@@ -1,45 +1,44 @@
 {
-  "repository": "uskutsav-cpu/mp5d-symmetry-exceptional-topology",
-  "branch": "research/final-science",
-  "commit": "6dd14cd55f1365c59939cc113dc8fc0704269136",
-  "env_hash": "51bd433766170fc3",
-  "completed_gates": [
-    1,
-    2,
-    3
-  ],
-  "active_gate": 3,
-  "gate_notes": {
-    "1": "recovery+PR4 merged",
-    "2": "near-horizon coordinate derived and implemented",
-    "3": "Solver D built, validated on ordinary modes, FAILS near-extremal"
-  },
-  "solvers": {
-    "A": "leaver-cf, domain r2<=0.20",
-    "B": "hill-wynn, domain r2<=0.20",
-    "C": "complex scaling, validated r2<=0.19",
-    "D": "multidomain near-horizon, validated on ordinary modes"
-  },
-  "validated_domains": {
-    "r2_le_0.19": "three-solver agreement <1e-5"
-  },
-  "unvalidated_domains": {
-    "r2_ge_0.26": "no solver converges better than ~2e-3"
-  },
-  "candidates": [],
-  "rejected_candidates": [
-    "near-extremal candidate (refuted, session 8)"
-  ],
-  "open_obligations": [
-    "O6.5",
-    "O6.6",
-    "O6.7",
-    "diagonal delta symmetry"
-  ],
-  "next_commands": [
-    "build Wronskian matching fallback (method C2)",
-    "OR test whether the r2=0.44 difficulty is spectral: map sigma_min over a neighbourhood in omega to look for mode accumulation / branch point",
-    "then multi-sector atlas"
-  ],
-  "failed_approaches_count": 10
+ "status": "complete",
+ "provenance": {
+  "commit": "3ccb7a2174f3d3332124a6fd0da8020c81dd778f",
+  "env_hash": "51bd433766170fc3"
+ },
+ "repository": "uskutsav-cpu/mp5d-symmetry-exceptional-topology",
+ "branch": "research/absolute-final",
+ "outcome": "C (bounded negative classification)",
+ "gates": {
+  "1_repository_recovery": "COMPLETE",
+  "2_public_ci_protected_main": "COMPLETE",
+  "3_persistent_project_config": "COMPLETE",
+  "4_solver_domains": "COMPLETE",
+  "5_published_benchmarks": "COMPLETE",
+  "6_cross_sector_no_go": "COMPLETE",
+  "7_symmetry_group_and_delta_parity": "COMPLETE",
+  "8_ep_machinery_synthetic_validation": "COMPLETE",
+  "9_branch_atlas": "COMPLETE",
+  "10_collision_search": "COMPLETE",
+  "11_ep_verification": "COMPLETE",
+  "12_long_lived_branches": "COMPLETE",
+  "13_near_extremal_classification": "COMPLETE",
+  "14_effective_models": "COMPLETE",
+  "15_pseudospectra": "COMPLETE",
+  "16_certification": "PARTIAL (angular enclosed; radial blocked by DFT aliasing bound)",
+  "17_reproducibility": "COMPLETE",
+  "18_novelty_audit": "COMPLETE",
+  "19_manuscript": "COMPLETE (draft; authorship intentionally unassigned)",
+  "E_wronskian_solver": "NOT STARTED (deferred by evidence; see gate 13)",
+  "F_hyperboloidal_solver": "NOT STARTED (now the evidence-based next gate)",
+  "raw_tail_higher_orders": "BLOCKED (Gaussian reduction degrades past n~500-800)",
+  "20_time_domain_ringdown": "COMPLETE",
+  "21_figures": "COMPLETE"
+ },
+ "checkpoints": {
+  "atlas": "data/full_branch_atlas/ (untracked, ~24MB; sha256 per shard in results/full_branch_atlas.json)"
+ },
+ "exact_next_commands": [
+  "PYTHONPATH=src .venv/bin/python scripts/build_branch_atlas.py --sector 1,1 --resume",
+  "PYTHONPATH=src .venv/bin/python scripts/collision_search.py",
+  "PYTHONPATH=src .venv/bin/python scripts/verify_candidates.py --top 10"
+ ]
 }

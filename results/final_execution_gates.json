@@ -1,83 +1,32 @@
 {
-  "commit": "c2ab227f53b0a088052f37ffdfda52286da4b7ad",
-  "env_hash": "51bd433766170fc3",
-  "gates": [
-    {
-      "n": 1,
-      "name": "Repository recovery and consistency",
-      "status": "COMPLETE"
-    },
-    {
-      "n": 2,
-      "name": "Raw-recurrence asymptotic tail",
-      "status": "PARTIAL - leading order only"
-    },
-    {
-      "n": 3,
-      "name": "Independent Solver C",
-      "status": "COMPLETE"
-    },
-    {
-      "n": 4,
-      "name": "Three-solver validation",
-      "status": "COMPLETE - candidate adjudicated (refuted)"
-    },
-    {
-      "n": 5,
-      "name": "Long-lived massive branches",
-      "status": "NOT STARTED"
-    },
-    {
-      "n": 6,
-      "name": "Cross-sector no-go closure",
-      "status": "PARTIAL - O6.5-O6.7 open"
-    },
-    {
-      "n": 7,
-      "name": "Fixed-sector branch atlas",
-      "status": "NOT STARTED"
-    },
-    {
-      "n": 8,
-      "name": "Candidate collision localization",
-      "status": "NOT STARTED"
-    },
-    {
-      "n": 9,
-      "name": "EP verification",
-      "status": "NOT STARTED"
-    },
-    {
-      "n": 10,
-      "name": "Exceptional-locus continuation",
-      "status": "NOT STARTED"
-    },
-    {
-      "n": 11,
-      "name": "Higher-order and junction search",
-      "status": "NOT STARTED"
-    },
-    {
-      "n": 12,
-      "name": "Effective local theory",
-      "status": "NOT STARTED"
-    },
-    {
-      "n": 13,
-      "name": "Pseudospectral and time-domain",
-      "status": "NOT STARTED"
-    },
-    {
-      "n": 14,
-      "name": "Numerical certification",
-      "status": "NOT STARTED"
-    },
-    {
-      "n": 15,
-      "name": "Final reproducibility freeze",
-      "status": "NOT STARTED"
-    }
-  ],
-  "complete": 3,
-  "total": 15
+ "status": "complete",
+ "provenance": {
+  "commit": "3ccb7a2174f3d3332124a6fd0da8020c81dd778f"
+ },
+ "gates": {
+  "1_repository_recovery": "COMPLETE",
+  "2_public_ci_protected_main": "COMPLETE",
+  "3_persistent_project_config": "COMPLETE",
+  "4_solver_domains": "COMPLETE",
+  "5_published_benchmarks": "COMPLETE",
+  "6_cross_sector_no_go": "COMPLETE",
+  "7_symmetry_group_and_delta_parity": "COMPLETE",
+  "8_ep_machinery_synthetic_validation": "COMPLETE",
+  "9_branch_atlas": "COMPLETE",
+  "10_collision_search": "COMPLETE",
+  "11_ep_verification": "COMPLETE",
+  "12_long_lived_branches": "COMPLETE",
+  "13_near_extremal_classification": "COMPLETE",
+  "14_effective_models": "COMPLETE",
+  "15_pseudospectra": "COMPLETE",
+  "16_certification": "PARTIAL (angular enclosed; radial blocked by DFT aliasing bound)",
+  "17_reproducibility": "COMPLETE",
+  "18_novelty_audit": "COMPLETE",
+  "19_manuscript": "COMPLETE (draft; authorship intentionally unassigned)",
+  "E_wronskian_solver": "NOT STARTED (deferred by evidence; see gate 13)",
+  "F_hyperboloidal_solver": "NOT STARTED (now the evidence-based next gate)",
+  "raw_tail_higher_orders": "BLOCKED (Gaussian reduction degrades past n~500-800)",
+  "20_time_domain_ringdown": "COMPLETE",
+  "21_figures": "COMPLETE"
+ }
 }

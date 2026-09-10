@@ -1,0 +1,884 @@
+{
+ "source": "arXiv API (export.arxiv.org), authoritative record",
+ "n_requested": 62,
+ "n_verified": 62,
+ "missing_from_api": [],
+ "unverifiable_here": [
+  {
+   "id": "A01",
+   "authors": "Myers; Perry",
+   "short_title": "Black Holes in Higher Dimensional Space-Times",
+   "identifier": "AnnPhys172-304-1986"
+  },
+  {
+   "id": "B32",
+   "authors": "Wang; Wu",
+   "short_title": "Coexistence of Spectrally Stable and Unstable Modes",
+   "identifier": "PRD-114-L021501-2026"
+  },
+  {
+   "id": "C34",
+   "authors": "Nollert; Price",
+   "short_title": "Quantifying Excitations of QNM Systems",
+   "identifier": ""
+  },
+  {
+   "id": "C40",
+   "authors": "Gasperin; Jaramillo",
+   "short_title": "Energy Scales and Black Hole Pseudospectra",
+   "identifier": ""
+  },
+  {
+   "id": "D51",
+   "authors": "Leaver",
+   "short_title": "Analytic Representation for QNMs of Kerr",
+   "identifier": "ProcRSocA402-285-1985"
+  },
+  {
+   "id": "D52",
+   "authors": "Leaver",
+   "short_title": "Spectral Decomposition of the Perturbation Response",
+   "identifier": ""
+  },
+  {
+   "id": "D53",
+   "authors": "Detweiler",
+   "short_title": "Klein-Gordon Equation and Rotating Black Holes",
+   "identifier": ""
+  },
+  {
+   "id": "E71",
+   "authors": "Kato",
+   "short_title": "Perturbation Theory for Linear Operators",
+   "identifier": "book"
+  },
+  {
+   "id": "E72",
+   "authors": "Trefethen; Embree",
+   "short_title": "Spectra and Pseudospectra",
+   "identifier": "book"
+  },
+  {
+   "id": "E73",
+   "authors": "Moore; Kearfott; Cloud",
+   "short_title": "Introduction to Interval Analysis",
+   "identifier": "book"
+  },
+  {
+   "id": "E74",
+   "authors": "Tucker",
+   "short_title": "Validated Numerics",
+   "identifier": "book"
+  }
+ ],
+ "records": {
+  "1811.02014": {
+   "arxiv_id": "1811.02014",
+   "title": "Quasinormal modes of Dirac spinors in the background of rotating black holes in four and five dimensions",
+   "authors": [
+    "Jose Luis Bl\u00e1zquez-Salcedo",
+    "Christian Knoll"
+   ],
+   "year": "2018",
+   "doi": "10.1088/1361-6382/ab1882",
+   "journal_ref": "Class. Quantum Grav. 36 105012 (2019)"
+  },
+  "1402.6215": {
+   "arxiv_id": "1402.6215",
+   "title": "Instability of rotating black holes: large D analysis",
+   "authors": [
+    "Roberto Emparan",
+    "Ryotaku Suzuki",
+    "Kentaro Tanabe"
+   ],
+   "year": "2014",
+   "doi": "10.1007/JHEP06(2014)106",
+   "journal_ref": "JHEP 06 (2014) 106"
+  },
+  "2205.13072": {
+   "arxiv_id": "2205.13072",
+   "title": "Eigenvalue repulsions and quasinormal mode spectra of Kerr-Newman: an extended study",
+   "authors": [
+    "Oscar J. C. Dias",
+    "Mahdi Godazgar",
+    "Jorge E. Santos"
+   ],
+   "year": "2022",
+   "doi": "10.1007/JHEP07(2022)076",
+   "journal_ref": null
+  },
+  "2503.21276": {
+   "arxiv_id": "2503.21276",
+   "title": "Unstable chords and destructive resonant excitation of black hole quasinormal modes",
+   "authors": [
+    "Naritaka Oshita",
+    "Emanuele Berti",
+    "Vitor Cardoso"
+   ],
+   "year": "2025",
+   "doi": null,
+   "journal_ref": null
+  },
+  "2407.20850": {
+   "arxiv_id": "2407.20850",
+   "title": "Exceptional point and hysteresis in perturbations of Kerr black holes",
+   "authors": [
+    "Jo\u00e3o Paulo Cavalcante",
+    "Maur\u00edcio Richartz",
+    "Bruno Carneiro da Cunha"
+   ],
+   "year": "2024",
+   "doi": "10.1103/PhysRevLett.133.261401",
+   "journal_ref": "Phys. Rev. Lett. 133, 261401 (2024)"
+  },
+  "2408.13964": {
+   "arxiv_id": "2408.13964",
+   "title": "Massive scalar perturbations in Kerr Black Holes: near extremal analysis",
+   "authors": [
+    "Jo\u00e3o Paulo Cavalcante",
+    "Maur\u00edcio Richartz",
+    "Bruno Carneiro da Cunha"
+   ],
+   "year": "2024",
+   "doi": "10.1103/PhysRevD.110.124064",
+   "journal_ref": "Phys. Rev. D 110, 124064 (2024)"
+  },
+  "2007.16108": {
+   "arxiv_id": "2007.16108",
+   "title": "Massive Scalar Perturbations on Myers-Perry-de Sitter Black Holes with a Single Rotation",
+   "authors": [
+    "Supakchai Ponglertsakul",
+    "Bogeun Gwak"
+   ],
+   "year": "2020",
+   "doi": "10.1140/epjc/s10052-020-08616-1",
+   "journal_ref": "Eur. Phys. J. C 80 (2020) 11, 1023"
+  },
+  "2109.13949": {
+   "arxiv_id": "2109.13949",
+   "title": "Eigenvalue repulsions in the quasinormal spectra of the Kerr-Newman black hole",
+   "authors": [
+    "Oscar J. C. Dias",
+    "Mahdi Godazgar",
+    "Jorge E. Santos",
+    "Gregorio Carullo",
+    "Walter Del Pozzo",
+    "Danny Laghi"
+   ],
+   "year": "2021",
+   "doi": "10.1103/PhysRevD.105.084044",
+   "journal_ref": null
+  },
+  "1907.03820": {
+   "arxiv_id": "1907.03820",
+   "title": "Excitations of the Myers-Perry Black Holes",
+   "authors": [
+    "Oleg Lunin"
+   ],
+   "year": "2019",
+   "doi": "10.1007/JHEP10(2019)030",
+   "journal_ref": null
+  },
+  "2305.11216": {
+   "arxiv_id": "2305.11216",
+   "title": "Scalar QNM spectra of Kerr and Reissner-Nordstr\u00f6m revealed by eigenvalue repulsions in Kerr-Newman",
+   "authors": [
+    "Alex Davey",
+    "Oscar J. C. Dias",
+    "Jorge E. Santos"
+   ],
+   "year": "2023",
+   "doi": null,
+   "journal_ref": null
+  },
+  "2307.02338": {
+   "arxiv_id": "2307.02338",
+   "title": "Quasinormal modes and stability of higher dimensional rotating black holes under massive scalar perturbations",
+   "authors": [
+    "Kai-Peng Lu",
+    "Wenbin Li",
+    "Jia-Hui Huang"
+   ],
+   "year": "2023",
+   "doi": null,
+   "journal_ref": null
+  },
+  "1001.4527": {
+   "arxiv_id": "1001.4527",
+   "title": "An instability of higher-dimensional rotating black holes",
+   "authors": [
+    "Oscar J. C. Dias",
+    "Pau Figueras",
+    "Ricardo Monteiro",
+    "Harvey S. Reall",
+    "Jorge E. Santos"
+   ],
+   "year": "2010",
+   "doi": "10.1007/JHEP05(2010)076",
+   "journal_ref": "JHEP 1005:076,2010"
+  },
+  "0807.2114": {
+   "arxiv_id": "0807.2114",
+   "title": "Separability of the massive Dirac's equation in 5-dimensional Myers-Perry black hole geometry and its relation to a rank-three Killing-Yano tensor",
+   "authors": [
+    "Shuang-Qing Wu"
+   ],
+   "year": "2008",
+   "doi": "10.1103/PhysRevD.78.064052",
+   "journal_ref": "Phys.Rev.D78:064052,2008"
+  },
+  "gr-qc/0511111": {
+   "arxiv_id": "gr-qc/0511111",
+   "title": "Eigenvalues and eigenfunctions of spin-weighted spheroidal harmonics in four and higher dimensions",
+   "authors": [
+    "Emanuele Berti",
+    "Vitor Cardoso",
+    "Marc Casals"
+   ],
+   "year": "2005",
+   "doi": "10.1103/PhysRevD.73.024013",
+   "journal_ref": "Phys.Rev.D73:024013,2006; Erratum-ibid.D73:109902,2006"
+  },
+  "0710.0221": {
+   "arxiv_id": "0710.0221",
+   "title": "A Note on Separability of Field Equations in Myers-Perry Spacetimes",
+   "authors": [
+    "Keiju Murata",
+    "Jiro Soda"
+   ],
+   "year": "2007",
+   "doi": "10.1088/0264-9381/25/3/035006",
+   "journal_ref": "Class.Quant.Grav.25:035006,2008"
+  },
+  "1804.00030": {
+   "arxiv_id": "1804.00030",
+   "title": "Massive Vector Fields in Rotating Black-Hole Spacetimes: Separability and Quasinormal Modes",
+   "authors": [
+    "Valeri P. Frolov",
+    "Pavel Krtou\u0161",
+    "David Kubiz\u0148\u00e1k",
+    "Jorge E. Santos"
+   ],
+   "year": "2018",
+   "doi": "10.1103/PhysRevLett.120.231103",
+   "journal_ref": "Phys. Rev. Lett. 120, 231103 (2018)"
+  },
+  "2407.15191": {
+   "arxiv_id": "2407.15191",
+   "title": "Resonant Excitation of Quasinormal Modes of Black Holes",
+   "authors": [
+    "Hayato Motohashi"
+   ],
+   "year": "2024",
+   "doi": "10.1103/PhysRevLett.134.141401",
+   "journal_ref": "Phys. Rev. Lett. 134, 141401 (2025)"
+  },
+  "1212.3271": {
+   "arxiv_id": "1212.3271",
+   "title": "Branching of quasinormal modes for nearly extremal Kerr black holes",
+   "authors": [
+    "Huan Yang",
+    "Fan Zhang",
+    "Aaron Zimmerman",
+    "David A. Nichols",
+    "Emanuele Berti",
+    "Yanbei Chen"
+   ],
+   "year": "2012",
+   "doi": "10.1103/PhysRevD.87.041502",
+   "journal_ref": "Phys. Rev. D 87, 041502(R) (2013)"
+  },
+  "2502.11764": {
+   "arxiv_id": "2502.11764",
+   "title": "Quasinormal modes of massive scalar fields in five-dimensional Myers-Perry black holes with two arbitrary rotation parameters",
+   "authors": [
+    "Zi-Yang Huang",
+    "Jia-Hui Huang"
+   ],
+   "year": "2025",
+   "doi": null,
+   "journal_ref": null
+  },
+  "2504.06072": {
+   "arxiv_id": "2504.06072",
+   "title": "Black hole quasinormal mode resonances",
+   "authors": [
+    "Yiqiu Yang",
+    "Emanuele Berti",
+    "Nicola Franchini"
+   ],
+   "year": "2025",
+   "doi": "10.1103/hfv8-n444",
+   "journal_ref": "Phys. Rev. Lett. 135, 201401 (2025)"
+  },
+  "0803.1371": {
+   "arxiv_id": "0803.1371",
+   "title": "Stability of Five-dimensional Myers-Perry Black Holes with Equal Angular Momenta",
+   "authors": [
+    "Keiju Murata",
+    "Jiro Soda"
+   ],
+   "year": "2008",
+   "doi": "10.1143/PTP.120.561",
+   "journal_ref": "Prog.Theor.Phys.120:561-579,2008"
+  },
+  "0801.3471": {
+   "arxiv_id": "0801.3471",
+   "title": "Black Holes in Higher Dimensions",
+   "authors": [
+    "Roberto Emparan",
+    "Harvey S. Reall"
+   ],
+   "year": "2008",
+   "doi": "10.12942/lrr-2008-6",
+   "journal_ref": "Living Rev.Rel.11:6,2008"
+  },
+  "2203.13830": {
+   "arxiv_id": "2203.13830",
+   "title": "Strong Cosmic Censorship and Eigenvalue Repulsions for rotating de Sitter black holes in higher-dimensions",
+   "authors": [
+    "Alex Davey",
+    "Oscar J. C. Dias",
+    "Paul Rodgers",
+    "Jorge E. Santos"
+   ],
+   "year": "2022",
+   "doi": "10.1007/JHEP07(2022)086",
+   "journal_ref": null
+  },
+  "2601.00704": {
+   "arxiv_id": "2601.00704",
+   "title": "Exceptional Lines and Excitation of (Nearly) Double-Pole Quasinormal Modes: A Semi-Analytic Study in the Nariai Black Hole",
+   "authors": [
+    "Nao Nakamoto",
+    "Naritaka Oshita"
+   ],
+   "year": "2026",
+   "doi": "10.1103/q6q5-lmwt",
+   "journal_ref": "Phys. Rev. D 113, 104032 (2026)"
+  },
+  "2309.08203": {
+   "arxiv_id": "2309.08203",
+   "title": "Stability of five-dimensional Myers-Perry black holes under massive scalar perturbation: bound states and quasinormal modes",
+   "authors": [
+    "Wenbin Li",
+    "Kai-Peng Lu",
+    "W. LiMing",
+    "Jia-Hui Huang"
+   ],
+   "year": "2023",
+   "doi": null,
+   "journal_ref": null
+  },
+  "2107.09673": {
+   "arxiv_id": "2107.09673",
+   "title": "Pseudospectrum of Reissner-Nordstr\u00f6m black holes: quasinormal mode instability and universality",
+   "authors": [
+    "Kyriakos Destounis",
+    "Rodrigo Panosso Macedo",
+    "Emanuele Berti",
+    "Vitor Cardoso",
+    "Jos\u00e9 Luis Jaramillo"
+   ],
+   "year": "2021",
+   "doi": "10.1103/PhysRevD.104.084091",
+   "journal_ref": "Phys. Rev. D 104, 084091 (2021)"
+  },
+  "2505.23895": {
+   "arxiv_id": "2505.23895",
+   "title": "Black hole spectroscopy: from theory to experiment",
+   "authors": [
+    "Emanuele Berti",
+    "Vitor Cardoso",
+    "Gregorio Carullo",
+    "Jahed Abedi",
+    "Niayesh Afshordi",
+    "Simone Albanesi",
+    "Vishal Baibhav",
+    "Swetha Bhagwat",
+    "Jos\u00e9 Luis Bl\u00e1zquez-Salcedo",
+    "B\u00e9atrice Bonga",
+    "Bruno Bucciotti",
+    "Giada Caneva Santoro",
+    "Pablo A. Cano",
+    "Collin Capano",
+    "Mark Ho-Yeuk Cheung",
+    "Cecilia Chirenti",
+    "Gregory B. Cook",
+    "Adrian Ka-Wai Chung",
+    "Marina De Amicis",
+    "Kyriakos Destounis",
+    "Oscar J. C. Dias",
+    "Walter Del Pozzo",
+    "Francisco Duque",
+    "Will M. Farr",
+    "Eliot Finch",
+    "Nicola Franchini",
+    "Kwinten Fransen",
+    "Vasco Gennari",
+    "Stephen R. Green",
+    "Scott A. Hughes",
+    "Maximiliano Isi",
+    "Xisco Jimenez Forteza",
+    "Gaurav Khanna",
+    "Fech Scen Khoo",
+    "Masashi Kimura",
+    "Badri Krishnan",
+    "Adrien Kuntz",
+    "Macarena Lagos",
+    "Rico K. L. Lo",
+    "Lionel London",
+    "Sizheng Ma",
+    "Simon Maenaut",
+    "Lorena Maga\u00f1a Zertuche",
+    "Elisa Maggio",
+    "Andrea Maselli",
+    "Keefe Mitman",
+    "Hayato Motohashi",
+    "Naritaka Oshita",
+    "Costantino Pacilio",
+    "Paolo Pani",
+    "Rodrigo Panosso Macedo",
+    "Chantal Pitte",
+    "Lorenzo Pompili",
+    "Jaime Redondo-Yuste",
+    "Maur\u00edcio Richartz",
+    "Antonio Riotto",
+    "Jorge E. Santos",
+    "Bangalore Sathyaprakash",
+    "Laura Sberna",
+    "Hector O. Silva",
+    "Leo C. Stein",
+    "Alexandre Toubiana",
+    "Sebastian H. V\u00f6lkel",
+    "Julian Westerweck",
+    "Huan Yang",
+    "Sophia Yi",
+    "Nicolas Yunes",
+    "Hengrui Zhu"
+   ],
+   "year": "2025",
+   "doi": null,
+   "journal_ref": null
+  },
+  "2511.17067": {
+   "arxiv_id": "2511.17067",
+   "title": "Exceptional line and pseudospectrum in black hole spectroscopy",
+   "authors": [
+    "Li-Ming Cao",
+    "Ming-Fei Ji",
+    "Liang-Bi Wu",
+    "Yu-Sen Zhou"
+   ],
+   "year": "2025",
+   "doi": null,
+   "journal_ref": null
+  },
+  "2512.18631": {
+   "arxiv_id": "2512.18631",
+   "title": "Spectral instability of parametrized black hole quasinormal modes in the high-overtone limit via the exact WKB analysis",
+   "authors": [
+    "Taiga Miyachi",
+    "Ryo Namba",
+    "Hidetoshi Omiya",
+    "Naritaka Oshita"
+   ],
+   "year": "2025",
+   "doi": "10.1103/gsht-7s9l",
+   "journal_ref": "Phys. Rev. D 113, 124006 (2026)"
+  },
+  "2308.16227": {
+   "arxiv_id": "2308.16227",
+   "title": "Black-hole spectroscopy: quasinormal modes, ringdown stability and the pseudospectrum",
+   "authors": [
+    "Kyriakos Destounis",
+    "Francisco Duque"
+   ],
+   "year": "2023",
+   "doi": "10.1007/978-3-031-55098-0_6",
+   "journal_ref": "Black-Hole Spectroscopy: Quasinormal Modes, Ringdown Stability and the Pseudospectrum. In: Papantonopoulos, E., Mavromatos, N. (eds) Compact Objects in the Universe (2024)"
+  },
+  "gr-qc/9602032": {
+   "arxiv_id": "gr-qc/9602032",
+   "title": "About the Significance of Quasinormal Modes of Black Holes",
+   "authors": [
+    "Hans-Peter Nollert"
+   ],
+   "year": "1996",
+   "doi": "10.1103/PhysRevD.53.4397",
+   "journal_ref": "Phys.Rev. D53 (1996) 4397-4402"
+  },
+  "1111.5024": {
+   "arxiv_id": "1111.5024",
+   "title": "A New Approach to Black Hole Quasinormal Modes: A Review of the Asymptotic Iteration Method",
+   "authors": [
+    "H. T. Cho",
+    "A. S. Cornell",
+    "Jason Doukas",
+    "T. R. Huang",
+    "Wade Naylor"
+   ],
+   "year": "2011",
+   "doi": null,
+   "journal_ref": null
+  },
+  "1404.7149": {
+   "arxiv_id": "1404.7149",
+   "title": "Can environmental effects spoil precision gravitational-wave astrophysics?",
+   "authors": [
+    "Enrico Barausse",
+    "Vitor Cardoso",
+    "Paolo Pani"
+   ],
+   "year": "2014",
+   "doi": "10.1103/PhysRevD.89.104059",
+   "journal_ref": "Phys.Rev. D89 (2014) 104059"
+  },
+  "0705.2880": {
+   "arxiv_id": "0705.2880",
+   "title": "Instability of the massive Klein-Gordon field on the Kerr spacetime",
+   "authors": [
+    "Sam R. Dolan"
+   ],
+   "year": "2007",
+   "doi": "10.1103/PhysRevD.76.084001",
+   "journal_ref": "Phys.Rev.D76:084001,2007"
+  },
+  "2509.06411": {
+   "arxiv_id": "2509.06411",
+   "title": "Resonance in black hole ringdown: Benchmarking quasinormal mode excitation and extraction",
+   "authors": [
+    "Kei-ichiro Kubota",
+    "Hayato Motohashi"
+   ],
+   "year": "2025",
+   "doi": "10.1103/pwyd-nv6v",
+   "journal_ref": "Phys.Rev.D 113, 043053 (2026)"
+  },
+  "0905.2975": {
+   "arxiv_id": "0905.2975",
+   "title": "Quasinormal modes of black holes and black branes",
+   "authors": [
+    "Emanuele Berti",
+    "Vitor Cardoso",
+    "Andrei O. Starinets"
+   ],
+   "year": "2009",
+   "doi": "10.1088/0264-9381/26/16/163001",
+   "journal_ref": null
+  },
+  "gr-qc/0402037": {
+   "arxiv_id": "gr-qc/0402037",
+   "title": "Instability of Massive Scalar Fields in Kerr-Newman Spacetime",
+   "authors": [
+    "Hironobu Furuhashi",
+    "Yasusada Nambu"
+   ],
+   "year": "2004",
+   "doi": "10.1143/PTP.112.983",
+   "journal_ref": "Prog.Theor.Phys. 112 (2004) 983-995"
+  },
+  "2004.06434": {
+   "arxiv_id": "2004.06434",
+   "title": "Pseudospectrum and black hole quasi-normal mode (in)stability",
+   "authors": [
+    "Jos\u00e9 Luis Jaramillo",
+    "Rodrigo Panosso Macedo",
+    "Lamis Al Sheikh"
+   ],
+   "year": "2020",
+   "doi": "10.1103/PhysRevX.11.031003",
+   "journal_ref": "Phys. Rev. X 11, 031003 (2021)"
+  },
+  "1102.4014": {
+   "arxiv_id": "1102.4014",
+   "title": "Quasinormal modes of black holes: from astrophysics to string theory",
+   "authors": [
+    "R. A. Konoplya",
+    "A. Zhidenko"
+   ],
+   "year": "2011",
+   "doi": "10.1103/RevModPhys.83.793",
+   "journal_ref": "Rev.Mod.Phys.83:793-836,2011"
+  },
+  "2205.08547": {
+   "arxiv_id": "2205.08547",
+   "title": "Stability of the fundamental quasinormal mode in time-domain observations against small perturbations",
+   "authors": [
+    "Emanuele Berti",
+    "Vitor Cardoso",
+    "Mark Ho-Yeuk Cheung",
+    "Francesco Di Filippo",
+    "Francisco Duque",
+    "Paul Martens",
+    "Shinji Mukohyama"
+   ],
+   "year": "2022",
+   "doi": "10.1103/PhysRevD.106.084011",
+   "journal_ref": "Phys. Rev. D 106, 084036 (2022)"
+  },
+  "2105.03451": {
+   "arxiv_id": "2105.03451",
+   "title": "Gravitational wave signatures of black hole quasi-normal mode instability",
+   "authors": [
+    "Jos\u00e9 Luis Jaramillo",
+    "Rodrigo Panosso Macedo",
+    "Lamis Al Sheikh"
+   ],
+   "year": "2021",
+   "doi": "10.1103/PhysRevLett.128.211102",
+   "journal_ref": null
+  },
+  "gr-qc/0607133": {
+   "arxiv_id": "gr-qc/0607133",
+   "title": "Massive scalar field quasi-normal modes of higher dimensional black holes",
+   "authors": [
+    "Alexander Zhidenko"
+   ],
+   "year": "2006",
+   "doi": "10.1103/PhysRevD.74.064017",
+   "journal_ref": "Phys.Rev. D74 (2006) 064017"
+  },
+  "1610.08135": {
+   "arxiv_id": "1610.08135",
+   "title": "A Matrix Method for Quasinormal Modes: Schwarzschild Black Holes in Asymptotically Flat and (Anti-) de Sitter Spacetimes",
+   "authors": [
+    "Kai Lin",
+    "Wei-Liang Qian"
+   ],
+   "year": "2016",
+   "doi": "10.1088/1361-6382/aa6643",
+   "journal_ref": "Class. Quantum Grav. 34 (2017) 095004 (13pp)"
+  },
+  "2111.15197": {
+   "arxiv_id": "2111.15197",
+   "title": "Spectral Problems for Quasinormal Modes of Black Holes",
+   "authors": [
+    "Yasuyuki Hatsuda",
+    "Masashi Kimura"
+   ],
+   "year": "2021",
+   "doi": "10.3390/universe7120476",
+   "journal_ref": null
+  },
+  "2111.05415": {
+   "arxiv_id": "2111.05415",
+   "title": "Destabilizing the Fundamental Mode of Black Holes: The Elephant and the Flea",
+   "authors": [
+    "Mark Ho-Yeuk Cheung",
+    "Kyriakos Destounis",
+    "Rodrigo Panosso Macedo",
+    "Emanuele Berti",
+    "Vitor Cardoso"
+   ],
+   "year": "2021",
+   "doi": "10.1103/PhysRevLett.128.111103",
+   "journal_ref": "Phys. Rev. Lett. 128.11 (2022): 111103"
+  },
+  "gr-qc/9909058": {
+   "arxiv_id": "gr-qc/9909058",
+   "title": "Quasi-Normal Modes of Stars and Black Holes",
+   "authors": [
+    "Kostas D. Kokkotas",
+    "Bernd G. Schmidt"
+   ],
+   "year": "1999",
+   "doi": "10.12942/lrr-1999-2",
+   "journal_ref": "LivingRev.Rel.2:2,1999"
+  },
+  "2407.20131": {
+   "arxiv_id": "2407.20131",
+   "title": "Spectral instability of black holes: relating the frequency domain to the time domain",
+   "authors": [
+    "Yiqiu Yang",
+    "Zhan-Feng Mai",
+    "Run-Qiu Yang",
+    "Lijing Shao",
+    "Emanuele Berti"
+   ],
+   "year": "2024",
+   "doi": "10.1103/PhysRevD.110.084018",
+   "journal_ref": "Phys. Rev. D 110 (2024) 084018"
+  },
+  "2507.11663": {
+   "arxiv_id": "2507.11663",
+   "title": "Asymptotic quasinormal modes, echoes, and black hole spectral instability: a brief review",
+   "authors": [
+    "Shui-Fa Shen",
+    "Guan-Ru Li",
+    "Ramin G. Daghigh",
+    "Jodin C. Morey",
+    "Michael D. Green",
+    "Wei-Liang Qian",
+    "Rui-Hong Yue"
+   ],
+   "year": "2025",
+   "doi": null,
+   "journal_ref": null
+  },
+  "2512.02110": {
+   "arxiv_id": "2512.02110",
+   "title": "Exceptional Points and Resonance in Black Hole Ringdown",
+   "authors": [
+    "Rodrigo Panosso Macedo",
+    "Takuya Katagiri",
+    "Kei-ichiro Kubota",
+    "Hayato Motohashi"
+   ],
+   "year": "2025",
+   "doi": "10.1103/5w5d-kr25",
+   "journal_ref": "Phys. Rev. D 113, L121504 (2026)"
+  },
+  "2511.16640": {
+   "arxiv_id": "2511.16640",
+   "title": "Ergodic Hysteresis of the Kerr black hole spectrum",
+   "authors": [
+    "Jo\u00e3o Paulo Cavalcante",
+    "Maur\u00edcio Richartz",
+    "Bruno Carneiro da Cunha"
+   ],
+   "year": "2025",
+   "doi": "10.1103/mssm-ws7d",
+   "journal_ref": "Phys. Rev. D 113, L101504 (2026)"
+  },
+  "2204.08052": {
+   "arxiv_id": "2204.08052",
+   "title": "Symmetry-protected topological exceptional chains in non-Hermitian crystals",
+   "authors": [
+    "Ruo-Yang Zhang",
+    "Xiaohan Cui",
+    "Wen-Jie Chen",
+    "Zhao-Qing Zhang",
+    "C. T. Chan"
+   ],
+   "year": "2022",
+   "doi": null,
+   "journal_ref": null
+  },
+  "1910.11712": {
+   "arxiv_id": "1910.11712",
+   "title": "NEP: a module for the parallel solution of nonlinear eigenvalue problems in SLEPc",
+   "authors": [
+    "Carmen Campos",
+    "Jose E. Roman"
+   ],
+   "year": "2019",
+   "doi": "10.1145/3447544",
+   "journal_ref": "ACM Trans. Math. Software, 47(3), Article 23, 2021"
+  },
+  "1703.06439": {
+   "arxiv_id": "1703.06439",
+   "title": "A Matrix Method for Quasinormal Modes: Kerr and Kerr-Sen Black Holes",
+   "authors": [
+    "Kai Lin",
+    "Wei-Liang Qian",
+    "Alan B. Pavan",
+    "Elcio Abdalla"
+   ],
+   "year": "2017",
+   "doi": "10.1142/S0217732317501346",
+   "journal_ref": "Mod. Phys. Lett. A, Vol. 32, No. 25 (2017) 1750134"
+  },
+  "1908.10377": {
+   "arxiv_id": "1908.10377",
+   "title": "qnm: A Python package for calculating Kerr quasinormal modes, separation constants, and spherical-spheroidal mixing coefficients",
+   "authors": [
+    "Leo C. Stein"
+   ],
+   "year": "2019",
+   "doi": "10.21105/joss.01683",
+   "journal_ref": "J. Open Source Softw., 4(42), 1683 (2019)"
+  },
+  "1912.10048": {
+   "arxiv_id": "1912.10048",
+   "title": "Exceptional Topology of Non-Hermitian Systems",
+   "authors": [
+    "Emil J. Bergholtz",
+    "Jan Carl Budich",
+    "Flore K. Kunst"
+   ],
+   "year": "2019",
+   "doi": "10.1103/RevModPhys.93.015005",
+   "journal_ref": "Rev. Mod. Phys. 93, 15005 (2021)"
+  },
+  "2006.01837": {
+   "arxiv_id": "2006.01837",
+   "title": "Non-Hermitian Physics",
+   "authors": [
+    "Yuto Ashida",
+    "Zongping Gong",
+    "Masahito Ueda"
+   ],
+   "year": "2020",
+   "doi": "10.1080/00018732.2021.1876991",
+   "journal_ref": "Advances in Physics 69, 3 (2020)"
+  },
+  "2003.06232": {
+   "arxiv_id": "2003.06232",
+   "title": "Bernstein spectral method for quasinormal modes and other eigenvalue problems",
+   "authors": [
+    "Sean Fortuna",
+    "Ian Vega"
+   ],
+   "year": "2020",
+   "doi": "10.1140/epjc/s10052-023-12350-9",
+   "journal_ref": "Eur. Phys. J. C 83, 1170 (2023)"
+  },
+  "2103.15729": {
+   "arxiv_id": "2103.15729",
+   "title": "Symmetry and Higher-Order Exceptional Points",
+   "authors": [
+    "Ipsita Mandal",
+    "Emil J. Bergholtz"
+   ],
+   "year": "2021",
+   "doi": "10.1103/PhysRevLett.127.186601",
+   "journal_ref": "Phys. Rev. Lett. 127, 186601 (2021)"
+  },
+  "1704.00361": {
+   "arxiv_id": "1704.00361",
+   "title": "Quasinormal modes of black holes. The improved semianalytic approach",
+   "authors": [
+    "Jerzy Matyjasek",
+    "Micha\u0142 Opala"
+   ],
+   "year": "2017",
+   "doi": "10.1103/PhysRevD.96.024011",
+   "journal_ref": "Phys. Rev. D 96, 024011 (2017)"
+  },
+  "2402.07053": {
+   "arxiv_id": "2402.07053",
+   "title": "Certified homotopy tracking using the Krawczyk method",
+   "authors": [
+    "Timothy Duff",
+    "Kisun Lee"
+   ],
+   "year": "2024",
+   "doi": null,
+   "journal_ref": null
+  },
+  "1909.11579": {
+   "arxiv_id": "1909.11579",
+   "title": "A high order continuation method to locate exceptional points and to compute Puiseux series with applications to acoustic waveguides",
+   "authors": [
+    "Benoit Nennig",
+    "Emmanuel Perrey-Debain"
+   ],
+   "year": "2019",
+   "doi": "10.1016/j.jcp.2020.109425",
+   "journal_ref": null
+  },
+  "2011.05000": {
+   "arxiv_id": "2011.05000",
+   "title": "Certifying zeros of polynomial systems using interval arithmetic",
+   "authors": [
+    "Paul Breiding",
+    "Kemal Rose",
+    "Sascha Timme"
+   ],
+   "year": "2020",
+   "doi": null,
+   "journal_ref": null
+  }
+ }
+}

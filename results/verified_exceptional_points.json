@@ -1,5 +1,15 @@
 {
-  "status": "complete",
-  "records": [],
-  "note": "NONE. No EP passed the EP2 gate."
+ "status": "complete",
+ "provenance": {
+  "commit": "3ccb7a2174f3d3332124a6fd0da8020c81dd778f",
+  "solver": "leaver-cf",
+  "precision": "double",
+  "depth": 200,
+  "runtime_s": 62.9
+ },
+ "gate": "docs/EP_VERIFICATION_GATE.md (G1-G6 here; G8-G10 elsewhere)",
+ "n_verified": 0,
+ "n_rejected": 10,
+ "n_unresolved": 0,
+ "verified": []
 }

@@ -1,4 +1,29 @@
 {
-  "status": "not_started",
-  "records": []
+ "status": "complete",
+ "provenance": {
+  "commit": "62ae3ef064f02784588ae94349ffb14b626b0ac9"
+ },
+ "reproducibility_check": {
+  "method": "fresh git clone of research/absolute-final into a clean directory, new venv from requirements.lock",
+  "fast_tests": "140 passed (machinery + certification + symmetry)",
+  "reproduce_core_science_quick": "132 passed",
+  "full_suite_in_place": "252 passed",
+  "date": "2026-08-02"
+ },
+ "committed_artifacts": [
+  "results/*.json (compact; the 24MB atlas is NOT committed)",
+  "docs/*.md",
+  "manuscript/*",
+  "scripts/*.py",
+  "src/mp5d/**",
+  "tests/**"
+ ],
+ "regenerable": {
+  "data/full_branch_atlas/": "scripts/build_branch_atlas.py --sector <m1,m2> --resume; verify against the sha256 per shard in results/full_branch_atlas.json"
+ },
+ "commands": {
+  "quick": "./scripts/reproduce_core_science.sh --quick",
+  "core": "./scripts/reproduce_core_science.sh",
+  "full": "./scripts/reproduce_full_science.sh --resume"
+ }
 }

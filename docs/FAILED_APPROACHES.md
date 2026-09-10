@@ -226,3 +226,147 @@ discretization, in which case no spatial resolution helps. UNTESTED.
 Value retained: Solver D is a second recurrence-free method, and it agrees with
 Solver C (2.1423) against the recurrence family (A 2.1395, B 2.1407),
 strengthening the finding that the recurrence is the outlier near extremality.
+
+---
+
+## Branch-label collapse in the first atlas build (fixed, guard added)
+
+**Attempted.** Build the fixed-sector branch atlas by nested continuation with
+`S_GRID = [0.0, 0.12, 0.24, 0.34, 0.42]` and a predictor tolerance of `0.25`.
+
+**Symptom.** The tier-1 collision search reported a minimum within-sector branch
+gap of `4.3e-15` — machine precision — at 200 parameter points, which read like
+a perfect degeneracy across the whole atlas.
+
+**Mechanism.** Always the same `l`, always adjacent overtones `N=2` and `N=3`,
+and always in `l = 6`. The first step of the stage-2 walk (`s: 0 → 0.12`) has
+only **one** history point, so `extrapolate` degenerates to the trivial
+predictor `omega_prev`. For a strongly damped high-`l` overtone the true motion
+over that step exceeds the spacing to the neighbouring overtone, and Muller's
+method converged onto the `N=2` branch while still carrying the `N=3` label.
+The jump was `|Δω| ≈ 0.79`, just under the `0.25·|ω| ≈ 0.86` tolerance, so the
+predictor guard did not fire.
+
+**How it was caught.** Not by the gap. The scale-free tier-2 diagnostic reported
+a root separation of `≈ 1.0` at points whose tier-1 gap was `1e-15` — a flat
+contradiction, since a genuine coalescence must show *both* small. This is
+precisely why the search is two-tier: tier 1 alone would have reported a
+spectacular false positive.
+
+**Fixes applied.**
+1. Finer early `s` steps: `[0.0, 0.04, 0.08, 0.14, 0.20, 0.27, 0.34, 0.42]`,
+   so the quadratic predictor is active before the steps grow.
+2. Predictor tolerance tightened `0.25 → 0.12`.
+3. A permanent **collapse guard** in `scripts/collision_search.py`: a tier-1 gap
+   below `1e-10` whose tier-2 separation exceeds `1000×` the gap is classified
+   `collapsed_label` and excluded from candidacy. Reported explicitly as
+   `n_collapsed_labels`, never silently dropped.
+
+**Revisit?** No. But the general lesson stands: *a small computed gap between
+two labels is evidence about the labels first and about the physics second.*
+A minimal extract documenting the defect is kept at
+`results/atlas_v1_collapse_extract.json`; the full 13 MB superseded atlas was
+not worth carrying in a public repository.
+
+---
+
+## Branch jump at large `s` admitted by a `|ω|`-relative tolerance (fixed)
+
+**Attempted.** Guard branch identity with `miss > predictor_tol · max(|ω|, 1)`,
+`predictor_tol = 0.12`, on the `s`-grid `[0, 0.04, 0.08, 0.14, 0.20, 0.27,
+0.34, 0.42]`.
+
+**Symptom.** The gap table for sector `(1,1)`, `l = 4`, `N = 2` vs `N = 3`,
+`δ = 0` was smooth and slowly decreasing out to `s = 0.27` (0.8373 → 0.7802)
+and then jumped non-monotonically to 1.0637 at `s = 0.34` and 1.3329 at
+`s = 0.42`.
+
+**Mechanism.** The `N = 3` branch jumped at the `0.27 → 0.34` step. Its
+`Im ω` had been decreasing smoothly (`−2.6477, −2.6429, −2.6349, −2.6159,
+−2.5857, −2.5299`) and then *reversed* to `−2.7617`. The predictor miss was
+`2.50e-1`, but the tolerance at `|ω| ≈ 3.66` was `0.12 × 3.66 ≈ 0.44`, so the
+guard did not fire. **A tolerance proportional to `|ω|` is not a branch-identity
+test** — it is a constant, and at large `|ω|` it is a very weak one.
+
+This contaminated the reported minimum branch gap: the tightest "candidate"
+(`gap = 0.5116` at `s = 0.42`) sat on the jumped branch.
+
+**Fix.** The predictor miss is the local truncation error of the extrapolator,
+so along a genuine branch it follows a smooth trend. The tolerance is now taken
+from the branch's **own history**:
+
+```
+allowed = max(4 × median(previous misses),  0.02 × max(|ω|, 1))
+```
+
+At the offending step this gives `allowed = 2.25e-1 < 2.50e-1`, so the jump is
+caught. It does not fire on the legitimate `N = 2` walk over the same range.
+
+**Also fixed:** the `s` grid. With steps `≤ 0.05` the `N = 3` branch continues
+smoothly all the way to `s = 0.42`, ending at `2.569781 − 2.226019i` — not the
+jumped `2.389498 − 2.873153i`. An 11-point (`≤ 0.05`) and a 12-point (`≤ 0.04`)
+grid give **identical** endpoints on all four hardest branches tested, so the
+continuation is resolution-independent at this spacing.
+
+**Lesson, distinct from the earlier collapse.** The first defect was a bad
+*predictor* (trivial on the first step); this one was a bad *acceptance test*.
+Both produced small computed gaps that looked physical. Any branch-gap minimum
+must be traced back to the trajectory that produced it before it is believed.
+
+---
+
+## The `|a₁/a₂|` separation estimator, withdrawn as a bound
+
+**Attempted.** Use the ratio of the first two Taylor coefficients of the
+continued-fraction spectral condition about a converged root as a
+normalization-invariant estimate of the distance to the nearest partner root,
+and quote its minimum over the atlas as a bound excluding EP2.
+
+**Two independent defects, both fatal to the bound.**
+
+*1. It is only asymptotically insensitive to normalization, not invariant.*
+Under `F → gF` with `g` holomorphic and nonvanishing, expanding about a simple
+root gives `ã₁ = g₀a₁` and `ã₂ = g₀a₂ + g₁a₁`, hence
+
+```
+ã₁/ã₂ = (a₁/a₂) / (1 + (g₁/g₀)(a₁/a₂))
+```
+
+which returns `a₁/a₂` only as `a₁/a₂ → 0`. Measured against `g = 10⁷e^{3ω}`, the
+distortion follows `|1 + 3d|⁻¹` to five decimals: 1.0003 at `d = 10⁻⁴` but
+**1.4286 at `d = 0.1`**. The manuscript had quoted "agrees to 2 %", which was
+the small-`d` end of exactly this curve.
+
+*2. Decisively: it measures the distance to the nearest zero **or pole**.*
+Leaver's continued fraction is meromorphic, and its poles sit close to the
+roots. Contour integration around the tightest candidate returns
+`zeros − poles = 0` for every radius up to `0.20`, i.e. one zero and one pole
+inside. The reported minimum of `0.0821` is therefore the distance to a **pole
+of the continued fraction**, carrying no spectral meaning whatever.
+
+**A third defect found on the way.** The diagnostics had been evaluated with
+the continued fraction inverted at index `0` regardless of the branch's own
+overtone. The inversions are *not* equivalent at finite depth: at a tracked
+`N = 2` root the `N = 2` inversion gives `|F| = 1.9e-13` while inversions
+`0, 1, 3` give `7e-2`, `1e-1` and `1.1`, and these values are fully converged in
+depth (identical at depths 200 through 3200). Every coefficient extracted from
+the wrong inversion was meaningless. A residual gate now rejects any expansion
+whose `a₀` is not small, and the inversion index is threaded through from the
+branch label.
+
+**Consequence for the result.** The bound is withdrawn, not repaired. What
+survives is stronger for being narrower:
+
+* the pairwise gap between **tracked modes**, each independently confirmed by an
+  ODE residual (`~1e-12`) and by cross-solver agreement (`|A−C| ≤ 2.06e-9`);
+* the eigenvalue condition number from Solver C's collocation matrix, which is
+  pole-free.
+
+**Also withdrawn:** `min|D| = 0.2618` was quoted as a third independent bound.
+Since `D = (ω₊−ω₋)²` it is the square of the gap, `0.5116² = 0.26176`, agreeing
+to sixteen digits. It was one quantity reported twice.
+
+**Revisit?** A contour bound remains the right goal, but it needs a spectral
+condition that is *entire*. The Hill determinant as implemented returns a
+normalized tail ratio requiring Wynn acceleration and is not usable at fixed
+truncation. A Wronskian or hyperboloidal formulation would supply one.

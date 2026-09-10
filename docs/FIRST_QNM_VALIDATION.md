@@ -2,7 +2,7 @@
 
 **Status: cross-solver verified.** This is the first quasinormal frequency
 computed in this repository, and the first that meets the benchmark gate in
-`.claude/skills/mp5d-bulk-research/SCIENTIFIC_GATES.md`.
+`.claude/skills/mp5d-complete-project/SCIENTIFIC_GATES.md`.
 
 ## Result
 

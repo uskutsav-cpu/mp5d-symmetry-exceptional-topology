@@ -1,0 +1,498 @@
+{
+ "status": "complete",
+ "provenance": {
+  "commit": "3ccb7a2174f3d3332124a6fd0da8020c81dd778f"
+ },
+ "note": "The atlas data itself is not committed (~24 MB). Regenerate with scripts/build_branch_atlas.py and compare sha256 per shard.",
+ "n_atlas_points": 50558,
+ "n_sectors": 7,
+ "failure_census": {
+  "predictor_miss": 118,
+  "not_converged": 33
+ },
+ "sectors": [
+  {
+   "sector": [
+    -1,
+    -1
+   ],
+   "n_points": 7452,
+   "n_failures": 2,
+   "n_branches": 12,
+   "points_per_branch": {
+    "m-1_-1__l2__N0": 552,
+    "m-1_-1__l2__N1": 460,
+    "m-1_-1__l2__N2": 644,
+    "m-1_-1__l2__N3": 644,
+    "m-1_-1__l4__N0": 644,
+    "m-1_-1__l4__N1": 644,
+    "m-1_-1__l4__N2": 644,
+    "m-1_-1__l4__N3": 644,
+    "m-1_-1__l6__N0": 644,
+    "m-1_-1__l6__N1": 644,
+    "m-1_-1__l6__N2": 644,
+    "m-1_-1__l6__N3": 644
+   },
+   "max_residual": 1.9158980826330744e-09,
+   "max_predictor_miss": 0.13219516790421137,
+   "r_minus_range": [
+    0.0,
+    0.22870680067498927
+   ],
+   "extremality_min": 0.2944000000000001,
+   "sha256": "a275fdaba6617d7d6eb6ba9794549de7d198090b8d92556ce2625124483366d8",
+   "provenance": {
+    "commit": "309b9a6ff520e0f8cdc89120c586763a89976db9",
+    "solver": "leaver-cf",
+    "depth": 200,
+    "angular_N": 40,
+    "precision": "double",
+    "z_minus_max": 0.2,
+    "extremality_min": 0.05,
+    "mu_grid": [
+     0.0,
+     0.3,
+     0.6,
+     0.9,
+     1.2,
+     1.5,
+     1.8
+    ],
+    "s_grid": [
+     0.0,
+     0.04,
+     0.08,
+     0.12,
+     0.16,
+     0.2,
+     0.25,
+     0.29,
+     0.33,
+     0.37,
+     0.42
+    ],
+    "delta_pos": [
+     0.05,
+     0.1,
+     0.15,
+     0.2
+    ],
+    "runtime_s": 1306.5
+   }
+  },
+  {
+   "sector": [
+    0,
+    0
+   ],
+   "n_points": 6697,
+   "n_failures": 52,
+   "n_branches": 12,
+   "points_per_branch": {
+    "m0_0__l0__N0": 407,
+    "m0_0__l0__N1": 503,
+    "m0_0__l0__N2": 510,
+    "m0_0__l0__N3": 446,
+    "m0_0__l2__N0": 552,
+    "m0_0__l2__N1": 460,
+    "m0_0__l2__N2": 644,
+    "m0_0__l2__N3": 599,
+    "m0_0__l4__N0": 644,
+    "m0_0__l4__N1": 644,
+    "m0_0__l4__N2": 644,
+    "m0_0__l4__N3": 644
+   },
+   "max_residual": 3.639296902627701e-09,
+   "max_predictor_miss": 0.23843856268494626,
+   "r_minus_range": [
+    0.0,
+    0.22870680067498927
+   ],
+   "extremality_min": 0.2944000000000001,
+   "sha256": "8fe42dfd095f63011d349a5b9e34632602d8854644b63c6bbd758dc8d87eec21",
+   "provenance": {
+    "commit": "309b9a6ff520e0f8cdc89120c586763a89976db9",
+    "solver": "leaver-cf",
+    "depth": 200,
+    "angular_N": 40,
+    "precision": "double",
+    "z_minus_max": 0.2,
+    "extremality_min": 0.05,
+    "mu_grid": [
+     0.0,
+     0.3,
+     0.6,
+     0.9,
+     1.2,
+     1.5,
+     1.8
+    ],
+    "s_grid": [
+     0.0,
+     0.04,
+     0.08,
+     0.12,
+     0.16,
+     0.2,
+     0.25,
+     0.29,
+     0.33,
+     0.37,
+     0.42
+    ],
+    "delta_pos": [
+     0.05,
+     0.1,
+     0.15,
+     0.2
+    ],
+    "runtime_s": 1450.4
+   }
+  },
+  {
+   "sector": [
+    1,
+    0
+   ],
+   "n_points": 7282,
+   "n_failures": 23,
+   "n_branches": 12,
+   "points_per_branch": {
+    "m1_0__l1__N0": 368,
+    "m1_0__l1__N1": 644,
+    "m1_0__l1__N2": 581,
+    "m1_0__l1__N3": 576,
+    "m1_0__l3__N0": 644,
+    "m1_0__l3__N1": 644,
+    "m1_0__l3__N2": 608,
+    "m1_0__l3__N3": 644,
+    "m1_0__l5__N0": 644,
+    "m1_0__l5__N1": 644,
+    "m1_0__l5__N2": 644,
+    "m1_0__l5__N3": 641
+   },
+   "max_residual": 1.5543409937460372e-09,
+   "max_predictor_miss": 0.1633368435532514,
+   "r_minus_range": [
+    0.0,
+    0.22870680067498927
+   ],
+   "extremality_min": 0.2944000000000001,
+   "sha256": "8424c828ff68111c27dc5080f557f907d9cbcd2758451c3d28247aabdadd4338",
+   "provenance": {
+    "commit": "309b9a6ff520e0f8cdc89120c586763a89976db9",
+    "solver": "leaver-cf",
+    "depth": 200,
+    "angular_N": 40,
+    "precision": "double",
+    "z_minus_max": 0.2,
+    "extremality_min": 0.05,
+    "mu_grid": [
+     0.0,
+     0.3,
+     0.6,
+     0.9,
+     1.2,
+     1.5,
+     1.8
+    ],
+    "s_grid": [
+     0.0,
+     0.04,
+     0.08,
+     0.12,
+     0.16,
+     0.2,
+     0.25,
+     0.29,
+     0.33,
+     0.37,
+     0.42
+    ],
+    "delta_pos": [
+     0.05,
+     0.1,
+     0.15,
+     0.2
+    ],
+    "runtime_s": 1346.4
+   }
+  },
+  {
+   "sector": [
+    1,
+    1
+   ],
+   "n_points": 7326,
+   "n_failures": 16,
+   "n_branches": 12,
+   "points_per_branch": {
+    "m1_1__l2__N0": 552,
+    "m1_1__l2__N1": 460,
+    "m1_1__l2__N2": 581,
+    "m1_1__l2__N3": 581,
+    "m1_1__l4__N0": 644,
+    "m1_1__l4__N1": 644,
+    "m1_1__l4__N2": 644,
+    "m1_1__l4__N3": 644,
+    "m1_1__l6__N0": 644,
+    "m1_1__l6__N1": 644,
+    "m1_1__l6__N2": 644,
+    "m1_1__l6__N3": 644
+   },
+   "max_residual": 1.7548647721511244e-09,
+   "max_predictor_miss": 0.1654935202806268,
+   "r_minus_range": [
+    0.0,
+    0.22870680067498927
+   ],
+   "extremality_min": 0.2944000000000001,
+   "sha256": "b3cfcbb86d1265457376dc79305dcf3a7b1c5e52ab01a3edfc2a7f061e865746",
+   "provenance": {
+    "commit": "309b9a6ff520e0f8cdc89120c586763a89976db9",
+    "solver": "leaver-cf",
+    "depth": 200,
+    "angular_N": 40,
+    "precision": "double",
+    "z_minus_max": 0.2,
+    "extremality_min": 0.05,
+    "mu_grid": [
+     0.0,
+     0.3,
+     0.6,
+     0.9,
+     1.2,
+     1.5,
+     1.8
+    ],
+    "s_grid": [
+     0.0,
+     0.04,
+     0.08,
+     0.12,
+     0.16,
+     0.2,
+     0.25,
+     0.29,
+     0.33,
+     0.37,
+     0.42
+    ],
+    "delta_pos": [
+     0.05,
+     0.1,
+     0.15,
+     0.2
+    ],
+    "runtime_s": 1147.2
+   }
+  },
+  {
+   "sector": [
+    2,
+    0
+   ],
+   "n_points": 7290,
+   "n_failures": 32,
+   "n_branches": 12,
+   "points_per_branch": {
+    "m2_0__l2__N0": 552,
+    "m2_0__l2__N1": 460,
+    "m2_0__l2__N2": 574,
+    "m2_0__l2__N3": 581,
+    "m2_0__l4__N0": 644,
+    "m2_0__l4__N1": 644,
+    "m2_0__l4__N2": 644,
+    "m2_0__l4__N3": 644,
+    "m2_0__l6__N0": 644,
+    "m2_0__l6__N1": 644,
+    "m2_0__l6__N2": 644,
+    "m2_0__l6__N3": 615
+   },
+   "max_residual": 8.196828115007747e-10,
+   "max_predictor_miss": 0.940990193687574,
+   "r_minus_range": [
+    0.0,
+    0.22870680067498927
+   ],
+   "extremality_min": 0.2944000000000001,
+   "sha256": "291d394b723a65092cb05496a4559a95e7be8102081c2cb982e6285a4f8cc991",
+   "provenance": {
+    "commit": "309b9a6ff520e0f8cdc89120c586763a89976db9",
+    "solver": "leaver-cf",
+    "depth": 200,
+    "angular_N": 40,
+    "precision": "double",
+    "z_minus_max": 0.2,
+    "extremality_min": 0.05,
+    "mu_grid": [
+     0.0,
+     0.3,
+     0.6,
+     0.9,
+     1.2,
+     1.5,
+     1.8
+    ],
+    "s_grid": [
+     0.0,
+     0.04,
+     0.08,
+     0.12,
+     0.16,
+     0.2,
+     0.25,
+     0.29,
+     0.33,
+     0.37,
+     0.42
+    ],
+    "delta_pos": [
+     0.05,
+     0.1,
+     0.15,
+     0.2
+    ],
+    "runtime_s": 1191.8
+   }
+  },
+  {
+   "sector": [
+    2,
+    1
+   ],
+   "n_points": 7395,
+   "n_failures": 13,
+   "n_branches": 12,
+   "points_per_branch": {
+    "m2_1__l3__N0": 644,
+    "m2_1__l3__N1": 644,
+    "m2_1__l3__N2": 644,
+    "m2_1__l3__N3": 545,
+    "m2_1__l5__N0": 644,
+    "m2_1__l5__N1": 644,
+    "m2_1__l5__N2": 644,
+    "m2_1__l5__N3": 410,
+    "m2_1__l7__N0": 644,
+    "m2_1__l7__N1": 644,
+    "m2_1__l7__N2": 644,
+    "m2_1__l7__N3": 644
+   },
+   "max_residual": 5.636494001627893e-10,
+   "max_predictor_miss": 0.22616895374276474,
+   "r_minus_range": [
+    0.0,
+    0.22870680067498927
+   ],
+   "extremality_min": 0.2944000000000001,
+   "sha256": "a8d7bc8c02233d6e25e7eb138753e80532a4d5afc907e1284f1f335edc4f96bd",
+   "provenance": {
+    "commit": "309b9a6ff520e0f8cdc89120c586763a89976db9",
+    "solver": "leaver-cf",
+    "depth": 200,
+    "angular_N": 40,
+    "precision": "double",
+    "z_minus_max": 0.2,
+    "extremality_min": 0.05,
+    "mu_grid": [
+     0.0,
+     0.3,
+     0.6,
+     0.9,
+     1.2,
+     1.5,
+     1.8
+    ],
+    "s_grid": [
+     0.0,
+     0.04,
+     0.08,
+     0.12,
+     0.16,
+     0.2,
+     0.25,
+     0.29,
+     0.33,
+     0.37,
+     0.42
+    ],
+    "delta_pos": [
+     0.05,
+     0.1,
+     0.15,
+     0.2
+    ],
+    "runtime_s": 1089.9
+   }
+  },
+  {
+   "sector": [
+    2,
+    2
+   ],
+   "n_points": 7116,
+   "n_failures": 13,
+   "n_branches": 12,
+   "points_per_branch": {
+    "m2_2__l4__N0": 644,
+    "m2_2__l4__N1": 644,
+    "m2_2__l4__N2": 644,
+    "m2_2__l4__N3": 590,
+    "m2_2__l6__N0": 644,
+    "m2_2__l6__N1": 644,
+    "m2_2__l6__N2": 644,
+    "m2_2__l6__N3": 86,
+    "m2_2__l8__N0": 644,
+    "m2_2__l8__N1": 644,
+    "m2_2__l8__N2": 644,
+    "m2_2__l8__N3": 644
+   },
+   "max_residual": 2.9251812372173346e-10,
+   "max_predictor_miss": 0.3120565579949867,
+   "r_minus_range": [
+    0.0,
+    0.22870680067498927
+   ],
+   "extremality_min": 0.2944000000000001,
+   "sha256": "759dfd8e25eb832f1a569e8a1cf03773297ece7bfd9fa8b29476d1d9ac6516f2",
+   "provenance": {
+    "commit": "309b9a6ff520e0f8cdc89120c586763a89976db9",
+    "solver": "leaver-cf",
+    "depth": 200,
+    "angular_N": 40,
+    "precision": "double",
+    "z_minus_max": 0.2,
+    "extremality_min": 0.05,
+    "mu_grid": [
+     0.0,
+     0.3,
+     0.6,
+     0.9,
+     1.2,
+     1.5,
+     1.8
+    ],
+    "s_grid": [
+     0.0,
+     0.04,
+     0.08,
+     0.12,
+     0.16,
+     0.2,
+     0.25,
+     0.29,
+     0.33,
+     0.37,
+     0.42
+    ],
+    "delta_pos": [
+     0.05,
+     0.1,
+     0.15,
+     0.2
+    ],
+    "runtime_s": 1006.9
+   }
+  }
+ ]
+}

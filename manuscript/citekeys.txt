@@ -1,0 +1,73 @@
+A01	Myers1986A01	Black Holes in Higher Dimensional Space-Times
+A02	Emparan2008A02	Black Holes in Higher Dimensions
+A03	Murata2007A03	Separability of Field Equations in Myers-Perry
+A04	Wu2008A04	Separability of Massive Dirac in 5D Myers-Perry
+A05	Berti2005A05	Spin-Weighted Spheroidal Harmonics in Four and Higher Dimensions
+A06	Murata2008A06	Stability of 5D Myers-Perry with Equal Angular Momenta
+A07	Diasetal2010A07	An Instability of Higher-Dimensional Rotating Black Holes
+A08	Emparan2014A08	Instability of Rotating Black Holes: Large-D
+A09	Frolovetal2018A09	Massive Vector Fields in Rotating Black-Hole Spacetimes
+A10	BlazquezSalcedo2018A10	QNMs of Dirac Spinors in Rotating BHs in 4D and 5D
+A11	Lunin2019A11	Excitations of the Myers-Perry Black Holes
+A12	Ponglertsakul2020A12	Massive Scalar on Myers-Perry-de Sitter Single Rotation
+A13	Daveyetal2022A13	SCC and Eigenvalue Repulsions for Rotating dS BHs in Higher D
+A14	Lu2023A14	QNMs and Stability of Higher-D Rotating BHs under Massive Scalar
+A15	Lietal2023A15	5D Myers-Perry under Massive Scalar: Bound States and QNMs
+A16	Huang2025A16	QNMs of Massive Scalar in 5D Myers-Perry Two Arbitrary Rotations
+A17	Nakamoto2026A17	Exceptional Lines and Nearly Double-Pole QNMs in Nariai
+B18	Yangetal2012B18	Branching of QNMs for Nearly Extremal Kerr
+B19	Diasetal2021B19	Eigenvalue Repulsions in Kerr-Newman QNM Spectra
+B20	Dias2022B20	Extended Kerr-Newman eigenvalue repulsion
+B21	Davey2023B21	Scalar QNM Spectra of Kerr and RN via Kerr-Newman Repulsions
+B22	Cavalcante2024B22	Exceptional Point and Hysteresis in Kerr
+B23	Cavalcante2024B23	Massive Scalar in Kerr: Near-Extremal
+B24	Motohashi2024B24	Resonant Excitation of QNMs
+B25	Oshita2025B25	Unstable Chords and Destructive Resonant Excitation
+B26	Yang2025B26	Black Hole QNM Resonances
+B27	Kubota2025B27	Resonance in Ringdown: Benchmarking QNM Excitation
+B28	Caoetal2025B28	Exceptional Line and Pseudospectrum in Black Hole Spectroscopy
+B29	Cavalcante2025B29	Ergodic Hysteresis of the Kerr Spectrum
+B30	PanossoMacedoetal2025B30	Exceptional Points and Resonance in Ringdown
+B32	Wang2026B32	Coexistence of Spectrally Stable and Unstable Modes
+C33	Nollert1996C33	About the Significance of QNMs
+C34	NollertC34	Quantifying Excitations of QNM Systems
+C35	Barausse2014C35	Environmental Effects and Precision GW Astrophysics
+C36	Jaramillo2020C36	Pseudospectrum and QNM (In)stability
+C37	Jaramillo2021C37	GW Signatures of QNM Instability
+C38	Destounisetal2021C38	Pseudospectrum of Reissner-Nordstrom
+C39	Cheungetal2021C39	The Elephant and the Flea
+C40	GasperinC40	Energy Scales and Black Hole Pseudospectra
+C41	Bertietal2022C41	Stability of the Fundamental QNM in Time Domain
+C42	Destounis2023C42	Black-Hole Spectroscopy: QNMs Ringdown Stability Pseudospectrum
+C43	Yangetal2024C43	Spectral Instability: Frequency to Time Domain
+C44	Shenetal2025C44	Asymptotic QNMs Echoes and Spectral Instability
+C45	Miyachi2025C45	Spectral Instability via Exact WKB
+D46	Kokkotas1999D46	QNMs of Stars and Black Holes
+D47	Berti2009D47	QNMs of Black Holes and Black Branes
+D48	Konoplya2011D48	QNMs of Black Holes
+D49	Hatsuda2021D49	Spectral Problems for QNMs
+D50	Bertietal2025D50	Black Hole Spectroscopy: Theory to Experiment
+D51	Leaver1985D51	Analytic Representation for QNMs of Kerr
+D52	LeaverD52	Spectral Decomposition of the Perturbation Response
+D53	DetweilerD53	Klein-Gordon Equation and Rotating Black Holes
+D54	Furuhashi2004D54	
+D55	Dolan2007D55	
+D56	Zhidenko2006D56	
+D57	Choetal2011D57	
+D58	Lin2016D58	
+D59	Linetal2017D59	
+D60	Matyjasek2017D60	
+D61	Stein2019D61	qnm python package
+D62	Fortuna2020D62	
+E63	Bergholtz2019E63	Exceptional Topology of Non-Hermitian Systems
+E64	Ashida2020E64	Non-Hermitian Physics
+E65	Mandal2021E65	Symmetry and Higher-Order Exceptional Points
+E66	Zhangetal2022E66	Symmetry-Protected Topological Exceptional Chains
+E67	Nennig2019E67	High-Order Continuation to Locate EPs and Puiseux Series
+E68	Campos2019E68	NEP: Nonlinear Eigenvalue Problems in SLEPc
+E69	Breiding2020E69	Certifying Zeros Using Interval Arithmetic
+E70	Duff2024E70	Certified Homotopy Tracking Using Krawczyk
+E71	KatoE71	Perturbation Theory for Linear Operators
+E72	TrefethenE72	Spectra and Pseudospectra
+E73	MooreE73	Introduction to Interval Analysis
+E74	TuckerE74	Validated Numerics

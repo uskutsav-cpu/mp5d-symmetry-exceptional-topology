@@ -1,47 +1,116 @@
 {
-  "project": "mp5d-symmetry-exceptional-topology",
-  "updated": "2026-08-01 (session 8: near-extremal candidate adjudicated and refuted)",
-  "stage": {
-    "A_repository_and_reuse": "complete; repo public, CI green",
-    "B_minimal_baseline": "PARTIAL - 4 Schwarzschild-Tangherlini benchmarks reproduced to 1e-13..1e-11, cross-solver verified; rotating benchmarks vs published values NOT yet done",
-    "C_equal_spin_structure": "analytic complete; U(2) degeneracy now CONFIRMED NUMERICALLY; branch atlas not started",
-    "D_symmetry_breaking": "not started",
-    "E_higher_order_topology": "not started",
-    "F_verification_certification": "cross-solver verified; no interval certification"
-  },
-  "solvers": {
-    "angular_spectral_jacobi": "implemented, cross-verified",
-    "angular_finite_difference": "implemented, independent cross-check",
-    "radial_structure": "exponents + singular structure derived and tested",
-    "radial_collocation_A_legacy": "NON-FUNCTIONAL by design of the selection principle; retained with reproduction test (FAILED_APPROACHES #3)",
-    "radial_leaver_cf": "WORKING - Solver A: 9-term recurrence -> 3-term Gaussian reduction -> n-th CF inversion",
-    "radial_hill_wynn": "WORKING - Solver B: raw recurrence, a_N condition, Wynn acceleration; independent of A",
-    "radial_tail": "leading order only (u1); orders>1 raise NotImplementedError",
-    "solver_C_contour": "BUILT AND VALIDATED - complex-scaled collocation, recurrence-free"
-  },
-  "qnm_frequencies_computed": 4,
-  "tests": {
-    "total": 142,
-    "passing": 142,
-    "note": "139 fast + 3 slow-marked"
-  },
-  "current_finding": "The near-extremal candidate is REFUTED as an EP. Three independent tests: Solver C shows no spectral dip there (contrast 0.13 vs ~1e11 at a genuine QNM); Solver A does not converge at those parameters (drifts 2-6e-4 per depth doubling with residual stuck at 1e-13); and the three solvers agree only to 3.5e-3, three orders above the claimed |dF/domega|=4.3e-6. The small derivative was Solver A's non-convergent drift. Mechanism: near extremality the spurious singularity x(-r_+) crowds the unit circle and the Frobenius radius degenerates.",
-  "current_evidence_level": "candidate falsified; bounded negative result stands in the safe box",
-  "next_gate": "multidomain / near-horizon matched asymptotics to make r2>0.26 resolvable",
-  "repository_visibility": "PUBLIC",
-  "exceptional_points_verified": 0,
-  "first_qnm": {
-    "system": "5D Schwarzschild-Tangherlini, massless scalar, l=0, n=0",
-    "omega": [
-      0.533835574268,
-      -0.383375368513
-    ],
-    "published": [
-      0.533835574268,
-      -0.383375368512
-    ],
-    "source": "Matyjasek, arXiv:2107.04815, Table I",
-    "absolute_error": 4.98e-13,
-    "evidence_level": "cross-solver verified"
-  }
+ "status": "outcome_C_bounded_negative_result",
+ "provenance": {
+  "commit": "3ccb7a2174f3d3332124a6fd0da8020c81dd778f",
+  "env_hash": "51bd433766170fc3",
+  "python": "3.13",
+  "tests": "252 passed"
+ },
+ "primary_result": "No EP2 in the searched domain; quantitative bounds; the U(2) multiplet channel is closed exactly by a direct-sum Jordan-structure theorem.",
+ "bounds": {
+  "min_branch_gap": 0.5116202072812408,
+  "condition_number_strongest": 8734.023424017041,
+  "condition_number_ordinary": 18.341836057972877,
+  "note": "One separation bound and one conditioning diagnostic. The former is a difference of tracked eigenvalues, each confirmed by ODE residual ~1e-12 and cross-solver agreement <= 2.06e-9."
+ },
+ "coverage": {
+  "atlas_points": 50558,
+  "sectors": 7,
+  "l_per_sector": 3,
+  "overtones": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "s": [
+   0.0,
+   0.42
+  ],
+  "delta": [
+   -0.2,
+   0.2
+  ],
+  "mu": [
+   0.0,
+   1.8
+  ],
+  "r_minus_max": 0.22870680067498927,
+  "extremality_min": 0.2944
+ },
+ "independent_verification": {
+  "solverA_vs_C_max_diff": 2.0564991397232055e-09,
+  "n_points": 9
+ },
+ "verified_EP2": 0,
+ "rejected_candidates": 10,
+ "collapsed_labels_excluded": 4,
+ "gates": {
+  "1_repository_recovery": "COMPLETE",
+  "2_public_ci_protected_main": "COMPLETE",
+  "3_persistent_project_config": "COMPLETE",
+  "4_solver_domains": "COMPLETE",
+  "5_published_benchmarks": "COMPLETE",
+  "6_cross_sector_no_go": "COMPLETE",
+  "7_symmetry_group_and_delta_parity": "COMPLETE",
+  "8_ep_machinery_synthetic_validation": "COMPLETE",
+  "9_branch_atlas": "COMPLETE",
+  "10_collision_search": "COMPLETE",
+  "11_ep_verification": "COMPLETE",
+  "12_long_lived_branches": "COMPLETE",
+  "13_near_extremal_classification": "COMPLETE",
+  "14_effective_models": "COMPLETE",
+  "15_pseudospectra": "COMPLETE",
+  "16_certification": "PARTIAL (angular enclosed; radial blocked by DFT aliasing bound)",
+  "17_reproducibility": "COMPLETE",
+  "18_novelty_audit": "COMPLETE",
+  "19_manuscript": "COMPLETE (draft; authorship intentionally unassigned)",
+  "E_wronskian_solver": "NOT STARTED (deferred by evidence; see gate 13)",
+  "F_hyperboloidal_solver": "NOT STARTED (now the evidence-based next gate)",
+  "raw_tail_higher_orders": "BLOCKED (Gaussian reduction degrades past n~500-800)",
+  "20_time_domain_ringdown": "COMPLETE",
+  "21_figures": "COMPLETE"
+ },
+ "next_scientific_gate": "Hyperboloidal formulation (Solver F): the only method that remains applicable in the quasiresonant regime, which is the one region of the spectrum this search could not cover.",
+ "manuscript": {
+  "documents": [
+   "main.tex",
+   "supplement.tex",
+   "cover_letter_prd.tex",
+   "cover_letter_prl.tex",
+   "response_template.tex"
+  ],
+  "figures": 4,
+  "compiles": true,
+  "engine": "tectonic",
+  "build": "./scripts/build_manuscript.sh",
+  "unassigned": [
+   "authors",
+   "affiliation",
+   "acknowledgments",
+   "referee suggestions"
+  ],
+  "target": "PRD. PRL explicitly declined -- see cover_letter_prl.tex for the reasoning, recorded so the decision is deliberate rather than an omission.",
+  "not_submitted": true,
+  "style": "Modelled on Kokkotas & Schmidt, Living Rev. Relativity 2, 2 (1999) [gr-qc/9909058]: single column, hierarchical numbered sections, heavy numbered equations, tables of numerical values, few figures, technical derivations in appendices.",
+  "pages": 27,
+  "sections": 14,
+  "subsections": 37,
+  "numbered_equations": 66,
+  "theorem_environments": 9,
+  "proofs": 5,
+  "tables": 6,
+  "distinct_citations": 66,
+  "bibliography_entries": 75,
+  "independently_verified_entries": 21,
+  "figure_style": "greyscale, Computer Modern, open/filled markers, labelled level curves instead of filled colour maps; survives monochrome printing"
+ },
+ "ringdown": {
+  "finding": "No exceptional phenomenology. The strongest interactions split in Im omega (0.53) rather than Re omega (8e-4 to 0.07): nearly equal oscillation frequencies, very different decay rates. The EP template beats a single damped exponential by only 2.4x while using twice the free amplitudes.",
+  "note": "A large t_beat/tau (up to 1.4e4 here) is NOT sufficient evidence of near-EP behaviour; secular growth needs coalescence in the full complex frequency."
+ },
+ "WITHDRAWN": {
+  "min_root_separation": "WITHDRAWN. |a1/a2| measures the distance to the nearest zero OR POLE; Leaver's CF is meromorphic and the contour integral returns zeros-minus-poles = 0 out to radius 0.20, so the quoted value was a pole distance. See docs/FAILED_APPROACHES.md.",
+  "min_abs_discriminant": "WITHDRAWN as independent. D = (w+ - w-)^2 is the square of the gap (0.5116^2 = 0.26176); one quantity reported twice."
+ }
 }

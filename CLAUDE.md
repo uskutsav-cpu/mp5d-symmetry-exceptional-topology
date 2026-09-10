@@ -1,7 +1,7 @@
 # CLAUDE.md — mp5d-symmetry-exceptional-topology
 
 Repository-level rules. Full instructions live in the project skill
-`.claude/skills/mp5d-bulk-research/`.
+`.claude/skills/mp5d-complete-project/`.
 
 * **Inspect real repository state before acting.** Never trust a summary,
   including a handoff document. Run the tests first.
@@ -14,10 +14,17 @@ Repository-level rules. Full instructions live in the project skill
   rediscovered.
 * **Preserve checkpoints.** Expensive work must be resumable.
 * **Distinguish evidence levels** using the claim-ledger vocabulary in
-  `.claude/skills/mp5d-bulk-research/STATUS_SCHEMA.md`.
-* **Never call a close frequency pair an exceptional point.** See the EP2 gate.
+  `.claude/skills/mp5d-complete-project/STATUS_SCHEMA.md`.
+* **Never call a close frequency pair an exceptional point.** Every applicable
+  condition in `docs/EP_VERIFICATION_GATE.md` must pass.
+* **Never use `|dF/domega|` as a bound** — it is not invariant under rescaling
+  of the spectral condition. Use `root_separation` or the branch gap.
+* **Never label a branch by sorting frequencies.** Identity comes from
+  continuation history plus predictor agreement.
 * **Never claim continuum certification from a matrix truncation.**
-* **Work on `research/core-science`**, not `main`.
+* **Stay inside the validated domain** (`z_minus <= 0.20`, extremality
+  `>= 0.05`); `z_minus` is the *inner* horizon radius squared.
+* **Work on a research branch**, not `main`.
 * **Push every validated milestone.**
 
 ## Conventions

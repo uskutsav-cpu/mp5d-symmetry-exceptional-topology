@@ -1,0 +1,714 @@
+{
+ "status": "complete",
+ "provenance": {
+  "commit": "3ccb7a2174f3d3332124a6fd0da8020c81dd778f",
+  "solver": "leaver-cf",
+  "precision": "double",
+  "depth": 200,
+  "runtime_s": 62.9
+ },
+ "note": "Rejections are evidence. Each entry names the gate that failed.",
+ "rejected": [
+  {
+   "candidate": {
+    "m1": 2,
+    "m2": 0,
+    "s": 0.42,
+    "delta": -0.2,
+    "mu": 1.8,
+    "gap": 0.5116202072812408,
+    "branch_a": "m2_0__l4__N2",
+    "branch_b": "m2_0__l4__N3",
+    "ell_a": 4,
+    "ell_b": 4,
+    "N_a": 2,
+    "N_b": 3
+   },
+   "gates": {
+    "G1": {
+     "separation_r1": 0.43932688406338827,
+     "separation_r2": 0.43932690265672825,
+     "radius_r1": 0.10232404145624817,
+     "radius_r2": 0.20464808291249634,
+     "residual_relative": 0.23688462286636802,
+     "pass": false
+    },
+    "G2": {
+     "winding": 2.000000000027432,
+     "radius": 1.0232404145624816,
+     "pass": true
+    },
+    "G3": {
+     "n_roots": 2,
+     "roots": [
+      [
+       3.3520177781233382,
+       -2.4400273147826277
+      ],
+      [
+       3.277454838696643,
+       -0.23845080814130648
+      ]
+     ],
+     "pass": true
+    },
+    "G4": {
+     "error": "non-integer zero count 589.8636 in disc",
+     "pass": false
+    },
+    "G6": {
+     "error": "7184 roots exceeds max_roots=3",
+     "pass": false
+    }
+   },
+   "gates_passed": [
+    "G2",
+    "G3"
+   ],
+   "gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "decisive_gates_passed": [],
+   "decisive_gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "verdict": "REJECTED",
+   "classification": "avoided or ordinary crossing: two distinct roots present (G2, G3) but no coalescence, no monodromy exchange and no square-root splitting"
+  },
+  {
+   "candidate": {
+    "m1": 2,
+    "m2": 0,
+    "s": 0.42,
+    "delta": -0.15,
+    "mu": 1.8,
+    "gap": 0.5135037473457634,
+    "branch_a": "m2_0__l4__N2",
+    "branch_b": "m2_0__l4__N3",
+    "ell_a": 4,
+    "ell_b": 4,
+    "N_a": 2,
+    "N_b": 3
+   },
+   "gates": {
+    "G1": {
+     "separation_r1": 0.4535221286803598,
+     "separation_r2": 0.4535221444689604,
+     "radius_r1": 0.1027007494691527,
+     "radius_r2": 0.2054014989383054,
+     "residual_relative": 0.2320577720018968,
+     "pass": false
+    },
+    "G2": {
+     "winding": 1.9999999999387799,
+     "radius": 1.0270074946915269,
+     "pass": true
+    },
+    "G3": {
+     "n_roots": 2,
+     "roots": [
+      [
+       3.3431973418947694,
+       -2.4510242115851826
+      ],
+      [
+       3.3037592229470936,
+       -0.2624992716911496
+      ]
+     ],
+     "pass": true
+    },
+    "G4": {
+     "error": "non-integer zero count 492.3388 in disc",
+     "pass": false
+    },
+    "G6": {
+     "error": "non-integer zero count 10920.8924 in disc",
+     "pass": false
+    }
+   },
+   "gates_passed": [
+    "G2",
+    "G3"
+   ],
+   "gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "decisive_gates_passed": [],
+   "decisive_gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "verdict": "REJECTED",
+   "classification": "avoided or ordinary crossing: two distinct roots present (G2, G3) but no coalescence, no monodromy exchange and no square-root splitting"
+  },
+  {
+   "candidate": {
+    "m1": 2,
+    "m2": 0,
+    "s": 0.42,
+    "delta": -0.1,
+    "mu": 1.8,
+    "gap": 0.5168677562489352,
+    "branch_a": "m2_0__l4__N2",
+    "branch_b": "m2_0__l4__N3",
+    "ell_a": 4,
+    "ell_b": 4,
+    "N_a": 2,
+    "N_b": 3
+   },
+   "gates": {
+    "G1": {
+     "separation_r1": 0.47287845469307643,
+     "separation_r2": 0.47287847651396636,
+     "radius_r1": 0.10337355124978705,
+     "radius_r2": 0.2067471024995741,
+     "residual_relative": 0.22517284899495102,
+     "pass": false
+    },
+    "G2": {
+     "winding": 2.0000000000131646,
+     "radius": 1.0337355124978704,
+     "pass": true
+    },
+    "G3": {
+     "n_roots": 2,
+     "roots": [
+      [
+       3.3443584838363885,
+       -2.4665297806372597
+      ],
+      [
+       3.333034441573044,
+       -0.27720069700926675
+      ]
+     ],
+     "pass": true
+    },
+    "G4": {
+     "error": "non-integer zero count 455.1403 in disc",
+     "pass": false
+    },
+    "G6": {
+     "error": "non-integer zero count 11208.3304 in disc",
+     "pass": false
+    }
+   },
+   "gates_passed": [
+    "G2",
+    "G3"
+   ],
+   "gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "decisive_gates_passed": [],
+   "decisive_gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "verdict": "REJECTED",
+   "classification": "avoided or ordinary crossing: two distinct roots present (G2, G3) but no coalescence, no monodromy exchange and no square-root splitting"
+  },
+  {
+   "candidate": {
+    "m1": 2,
+    "m2": 0,
+    "s": 0.42,
+    "delta": -0.05,
+    "mu": 1.8,
+    "gap": 0.5212993750472715,
+    "branch_a": "m2_0__l4__N2",
+    "branch_b": "m2_0__l4__N3",
+    "ell_a": 4,
+    "ell_b": 4,
+    "N_a": 2,
+    "N_b": 3
+   },
+   "gates": {
+    "G1": {
+     "separation_r1": 0.49593212220330035,
+     "separation_r2": 0.49593208315178655,
+     "radius_r1": 0.10425987500945431,
+     "radius_r2": 0.20851975001890863,
+     "residual_relative": 0.21676673665831311,
+     "pass": false
+    },
+    "G2": {
+     "winding": 2.000000000009374,
+     "radius": 1.042598750094543,
+     "pass": true
+    },
+    "G3": {
+     "n_roots": 2,
+     "roots": [
+      [
+       3.35490310160764,
+       -2.486244224452639
+      ],
+      [
+       3.3657537454210615,
+       -0.28320636391098447
+      ]
+     ],
+     "pass": true
+    },
+    "G4": {
+     "error": "non-integer zero count 383.5294 in disc",
+     "pass": false
+    },
+    "G6": {
+     "error": "24888 roots exceeds max_roots=3",
+     "pass": false
+    }
+   },
+   "gates_passed": [
+    "G2",
+    "G3"
+   ],
+   "gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "decisive_gates_passed": [],
+   "decisive_gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "verdict": "REJECTED",
+   "classification": "avoided or ordinary crossing: two distinct roots present (G2, G3) but no coalescence, no monodromy exchange and no square-root splitting"
+  },
+  {
+   "candidate": {
+    "m1": 2,
+    "m2": 0,
+    "s": 0.42,
+    "delta": 0.0,
+    "mu": 1.8,
+    "gap": 0.5264219578353263,
+    "branch_a": "m2_0__l4__N2",
+    "branch_b": "m2_0__l4__N3",
+    "ell_a": 4,
+    "ell_b": 4,
+    "N_a": 2,
+    "N_b": 3
+   },
+   "gates": {
+    "G1": {
+     "separation_r1": 0.5202553451981898,
+     "separation_r2": 0.5202552946126069,
+     "radius_r1": 0.10528439156706526,
+     "radius_r2": 0.21056878313413052,
+     "residual_relative": 0.20756352509908782,
+     "pass": false
+    },
+    "G2": {
+     "winding": 2.000000000053303,
+     "radius": 1.0528439156706526,
+     "pass": true
+    },
+    "G3": {
+     "n_roots": 2,
+     "roots": [
+      [
+       3.3746029580527304,
+       -2.510369542822174
+      ],
+      [
+       3.402694873686083,
+       -0.2805935100778274
+      ]
+     ],
+     "pass": true
+    },
+    "G4": {
+     "error": "non-integer zero count -534.2235 in disc",
+     "pass": false
+    },
+    "G6": {
+     "error": "non-integer zero count 50648.3355 in disc",
+     "pass": false
+    }
+   },
+   "gates_passed": [
+    "G2",
+    "G3"
+   ],
+   "gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "decisive_gates_passed": [],
+   "decisive_gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "verdict": "REJECTED",
+   "classification": "avoided or ordinary crossing: two distinct roots present (G2, G3) but no coalescence, no monodromy exchange and no square-root splitting"
+  },
+  {
+   "candidate": {
+    "m1": 1,
+    "m2": 1,
+    "s": 0.42,
+    "delta": 0.0,
+    "mu": 1.8,
+    "gap": 0.5264219578359149,
+    "branch_a": "m1_1__l4__N2",
+    "branch_b": "m1_1__l4__N3",
+    "ell_a": 4,
+    "ell_b": 4,
+    "N_a": 2,
+    "N_b": 3
+   },
+   "gates": {
+    "G1": {
+     "separation_r1": 0.5202552999022285,
+     "separation_r2": 0.5202553034626369,
+     "radius_r1": 0.105284391567183,
+     "radius_r2": 0.210568783134366,
+     "residual_relative": 0.2075635237197862,
+     "pass": false
+    },
+    "G2": {
+     "winding": 1.9999999999676428,
+     "radius": 1.0528439156718299,
+     "pass": true
+    },
+    "G3": {
+     "n_roots": 2,
+     "roots": [
+      [
+       3.3746026399299125,
+       -2.5103702124446703
+      ],
+      [
+       3.402695416156427,
+       -0.2805934850146159
+      ]
+     ],
+     "pass": true
+    },
+    "G4": {
+     "error": "only 0 roots found at parameter [0.02 1.8 ]",
+     "pass": false
+    },
+    "G6": {
+     "error": "non-integer zero count 50650.3236 in disc",
+     "pass": false
+    }
+   },
+   "gates_passed": [
+    "G2",
+    "G3"
+   ],
+   "gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "decisive_gates_passed": [],
+   "decisive_gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "verdict": "REJECTED",
+   "classification": "avoided or ordinary crossing: two distinct roots present (G2, G3) but no coalescence, no monodromy exchange and no square-root splitting"
+  },
+  {
+   "candidate": {
+    "m1": 1,
+    "m2": 1,
+    "s": 0.42,
+    "delta": 0.05,
+    "mu": 1.8,
+    "gap": 0.5265470265947109,
+    "branch_a": "m1_1__l4__N2",
+    "branch_b": "m1_1__l4__N3",
+    "ell_a": 4,
+    "ell_b": 4,
+    "N_a": 2,
+    "N_b": 3
+   },
+   "gates": {
+    "G1": {
+     "separation_r1": 0.517256053667281,
+     "separation_r2": 0.5172559928491527,
+     "radius_r1": 0.10530940531894217,
+     "radius_r2": 0.21061881063788435,
+     "residual_relative": 0.20782954088517258,
+     "pass": false
+    },
+    "G2": {
+     "winding": 1.9999999999752371,
+     "radius": 1.0530940531894217,
+     "pass": true
+    },
+    "G3": {
+     "n_roots": 2,
+     "roots": [
+      [
+       3.3792533718135473,
+       -2.512107954247644
+      ],
+      [
+       3.4042259812181235,
+       -0.2760256622544876
+      ]
+     ],
+     "pass": true
+    },
+    "G4": {
+     "error": "non-integer zero count -480.5707 in disc",
+     "pass": false
+    },
+    "G6": {
+     "error": "non-integer zero count 46915.4523 in disc",
+     "pass": false
+    }
+   },
+   "gates_passed": [
+    "G2",
+    "G3"
+   ],
+   "gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "decisive_gates_passed": [],
+   "decisive_gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "verdict": "REJECTED",
+   "classification": "avoided or ordinary crossing: two distinct roots present (G2, G3) but no coalescence, no monodromy exchange and no square-root splitting"
+  },
+  {
+   "candidate": {
+    "m1": 1,
+    "m2": 1,
+    "s": 0.42,
+    "delta": -0.05,
+    "mu": 1.8,
+    "gap": 0.526547026603319,
+    "branch_a": "m1_1__l4__N2",
+    "branch_b": "m1_1__l4__N3",
+    "ell_a": 4,
+    "ell_b": 4,
+    "N_a": 2,
+    "N_b": 3
+   },
+   "gates": {
+    "G1": {
+     "separation_r1": 0.5172560694066315,
+     "separation_r2": 0.5172560303863692,
+     "radius_r1": 0.1053094053206638,
+     "radius_r2": 0.2106188106413276,
+     "residual_relative": 0.20782954279265592,
+     "pass": false
+    },
+    "G2": {
+     "winding": 1.9999999999576186,
+     "radius": 1.053094053206638,
+     "pass": true
+    },
+    "G3": {
+     "n_roots": 2,
+     "roots": [
+      [
+       3.3792532534214645,
+       -2.5121088352208067
+      ],
+      [
+       3.4042265282869346,
+       -0.2760254091800602
+      ]
+     ],
+     "pass": true
+    },
+    "G4": {
+     "error": "non-integer zero count -526.1319 in disc",
+     "pass": false
+    },
+    "G6": {
+     "error": "non-integer zero count 46900.3509 in disc",
+     "pass": false
+    }
+   },
+   "gates_passed": [
+    "G2",
+    "G3"
+   ],
+   "gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "decisive_gates_passed": [],
+   "decisive_gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "verdict": "REJECTED",
+   "classification": "avoided or ordinary crossing: two distinct roots present (G2, G3) but no coalescence, no monodromy exchange and no square-root splitting"
+  },
+  {
+   "candidate": {
+    "m1": 1,
+    "m2": 1,
+    "s": 0.42,
+    "delta": 0.1,
+    "mu": 1.8,
+    "gap": 0.5270039929724095,
+    "branch_a": "m1_1__l4__N2",
+    "branch_b": "m1_1__l4__N3",
+    "ell_a": 4,
+    "ell_b": 4,
+    "N_a": 2,
+    "N_b": 3
+   },
+   "gates": {
+    "G1": {
+     "separation_r1": 0.508693629008382,
+     "separation_r2": 0.5086935949151175,
+     "radius_r1": 0.10540079859448191,
+     "radius_r2": 0.21080159718896382,
+     "residual_relative": 0.2085586314560629,
+     "pass": false
+    },
+    "G2": {
+     "winding": 1.9999999999517084,
+     "radius": 1.054007985944819,
+     "pass": true
+    },
+    "G3": {
+     "n_roots": 2,
+     "roots": [
+      [
+       3.393379757539494,
+       -2.5175520520545316
+      ],
+      [
+       3.408959747696428,
+       -0.2620243461542224
+      ]
+     ],
+     "pass": true
+    },
+    "G4": {
+     "error": "non-integer zero count -396.1266 in disc",
+     "pass": false
+    },
+    "G6": {
+     "error": "non-integer zero count 35717.5336 in disc",
+     "pass": false
+    }
+   },
+   "gates_passed": [
+    "G2",
+    "G3"
+   ],
+   "gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "decisive_gates_passed": [],
+   "decisive_gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "verdict": "REJECTED",
+   "classification": "avoided or ordinary crossing: two distinct roots present (G2, G3) but no coalescence, no monodromy exchange and no square-root splitting"
+  },
+  {
+   "candidate": {
+    "m1": 1,
+    "m2": 1,
+    "s": 0.42,
+    "delta": -0.1,
+    "mu": 1.8,
+    "gap": 0.5270039929794831,
+    "branch_a": "m1_1__l4__N2",
+    "branch_b": "m1_1__l4__N3",
+    "ell_a": 4,
+    "ell_b": 4,
+    "N_a": 2,
+    "N_b": 3
+   },
+   "gates": {
+    "G1": {
+     "separation_r1": 0.5086936855454988,
+     "separation_r2": 0.508693676984622,
+     "radius_r1": 0.10540079859589663,
+     "radius_r2": 0.21080159719179326,
+     "residual_relative": 0.20855862718925827,
+     "pass": false
+    },
+    "G2": {
+     "winding": 1.9999999999992055,
+     "radius": 1.0540079859589662,
+     "pass": true
+    },
+    "G3": {
+     "n_roots": 2,
+     "roots": [
+      [
+       3.3933834192031553,
+       -2.517554456457442
+      ],
+      [
+       3.4089605436313257,
+       -0.26202051644890173
+      ]
+     ],
+     "pass": true
+    },
+    "G4": {
+     "error": "non-integer zero count -488.5022 in disc",
+     "pass": false
+    },
+    "G6": {
+     "error": "non-integer zero count 35716.3631 in disc",
+     "pass": false
+    }
+   },
+   "gates_passed": [
+    "G2",
+    "G3"
+   ],
+   "gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "decisive_gates_passed": [],
+   "decisive_gates_failed": [
+    "G1",
+    "G4",
+    "G6"
+   ],
+   "verdict": "REJECTED",
+   "classification": "avoided or ordinary crossing: two distinct roots present (G2, G3) but no coalescence, no monodromy exchange and no square-root splitting"
+  }
+ ],
+ "unresolved": []
+}
