@@ -1,0 +1,65 @@
+{
+  "points": [
+    {
+      "id": "historical-coordinate-01",
+      "point": [
+        0.42,
+        -0.2,
+        1.8
+      ]
+    },
+    {
+      "id": "historical-coordinate-02",
+      "point": [
+        0.42,
+        -0.15,
+        1.8
+      ]
+    },
+    {
+      "id": "historical-coordinate-03",
+      "point": [
+        0.42,
+        -0.1,
+        1.8
+      ]
+    },
+    {
+      "id": "historical-coordinate-04",
+      "point": [
+        0.42,
+        -0.05,
+        1.8
+      ]
+    },
+    {
+      "id": "historical-coordinate-05",
+      "point": [
+        0.42,
+        0.0,
+        1.8
+      ]
+    },
+    {
+      "id": "historical-coordinate-06",
+      "point": [
+        0.42,
+        0.05,
+        1.8
+      ]
+    },
+    {
+      "id": "historical-coordinate-07",
+      "point": [
+        0.42,
+        0.1,
+        1.8
+      ]
+    }
+  ],
+  "source": "data/regressions/ten_interactions.json; coordinate-only extraction",
+  "original_expected_count": 10,
+  "extracted_count": 7,
+  "legacy_frequencies_used": false,
+  "legacy_branch_labels_used": false
+}

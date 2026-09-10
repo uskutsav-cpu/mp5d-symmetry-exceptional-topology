@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "complete_submission_input_inventory": false,
+  "scope": "All inputs cited/used by the submission, not only a passing benchmark subset",
+  "reviews": [],
+  "required_review_fields": [
+    "source_id",
+    "verified_metadata",
+    "verified_conventions",
+    "verified_numeric_transcription",
+    "verified_domain_of_applicability",
+    "verification_notes_file",
+    "verification_notes_sha256",
+    "primary_source_url",
+    "primary_evidence_file",
+    "primary_evidence_sha256",
+    "submission_inputs"
+  ],
+  "instructions": "Add evidence-backed primary-source audits. True flags without matching local evidence hashes do not pass."
+}

@@ -1,0 +1,174 @@
+{
+  "records": [
+    {
+      "id": "huang-table-II-1",
+      "source_id": "arxiv:2502.11764",
+      "location": {
+        "table": "II",
+        "row": 1,
+        "column": "omega_ref"
+      },
+      "point": [
+        0.0,
+        0.0,
+        0
+      ],
+      "sector": {
+        "m1": 0,
+        "m2": 0,
+        "ell": 0
+      },
+      "N": 0,
+      "frequency": [
+        "0.53384",
+        "-0.38338"
+      ],
+      "normalization": "omega; M=1",
+      "metric_normalization": "M=1; NOT generally rh=1 when rotating",
+      "frequency_scale": "M=1",
+      "benchmark_tolerance": 1e-05
+    },
+    {
+      "id": "huang-table-II-2",
+      "source_id": "arxiv:2502.11764",
+      "location": {
+        "table": "II",
+        "row": 2,
+        "column": "omega_ref"
+      },
+      "point": [
+        0.0,
+        0.0,
+        0
+      ],
+      "sector": {
+        "m1": 1,
+        "m2": 0,
+        "ell": 1
+      },
+      "N": 0,
+      "frequency": [
+        "1.01602",
+        "-0.36233"
+      ],
+      "normalization": "omega; M=1",
+      "metric_normalization": "M=1; NOT generally rh=1 when rotating",
+      "frequency_scale": "M=1",
+      "benchmark_tolerance": 1e-05
+    },
+    {
+      "id": "huang-table-II-3",
+      "source_id": "arxiv:2502.11764",
+      "location": {
+        "table": "II",
+        "row": 3,
+        "column": "omega_ref"
+      },
+      "point": [
+        0.0,
+        0.0,
+        0
+      ],
+      "sector": {
+        "m1": 1,
+        "m2": 1,
+        "ell": 2
+      },
+      "N": 0,
+      "frequency": [
+        "1.51057",
+        "-0.35754"
+      ],
+      "normalization": "omega; M=1",
+      "metric_normalization": "M=1; NOT generally rh=1 when rotating",
+      "frequency_scale": "M=1",
+      "benchmark_tolerance": 1e-05
+    },
+    {
+      "id": "huang-table-II-4",
+      "source_id": "arxiv:2502.11764",
+      "location": {
+        "table": "II",
+        "row": 4,
+        "column": "omega_ref"
+      },
+      "point": [
+        0.1,
+        0.1,
+        0
+      ],
+      "sector": {
+        "m1": 1,
+        "m2": 1,
+        "ell": 4
+      },
+      "N": 0,
+      "frequency": [
+        "2.565177",
+        "-0.353047"
+      ],
+      "normalization": "omega; M=1",
+      "metric_normalization": "M=1; NOT generally rh=1 when rotating",
+      "frequency_scale": "M=1",
+      "benchmark_tolerance": 1e-05
+    },
+    {
+      "id": "huang-table-II-5",
+      "source_id": "arxiv:2502.11764",
+      "location": {
+        "table": "II",
+        "row": 5,
+        "column": "omega_ref"
+      },
+      "point": [
+        0.25,
+        0.25,
+        0
+      ],
+      "sector": {
+        "m1": 1,
+        "m2": 0,
+        "ell": 3
+      },
+      "N": 0,
+      "frequency": [
+        "2.178379",
+        "-0.340853"
+      ],
+      "normalization": "omega; M=1",
+      "metric_normalization": "M=1; NOT generally rh=1 when rotating",
+      "frequency_scale": "M=1",
+      "benchmark_tolerance": 1e-05
+    },
+    {
+      "id": "huang-table-II-6",
+      "source_id": "arxiv:2502.11764",
+      "location": {
+        "table": "II",
+        "row": 6,
+        "column": "omega_ref"
+      },
+      "point": [
+        0.15,
+        0.15,
+        0.3
+      ],
+      "sector": {
+        "m1": 1,
+        "m2": 1,
+        "ell": 4
+      },
+      "N": 0,
+      "frequency": [
+        "2.609174",
+        "-0.348709"
+      ],
+      "normalization": "omega; M=1",
+      "metric_normalization": "M=1; NOT generally rh=1 when rotating",
+      "frequency_scale": "M=1",
+      "benchmark_tolerance": 1e-05
+    }
+  ],
+  "coverage": "TABLE_II_ONLY",
+  "all_rotating_and_massive_tables_reviewed": false
+}

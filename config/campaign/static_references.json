@@ -1,0 +1,441 @@
+{
+  "records": [
+    {
+      "id": "matyjasek-ell0-N0",
+      "source_id": "arxiv:2107.04815",
+      "source_url": "https://arxiv.org/abs/2107.04815",
+      "location": {
+        "table": "I",
+        "printed_page": 12
+      },
+      "ell": 0,
+      "N": 0,
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "sector": {
+        "m1": 0,
+        "m2": 0,
+        "ell": 0
+      },
+      "frequency": [
+        "3.35418783669",
+        "-2.40881848257"
+      ],
+      "normalization": "omega_tilde=2*pi*omega; rh=1",
+      "component_rounding_radius": "0.000000000005",
+      "label_provenance": "PUBLISHED_TABLE",
+      "source_review_status": "NOT_FRESHLY_REVIEWED"
+    },
+    {
+      "id": "matyjasek-ell0-N1",
+      "source_id": "arxiv:2107.04815",
+      "source_url": "https://arxiv.org/abs/2107.04815",
+      "location": {
+        "table": "I",
+        "printed_page": 12
+      },
+      "ell": 0,
+      "N": 1,
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "sector": {
+        "m1": 0,
+        "m2": 0,
+        "ell": 0
+      },
+      "frequency": [
+        "2.33646259225",
+        "-8.31019918700"
+      ],
+      "normalization": "omega_tilde=2*pi*omega; rh=1",
+      "component_rounding_radius": "0.000000000005",
+      "label_provenance": "PUBLISHED_TABLE",
+      "source_review_status": "NOT_FRESHLY_REVIEWED"
+    },
+    {
+      "id": "matyjasek-ell0-N2",
+      "source_id": "arxiv:2107.04815",
+      "source_url": "https://arxiv.org/abs/2107.04815",
+      "location": {
+        "table": "I",
+        "printed_page": 12
+      },
+      "ell": 0,
+      "N": 2,
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "sector": {
+        "m1": 0,
+        "m2": 0,
+        "ell": 0
+      },
+      "frequency": [
+        "1.88699812446",
+        "-14.78624149094"
+      ],
+      "normalization": "omega_tilde=2*pi*omega; rh=1",
+      "component_rounding_radius": "0.000000000005",
+      "label_provenance": "PUBLISHED_TABLE",
+      "source_review_status": "NOT_FRESHLY_REVIEWED"
+    },
+    {
+      "id": "matyjasek-ell0-N3",
+      "source_id": "arxiv:2107.04815",
+      "source_url": "https://arxiv.org/abs/2107.04815",
+      "location": {
+        "table": "I",
+        "printed_page": 12
+      },
+      "ell": 0,
+      "N": 3,
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "sector": {
+        "m1": 0,
+        "m2": 0,
+        "ell": 0
+      },
+      "frequency": [
+        "1.69259527010",
+        "-21.21981386107"
+      ],
+      "normalization": "omega_tilde=2*pi*omega; rh=1",
+      "component_rounding_radius": "0.000000000005",
+      "label_provenance": "PUBLISHED_TABLE",
+      "source_review_status": "NOT_FRESHLY_REVIEWED"
+    },
+    {
+      "id": "matyjasek-ell0-N4",
+      "source_id": "arxiv:2107.04815",
+      "source_url": "https://arxiv.org/abs/2107.04815",
+      "location": {
+        "table": "I",
+        "printed_page": 12
+      },
+      "ell": 0,
+      "N": 4,
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "sector": {
+        "m1": 0,
+        "m2": 0,
+        "ell": 0
+      },
+      "frequency": [
+        "1.58414637600",
+        "-27.60684313053"
+      ],
+      "normalization": "omega_tilde=2*pi*omega; rh=1",
+      "component_rounding_radius": "0.000000000005",
+      "label_provenance": "PUBLISHED_TABLE",
+      "source_review_status": "NOT_FRESHLY_REVIEWED"
+    },
+    {
+      "id": "matyjasek-ell1-N0",
+      "source_id": "arxiv:2107.04815",
+      "source_url": "https://arxiv.org/abs/2107.04815",
+      "location": {
+        "table": "II",
+        "printed_page": 12
+      },
+      "ell": 1,
+      "N": 0,
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "sector": {
+        "m1": 1,
+        "m2": 0,
+        "ell": 1
+      },
+      "frequency": [
+        "6.38382253011",
+        "-2.27657411582"
+      ],
+      "normalization": "omega_tilde=2*pi*omega; rh=1",
+      "component_rounding_radius": "0.000000000005",
+      "label_provenance": "PUBLISHED_TABLE",
+      "source_review_status": "NOT_FRESHLY_REVIEWED"
+    },
+    {
+      "id": "matyjasek-ell1-N1",
+      "source_id": "arxiv:2107.04815",
+      "source_url": "https://arxiv.org/abs/2107.04815",
+      "location": {
+        "table": "II",
+        "printed_page": 12
+      },
+      "ell": 1,
+      "N": 1,
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "sector": {
+        "m1": 1,
+        "m2": 0,
+        "ell": 1
+      },
+      "frequency": [
+        "5.38079295983",
+        "-7.27345089157"
+      ],
+      "normalization": "omega_tilde=2*pi*omega; rh=1",
+      "component_rounding_radius": "0.000000000005",
+      "label_provenance": "PUBLISHED_TABLE",
+      "source_review_status": "NOT_FRESHLY_REVIEWED"
+    },
+    {
+      "id": "matyjasek-ell1-N2",
+      "source_id": "arxiv:2107.04815",
+      "source_url": "https://arxiv.org/abs/2107.04815",
+      "location": {
+        "table": "II",
+        "printed_page": 12
+      },
+      "ell": 1,
+      "N": 2,
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "sector": {
+        "m1": 1,
+        "m2": 0,
+        "ell": 1
+      },
+      "frequency": [
+        "4.16851774973",
+        "-13.25239223151"
+      ],
+      "normalization": "omega_tilde=2*pi*omega; rh=1",
+      "component_rounding_radius": "0.000000000005",
+      "label_provenance": "PUBLISHED_TABLE",
+      "source_review_status": "NOT_FRESHLY_REVIEWED"
+    },
+    {
+      "id": "matyjasek-ell1-N3",
+      "source_id": "arxiv:2107.04815",
+      "source_url": "https://arxiv.org/abs/2107.04815",
+      "location": {
+        "table": "II",
+        "printed_page": 12
+      },
+      "ell": 1,
+      "N": 3,
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "sector": {
+        "m1": 1,
+        "m2": 0,
+        "ell": 1
+      },
+      "frequency": [
+        "3.40134506823",
+        "-19.70845126683"
+      ],
+      "normalization": "omega_tilde=2*pi*omega; rh=1",
+      "component_rounding_radius": "0.000000000005",
+      "label_provenance": "PUBLISHED_TABLE",
+      "source_review_status": "NOT_FRESHLY_REVIEWED"
+    },
+    {
+      "id": "matyjasek-ell1-N4",
+      "source_id": "arxiv:2107.04815",
+      "source_url": "https://arxiv.org/abs/2107.04815",
+      "location": {
+        "table": "II",
+        "printed_page": 12
+      },
+      "ell": 1,
+      "N": 4,
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "sector": {
+        "m1": 1,
+        "m2": 0,
+        "ell": 1
+      },
+      "frequency": [
+        "2.95415287238",
+        "-26.21483703856"
+      ],
+      "normalization": "omega_tilde=2*pi*omega; rh=1",
+      "component_rounding_radius": "0.000000000005",
+      "label_provenance": "PUBLISHED_TABLE",
+      "source_review_status": "NOT_FRESHLY_REVIEWED"
+    },
+    {
+      "id": "matyjasek-ell2-N0",
+      "source_id": "arxiv:2107.04815",
+      "source_url": "https://arxiv.org/abs/2107.04815",
+      "location": {
+        "table": "III",
+        "printed_page": 13
+      },
+      "ell": 2,
+      "N": 0,
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "sector": {
+        "m1": 2,
+        "m2": 0,
+        "ell": 2
+      },
+      "frequency": [
+        "9.49117521848",
+        "-2.24647282923"
+      ],
+      "normalization": "omega_tilde=2*pi*omega; rh=1",
+      "component_rounding_radius": "0.000000000005",
+      "label_provenance": "PUBLISHED_TABLE",
+      "source_review_status": "NOT_FRESHLY_REVIEWED"
+    },
+    {
+      "id": "matyjasek-ell2-N1",
+      "source_id": "arxiv:2107.04815",
+      "source_url": "https://arxiv.org/abs/2107.04815",
+      "location": {
+        "table": "III",
+        "printed_page": 13
+      },
+      "ell": 2,
+      "N": 1,
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "sector": {
+        "m1": 2,
+        "m2": 0,
+        "ell": 2
+      },
+      "frequency": [
+        "8.75072206831",
+        "-6.94013514280"
+      ],
+      "normalization": "omega_tilde=2*pi*omega; rh=1",
+      "component_rounding_radius": "0.000000000005",
+      "label_provenance": "PUBLISHED_TABLE",
+      "source_review_status": "NOT_FRESHLY_REVIEWED"
+    },
+    {
+      "id": "matyjasek-ell2-N2",
+      "source_id": "arxiv:2107.04815",
+      "source_url": "https://arxiv.org/abs/2107.04815",
+      "location": {
+        "table": "III",
+        "printed_page": 13
+      },
+      "ell": 2,
+      "N": 2,
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "sector": {
+        "m1": 2,
+        "m2": 0,
+        "ell": 2
+      },
+      "frequency": [
+        "7.50107062040",
+        "-12.22543669696"
+      ],
+      "normalization": "omega_tilde=2*pi*omega; rh=1",
+      "component_rounding_radius": "0.000000000005",
+      "label_provenance": "PUBLISHED_TABLE",
+      "source_review_status": "NOT_FRESHLY_REVIEWED"
+    },
+    {
+      "id": "matyjasek-ell2-N3",
+      "source_id": "arxiv:2107.04815",
+      "source_url": "https://arxiv.org/abs/2107.04815",
+      "location": {
+        "table": "III",
+        "printed_page": 13
+      },
+      "ell": 2,
+      "N": 3,
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "sector": {
+        "m1": 2,
+        "m2": 0,
+        "ell": 2
+      },
+      "frequency": [
+        "6.24820058005",
+        "-18.21482743438"
+      ],
+      "normalization": "omega_tilde=2*pi*omega; rh=1",
+      "component_rounding_radius": "0.000000000005",
+      "label_provenance": "PUBLISHED_TABLE",
+      "source_review_status": "NOT_FRESHLY_REVIEWED"
+    },
+    {
+      "id": "matyjasek-ell2-N4",
+      "source_id": "arxiv:2107.04815",
+      "source_url": "https://arxiv.org/abs/2107.04815",
+      "location": {
+        "table": "III",
+        "printed_page": 13
+      },
+      "ell": 2,
+      "N": 4,
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "sector": {
+        "m1": 2,
+        "m2": 0,
+        "ell": 2
+      },
+      "frequency": [
+        "5.31531126304",
+        "-24.59655935942"
+      ],
+      "normalization": "omega_tilde=2*pi*omega; rh=1",
+      "component_rounding_radius": "0.000000000005",
+      "label_provenance": "PUBLISHED_TABLE",
+      "source_review_status": "NOT_FRESHLY_REVIEWED"
+    }
+  ],
+  "N5_supplied": false,
+  "scope": "Transcribed repository benchmark data; fresh primary-source verification remains separate."
+}

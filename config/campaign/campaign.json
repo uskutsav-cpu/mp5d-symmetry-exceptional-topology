@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "bounds": [
+    [
+      0,
+      0.42
+    ],
+    [
+      -0.2,
+      0.2
+    ],
+    [
+      0,
+      1.8
+    ]
+  ],
+  "sectors": [
+    {
+      "m1": 2,
+      "m2": 0,
+      "ell": 4
+    }
+  ],
+  "scope_note": "Finite declared grid in the dangerous m1=2,m2=0,ell=4 sector; NOT a claim to cover every admissible angular sector.",
+  "atlas_grid": {
+    "s": [
+      0,
+      0.21,
+      0.42
+    ],
+    "delta": [
+      -0.2,
+      0,
+      0.2
+    ],
+    "mu": [
+      0,
+      0.9,
+      1.8
+    ]
+  },
+  "dangerous_points_file": "config/campaign/dangerous_points.json",
+  "required_historical_points": 10,
+  "static_references": "config/campaign/static_references.json",
+  "rotating_references": "config/campaign/rotating_references.json",
+  "source_reviews": "config/campaign/source_reviews.json",
+  "bibliography_file": "bibliography/mandatory_sources.csv",
+  "resolution": {
+    "cf_depth": 480,
+    "angular_n": 64,
+    "precision_dps": 80,
+    "radial_n": 360,
+    "contour_length": 90,
+    "scaling_angle_deg": 70,
+    "continuation_step": 0.0025
+  },
+  "anchor_resolution": {
+    "cf_depth": 640,
+    "angular_n": 64,
+    "precision_dps": 60,
+    "radial_n": 440,
+    "contour_length": 90,
+    "scaling_angle_deg": 84,
+    "continuation_step": 0.0025
+  },
+  "anchor_depths": [
+    320,
+    480,
+    640
+  ],
+  "anchor_radial_n": [
+    280,
+    360,
+    440
+  ],
+  "anchor_tolerance": 2e-06,
+  "frequency_tolerance": 1e-06,
+  "benchmark_tolerance": 1e-05,
+  "residual_tolerance": 1e-08,
+  "lambda_step": 1.0,
+  "approach_detour": 0.01,
+  "small_gap_points": 5,
+  "uncertain_points": 3,
+  "boundary_max_polls": 100,
+  "tracking_policy": {
+    "residual_tol": 1e-08,
+    "duplicate_atol": 1e-10,
+    "predictor_atol": 1e-05,
+    "predictor_rtol": 0.05,
+    "max_motion_fraction": 0.45,
+    "assignment_margin": 1e-05,
+    "min_step": 1e-08,
+    "max_halvings": 24,
+    "max_evaluations": 10000
+  },
+  "benchmark_depths": [
+    160,
+    240,
+    320
+  ],
+  "benchmark_radial_n": [
+    160,
+    220,
+    280
+  ],
+  "benchmark_resolution": {
+    "cf_depth": 320,
+    "angular_n": 40,
+    "precision_dps": 50,
+    "radial_n": 280,
+    "contour_length": 120,
+    "scaling_angle_deg": 88.5,
+    "continuation_step": 0.0025
+  },
+  "lean_timeout_seconds": 1800,
+  "pytest_timeout_seconds": 600,
+  "required_primary_sources": [
+    "arxiv:2107.04815",
+    "arxiv:2502.11764"
+  ],
+  "quasiresonant_scope": "EXCLUDED",
+  "rigorous_claim_scope": "FINITE_DISCRETIZATION_ONLY",
+  "atlas_resolution": {
+    "cf_depth": 320,
+    "angular_n": 64,
+    "precision_dps": 50,
+    "radial_n": 280,
+    "contour_length": 90,
+    "scaling_angle_deg": 70,
+    "continuation_step": 0.01
+  },
+  "quasiresonant_exclusion": {
+    "minimum_damping": 0.001,
+    "minimum_abs_outgoing_wave_number": 0.05,
+    "units": "M=1",
+    "interpretation": "Preregistered operational numerical-domain cutoffs; not a theorem locating the onset of quasiresonance."
+  },
+  "robustness_resolution": {
+    "cf_depth": 640,
+    "angular_n": 64,
+    "precision_dps": 80,
+    "radial_n": 440,
+    "contour_length": 90,
+    "scaling_angle_deg": 84,
+    "continuation_step": 0.005
+  },
+  "robustness_axes": {
+    "cf_depth": [
+      320,
+      480,
+      640
+    ],
+    "radial_n": [
+      280,
+      360,
+      440
+    ]
+  }
+}

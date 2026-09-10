@@ -1,0 +1,86 @@
+name: Fresh MP5D campaign v2
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: ["research/**"]
+  workflow_dispatch:
+    inputs:
+      authoritative_science:
+        description: "Run all scientific gates on a configured self-hosted science runner"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+env:
+  OPENBLAS_NUM_THREADS: "1"
+  OMP_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+  PYTHONDONTWRITEBYTECODE: "1"
+
+jobs:
+  software:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - name: Install repository-pinned dependencies
+        run: python -m pip install -r requirements.lock
+      - name: New campaign regression tests
+        env:
+          PYTHONPATH: src
+        run: |
+          python -m pytest -q tests/campaign -o cache_dir="$RUNNER_TEMP/pytest-cache" \
+            --junitxml="$RUNNER_TEMP/campaign-tests.xml"
+      - name: Upload software test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: campaign-software-tests
+          path: ${{ runner.temp }}/campaign-tests.xml
+
+  authoritative-science:
+    if: github.event_name == 'workflow_dispatch' && inputs.authoritative_science
+    # This label denotes a runner provisioned with the pinned Lean toolchain.
+    # No paid runner is started and no external service is provisioned by this file.
+    runs-on: [self-hosted, linux, mp5d-science]
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Create isolated pinned environment outside checkout
+        run: |
+          python -m venv "$RUNNER_TEMP/mp5d-venv"
+          "$RUNNER_TEMP/mp5d-venv/bin/python" -m pip install -r requirements.lock
+      - name: Require actual Lean build tooling
+        run: |
+          command -v lake
+          command -v lean
+      - name: Authoritative post-commit production
+        env:
+          PYTHONPATH: src
+        run: |
+          test -z "$(git status --porcelain --untracked-files=all)"
+          "$RUNNER_TEMP/mp5d-venv/bin/python" -m mp5d_campaign.cli run \
+            --root "$GITHUB_WORKSPACE" --output "$RUNNER_TEMP/mp5d-evidence" --stages all
+      - name: Preserve positive and negative scientific evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mp5d-scientific-evidence-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/mp5d-evidence/*.json
+            ${{ runner.temp }}/mp5d-evidence/tasks/*.json
+            ${{ runner.temp }}/mp5d-evidence/logs/*.log
+            ${{ runner.temp }}/mp5d-evidence/publication-figures/*
