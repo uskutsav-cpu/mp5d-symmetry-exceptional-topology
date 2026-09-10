@@ -1,0 +1,12 @@
+(1,1) l=2 N=0 s=0.0 d=0.0: 24 pts, regimes=['long_lived', 'ordinary', 'quasi_bound'], min damping=8.654682716258757e-10, stop=stalled
+(1,1) l=2 N=0 s=0.24 d=0.0: 27 pts, regimes=['ordinary', 'quasi_bound'], min damping=2.5152974894973205e-07, stop=stalled
+(1,1) l=2 N=0 s=0.24 d=0.1: 26 pts, regimes=['ordinary', 'quasi_bound'], min damping=1.6132703917340192e-07, stop=stalled
+(1,1) l=2 N=1 s=0.24 d=0.0: 21 pts, regimes=['ordinary', 'quasi_bound'], min damping=0.0936020039486922, stop=reached_mu_max
+(0,0) l=0 N=0 s=0.0 d=0.0: 13 pts, regimes=['ordinary', 'quasi_bound'], min damping=0.00013413366750110602, stop=stalled
+(0,0) l=0 N=0 s=0.24 d=0.0: 15 pts, regimes=['ordinary', 'quasi_bound'], min damping=0.00019458397054839373, stop=stalled
+(0,0) l=2 N=0 s=0.24 d=0.0: 40 pts, regimes=['long_lived', 'ordinary', 'quasi_bound'], min damping=5.766744236341494e-09, stop=stalled
+(2,2) l=4 N=0 s=0.24 d=0.0: 21 pts, regimes=['ordinary'], min damping=0.21134696338008996, stop=reached_mu_max
+(1,0) l=1 N=0 s=0.24 d=0.0: 14 pts, regimes=['ordinary', 'quasi_bound'], min damping=5.835164817504734e-09, stop=stalled
+(2,0) l=2 N=0 s=0.24 d=0.0: 27 pts, regimes=['ordinary', 'quasi_bound'], min damping=1.7912745629032717e-06, stop=stalled
+(2,1) l=3 N=0 s=0.24 d=0.0: 21 pts, regimes=['ordinary'], min damping=0.13162770857821507, stop=reached_mu_max
+wrote results/long_lived_branches_final.json in 180.1s

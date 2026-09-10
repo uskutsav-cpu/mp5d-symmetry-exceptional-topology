@@ -1,0 +1,83 @@
+% Figure 1 -- the stored quasinormal atlas in the complex-frequency plane.
+% Drawn in PGFPlots from data/atlas_density.dat: occupancy of all 50,558
+% stored entries on a 180 x 136 grid, as log10(count+1).  Every entry is
+% counted and nothing is smoothed, so an empty cell is exactly empty.
+% The axis, ticks, labels, colour bar and annotations are typeset by PGFPlots
+% in the document's own font; only the occupancy field itself is pixel data.
+\begin{tikzpicture}
+
+\pgfplotsset{
+  colormap={emberdark}{
+    rgb=(0.001,0.000,0.014)
+    rgb=(0.232,0.060,0.438)
+    rgb=(0.554,0.161,0.506)
+    rgb=(0.868,0.288,0.409)
+    rgb=(0.988,0.553,0.348)
+    rgb=(0.987,0.991,0.750)
+  },
+}
+% Labels sit on top of the field, so each one carries its own dark plate;
+% white-on-bright is the one combination this colour map cannot survive.
+\tikzset{
+  plate/.style={font=\scriptsize, text=white, inner xsep=2.4pt,
+                inner ysep=1.6pt, fill=black, fill opacity=0.55,
+                text opacity=1, rounded corners=1pt},
+  band/.style={plate, anchor=west},
+  winlab/.style={plate, font=\fontsize{7}{8}\selectfont},
+  win/.style={draw=white, line width=0.6pt, rounded corners=0.7pt},
+}
+
+\begin{axis}[
+  width=13.72cm, height=7.3cm, scale only axis,
+  xmin=0, xmax=5.4, ymin=-3.4, ymax=0,
+  xlabel={$\Rey\omega$}, ylabel={$\Imy\omega$},
+  label style={font=\small}, tick label style={font=\scriptsize},
+  xtick={0,1,2,3,4,5}, minor xtick={0.5,1.5,2.5,3.5,4.5},
+  ytick={0,-1,-2,-3}, minor ytick={-0.5,-1.5,-2.5},
+  tick align=outside,
+  axis line style={draw=black!55, line width=0.3pt},
+  tick style={black!55},
+  colormap name=emberdark,
+  point meta min=0, point meta max=\atlasMetaMax,
+  colorbar,
+  colorbar style={
+    width=0.22cm, ytick={0,1,2},
+    ylabel={$\log_{10}(\text{entries}+1)$},
+    ylabel style={font=\scriptsize},
+    yticklabel style={font=\scriptsize},
+    axis line style={draw=black!55, line width=0.3pt},
+    tick style={draw=black!55},
+  },
+]
+
+% The occupancy field is pixel data and ships as an image.
+\addplot graphics [xmin=0, xmax=5.4, ymin=-3.4, ymax=0]
+  {data/atlas_density.png};
+
+% gives the colorbar its range without drawing anything
+\addplot[scatter, only marks, mark size=0pt, point meta=explicit,
+         forget plot, draw opacity=0, fill opacity=0]
+  table[x=x, y=y, meta=m] {
+    x  y     m
+    0  -3.4  0
+    0  -3.4  \atlasMetaMax
+  };
+
+% ---- overtone ladders, at the median damping of each band -------------
+\node[band] at (axis cs:0.07,-0.329) {$N=0$};
+\node[band] at (axis cs:0.07,-1.007) {$N=1$};
+\node[band] at (axis cs:0.07,-1.726) {$N=2$};
+\node[band] at (axis cs:0.07,-2.511) {$N=3$};
+
+% ---- the two windows opened in Figure 2 -------------------------------
+% Boxes are the panel windows themselves; each label is tied to its box by a
+% short leader so it can sit clear of the occupied cells.
+\draw[win] (axis cs:1.425,-0.625) rectangle (axis cs:2.025,-0.025);
+\draw[white, line width=0.4pt] (axis cs:2.025,-0.325) -- (axis cs:2.16,-0.325);
+\node[winlab, anchor=west] at (axis cs:2.17,-0.325) {Fig.~\ref{fig:pseudo}(a)};
+
+\draw[win] (axis cs:2.459,-1.723) rectangle (axis cs:3.059,-1.123);
+\draw[white, line width=0.4pt] (axis cs:3.059,-1.423) -- (axis cs:3.19,-1.423);
+\node[winlab, anchor=west] at (axis cs:3.20,-1.423) {Fig.~\ref{fig:pseudo}(b)};
+\end{axis}
+\end{tikzpicture}

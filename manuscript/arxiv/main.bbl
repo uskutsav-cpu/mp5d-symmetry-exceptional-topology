@@ -1,0 +1,177 @@
+\begin{thebibliography}{30}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ashida et~al.(2020)Ashida, Gong, and Ueda]{ashida2020}
+Y.~Ashida, Z.~Gong, and M.~Ueda.
+\newblock Non-{H}ermitian physics.
+\newblock \emph{Advances in Physics}, 69:\penalty0 249, 2020.
+
+\bibitem[Bergholtz et~al.(2021)Bergholtz, Budich, and Kunst]{bergholtz2021}
+E.~J. Bergholtz, J.~C. Budich, and F.~K. Kunst.
+\newblock Exceptional topology of non-{H}ermitian systems.
+\newblock \emph{Reviews of Modern Physics}, 93:\penalty0 015005, 2021.
+
+\bibitem[Berti et~al.(2009)Berti, Cardoso, and Starinets]{berti2009}
+E.~Berti, V.~Cardoso, and A.~O. Starinets.
+\newblock Quasinormal modes of black holes and black branes.
+\newblock \emph{Classical and Quantum Gravity}, 26:\penalty0 163001, 2009.
+
+\bibitem[Berti et~al.(2026)]{berti2026}
+E.~Berti et~al.
+\newblock Black hole spectroscopy: From theory to experiment.
+\newblock \emph{Classical and Quantum Gravity}, 43:\penalty0 123001, 2026.
+
+\bibitem[Cao et~al.(2025)Cao, Ji, Wu, and Zhou]{cao2025}
+L.-M. Cao, M.-F. Ji, L.-B. Wu, and Y.-S. Zhou.
+\newblock Exceptional line and pseudospectrum in black hole spectroscopy.
+\newblock \emph{arXiv preprint arXiv:2511.17067}, 2025.
+
+\bibitem[Cavalcante et~al.(2024)Cavalcante, Richartz, and
+  da~Cunha]{cavalcante2024}
+J.~P. Cavalcante, M.~Richartz, and B.~C. da~Cunha.
+\newblock Exceptional point and hysteresis in perturbations of {K}err black
+  holes.
+\newblock \emph{Physical Review Letters}, 133:\penalty0 261401, 2024.
+
+\bibitem[Cavalcante et~al.(2026)Cavalcante, Richartz, and
+  da~Cunha]{cavalcante2026}
+J.~P. Cavalcante, M.~Richartz, and B.~C. da~Cunha.
+\newblock Ergodic hysteresis of the {K}err black hole spectrum.
+\newblock \emph{Physical Review D}, 113:\penalty0 L101504, 2026.
+\newblock \doi{10.1103/mssm-ws7d}.
+
+\bibitem[Detweiler(1980)]{detweiler1980}
+S.~Detweiler.
+\newblock {Klein--Gordon} equation and rotating black holes.
+\newblock \emph{Physical Review D}, 22:\penalty0 2323, 1980.
+
+\bibitem[Dias et~al.(2010)Dias, Figueras, Monteiro, Reall, and
+  Santos]{dias2010}
+O.~J.~C. Dias, P.~Figueras, R.~Monteiro, H.~S. Reall, and J.~E. Santos.
+\newblock An instability of higher-dimensional rotating black holes.
+\newblock \emph{Journal of High Energy Physics}, 05:\penalty0 076, 2010.
+
+\bibitem[Dolan(2007)]{dolan2007}
+S.~R. Dolan.
+\newblock Instability of the massive {Klein--Gordon} field on the {K}err
+  spacetime.
+\newblock \emph{Physical Review D}, 76:\penalty0 084001, 2007.
+
+\bibitem[Emparan et~al.(2014)Emparan, Suzuki, and Tanabe]{emparan2014}
+R.~Emparan, R.~Suzuki, and K.~Tanabe.
+\newblock Instability of rotating black holes: Large-{D} analysis.
+\newblock \emph{Journal of High Energy Physics}, 06:\penalty0 106, 2014.
+
+\bibitem[Frolov \& Stojkovic(2003)Frolov and Stojkovic]{frolov2003}
+V.~P. Frolov and D.~Stojkovic.
+\newblock Quantum radiation from a five-dimensional rotating black hole.
+\newblock \emph{Physical Review D}, 67:\penalty0 084004, 2003.
+
+\bibitem[G{\"u}ttel \& Tisseur(2017)G{\"u}ttel and Tisseur]{guttel2017}
+S.~G{\"u}ttel and F.~Tisseur.
+\newblock The nonlinear eigenvalue problem.
+\newblock \emph{Acta Numerica}, 26:\penalty0 1--94, 2017.
+\newblock \doi{10.1017/S0962492917000034}.
+
+\bibitem[Hartnett \& Santos(2013)Hartnett and Santos]{hartnett2013}
+G.~S. Hartnett and J.~E. Santos.
+\newblock Non-axisymmetric instability of rotating black holes in higher
+  dimensions.
+\newblock \emph{Physical Review D}, 88:\penalty0 041505(R), 2013.
+\newblock arXiv:1306.4318.
+
+\bibitem[Hatsuda \& Kimura(2021)Hatsuda and Kimura]{hatsuda2021}
+Y.~Hatsuda and M.~Kimura.
+\newblock Spectral problems for quasinormal modes of black holes.
+\newblock \emph{Universe}, 7:\penalty0 476, 2021.
+
+\bibitem[Huang \& Huang(2025)Huang and Huang]{huang2025}
+Z.-Y. Huang and J.-H. Huang.
+\newblock Quasinormal modes of massive scalar fields in five-dimensional
+  {Myers--Perry} black holes with two arbitrary rotation parameters.
+\newblock \emph{Physics Letters B}, 866:\penalty0 139514, 2025.
+
+\bibitem[Jaramillo et~al.(2021)Jaramillo, Macedo, and Sheikh]{jaramillo2021}
+J.~L. Jaramillo, R.~P. Macedo, and L.~A. Sheikh.
+\newblock Pseudospectrum and black hole quasinormal mode instability.
+\newblock \emph{Physical Review X}, 11:\penalty0 031003, 2021.
+
+\bibitem[Kato(1995)]{kato1995}
+T.~Kato.
+\newblock \emph{Perturbation Theory for Linear Operators}.
+\newblock Springer, Berlin, 1995.
+
+\bibitem[Kokkotas \& Schmidt(1999)Kokkotas and Schmidt]{kokkotas1999}
+K.~D. Kokkotas and B.~G. Schmidt.
+\newblock Quasi-normal modes of stars and black holes.
+\newblock \emph{Living Reviews in Relativity}, 2:\penalty0 2, 1999.
+
+\bibitem[Konoplya \& Zhidenko(2011)Konoplya and Zhidenko]{konoplya2011}
+R.~A. Konoplya and A.~Zhidenko.
+\newblock Quasinormal modes of black holes: From astrophysics to string theory.
+\newblock \emph{Reviews of Modern Physics}, 83:\penalty0 793, 2011.
+
+\bibitem[Leaver(1985)]{leaver1985}
+E.~W. Leaver.
+\newblock An analytic representation for the quasinormal modes of {K}err black
+  holes.
+\newblock \emph{Proceedings of the Royal Society A}, 402:\penalty0 285, 1985.
+
+\bibitem[Macedo et~al.(2026)Macedo, Katagiri, Kubota, and
+  Motohashi]{macedo2026}
+R.~P. Macedo, T.~Katagiri, K.-i. Kubota, and H.~Motohashi.
+\newblock Exceptional points and resonance in black hole ringdown.
+\newblock \emph{Physical Review D}, 113:\penalty0 L121504, 2026.
+\newblock \doi{10.1103/5w5d-kr25}.
+
+\bibitem[Matyjasek(2021)]{matyjasek2021}
+J.~Matyjasek.
+\newblock Quasinormal modes of black holes in {Einstein--Gauss--Bonnet} and
+  other theories: The {Schwarzschild--Tangherlini} case.
+\newblock \emph{Physical Review D}, 104:\penalty0 084066, 2021.
+
+\bibitem[Motohashi(2025)]{motohashi2025}
+H.~Motohashi.
+\newblock Resonant excitation of quasinormal modes of black holes.
+\newblock \emph{Physical Review Letters}, 134:\penalty0 141401, 2025.
+
+\bibitem[Murata \& Soda(2008)Murata and Soda]{murata2008}
+K.~Murata and J.~Soda.
+\newblock A note on separability of field equations in {Myers--Perry}
+  spacetimes.
+\newblock \emph{Classical and Quantum Gravity}, 25:\penalty0 035006, 2008.
+
+\bibitem[Myers(2012)]{myers2012}
+R.~C. Myers.
+\newblock {Myers--Perry} black holes.
+\newblock In G.~T. Horowitz (ed.), \emph{Black Holes in Higher Dimensions}.
+  Cambridge University Press, Cambridge, 2012.
+\newblock arXiv:1111.1903.
+
+\bibitem[Myers \& Perry(1986)Myers and Perry]{myers1986}
+R.~C. Myers and M.~J. Perry.
+\newblock Black holes in higher dimensional space-times.
+\newblock \emph{Annals of Physics (N.Y.)}, 172:\penalty0 304, 1986.
+
+\bibitem[Nennig \& Perrey-Debain(2020)Nennig and Perrey-Debain]{nennig2020}
+B.~Nennig and E.~Perrey-Debain.
+\newblock A high-order continuation method to locate exceptional points and
+  compute {P}uiseux series.
+\newblock \emph{Journal of Computational Physics}, 412:\penalty0 109425, 2020.
+
+\bibitem[Stein(2019)]{stein2019}
+L.~C. Stein.
+\newblock qnm: A {Python} package for calculating {K}err quasinormal modes.
+\newblock \emph{Journal of Open Source Software}, 4:\penalty0 1683, 2019.
+
+\bibitem[Yang et~al.(2025)Yang, Berti, and Franchini]{yang2025}
+Y.~Yang, E.~Berti, and N.~Franchini.
+\newblock Black hole quasinormal mode resonances.
+\newblock \emph{Physical Review Letters}, 135:\penalty0 201401, 2025.
+\newblock \doi{10.1103/hfv8-n444}.
+
+\end{thebibliography}

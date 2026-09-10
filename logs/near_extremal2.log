@@ -1,0 +1,23 @@
+z-=0.100: window centred on 2.140000-0.490000j
+z-=0.100 (a=0.5779,b=0.3612) theta=50deg min_sigma=2.499e-06 at 2.0050-0.9400i
+z-=0.100 (a=0.5779,b=0.3612) theta=60deg min_sigma=3.743e-06 at 1.9600-0.9400i
+z-=0.100 (a=0.5779,b=0.3612) theta=70deg min_sigma=3.840e-06 at 2.0050-0.9400i
+z-=0.190: window centred on 2.140000-0.490000j
+z-=0.190 (a=0.6122,b=0.3826) theta=50deg min_sigma=4.781e-10 at 2.0050-0.9400i
+z-=0.190 (a=0.6122,b=0.3826) theta=60deg min_sigma=2.265e-09 at 2.2750-0.9400i
+z-=0.190 (a=0.6122,b=0.3826) theta=70deg min_sigma=3.111e-09 at 2.3650-0.9400i
+  [warn] seeding failed at z-=0.3: complex division by zero
+z-=0.300: window centred on 2.140000-0.490000j
+Traceback (most recent call last):
+  File "/Users/swethasunilkumar/mp5d-symmetry-exceptional-topology/scripts/map_near_extremal_spectrum.py", line 182, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/swethasunilkumar/mp5d-symmetry-exceptional-topology/scripts/map_near_extremal_spectrum.py", line 142, in main
+    m = map_window(prob, centre, args.half_re, args.half_im,
+                   args.n_re, args.n_im)
+  File "/Users/swethasunilkumar/mp5d-symmetry-exceptional-topology/scripts/map_near_extremal_spectrum.py", line 86, in map_window
+    k = int(np.nanargmin(grid))
+            ~~~~~~~~~~~~^^^^^^
+  File "/Users/swethasunilkumar/mp5d-symmetry-exceptional-topology/.venv/lib/python3.13/site-packages/numpy/lib/_nanfunctions_impl.py", line 562, in nanargmin
+    raise ValueError("All-NaN slice encountered")
+ValueError: All-NaN slice encountered
