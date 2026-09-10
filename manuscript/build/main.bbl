@@ -1,0 +1,795 @@
+%apsrev4-2.bst 2019-01-14 (MD) hand-edited version of apsrev4-1.bst
+%Control: key (0)
+%Control: author (8) initials jnrlst
+%Control: editor formatted (1) identically to author
+%Control: production of article title (0) allowed
+%Control: page (0) single
+%Control: year (1) truncated
+%Control: production of eprint (0) enabled
+\begin{thebibliography}{61}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{https://doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Kokkotas}\ and\ \citenamefont
+  {Schmidt}(1999)}]{Kokkotas1999D46}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.~D.}\ \bibnamefont
+  {Kokkotas}}\ and\ \bibinfo {author} {\bibfnamefont {B.~G.}\ \bibnamefont
+  {Schmidt}},\ }\bibfield  {title} {\bibinfo {title} {{Quasi-Normal Modes of
+  Stars and Black Holes}},\ }\href {https://doi.org/10.12942/lrr-1999-2}
+  {\bibfield  {journal} {\bibinfo  {journal} {LivingRev.Rel}\ }\textbf
+  {\bibinfo {volume} {2}},\ \bibinfo {pages} {2} (\bibinfo {year} {1999})},\
+  \Eprint {https://arxiv.org/abs/gr-qc/9909058} {arXiv:gr-qc/9909058}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Berti}\ \emph {et~al.}(2009)\citenamefont {Berti},
+  \citenamefont {Cardoso},\ and\ \citenamefont {Starinets}}]{Berti2009D47}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Berti}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Cardoso}},\
+  and\ \bibinfo {author} {\bibfnamefont {A.~O.}\ \bibnamefont {Starinets}},\
+  }\bibfield  {title} {\bibinfo {title} {{Quasinormal modes of black holes and
+  black branes}}\ }\href {https://doi.org/10.1088/0264-9381/26/16/163001}
+  {10.1088/0264-9381/26/16/163001} (\bibinfo {year} {2009}),\ \Eprint
+  {https://arxiv.org/abs/0905.2975} {arXiv:0905.2975} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Konoplya}\ and\ \citenamefont
+  {Zhidenko}(2011)}]{Konoplya2011D48}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~A.}\ \bibnamefont
+  {Konoplya}}\ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Zhidenko}},\ }\bibfield  {title} {\bibinfo {title} {{Quasinormal modes of
+  black holes: from astrophysics to string theory}},\ }\href
+  {https://doi.org/10.1103/RevModPhys.83.793} {\bibfield  {journal} {\bibinfo
+  {journal} {Rev.Mod.Phys}\ }\textbf {\bibinfo {volume} {83}},\ \bibinfo
+  {pages} {793} (\bibinfo {year} {2011})},\ \Eprint
+  {https://arxiv.org/abs/1102.4014} {arXiv:1102.4014} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Berti}\ \emph {et~al.}(2025)\citenamefont {Berti},
+  \citenamefont {Cardoso}, \citenamefont {Carullo}, \citenamefont {Abedi},
+  \citenamefont {Afshordi}, \citenamefont {Albanesi}, \citenamefont {Baibhav},
+  \citenamefont {Bhagwat}, \citenamefont {Blázquez-Salcedo}, \citenamefont
+  {Bonga}, \citenamefont {Bucciotti}, \citenamefont {Santoro}, \citenamefont
+  {Cano}, \citenamefont {Capano}, \citenamefont {Cheung}, \citenamefont
+  {Chirenti}, \citenamefont {Cook}, \citenamefont {Chung}, \citenamefont
+  {Amicis}, \citenamefont {Destounis}, \citenamefont {Dias}, \citenamefont
+  {Pozzo}, \citenamefont {Duque}, \citenamefont {Farr}, \citenamefont {Finch},
+  \citenamefont {Franchini}, \citenamefont {Fransen}, \citenamefont {Gennari},
+  \citenamefont {Green}, \citenamefont {Hughes}, \citenamefont {Isi},
+  \citenamefont {Forteza}, \citenamefont {Khanna}, \citenamefont {Khoo},
+  \citenamefont {Kimura}, \citenamefont {Krishnan}, \citenamefont {Kuntz},
+  \citenamefont {Lagos}, \citenamefont {Lo}, \citenamefont {London},
+  \citenamefont {Ma}, \citenamefont {Maenaut}, \citenamefont {Zertuche},
+  \citenamefont {Maggio}, \citenamefont {Maselli}, \citenamefont {Mitman},
+  \citenamefont {Motohashi}, \citenamefont {Oshita}, \citenamefont {Pacilio},
+  \citenamefont {Pani}, \citenamefont {Macedo}, \citenamefont {Pitte},
+  \citenamefont {Pompili}, \citenamefont {Redondo-Yuste}, \citenamefont
+  {Richartz}, \citenamefont {Riotto}, \citenamefont {Santos}, \citenamefont
+  {Sathyaprakash}, \citenamefont {Sberna}, \citenamefont {Silva}, \citenamefont
+  {Stein}, \citenamefont {Toubiana}, \citenamefont {Völkel}, \citenamefont
+  {Westerweck}, \citenamefont {Yang}, \citenamefont {Yi}, \citenamefont
+  {Yunes},\ and\ \citenamefont {Zhu}}]{Bertietal2025D50}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Berti}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Cardoso}},
+  \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Carullo}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Abedi}}, \bibinfo {author}
+  {\bibfnamefont {N.}~\bibnamefont {Afshordi}}, \bibinfo {author}
+  {\bibfnamefont {S.}~\bibnamefont {Albanesi}}, \bibinfo {author}
+  {\bibfnamefont {V.}~\bibnamefont {Baibhav}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Bhagwat}}, \bibinfo {author} {\bibfnamefont {J.~L.}\
+  \bibnamefont {Blázquez-Salcedo}}, \bibinfo {author} {\bibfnamefont
+  {B.}~\bibnamefont {Bonga}}, \bibinfo {author} {\bibfnamefont
+  {B.}~\bibnamefont {Bucciotti}}, \bibinfo {author} {\bibfnamefont {G.~C.}\
+  \bibnamefont {Santoro}}, \bibinfo {author} {\bibfnamefont {P.~A.}\
+  \bibnamefont {Cano}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Capano}}, \bibinfo {author} {\bibfnamefont {M.~H.-Y.}\ \bibnamefont
+  {Cheung}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont {Chirenti}},
+  \bibinfo {author} {\bibfnamefont {G.~B.}\ \bibnamefont {Cook}}, \bibinfo
+  {author} {\bibfnamefont {A.~K.-W.}\ \bibnamefont {Chung}}, \bibinfo {author}
+  {\bibfnamefont {M.~D.}\ \bibnamefont {Amicis}}, \bibinfo {author}
+  {\bibfnamefont {K.}~\bibnamefont {Destounis}}, \bibinfo {author}
+  {\bibfnamefont {O.~J.~C.}\ \bibnamefont {Dias}}, \bibinfo {author}
+  {\bibfnamefont {W.~D.}\ \bibnamefont {Pozzo}}, \bibinfo {author}
+  {\bibfnamefont {F.}~\bibnamefont {Duque}}, \bibinfo {author} {\bibfnamefont
+  {W.~M.}\ \bibnamefont {Farr}}, \bibinfo {author} {\bibfnamefont
+  {E.}~\bibnamefont {Finch}}, \bibinfo {author} {\bibfnamefont
+  {N.}~\bibnamefont {Franchini}}, \bibinfo {author} {\bibfnamefont
+  {K.}~\bibnamefont {Fransen}}, \bibinfo {author} {\bibfnamefont
+  {V.}~\bibnamefont {Gennari}}, \bibinfo {author} {\bibfnamefont {S.~R.}\
+  \bibnamefont {Green}}, \bibinfo {author} {\bibfnamefont {S.~A.}\ \bibnamefont
+  {Hughes}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Isi}},
+  \bibinfo {author} {\bibfnamefont {X.~J.}\ \bibnamefont {Forteza}}, \bibinfo
+  {author} {\bibfnamefont {G.}~\bibnamefont {Khanna}}, \bibinfo {author}
+  {\bibfnamefont {F.~S.}\ \bibnamefont {Khoo}}, \bibinfo {author}
+  {\bibfnamefont {M.}~\bibnamefont {Kimura}}, \bibinfo {author} {\bibfnamefont
+  {B.}~\bibnamefont {Krishnan}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Kuntz}}, \bibinfo {author} {\bibfnamefont
+  {M.}~\bibnamefont {Lagos}}, \bibinfo {author} {\bibfnamefont {R.~K.~L.}\
+  \bibnamefont {Lo}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {London}}, \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Ma}}, \bibinfo
+  {author} {\bibfnamefont {S.}~\bibnamefont {Maenaut}}, \bibinfo {author}
+  {\bibfnamefont {L.~M.}\ \bibnamefont {Zertuche}}, \bibinfo {author}
+  {\bibfnamefont {E.}~\bibnamefont {Maggio}}, \bibinfo {author} {\bibfnamefont
+  {A.}~\bibnamefont {Maselli}}, \bibinfo {author} {\bibfnamefont
+  {K.}~\bibnamefont {Mitman}}, \bibinfo {author} {\bibfnamefont
+  {H.}~\bibnamefont {Motohashi}}, \bibinfo {author} {\bibfnamefont
+  {N.}~\bibnamefont {Oshita}}, \bibinfo {author} {\bibfnamefont
+  {C.}~\bibnamefont {Pacilio}}, \bibinfo {author} {\bibfnamefont
+  {P.}~\bibnamefont {Pani}}, \bibinfo {author} {\bibfnamefont {R.~P.}\
+  \bibnamefont {Macedo}}, \bibinfo {author} {\bibfnamefont {C.}~\bibnamefont
+  {Pitte}}, \bibinfo {author} {\bibfnamefont {L.}~\bibnamefont {Pompili}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Redondo-Yuste}}, \bibinfo
+  {author} {\bibfnamefont {M.}~\bibnamefont {Richartz}}, \bibinfo {author}
+  {\bibfnamefont {A.}~\bibnamefont {Riotto}}, \bibinfo {author} {\bibfnamefont
+  {J.~E.}\ \bibnamefont {Santos}}, \bibinfo {author} {\bibfnamefont
+  {B.}~\bibnamefont {Sathyaprakash}}, \bibinfo {author} {\bibfnamefont
+  {L.}~\bibnamefont {Sberna}}, \bibinfo {author} {\bibfnamefont {H.~O.}\
+  \bibnamefont {Silva}}, \bibinfo {author} {\bibfnamefont {L.~C.}\ \bibnamefont
+  {Stein}}, \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Toubiana}},
+  \bibinfo {author} {\bibfnamefont {S.~H.}\ \bibnamefont {Völkel}}, \bibinfo
+  {author} {\bibfnamefont {J.}~\bibnamefont {Westerweck}}, \bibinfo {author}
+  {\bibfnamefont {H.}~\bibnamefont {Yang}}, \bibinfo {author} {\bibfnamefont
+  {S.}~\bibnamefont {Yi}}, \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Yunes}},\ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Zhu}},\
+  }\bibfield  {title} {\bibinfo {title} {{Black hole spectroscopy: from theory
+  to experiment}},\ }\href@noop {} {\  (\bibinfo {year} {2025})},\ \Eprint
+  {https://arxiv.org/abs/2505.23895} {arXiv:2505.23895} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kato}(1995)}]{KatoE71}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Kato}},\ }\href@noop {} {\emph {\bibinfo {title} {{Perturbation Theory for
+  Linear Operators}}}},\ Classics in Mathematics\ (\bibinfo  {publisher}
+  {Springer},\ \bibinfo {year} {1995})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Bergholtz}\ \emph {et~al.}(2019)\citenamefont
+  {Bergholtz}, \citenamefont {Budich},\ and\ \citenamefont
+  {Kunst}}]{Bergholtz2019E63}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.~J.}\ \bibnamefont
+  {Bergholtz}}, \bibinfo {author} {\bibfnamefont {J.~C.}\ \bibnamefont
+  {Budich}},\ and\ \bibinfo {author} {\bibfnamefont {F.~K.}\ \bibnamefont
+  {Kunst}},\ }\bibfield  {title} {\bibinfo {title} {{Exceptional Topology of
+  Non-Hermitian Systems}},\ }\href
+  {https://doi.org/10.1103/RevModPhys.93.015005} {\bibfield  {journal}
+  {\bibinfo  {journal} {Rev. Mod. Phys}\ }\textbf {\bibinfo {volume} {93}},\
+  \bibinfo {pages} {15005} (\bibinfo {year} {2019})},\ \Eprint
+  {https://arxiv.org/abs/1912.10048} {arXiv:1912.10048} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ashida}\ \emph {et~al.}(2020)\citenamefont {Ashida},
+  \citenamefont {Gong},\ and\ \citenamefont {Ueda}}]{Ashida2020E64}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Ashida}}, \bibinfo {author} {\bibfnamefont {Z.}~\bibnamefont {Gong}},\ and\
+  \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Ueda}},\ }\bibfield
+  {title} {\bibinfo {title} {{Non-Hermitian Physics}},\ }\href
+  {https://doi.org/10.1080/00018732.2021.1876991} {\bibfield  {journal}
+  {\bibinfo  {journal} {Advances in Physics}\ }\textbf {\bibinfo {volume}
+  {69}},\ \bibinfo {pages} {3} (\bibinfo {year} {2020})},\ \Eprint
+  {https://arxiv.org/abs/2006.01837} {arXiv:2006.01837} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Macedo}\ \emph {et~al.}(2025)\citenamefont {Macedo},
+  \citenamefont {Katagiri}, \citenamefont {ichiro Kubota},\ and\ \citenamefont
+  {Motohashi}}]{PanossoMacedoetal2025B30}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~P.}\ \bibnamefont
+  {Macedo}}, \bibinfo {author} {\bibfnamefont {T.}~\bibnamefont {Katagiri}},
+  \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {ichiro Kubota}},\ and\
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Motohashi}},\ }\bibfield
+  {title} {\bibinfo {title} {{Exceptional Points and Resonance in Black Hole
+  Ringdown}}\ }\href {https://doi.org/10.1103/5w5d-kr25} {10.1103/5w5d-kr25}
+  (\bibinfo {year} {2025}),\ \Eprint {https://arxiv.org/abs/2512.02110}
+  {arXiv:2512.02110} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Motohashi}(2024)}]{Motohashi2024B24}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Motohashi}},\ }\bibfield  {title} {\bibinfo {title} {{Resonant Excitation of
+  Quasinormal Modes of Black Holes}},\ }\href
+  {https://doi.org/10.1103/PhysRevLett.134.141401} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Lett}\ }\textbf {\bibinfo {volume} {134}},\
+  \bibinfo {pages} {141401} (\bibinfo {year} {2024})},\ \Eprint
+  {https://arxiv.org/abs/2407.15191} {arXiv:2407.15191} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Jaramillo}\ \emph {et~al.}(2020)\citenamefont
+  {Jaramillo}, \citenamefont {Macedo},\ and\ \citenamefont
+  {Sheikh}}]{Jaramillo2020C36}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~L.}\ \bibnamefont
+  {Jaramillo}}, \bibinfo {author} {\bibfnamefont {R.~P.}\ \bibnamefont
+  {Macedo}},\ and\ \bibinfo {author} {\bibfnamefont {L.~A.}\ \bibnamefont
+  {Sheikh}},\ }\bibfield  {title} {\bibinfo {title} {{Pseudospectrum and black
+  hole quasi-normal mode (in)stability}},\ }\href
+  {https://doi.org/10.1103/PhysRevX.11.031003} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. X}\ }\textbf {\bibinfo {volume} {11}},\ \bibinfo
+  {pages} {031003} (\bibinfo {year} {2020})},\ \Eprint
+  {https://arxiv.org/abs/2004.06434} {arXiv:2004.06434} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Jaramillo}\ \emph {et~al.}(2021)\citenamefont
+  {Jaramillo}, \citenamefont {Macedo},\ and\ \citenamefont
+  {Sheikh}}]{Jaramillo2021C37}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~L.}\ \bibnamefont
+  {Jaramillo}}, \bibinfo {author} {\bibfnamefont {R.~P.}\ \bibnamefont
+  {Macedo}},\ and\ \bibinfo {author} {\bibfnamefont {L.~A.}\ \bibnamefont
+  {Sheikh}},\ }\bibfield  {title} {\bibinfo {title} {{Gravitational wave
+  signatures of black hole quasi-normal mode instability}}\ }\href
+  {https://doi.org/10.1103/PhysRevLett.128.211102}
+  {10.1103/PhysRevLett.128.211102} (\bibinfo {year} {2021}),\ \Eprint
+  {https://arxiv.org/abs/2105.03451} {arXiv:2105.03451} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Destounis}\ \emph {et~al.}(2021)\citenamefont
+  {Destounis}, \citenamefont {Macedo}, \citenamefont {Berti}, \citenamefont
+  {Cardoso},\ and\ \citenamefont {Jaramillo}}]{Destounisetal2021C38}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Destounis}}, \bibinfo {author} {\bibfnamefont {R.~P.}\ \bibnamefont
+  {Macedo}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Berti}},
+  \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Cardoso}},\ and\ \bibinfo
+  {author} {\bibfnamefont {J.~L.}\ \bibnamefont {Jaramillo}},\ }\bibfield
+  {title} {\bibinfo {title} {{Pseudospectrum of Reissner-Nordström black
+  holes: quasinormal mode instability and universality}},\ }\href
+  {https://doi.org/10.1103/PhysRevD.104.084091} {\bibfield  {journal} {\bibinfo
+   {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume} {104}},\ \bibinfo
+  {pages} {084091} (\bibinfo {year} {2021})},\ \Eprint
+  {https://arxiv.org/abs/2107.09673} {arXiv:2107.09673} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Yang}\ \emph {et~al.}(2012)\citenamefont {Yang},
+  \citenamefont {Zhang}, \citenamefont {Zimmerman}, \citenamefont {Nichols},
+  \citenamefont {Berti},\ and\ \citenamefont {Chen}}]{Yangetal2012B18}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Yang}}, \bibinfo {author} {\bibfnamefont {F.}~\bibnamefont {Zhang}},
+  \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Zimmerman}}, \bibinfo
+  {author} {\bibfnamefont {D.~A.}\ \bibnamefont {Nichols}}, \bibinfo {author}
+  {\bibfnamefont {E.}~\bibnamefont {Berti}},\ and\ \bibinfo {author}
+  {\bibfnamefont {Y.}~\bibnamefont {Chen}},\ }\bibfield  {title} {\bibinfo
+  {title} {{Branching of quasinormal modes for nearly extremal Kerr black
+  holes}},\ }\href {https://doi.org/10.1103/PhysRevD.87.041502} {\bibfield
+  {journal} {\bibinfo  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume}
+  {87}},\ \bibinfo {pages} {041502} (\bibinfo {year} {2012})},\ \Eprint
+  {https://arxiv.org/abs/1212.3271} {arXiv:1212.3271} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dias}\ \emph {et~al.}(2021)\citenamefont {Dias},
+  \citenamefont {Godazgar}, \citenamefont {Santos}, \citenamefont {Carullo},
+  \citenamefont {Pozzo},\ and\ \citenamefont {Laghi}}]{Diasetal2021B19}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~J.~C.}\
+  \bibnamefont {Dias}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Godazgar}}, \bibinfo {author} {\bibfnamefont {J.~E.}\ \bibnamefont
+  {Santos}}, \bibinfo {author} {\bibfnamefont {G.}~\bibnamefont {Carullo}},
+  \bibinfo {author} {\bibfnamefont {W.~D.}\ \bibnamefont {Pozzo}},\ and\
+  \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Laghi}},\ }\bibfield
+  {title} {\bibinfo {title} {{Eigenvalue repulsions in the quasinormal spectra
+  of the Kerr-Newman black hole}}\ }\href
+  {https://doi.org/10.1103/PhysRevD.105.084044} {10.1103/PhysRevD.105.084044}
+  (\bibinfo {year} {2021}),\ \Eprint {https://arxiv.org/abs/2109.13949}
+  {arXiv:2109.13949} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dias}\ \emph {et~al.}(2022)\citenamefont {Dias},
+  \citenamefont {Godazgar},\ and\ \citenamefont {Santos}}]{Dias2022B20}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~J.~C.}\
+  \bibnamefont {Dias}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Godazgar}},\ and\ \bibinfo {author} {\bibfnamefont {J.~E.}\ \bibnamefont
+  {Santos}},\ }\bibfield  {title} {\bibinfo {title} {{Eigenvalue repulsions and
+  quasinormal mode spectra of Kerr-Newman: an extended study}}\ }\href
+  {https://doi.org/10.1007/JHEP07(2022)076} {10.1007/JHEP07(2022)076} (\bibinfo
+  {year} {2022}),\ \Eprint {https://arxiv.org/abs/2205.13072}
+  {arXiv:2205.13072} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Davey}\ \emph {et~al.}(2023)\citenamefont {Davey},
+  \citenamefont {Dias},\ and\ \citenamefont {Santos}}]{Davey2023B21}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Davey}}, \bibinfo {author} {\bibfnamefont {O.~J.~C.}\ \bibnamefont {Dias}},\
+  and\ \bibinfo {author} {\bibfnamefont {J.~E.}\ \bibnamefont {Santos}},\
+  }\bibfield  {title} {\bibinfo {title} {{Scalar QNM spectra of Kerr and
+  Reissner-Nordström revealed by eigenvalue repulsions in Kerr-Newman}},\
+  }\href@noop {} {\  (\bibinfo {year} {2023})},\ \Eprint
+  {https://arxiv.org/abs/2305.11216} {arXiv:2305.11216} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Cavalcante}\ \emph
+  {et~al.}(2024{\natexlab{a}})\citenamefont {Cavalcante}, \citenamefont
+  {Richartz},\ and\ \citenamefont {da~Cunha}}]{Cavalcante2024B22}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~P.}\ \bibnamefont
+  {Cavalcante}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Richartz}},\ and\ \bibinfo {author} {\bibfnamefont {B.~C.}\ \bibnamefont
+  {da~Cunha}},\ }\bibfield  {title} {\bibinfo {title} {{Exceptional point and
+  hysteresis in perturbations of Kerr black holes}},\ }\href
+  {https://doi.org/10.1103/PhysRevLett.133.261401} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Lett}\ }\textbf {\bibinfo {volume} {133}},\
+  \bibinfo {pages} {261401} (\bibinfo {year} {2024}{\natexlab{a}})},\ \Eprint
+  {https://arxiv.org/abs/2407.20850} {arXiv:2407.20850} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Cavalcante}\ \emph
+  {et~al.}(2024{\natexlab{b}})\citenamefont {Cavalcante}, \citenamefont
+  {Richartz},\ and\ \citenamefont {da~Cunha}}]{Cavalcante2024B23}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~P.}\ \bibnamefont
+  {Cavalcante}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Richartz}},\ and\ \bibinfo {author} {\bibfnamefont {B.~C.}\ \bibnamefont
+  {da~Cunha}},\ }\bibfield  {title} {\bibinfo {title} {{Massive scalar
+  perturbations in Kerr Black Holes: near extremal analysis}},\ }\href
+  {https://doi.org/10.1103/PhysRevD.110.124064} {\bibfield  {journal} {\bibinfo
+   {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume} {110}},\ \bibinfo
+  {pages} {124064} (\bibinfo {year} {2024}{\natexlab{b}})},\ \Eprint
+  {https://arxiv.org/abs/2408.13964} {arXiv:2408.13964} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Cavalcante}\ \emph {et~al.}(2025)\citenamefont
+  {Cavalcante}, \citenamefont {Richartz},\ and\ \citenamefont
+  {da~Cunha}}]{Cavalcante2025B29}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.~P.}\ \bibnamefont
+  {Cavalcante}}, \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Richartz}},\ and\ \bibinfo {author} {\bibfnamefont {B.~C.}\ \bibnamefont
+  {da~Cunha}},\ }\bibfield  {title} {\bibinfo {title} {{Ergodic Hysteresis of
+  the Kerr black hole spectrum}}\ }\href {https://doi.org/10.1103/mssm-ws7d}
+  {10.1103/mssm-ws7d} (\bibinfo {year} {2025}),\ \Eprint
+  {https://arxiv.org/abs/2511.16640} {arXiv:2511.16640} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Oshita}\ \emph {et~al.}(2025)\citenamefont {Oshita},
+  \citenamefont {Berti},\ and\ \citenamefont {Cardoso}}]{Oshita2025B25}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Oshita}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Berti}},\ and\
+  \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Cardoso}},\ }\bibfield
+  {title} {\bibinfo {title} {{Unstable chords and destructive resonant
+  excitation of black hole quasinormal modes}},\ }\href@noop {} {\  (\bibinfo
+  {year} {2025})},\ \Eprint {https://arxiv.org/abs/2503.21276}
+  {arXiv:2503.21276} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Yang}\ \emph {et~al.}(2025)\citenamefont {Yang},
+  \citenamefont {Berti},\ and\ \citenamefont {Franchini}}]{Yang2025B26}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Yang}}, \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Berti}},\ and\
+  \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont {Franchini}},\ }\bibfield
+  {title} {\bibinfo {title} {{Black hole quasinormal mode resonances}},\ }\href
+  {https://doi.org/10.1103/hfv8-n444} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. Lett}\ }\textbf {\bibinfo {volume} {135}},\ \bibinfo
+  {pages} {201401} (\bibinfo {year} {2025})},\ \Eprint
+  {https://arxiv.org/abs/2504.06072} {arXiv:2504.06072} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {ichiro Kubota}\ and\ \citenamefont
+  {Motohashi}(2025)}]{Kubota2025B27}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {ichiro Kubota}}\ and\ \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont
+  {Motohashi}},\ }\bibfield  {title} {\bibinfo {title} {{Resonance in black
+  hole ringdown: Benchmarking quasinormal mode excitation and extraction}},\
+  }\href {https://doi.org/10.1103/pwyd-nv6v} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys.Rev.D}\ }\textbf {\bibinfo {volume} {113}},\ \bibinfo {pages}
+  {043053} (\bibinfo {year} {2025})},\ \Eprint
+  {https://arxiv.org/abs/2509.06411} {arXiv:2509.06411} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Cao}\ \emph {et~al.}(2025)\citenamefont {Cao},
+  \citenamefont {Ji}, \citenamefont {Wu},\ and\ \citenamefont
+  {Zhou}}]{Caoetal2025B28}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.-M.}\ \bibnamefont
+  {Cao}}, \bibinfo {author} {\bibfnamefont {M.-F.}\ \bibnamefont {Ji}},
+  \bibinfo {author} {\bibfnamefont {L.-B.}\ \bibnamefont {Wu}},\ and\ \bibinfo
+  {author} {\bibfnamefont {Y.-S.}\ \bibnamefont {Zhou}},\ }\bibfield  {title}
+  {\bibinfo {title} {{Exceptional line and pseudospectrum in black hole
+  spectroscopy}},\ }\href@noop {} {\  (\bibinfo {year} {2025})},\ \Eprint
+  {https://arxiv.org/abs/2511.17067} {arXiv:2511.17067} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wang}\ and\ \citenamefont {Wu}(2026)}]{Wang2026B32}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Wang}}\ and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Wu}},\
+  }\bibfield  {title} {\bibinfo {title} {{Coexistence of spectrally stable and
+  unstable modes in black hole ringdowns}},\ }\bibfield  {journal} {\bibinfo
+  {journal} {Physical Review D}\ }\textbf {\bibinfo {volume} {114}},\ \href
+  {https://doi.org/10.1103/srxw-wsvq} {10.1103/srxw-wsvq} (\bibinfo {year}
+  {2026})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Nakamoto}\ and\ \citenamefont
+  {Oshita}(2026)}]{Nakamoto2026A17}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Nakamoto}}\ and\ \bibinfo {author} {\bibfnamefont {N.}~\bibnamefont
+  {Oshita}},\ }\bibfield  {title} {\bibinfo {title} {{Exceptional Lines and
+  Excitation of (Nearly) Double-Pole Quasinormal Modes: A Semi-Analytic Study
+  in the Nariai Black Hole}},\ }\href {https://doi.org/10.1103/q6q5-lmwt}
+  {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo
+  {volume} {113}},\ \bibinfo {pages} {104032} (\bibinfo {year} {2026})},\
+  \Eprint {https://arxiv.org/abs/2601.00704} {arXiv:2601.00704} \BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Davey}\ \emph {et~al.}(2022)\citenamefont {Davey},
+  \citenamefont {Dias}, \citenamefont {Rodgers},\ and\ \citenamefont
+  {Santos}}]{Daveyetal2022A13}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.}~\bibnamefont
+  {Davey}}, \bibinfo {author} {\bibfnamefont {O.~J.~C.}\ \bibnamefont {Dias}},
+  \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Rodgers}},\ and\ \bibinfo
+  {author} {\bibfnamefont {J.~E.}\ \bibnamefont {Santos}},\ }\bibfield  {title}
+  {\bibinfo {title} {{Strong Cosmic Censorship and Eigenvalue Repulsions for
+  rotating de Sitter black holes in higher-dimensions}}\ }\href
+  {https://doi.org/10.1007/JHEP07(2022)086} {10.1007/JHEP07(2022)086} (\bibinfo
+  {year} {2022}),\ \Eprint {https://arxiv.org/abs/2203.13830}
+  {arXiv:2203.13830} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Ponglertsakul}\ and\ \citenamefont
+  {Gwak}(2020)}]{Ponglertsakul2020A12}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Ponglertsakul}}\ and\ \bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Gwak}},\ }\bibfield  {title} {\bibinfo {title} {{Massive Scalar
+  Perturbations on Myers-Perry-de Sitter Black Holes with a Single Rotation}},\
+  }\href {https://doi.org/10.1140/epjc/s10052-020-08616-1} {\ \textbf {\bibinfo
+  {volume} {11}},\ \bibinfo {pages} {1023} (\bibinfo {year} {2020})},\ \Eprint
+  {https://arxiv.org/abs/2007.16108} {arXiv:2007.16108} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Mandal}\ and\ \citenamefont
+  {Bergholtz}(2021)}]{Mandal2021E65}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {I.}~\bibnamefont
+  {Mandal}}\ and\ \bibinfo {author} {\bibfnamefont {E.~J.}\ \bibnamefont
+  {Bergholtz}},\ }\bibfield  {title} {\bibinfo {title} {{Symmetry and
+  Higher-Order Exceptional Points}},\ }\href
+  {https://doi.org/10.1103/PhysRevLett.127.186601} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Lett}\ }\textbf {\bibinfo {volume} {127}},\
+  \bibinfo {pages} {186601} (\bibinfo {year} {2021})},\ \Eprint
+  {https://arxiv.org/abs/2103.15729} {arXiv:2103.15729} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Zhang}\ \emph {et~al.}(2022)\citenamefont {Zhang},
+  \citenamefont {Cui}, \citenamefont {Chen}, \citenamefont {Zhang},\ and\
+  \citenamefont {Chan}}]{Zhangetal2022E66}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.-Y.}\ \bibnamefont
+  {Zhang}}, \bibinfo {author} {\bibfnamefont {X.}~\bibnamefont {Cui}}, \bibinfo
+  {author} {\bibfnamefont {W.-J.}\ \bibnamefont {Chen}}, \bibinfo {author}
+  {\bibfnamefont {Z.-Q.}\ \bibnamefont {Zhang}},\ and\ \bibinfo {author}
+  {\bibfnamefont {C.~T.}\ \bibnamefont {Chan}},\ }\bibfield  {title} {\bibinfo
+  {title} {{Symmetry-protected topological exceptional chains in non-Hermitian
+  crystals}},\ }\href@noop {} {\  (\bibinfo {year} {2022})},\ \Eprint
+  {https://arxiv.org/abs/2204.08052} {arXiv:2204.08052} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Myers}\ and\ \citenamefont
+  {Perry}(1986)}]{Myers1986A01}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~C.}\ \bibnamefont
+  {Myers}}\ and\ \bibinfo {author} {\bibfnamefont {M.~J.}\ \bibnamefont
+  {Perry}},\ }\bibfield  {title} {\bibinfo {title} {{Black holes in higher
+  dimensional space-times}},\ }\href
+  {https://doi.org/10.1016/0003-4916(86)90186-7} {\bibfield  {journal}
+  {\bibinfo  {journal} {Annals of Physics}\ }\textbf {\bibinfo {volume}
+  {172}},\ \bibinfo {pages} {304} (\bibinfo {year} {1986})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Emparan}\ and\ \citenamefont
+  {Reall}(2008)}]{Emparan2008A02}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Emparan}}\ and\ \bibinfo {author} {\bibfnamefont {H.~S.}\ \bibnamefont
+  {Reall}},\ }\bibfield  {title} {\bibinfo {title} {{Black Holes in Higher
+  Dimensions}},\ }\href {https://doi.org/10.12942/lrr-2008-6} {\bibfield
+  {journal} {\bibinfo  {journal} {Living Rev.Rel}\ }\textbf {\bibinfo {volume}
+  {11}},\ \bibinfo {pages} {6} (\bibinfo {year} {2008})},\ \Eprint
+  {https://arxiv.org/abs/0801.3471} {arXiv:0801.3471} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Murata}\ and\ \citenamefont
+  {Soda}(2007)}]{Murata2007A03}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Murata}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Soda}},\
+  }\bibfield  {title} {\bibinfo {title} {{A Note on Separability of Field
+  Equations in Myers-Perry Spacetimes}},\ }\href
+  {https://doi.org/10.1088/0264-9381/25/3/035006} {\bibfield  {journal}
+  {\bibinfo  {journal} {Class.Quant.Grav}\ }\textbf {\bibinfo {volume} {25}},\
+  \bibinfo {pages} {035006} (\bibinfo {year} {2007})},\ \Eprint
+  {https://arxiv.org/abs/0710.0221} {arXiv:0710.0221} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Wu}(2008)}]{Wu2008A04}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.-Q.}\ \bibnamefont
+  {Wu}},\ }\bibfield  {title} {\bibinfo {title} {{Separability of the massive
+  Dirac's equation in 5-dimensional Myers-Perry black hole geometry and its
+  relation to a rank-three Killing-Yano tensor}},\ }\href
+  {https://doi.org/10.1103/PhysRevD.78.064052} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys.Rev.D}\ }\textbf {\bibinfo {volume} {78}},\ \bibinfo {pages}
+  {064052} (\bibinfo {year} {2008})},\ \Eprint
+  {https://arxiv.org/abs/0807.2114} {arXiv:0807.2114} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Frolov}\ \emph {et~al.}(2018)\citenamefont {Frolov},
+  \citenamefont {Krtouš}, \citenamefont {Kubizňák},\ and\ \citenamefont
+  {Santos}}]{Frolovetal2018A09}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {V.~P.}\ \bibnamefont
+  {Frolov}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont {Krtouš}},
+  \bibinfo {author} {\bibfnamefont {D.}~\bibnamefont {Kubizňák}},\ and\
+  \bibinfo {author} {\bibfnamefont {J.~E.}\ \bibnamefont {Santos}},\ }\bibfield
+   {title} {\bibinfo {title} {{Massive Vector Fields in Rotating Black-Hole
+  Spacetimes: Separability and Quasinormal Modes}},\ }\href
+  {https://doi.org/10.1103/PhysRevLett.120.231103} {\bibfield  {journal}
+  {\bibinfo  {journal} {Phys. Rev. Lett}\ }\textbf {\bibinfo {volume} {120}},\
+  \bibinfo {pages} {231103} (\bibinfo {year} {2018})},\ \Eprint
+  {https://arxiv.org/abs/1804.00030} {arXiv:1804.00030} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Huang}\ and\ \citenamefont
+  {Huang}(2025)}]{Huang2025A16}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Z.-Y.}\ \bibnamefont
+  {Huang}}\ and\ \bibinfo {author} {\bibfnamefont {J.-H.}\ \bibnamefont
+  {Huang}},\ }\bibfield  {title} {\bibinfo {title} {{Quasinormal modes of
+  massive scalar fields in five-dimensional Myers-Perry black holes with two
+  arbitrary rotation parameters}},\ }\href@noop {} {\  (\bibinfo {year}
+  {2025})},\ \Eprint {https://arxiv.org/abs/2502.11764} {arXiv:2502.11764}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Li}\ \emph {et~al.}(2023)\citenamefont {Li},
+  \citenamefont {Lu}, \citenamefont {LiMing},\ and\ \citenamefont
+  {Huang}}]{Lietal2023A15}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+  {Li}}, \bibinfo {author} {\bibfnamefont {K.-P.}\ \bibnamefont {Lu}}, \bibinfo
+  {author} {\bibfnamefont {W.}~\bibnamefont {LiMing}},\ and\ \bibinfo {author}
+  {\bibfnamefont {J.-H.}\ \bibnamefont {Huang}},\ }\bibfield  {title} {\bibinfo
+  {title} {{Stability of five-dimensional Myers-Perry black holes under massive
+  scalar perturbation: bound states and quasinormal modes}},\ }\href@noop {} {\
+   (\bibinfo {year} {2023})},\ \Eprint {https://arxiv.org/abs/2309.08203}
+  {arXiv:2309.08203} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lu}\ \emph {et~al.}(2023)\citenamefont {Lu},
+  \citenamefont {Li},\ and\ \citenamefont {Huang}}]{Lu2023A14}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.-P.}\ \bibnamefont
+  {Lu}}, \bibinfo {author} {\bibfnamefont {W.}~\bibnamefont {Li}},\ and\
+  \bibinfo {author} {\bibfnamefont {J.-H.}\ \bibnamefont {Huang}},\ }\bibfield
+  {title} {\bibinfo {title} {{Quasinormal modes and stability of higher
+  dimensional rotating black holes under massive scalar perturbations}},\
+  }\href@noop {} {\  (\bibinfo {year} {2023})},\ \Eprint
+  {https://arxiv.org/abs/2307.02338} {arXiv:2307.02338} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Murata}\ and\ \citenamefont
+  {Soda}(2008)}]{Murata2008A06}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Murata}}\ and\ \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Soda}},\
+  }\bibfield  {title} {\bibinfo {title} {{Stability of Five-dimensional
+  Myers-Perry Black Holes with Equal Angular Momenta}},\ }\href
+  {https://doi.org/10.1143/PTP.120.561} {\bibfield  {journal} {\bibinfo
+  {journal} {Prog.Theor.Phys}\ }\textbf {\bibinfo {volume} {120}},\ \bibinfo
+  {pages} {561} (\bibinfo {year} {2008})},\ \Eprint
+  {https://arxiv.org/abs/0803.1371} {arXiv:0803.1371} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dias}\ \emph {et~al.}(2010)\citenamefont {Dias},
+  \citenamefont {Figueras}, \citenamefont {Monteiro}, \citenamefont {Reall},\
+  and\ \citenamefont {Santos}}]{Diasetal2010A07}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {O.~J.~C.}\
+  \bibnamefont {Dias}}, \bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Figueras}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Monteiro}},
+  \bibinfo {author} {\bibfnamefont {H.~S.}\ \bibnamefont {Reall}},\ and\
+  \bibinfo {author} {\bibfnamefont {J.~E.}\ \bibnamefont {Santos}},\ }\bibfield
+   {title} {\bibinfo {title} {{An instability of higher-dimensional rotating
+  black holes}},\ }\href {https://doi.org/10.1007/JHEP05(2010)076} {\bibfield
+  {journal} {\bibinfo  {journal} {JHEP}\ }\textbf {\bibinfo {volume} {1005}},\
+  \bibinfo {pages} {076}},\ \Eprint {https://arxiv.org/abs/1001.4527}
+  {arXiv:1001.4527} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Emparan}\ \emph {et~al.}(2014)\citenamefont
+  {Emparan}, \citenamefont {Suzuki},\ and\ \citenamefont
+  {Tanabe}}]{Emparan2014A08}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.}~\bibnamefont
+  {Emparan}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Suzuki}},\
+  and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Tanabe}},\
+  }\bibfield  {title} {\bibinfo {title} {{Instability of rotating black holes:
+  large D analysis}}\ }\href {https://doi.org/10.1007/JHEP06(2014)106}
+  {10.1007/JHEP06(2014)106} (\bibinfo {year} {2014}),\ \Eprint
+  {https://arxiv.org/abs/1402.6215} {arXiv:1402.6215} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Berti}\ \emph {et~al.}(2005)\citenamefont {Berti},
+  \citenamefont {Cardoso},\ and\ \citenamefont {Casals}}]{Berti2005A05}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Berti}}, \bibinfo {author} {\bibfnamefont {V.}~\bibnamefont {Cardoso}},\
+  and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont {Casals}},\
+  }\bibfield  {title} {\bibinfo {title} {{Eigenvalues and eigenfunctions of
+  spin-weighted spheroidal harmonics in four and higher dimensions}},\ }\href
+  {https://doi.org/10.1103/PhysRevD.73.024013} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys.Rev.D}\ }\textbf {\bibinfo {volume} {73}},\ \bibinfo {pages}
+  {024013} (\bibinfo {year} {2005})},\ \Eprint
+  {https://arxiv.org/abs/gr-qc/0511111} {arXiv:gr-qc/0511111} \BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Detweiler}(1980)}]{DetweilerD53}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Detweiler}},\ }\bibfield  {title} {\bibinfo {title} {{Klein-Gordon equation
+  and rotating black holes}},\ }\href
+  {https://doi.org/10.1103/PhysRevD.22.2323} {\bibfield  {journal} {\bibinfo
+  {journal} {Physical Review D}\ }\textbf {\bibinfo {volume} {22}},\ \bibinfo
+  {pages} {2323} (\bibinfo {year} {1980})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Dolan}(2007)}]{Dolan2007D55}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.~R.}\ \bibnamefont
+  {Dolan}},\ }\bibfield  {title} {\bibinfo {title} {{Instability of the massive
+  Klein-Gordon field on the Kerr spacetime}},\ }\href
+  {https://doi.org/10.1103/PhysRevD.76.084001} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys.Rev.D}\ }\textbf {\bibinfo {volume} {76}},\ \bibinfo {pages}
+  {084001} (\bibinfo {year} {2007})},\ \Eprint
+  {https://arxiv.org/abs/0705.2880} {arXiv:0705.2880} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Nennig}\ and\ \citenamefont
+  {Perrey-Debain}(2019)}]{Nennig2019E67}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {B.}~\bibnamefont
+  {Nennig}}\ and\ \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Perrey-Debain}},\ }\bibfield  {title} {\bibinfo {title} {{A high order
+  continuation method to locate exceptional points and to compute Puiseux
+  series with applications to acoustic waveguides}}\ }\href
+  {https://doi.org/10.1016/j.jcp.2020.109425} {10.1016/j.jcp.2020.109425}
+  (\bibinfo {year} {2019}),\ \Eprint {https://arxiv.org/abs/1909.11579}
+  {arXiv:1909.11579} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Kravanja}\ and\ \citenamefont
+  {Van~Barel}(2000)}]{KravanjaVanBarel2000}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Kravanja}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Van~Barel}},\ }\href {https://doi.org/10.1007/BFb0103927} {\emph {\bibinfo
+  {title} {{Computing the Zeros of Analytic Functions}}}},\ Lecture Notes in
+  Mathematics 1727\ (\bibinfo  {publisher} {Springer},\ \bibinfo {year}
+  {2000})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Leaver}(1985)}]{Leaver1985D51}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.~W.}\ \bibnamefont
+  {Leaver}},\ }\bibfield  {title} {\bibinfo {title} {{An analytic
+  representation for the quasi-normal modes of Kerr black holes}},\ }\href
+  {https://doi.org/10.1098/rspa.1985.0119} {\bibfield  {journal} {\bibinfo
+  {journal} {Proceedings of the Royal Society A}\ }\textbf {\bibinfo {volume}
+  {402}},\ \bibinfo {pages} {285} (\bibinfo {year} {1985})}\BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Leaver}(1986)}]{LeaverD52}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.~W.}\ \bibnamefont
+  {Leaver}},\ }\bibfield  {title} {\bibinfo {title} {{Spectral decomposition of
+  the perturbation response of the Schwarzschild geometry}},\ }\href
+  {https://doi.org/10.1103/PhysRevD.34.384} {\bibfield  {journal} {\bibinfo
+  {journal} {Physical Review D}\ }\textbf {\bibinfo {volume} {34}},\ \bibinfo
+  {pages} {384} (\bibinfo {year} {1986})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Hatsuda}\ and\ \citenamefont
+  {Kimura}(2021)}]{Hatsuda2021D49}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {Y.}~\bibnamefont
+  {Hatsuda}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Kimura}},\ }\bibfield  {title} {\bibinfo {title} {{Spectral Problems for
+  Quasinormal Modes of Black Holes}}\ }\href
+  {https://doi.org/10.3390/universe7120476} {10.3390/universe7120476} (\bibinfo
+  {year} {2021}),\ \Eprint {https://arxiv.org/abs/2111.15197}
+  {arXiv:2111.15197} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Cho}\ \emph {et~al.}(2011)\citenamefont {Cho},
+  \citenamefont {Cornell}, \citenamefont {Doukas}, \citenamefont {Huang},\ and\
+  \citenamefont {Naylor}}]{Choetal2011D57}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~T.}\ \bibnamefont
+  {Cho}}, \bibinfo {author} {\bibfnamefont {A.~S.}\ \bibnamefont {Cornell}},
+  \bibinfo {author} {\bibfnamefont {J.}~\bibnamefont {Doukas}}, \bibinfo
+  {author} {\bibfnamefont {T.~R.}\ \bibnamefont {Huang}},\ and\ \bibinfo
+  {author} {\bibfnamefont {W.}~\bibnamefont {Naylor}},\ }\bibfield  {title}
+  {\bibinfo {title} {{A New Approach to Black Hole Quasinormal Modes: A Review
+  of the Asymptotic Iteration Method}},\ }\href@noop {} {\  (\bibinfo {year}
+  {2011})},\ \Eprint {https://arxiv.org/abs/1111.5024} {arXiv:1111.5024}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lin}\ and\ \citenamefont {Qian}(2016)}]{Lin2016D58}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Lin}}\ and\ \bibinfo {author} {\bibfnamefont {W.-L.}\ \bibnamefont {Qian}},\
+  }\bibfield  {title} {\bibinfo {title} {{A Matrix Method for Quasinormal
+  Modes: Schwarzschild Black Holes in Asymptotically Flat and (Anti-) de Sitter
+  Spacetimes}}\ }\href {https://doi.org/10.1088/1361-6382/aa6643}
+  {10.1088/1361-6382/aa6643} (\bibinfo {year} {2016}),\ \Eprint
+  {https://arxiv.org/abs/1610.08135} {arXiv:1610.08135} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Lin}\ \emph {et~al.}(2017)\citenamefont {Lin},
+  \citenamefont {Qian}, \citenamefont {Pavan},\ and\ \citenamefont
+  {Abdalla}}]{Linetal2017D59}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {K.}~\bibnamefont
+  {Lin}}, \bibinfo {author} {\bibfnamefont {W.-L.}\ \bibnamefont {Qian}},
+  \bibinfo {author} {\bibfnamefont {A.~B.}\ \bibnamefont {Pavan}},\ and\
+  \bibinfo {author} {\bibfnamefont {E.}~\bibnamefont {Abdalla}},\ }\bibfield
+  {title} {\bibinfo {title} {{A Matrix Method for Quasinormal Modes: Kerr and
+  Kerr-Sen Black Holes}}\ }\href {https://doi.org/10.1142/S0217732317501346}
+  {10.1142/S0217732317501346} (\bibinfo {year} {2017}),\ \Eprint
+  {https://arxiv.org/abs/1703.06439} {arXiv:1703.06439} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Matyjasek}\ and\ \citenamefont
+  {Opala}(2017)}]{Matyjasek2017D60}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Matyjasek}}\ and\ \bibinfo {author} {\bibfnamefont {M.}~\bibnamefont
+  {Opala}},\ }\bibfield  {title} {\bibinfo {title} {{Quasinormal modes of black
+  holes. The improved semianalytic approach}},\ }\href
+  {https://doi.org/10.1103/PhysRevD.96.024011} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume} {96}},\ \bibinfo
+  {pages} {024011} (\bibinfo {year} {2017})},\ \Eprint
+  {https://arxiv.org/abs/1704.00361} {arXiv:1704.00361} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Fortuna}\ and\ \citenamefont
+  {Vega}(2020)}]{Fortuna2020D62}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {S.}~\bibnamefont
+  {Fortuna}}\ and\ \bibinfo {author} {\bibfnamefont {I.}~\bibnamefont {Vega}},\
+  }\bibfield  {title} {\bibinfo {title} {{Bernstein spectral method for
+  quasinormal modes and other eigenvalue problems}},\ }\href
+  {https://doi.org/10.1140/epjc/s10052-023-12350-9} {\bibfield  {journal}
+  {\bibinfo  {journal} {Eur. Phys. J. C}\ }\textbf {\bibinfo {volume} {83}},\
+  \bibinfo {pages} {1170} (\bibinfo {year} {2020})},\ \Eprint
+  {https://arxiv.org/abs/2003.06232} {arXiv:2003.06232} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Stein}(2019)}]{Stein2019D61}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.~C.}\ \bibnamefont
+  {Stein}},\ }\bibfield  {title} {\bibinfo {title} {{qnm: A Python package for
+  calculating Kerr quasinormal modes, separation constants, and
+  spherical-spheroidal mixing coefficients}}\ }\href
+  {https://doi.org/10.21105/joss.01683} {10.21105/joss.01683} (\bibinfo {year}
+  {2019}),\ \Eprint {https://arxiv.org/abs/1908.10377} {arXiv:1908.10377}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Matyjasek}(2021)}]{Matyjasek2021}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {J.}~\bibnamefont
+  {Matyjasek}},\ }\bibfield  {title} {\bibinfo {title} {{Quasinormal modes of
+  black holes in Einstein-Gauss-Bonnet and other theories: the
+  Schwarzschild-Tangherlini case}},\ }\href@noop {} {\  (\bibinfo {year}
+  {2021})},\ \Eprint {https://arxiv.org/abs/2107.04815} {arXiv:2107.04815}
+  \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Nollert}(1996)}]{Nollert1996C33}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.-P.}\ \bibnamefont
+  {Nollert}},\ }\bibfield  {title} {\bibinfo {title} {{About the Significance
+  of Quasinormal Modes of Black Holes}}\ }\href
+  {https://doi.org/10.1103/PhysRevD.53.4397} {10.1103/PhysRevD.53.4397}
+  (\bibinfo {year} {1996}),\ \Eprint {https://arxiv.org/abs/gr-qc/9602032}
+  {arXiv:gr-qc/9602032} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Miyachi}\ \emph {et~al.}(2025)\citenamefont
+  {Miyachi}, \citenamefont {Namba}, \citenamefont {Omiya},\ and\ \citenamefont
+  {Oshita}}]{Miyachi2025C45}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Miyachi}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Namba}},
+  \bibinfo {author} {\bibfnamefont {H.}~\bibnamefont {Omiya}},\ and\ \bibinfo
+  {author} {\bibfnamefont {N.}~\bibnamefont {Oshita}},\ }\bibfield  {title}
+  {\bibinfo {title} {{Spectral instability of parametrized black hole
+  quasinormal modes in the high-overtone limit via the exact WKB analysis}},\
+  }\href {https://doi.org/10.1103/gsht-7s9l} {\bibfield  {journal} {\bibinfo
+  {journal} {Phys. Rev. D}\ }\textbf {\bibinfo {volume} {113}},\ \bibinfo
+  {pages} {124006} (\bibinfo {year} {2025})},\ \Eprint
+  {https://arxiv.org/abs/2512.18631} {arXiv:2512.18631} \BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Moore}\ \emph {et~al.}(2009)\citenamefont {Moore},
+  \citenamefont {Kearfott},\ and\ \citenamefont {Cloud}}]{MooreE73}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~E.}\ \bibnamefont
+  {Moore}}, \bibinfo {author} {\bibfnamefont {R.~B.}\ \bibnamefont
+  {Kearfott}},\ and\ \bibinfo {author} {\bibfnamefont {M.~J.}\ \bibnamefont
+  {Cloud}},\ }\href {https://doi.org/10.1137/1.9780898717716} {\emph {\bibinfo
+  {title} {{Introduction to Interval Analysis}}}}\ (\bibinfo  {publisher}
+  {Society for Industrial and Applied Mathematics},\ \bibinfo {year}
+  {2009})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Tucker}(2011)}]{TuckerE74}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.}~\bibnamefont
+  {Tucker}},\ }\href {https://doi.org/10.1515/9781400838974} {\emph {\bibinfo
+  {title} {{Validated Numerics: A Short Introduction to Rigorous
+  Computations}}}}\ (\bibinfo  {publisher} {Princeton University Press},\
+  \bibinfo {year} {2011})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Breiding}\ \emph {et~al.}(2020)\citenamefont
+  {Breiding}, \citenamefont {Rose},\ and\ \citenamefont
+  {Timme}}]{Breiding2020E69}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Breiding}}, \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Rose}},\
+  and\ \bibinfo {author} {\bibfnamefont {S.}~\bibnamefont {Timme}},\ }\bibfield
+   {title} {\bibinfo {title} {{Certifying zeros of polynomial systems using
+  interval arithmetic}},\ }\href@noop {} {\  (\bibinfo {year} {2020})},\
+  \Eprint {https://arxiv.org/abs/2011.05000} {arXiv:2011.05000} \BibitemShut
+  {NoStop}%
+\bibitem [{\citenamefont {Duff}\ and\ \citenamefont {Lee}(2024)}]{Duff2024E70}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {T.}~\bibnamefont
+  {Duff}}\ and\ \bibinfo {author} {\bibfnamefont {K.}~\bibnamefont {Lee}},\
+  }\bibfield  {title} {\bibinfo {title} {{Certified homotopy tracking using the
+  Krawczyk method}},\ }\href@noop {} {\  (\bibinfo {year} {2024})},\ \Eprint
+  {https://arxiv.org/abs/2402.07053} {arXiv:2402.07053} \BibitemShut {NoStop}%
+\end{thebibliography}%
